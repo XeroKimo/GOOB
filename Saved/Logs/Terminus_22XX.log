@@ -1,4 +1,4 @@
-﻿Log file open, 01/30/19 19:39:31
+﻿Log file open, 02/01/19 15:44:39
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
@@ -9,8 +9,8 @@ LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
 LogWindows: File 'VtuneApi32e.dll' does not exist
 LogInit: Display: Running engine for game: Terminus_22XX
 LogPlatformFile: Not using cached read wrapper
-LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.265417
+LogTaskGraph: Started task graph with 5 named threads and 14 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.256502
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -93,7 +93,7 @@ LogPluginManager: Mounting plugin ProceduralMeshComponent
 LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WindowsMoviePlayer
-LogStreaming: Display: Took  0.110s to configure plugins.
+LogStreaming: Display: Took  0.137s to configure plugins.
 LogInit: Using libcurl 7.55.1-DEV
 LogInit:  - built for x86_64-pc-win32
 LogInit:  - supports SSL with OpenSSL/1.0.2h
@@ -114,17 +114,17 @@ LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connecti
 LogInit:  - LocalHostAddr = Default
 LogInit:  - BufferSize = 65536
 LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
-LogInit: Build: ++UE4+Release-4.20-CL-4212847
-LogInit: Engine Version: 4.20.0-4212847+++UE4+Release-4.20
+LogInit: Build: ++UE4+Release-4.20-CL-4369336
+LogInit: Engine Version: 4.20.3-4369336+++UE4+Release-4.20
 LogInit: Compatible Engine Version: 4.20.0-4212847+++UE4+Release-4.20
 LogInit: Net CL: 4212847
-LogInit: OS: Windows 10 (), CPU: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz, GPU: NVIDIA GeForce GTX 1060 6GB
-LogInit: Compiled (64-bit): Jul 14 2018 09:51:14
+LogInit: OS: Windows 10 (), CPU: Intel(R) Core(TM) i5-6600K CPU @ 3.50GHz, GPU: NVIDIA GeForce GTX 1060 6GB
+LogInit: Compiled (64-bit): Sep 17 2018 12:26:19
 LogInit: Compiled with Visual C++: 19.13.26129.00
 LogInit: Build Configuration: Development
 LogInit: Branch Name: ++UE4+Release-4.20
-LogInit: Command Line: -EpicPortal  -epiclocale=en-US
-LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.20/Engine/Binaries/Win64/
+LogInit: Command Line:  -skipcompile
+LogInit: Base Directory: F:/Program Files (x86)/Epic Games/UE_4.20/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
 LogDevObjectVersion: Number of dev versions registered: 20
 LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
@@ -147,815 +147,557 @@ LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC
 LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
 LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 12
 LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 1
-LogStreaming: Display: Took  0.000s to delete old logs.
+LogStreaming: Display: Took  0.001s to delete old logs.
 LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
 LogInit: Object subsystem initialized
-[2019.01.31-00.39.31:538][  0]LogInit: Selected Device Profile: [Windows]
-[2019.01.31-00.39.31:538][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.01.31-00.39.31:544][  0]LogHAL: Display: Platform has ~ 16 GB [17096687616 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2019.01.31-00.39.31:544][  0]LogInit: Setting Device Profile CVar: [[r.Vulkan.UseRealUBs:1]]
-[2019.01.31-00.39.31:544][  0]LogInit: Going up to parent DeviceProfile []
-[2019.01.31-00.39.31:545][  0]LogInit: Computer: WJ310-05
-[2019.01.31-00.39.31:545][  0]LogInit: User: jarr0036
-[2019.01.31-00.39.31:545][  0]LogInit: CPU Page size=4096, Cores=4
-[2019.01.31-00.39.31:545][  0]LogInit: High frequency timer resolution =3.914064 MHz
-[2019.01.31-00.39.31:545][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
-[2019.01.31-00.39.31:545][  0]LogMemory: Platform Memory Stats for Windows
-[2019.01.31-00.39.31:545][  0]LogMemory: Process Physical Memory: 103.04 MB used, 103.04 MB peak
-[2019.01.31-00.39.31:545][  0]LogMemory: Process Virtual Memory: 89.68 MB used, 89.68 MB peak
-[2019.01.31-00.39.31:545][  0]LogMemory: Physical Memory: 6277.86 MB used,  10026.81 MB free, 16304.67 MB total
-[2019.01.31-00.39.31:545][  0]LogMemory: Virtual Memory: 541.83 MB used,  10026.81 MB free, 134217728.00 MB total
-[2019.01.31-00.39.31:561][  0]LogInit: Using OS detected language (en-US).
-[2019.01.31-00.39.31:561][  0]LogInit: Using OS detected locale (en-US).
-[2019.01.31-00.39.31:561][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2019.01.31-00.39.31:846][  0]LogStreaming: Display: Took  0.285s to InitEngineTextLocalization.
-[2019.01.31-00.39.31:846][  0]LogInit: Setting process to per monitor DPI aware
-[2019.01.31-00.39.31:866][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.01.31-00.39.31:866][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.01.31-00.39.32:111][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.01.31-00.39.32:111][  0]LogD3D11RHI: D3D11 adapters:
-[2019.01.31-00.39.32:149][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1060 6GB' (Feature Level 11_0)
-[2019.01.31-00.39.32:149][  0]LogD3D11RHI:       6052/0/8152 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
-[2019.01.31-00.39.32:151][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.01.31-00.39.32:151][  0]LogD3D11RHI:       0/0/8152 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.01.31-00.39.32:151][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.01.31-00.39.32:155][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.01.31-00.39.32:155][  0]LogD3D11RHI:     GPU DeviceId: 0x1c03 (for the marketing name, search the web for "GPU Device Id")
-[2019.01.31-00.39.32:155][  0]LogWindows: EnumDisplayDevices:
-[2019.01.31-00.39.32:155][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1060 6GB' (P:1 D:1)
-[2019.01.31-00.39.32:155][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:0)
-[2019.01.31-00.39.32:155][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:0)
-[2019.01.31-00.39.32:155][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:0)
-[2019.01.31-00.39.32:155][  0]LogWindows: DebugString: FoundDriverCount:4 
-[2019.01.31-00.39.32:155][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1060 6GB
-[2019.01.31-00.39.32:155][  0]LogD3D11RHI:   Driver Version: 391.35 (internal:23.21.13.9135, unified:391.35)
-[2019.01.31-00.39.32:155][  0]LogD3D11RHI:      Driver Date: 3-23-2018
-[2019.01.31-00.39.32:155][  0]LogRHI: Texture pool is 4236 MB (70% of 6052 MB)
-[2019.01.31-00.39.32:178][  0]LogD3D11RHI: Async texture creation enabled
-[2019.01.31-00.39.32:193][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
-[2019.01.31-00.39.32:235][  0]LogShaderCompilers: Guid format shader working directory is -5 characters bigger than the processId version (../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Intermediate/Shaders/WorkingDirectory/6776/).
-[2019.01.31-00.39.32:235][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/jarr0036/AppData/Local/Temp/UnrealShaderWorkingDir/AF92FC0548232309F7A786AED3FEDBC8/'.
-[2019.01.31-00.39.32:423][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
-[2019.01.31-00.39.32:433][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
-[2019.01.31-00.39.32:443][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
-[2019.01.31-00.39.32:455][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
-[2019.01.31-00.39.32:467][  0]LogTemp: Display: Loaded TP MacTargetPlatform
-[2019.01.31-00.39.32:477][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
-[2019.01.31-00.39.32:487][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
-[2019.01.31-00.39.32:498][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
-[2019.01.31-00.39.32:503][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
-[2019.01.31-00.39.32:561][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:561][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:561][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:561][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:562][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
-[2019.01.31-00.39.32:563][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
-[2019.01.31-00.39.32:616][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2019.01.31-00.39.32:616][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
-[2019.01.31-00.39.32:633][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2019.01.31-00.39.32:633][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
-[2019.01.31-00.39.32:642][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
-[2019.01.31-00.39.32:652][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
-[2019.01.31-00.39.32:661][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
-[2019.01.31-00.39.32:671][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
-[2019.01.31-00.39.32:678][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
-[2019.01.31-00.39.32:678][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.01.31-00.39.32:724][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.01.31-00.39.32:724][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.01.31-00.39.32:724][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.01.31-00.39.33:363][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.01.31-00.39.33:409][  0]LogDerivedDataCache: Loaded boot cache 0.05s 87MB C:/Users/jarr0036/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
-[2019.01.31-00.39.33:409][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/jarr0036/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc
-[2019.01.31-00.39.33:409][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/jarr0036/Desktop/Terminus_22XX/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.01.31-00.39.33:409][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.01.31-00.39.33:409][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/jarr0036/Desktop/Terminus_22XX/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.01.31-00.39.33:409][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.01.31-00.39.33:422][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.01.31-00.39.33:434][  0]LogDerivedDataCache: Using Local data cache path C:/Users/jarr0036/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.01.31-00.39.33:434][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.01.31-00.39.33:434][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.01.31-00.39.33:448][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.01.31-00.39.33:449][  0]LogSlate: Using FreeType 2.6.0
-[2019.01.31-00.39.33:450][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.01.31-00.39.33:527][  0]LogAssetRegistry: FAssetRegistry took 0.0251 seconds to start up
-[2019.01.31-00.39.33:776][  0]LogInit: Selected Device Profile: [Windows]
-[2019.01.31-00.39.33:874][  0]LogSimplygon: Simplygon DLL not present - disabling.
-[2019.01.31-00.39.33:878][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
-[2019.01.31-00.39.33:878][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2019.01.31-00.39.33:878][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.01.31-00.39.33:878][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
-[2019.01.31-00.39.33:891][  0]LogNetVersion: Terminus_22XX 1.0.0, NetCL: 4212847, EngineNetVer: 5, GameNetVer: 0 (Checksum: 1011408813)
-[2019.01.31-00.39.34:265][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.081320 seconds
-[2019.01.31-00.39.34:270][  0]LogUObjectArray: 38425 objects as part of root set at end of initial load.
-[2019.01.31-00.39.34:270][  0]LogUObjectAllocator: 6690872 out of 0 bytes used by permanent object pool.
-[2019.01.31-00.39.34:270][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.01.31-00.39.35:199][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.01.31-00.39.35:222][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.01.31-00.39.35:351][  0]SourceControl: Source control is disabled
-[2019.01.31-00.39.35:351][  0]SourceControl: Source control is disabled
-[2019.01.31-00.39.35:352][  0]SourceControl: Source control is disabled
-[2019.01.31-00.39.35:354][  0]SourceControl: Source control is disabled
-[2019.01.31-00.39.35:507][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.01.31-00.39.35:543][  0]LogOcInput: OculusInput pre-init called
-[2019.01.31-00.39.35:591][  0]LogEngine: Initializing Engine...
-[2019.01.31-00.39.35:592][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.01.31-00.39.35:593][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
-[2019.01.31-00.39.35:593][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2019.01.31-00.39.35:593][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
-[2019.01.31-00.39.35:593][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2019.01.31-00.39.35:758][  0]LogInit: Initializing FReadOnlyCVARCache
-[2019.01.31-00.39.35:771][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.01.31-00.39.35:776][  0]LogInit: XAudio2 using 'DELL P2715Q (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.01.31-00.39.35:790][  0]LogInit: FAudioDevice initialized.
-[2019.01.31-00.39.35:790][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2019.01.31-00.39.35:877][  0]LogDerivedDataCache: Saved boot cache 0.09s 87MB C:/Users/jarr0036/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
-[2019.01.31-00.39.35:880][  0]LogInit: Texture streaming: Enabled
-[2019.01.31-00.39.35:895][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.01.31-00.39.35:905][  0]LogInit: Transaction tracking system initialized
-[2019.01.31-00.39.35:925][  0]BlueprintLog: New page: Editor Load
-[2019.01.31-00.39.36:029][  0]LocalizationService: Localization service is disabled
-[2019.01.31-00.39.36:267][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jarr0036/Desktop/Terminus_22XX/Content/' took 0.01s
-[2019.01.31-00.39.36:267][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.01.31-00.39.36:267][  0]LogCook: Display: Mobile HDR setting 1
-[2019.01.31-00.39.36:267][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
-[2019.01.31-00.39.36:268][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
-[2019.01.31-00.39.36:268][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
-[2019.01.31-00.39.36:268][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
-[2019.01.31-00.39.36:268][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
-[2019.01.31-00.39.36:390][  0]SourceControl: Source control is disabled
-[2019.01.31-00.39.36:393][  0]LogFactory: FactoryCreateFile: PackFactory with PackFactory (0 0 C:/Program Files/Epic Games/UE_4.20/FeaturePacks/StarterContent.upack)
-[2019.01.31-00.39.36:401][  0]LogPackFactory: Finished extracting 8 files (including 0 errors).
-[2019.01.31-00.39.36:403][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Floor_400x400.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Floor_400x400.uasset"
-[2019.01.31-00.39.36:404][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Pillar_50x500.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Pillar_50x500.uasset"
-[2019.01.31-00.39.36:408][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/SM_AssetPlatform.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/SM_AssetPlatform.uasset"
-[2019.01.31-00.39.36:409][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_400x200.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_400x200.uasset"
-[2019.01.31-00.39.36:411][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_400x300.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_400x300.uasset"
-[2019.01.31-00.39.36:412][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_400x400.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_400x400.uasset"
-[2019.01.31-00.39.36:413][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_500x500.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_500x500.uasset"
-[2019.01.31-00.39.36:415][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Door_400x300.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_Door_400x300.uasset"
-[2019.01.31-00.39.36:416][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Door_400x400.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_Door_400x400.uasset"
-[2019.01.31-00.39.36:417][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Window_400x300.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_Window_400x300.uasset"
-[2019.01.31-00.39.36:419][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Architecture/Wall_Window_400x400.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Wall_Window_400x400.uasset"
-[2019.01.31-00.39.36:422][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Collapse01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Collapse01.uasset"
-[2019.01.31-00.39.36:424][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Collapse02.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Collapse02.uasset"
-[2019.01.31-00.39.36:426][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Collapse_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Collapse_Cue.uasset"
-[2019.01.31-00.39.36:428][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Explosion01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Explosion01.uasset"
-[2019.01.31-00.39.36:430][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Explosion02.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Explosion02.uasset"
-[2019.01.31-00.39.36:431][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Explosion_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Explosion_Cue.uasset"
-[2019.01.31-00.39.36:435][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Fire01.uasset"
-[2019.01.31-00.39.36:437][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire01_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Fire01_Cue.uasset"
-[2019.01.31-00.39.36:444][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire_Sparks01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Fire_Sparks01.uasset"
-[2019.01.31-00.39.36:445][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Fire_Sparks01_Cue.uasset"
-[2019.01.31-00.39.36:448][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Light01.uasset"
-[2019.01.31-00.39.36:450][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light01_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Light01_Cue.uasset"
-[2019.01.31-00.39.36:453][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light02.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Light02.uasset"
-[2019.01.31-00.39.36:454][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Light02_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Light02_Cue.uasset"
-[2019.01.31-00.39.36:458][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Smoke01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Smoke01.uasset"
-[2019.01.31-00.39.36:460][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Smoke01_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Smoke01_Cue.uasset"
-[2019.01.31-00.39.36:461][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Background_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Starter_Background_Cue.uasset"
-[2019.01.31-00.39.36:477][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Birds01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Starter_Birds01.uasset"
-[2019.01.31-00.39.36:512][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Music01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Starter_Music01.uasset"
-[2019.01.31-00.39.36:513][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Music_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Starter_Music_Cue.uasset"
-[2019.01.31-00.39.36:524][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Wind05.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Starter_Wind05.uasset"
-[2019.01.31-00.39.36:533][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Starter_Wind06.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Starter_Wind06.uasset"
-[2019.01.31-00.39.36:537][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Steam01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Steam01.uasset"
-[2019.01.31-00.39.36:538][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Audio/Steam01_Cue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Audio/Steam01_Cue.uasset"
-[2019.01.31-00.39.36:540][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset"
-[2019.01.31-00.39.36:541][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Blueprint_Effect_Explosion.uasset"
-[2019.01.31-00.39.36:543][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Blueprint_Effect_Fire.uasset"
-[2019.01.31-00.39.36:544][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Blueprint_Effect_Smoke.uasset"
-[2019.01.31-00.39.36:545][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Blueprint_Effect_Sparks.uasset"
-[2019.01.31-00.39.36:546][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Blueprint_Effect_Steam.uasset"
-[2019.01.31-00.39.36:548][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Blueprint_WallSconce.uasset"
-[2019.01.31-00.39.36:553][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/BP_LightStudio.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/BP_LightStudio.uasset"
-[2019.01.31-00.39.36:554][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/FogBrightnessLUT.uasset"
-[2019.01.31-00.39.36:555][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/M_LightStage_Arrows.uasset"
-[2019.01.31-00.39.36:557][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Black.uasset"
-[2019.01.31-00.39.36:558][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_HDRI.uasset"
-[2019.01.31-00.39.36:560][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/M_LightStage_Skybox_Master.uasset"
-[2019.01.31-00.39.36:565][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/Skybox.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/Skybox.uasset"
-[2019.01.31-00.39.36:568][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/SM_Arrows.uasset"
-[2019.01.31-00.39.36:569][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Blueprints/Assets/SunlightColorLUT.uasset"
-[2019.01.31-00.39.36:807][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset"
-[2019.01.31-00.39.36:809][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Advanced_Lighting.umap" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Maps/Advanced_Lighting.umap"
-[2019.01.31-00.39.36:815][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Maps/Advanced_Lighting_BuiltData.uasset"
-[2019.01.31-00.39.36:818][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Minimal_Default.umap" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Maps/Minimal_Default.umap"
-[2019.01.31-00.39.36:829][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Maps/Minimal_Default_BuiltData.uasset"
-[2019.01.31-00.39.36:834][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/StarterMap.umap" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Maps/StarterMap.umap"
-[2019.01.31-00.39.36:901][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Maps/StarterMap_BuiltData.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Maps/StarterMap_BuiltData.uasset"
-[2019.01.31-00.39.36:902][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_AssetPlatform.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_AssetPlatform.uasset"
-[2019.01.31-00.39.36:903][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Basic_Floor.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Basic_Floor.uasset"
-[2019.01.31-00.39.36:905][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Basic_Wall.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Basic_Wall.uasset"
-[2019.01.31-00.39.36:907][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Brick_Clay_Beveled.uasset"
-[2019.01.31-00.39.36:909][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Clay_New.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Brick_Clay_New.uasset"
-[2019.01.31-00.39.36:910][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Brick_Clay_Old.uasset"
-[2019.01.31-00.39.36:912][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Brick_Cut_Stone.uasset"
-[2019.01.31-00.39.36:914][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Brick_Hewn_Stone.uasset"
-[2019.01.31-00.39.36:915][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Ceramic_Tile_Checker.uasset"
-[2019.01.31-00.39.36:917][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_CobbleStone_Pebble.uasset"
-[2019.01.31-00.39.36:919][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_CobbleStone_Rough.uasset"
-[2019.01.31-00.39.36:922][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_CobbleStone_Smooth.uasset"
-[2019.01.31-00.39.36:923][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_ColorGrid_LowSpec.uasset"
-[2019.01.31-00.39.36:925][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Grime.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Concrete_Grime.uasset"
-[2019.01.31-00.39.36:928][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Panels.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Concrete_Panels.uasset"
-[2019.01.31-00.39.36:929][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Poured.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Concrete_Poured.uasset"
-[2019.01.31-00.39.36:931][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Concrete_Tiles.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Concrete_Tiles.uasset"
-[2019.01.31-00.39.36:933][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Glass.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Glass.uasset"
-[2019.01.31-00.39.36:935][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ground_Grass.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Ground_Grass.uasset"
-[2019.01.31-00.39.36:936][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ground_Gravel.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Ground_Gravel.uasset"
-[2019.01.31-00.39.36:938][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Ground_Moss.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Ground_Moss.uasset"
-[2019.01.31-00.39.36:940][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Metal_Brushed_Nickel.uasset"
-[2019.01.31-00.39.36:942][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset"
-[2019.01.31-00.39.36:943][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Chrome.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Metal_Chrome.uasset"
-[2019.01.31-00.39.36:945][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Copper.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Metal_Copper.uasset"
-[2019.01.31-00.39.36:947][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Gold.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Metal_Gold.uasset"
-[2019.01.31-00.39.36:948][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Rust.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Metal_Rust.uasset"
-[2019.01.31-00.39.36:950][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Metal_Steel.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Metal_Steel.uasset"
-[2019.01.31-00.39.36:952][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Basalt.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Rock_Basalt.uasset"
-[2019.01.31-00.39.36:953][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Rock_Marble_Polished.uasset"
-[2019.01.31-00.39.36:955][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Sandstone.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Rock_Sandstone.uasset"
-[2019.01.31-00.39.36:957][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Rock_Slate.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Rock_Slate.uasset"
-[2019.01.31-00.39.36:959][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Tech_Checker_Dot.uasset"
-[2019.01.31-00.39.36:961][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Tech_Hex_Tile.uasset"
-[2019.01.31-00.39.36:962][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Tech_Hex_Tile_Pulse.uasset"
-[2019.01.31-00.39.36:964][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Tech_Panel.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Tech_Panel.uasset"
-[2019.01.31-00.39.36:965][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Water_Lake.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Water_Lake.uasset"
-[2019.01.31-00.39.36:967][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Water_Ocean.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Water_Ocean.uasset"
-[2019.01.31-00.39.36:969][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Polished.uasset"
-[2019.01.31-00.39.36:970][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Wood_Floor_Walnut_Worn.uasset"
-[2019.01.31-00.39.36:972][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Oak.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Wood_Oak.uasset"
-[2019.01.31-00.39.36:973][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Pine.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Wood_Pine.uasset"
-[2019.01.31-00.39.36:975][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Materials/M_Wood_Walnut.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Materials/M_Wood_Walnut.uasset"
-[2019.01.31-00.39.36:976][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Ambient_Dust.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/P_Ambient_Dust.uasset"
-[2019.01.31-00.39.36:979][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Explosion.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/P_Explosion.uasset"
-[2019.01.31-00.39.36:981][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Fire.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/P_Fire.uasset"
-[2019.01.31-00.39.36:983][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Smoke.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/P_Smoke.uasset"
-[2019.01.31-00.39.36:984][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Sparks.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/P_Sparks.uasset"
-[2019.01.31-00.39.36:986][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/P_Steam_Lit.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/P_Steam_Lit.uasset"
-[2019.01.31-00.39.36:987][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Burst.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_Burst.uasset"
-[2019.01.31-00.39.36:989][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_Dust_Particle.uasset"
-[2019.01.31-00.39.36:990][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_explosion_subUV.uasset"
-[2019.01.31-00.39.36:992][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_Fire_SubUV.uasset"
-[2019.01.31-00.39.36:993][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/m_flare_01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/m_flare_01.uasset"
-[2019.01.31-00.39.36:995][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_Heat_Distortion.uasset"
-[2019.01.31-00.39.36:996][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_Radial_Gradient.uasset"
-[2019.01.31-00.39.36:997][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_radial_ramp.uasset"
-[2019.01.31-00.39.36:999][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_smoke_subUV.uasset"
-[2019.01.31-00.39.37:000][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Particles/Materials/M_Spark.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Particles/Materials/M_Spark.uasset"
-[2019.01.31-00.39.37:002][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/MaterialSphere.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/MaterialSphere.uasset"
-[2019.01.31-00.39.37:004][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Bush.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Bush.uasset"
-[2019.01.31-00.39.37:006][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Chair.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Chair.uasset"
-[2019.01.31-00.39.37:008][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_CornerFrame.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_CornerFrame.uasset"
-[2019.01.31-00.39.37:010][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Couch.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Couch.uasset"
-[2019.01.31-00.39.37:012][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Door.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Door.uasset"
-[2019.01.31-00.39.37:014][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_DoorFrame.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_DoorFrame.uasset"
-[2019.01.31-00.39.37:015][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_GlassWindow.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_GlassWindow.uasset"
-[2019.01.31-00.39.37:018][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Lamp_Ceiling.uasset"
-[2019.01.31-00.39.37:020][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Lamp_Wall.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Lamp_Wall.uasset"
-[2019.01.31-00.39.37:033][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_MatPreviewMesh_02.uasset"
-[2019.01.31-00.39.37:035][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_PillarFrame.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_PillarFrame.uasset"
-[2019.01.31-00.39.37:037][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_PillarFrame300.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_PillarFrame300.uasset"
-[2019.01.31-00.39.37:039][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Rock.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Rock.uasset"
-[2019.01.31-00.39.37:040][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Shelf.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Shelf.uasset"
-[2019.01.31-00.39.37:041][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Stairs.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Stairs.uasset"
-[2019.01.31-00.39.37:045][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_Statue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_Statue.uasset"
-[2019.01.31-00.39.37:048][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_TableRound.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_TableRound.uasset"
-[2019.01.31-00.39.37:049][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/SM_WindowFrame.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/SM_WindowFrame.uasset"
-[2019.01.31-00.39.37:051][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Bush.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Bush.uasset"
-[2019.01.31-00.39.37:052][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Chair.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Chair.uasset"
-[2019.01.31-00.39.37:054][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Door.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Door.uasset"
-[2019.01.31-00.39.37:055][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Frame.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Frame.uasset"
-[2019.01.31-00.39.37:056][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Lamp.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Lamp.uasset"
-[2019.01.31-00.39.37:058][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_MaterialSphere.uasset"
-[2019.01.31-00.39.37:059][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_MaterialSphere_Plain.uasset"
-[2019.01.31-00.39.37:060][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Rock.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Rock.uasset"
-[2019.01.31-00.39.37:062][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Shelf.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Shelf.uasset"
-[2019.01.31-00.39.37:063][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_Statue.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_Statue.uasset"
-[2019.01.31-00.39.37:064][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_StatueGlass.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_StatueGlass.uasset"
-[2019.01.31-00.39.37:066][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Props/Materials/M_TableRound.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Props/Materials/M_TableRound.uasset"
-[2019.01.31-00.39.37:067][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Cone.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Cone.uasset"
-[2019.01.31-00.39.37:068][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Cube.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Cube.uasset"
-[2019.01.31-00.39.37:070][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Cylinder.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Cylinder.uasset"
-[2019.01.31-00.39.37:072][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_NarrowCapsule.uasset"
-[2019.01.31-00.39.37:073][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Pipe.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Pipe.uasset"
-[2019.01.31-00.39.37:075][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Pipe_180.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Pipe_180.uasset"
-[2019.01.31-00.39.37:076][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Pipe_90.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Pipe_90.uasset"
-[2019.01.31-00.39.37:078][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Plane.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Plane.uasset"
-[2019.01.31-00.39.37:079][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_QuadPyramid.uasset"
-[2019.01.31-00.39.37:082][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Sphere.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Sphere.uasset"
-[2019.01.31-00.39.37:086][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Torus.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Torus.uasset"
-[2019.01.31-00.39.37:087][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Trim.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Trim.uasset"
-[2019.01.31-00.39.37:089][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Trim_90_In.uasset"
-[2019.01.31-00.39.37:090][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Trim_90_Out.uasset"
-[2019.01.31-00.39.37:091][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_TriPyramid.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_TriPyramid.uasset"
-[2019.01.31-00.39.37:094][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Tube.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Tube.uasset"
-[2019.01.31-00.39.37:095][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Wedge_A.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Wedge_A.uasset"
-[2019.01.31-00.39.37:097][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_Wedge_B.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_Wedge_B.uasset"
-[2019.01.31-00.39.37:099][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Shapes/Shape_WideCapsule.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Shapes/Shape_WideCapsule.uasset"
-[2019.01.31-00.39.37:128][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_Beveled_D.uasset"
-[2019.01.31-00.39.37:162][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_Beveled_M.uasset"
-[2019.01.31-00.39.37:191][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_Beveled_N.uasset"
-[2019.01.31-00.39.37:217][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_New_D.uasset"
-[2019.01.31-00.39.37:255][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_New_M.uasset"
-[2019.01.31-00.39.37:286][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_New_N.uasset"
-[2019.01.31-00.39.37:331][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_Old_D.uasset"
-[2019.01.31-00.39.37:360][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Clay_Old_N.uasset"
-[2019.01.31-00.39.37:409][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Cut_Stone_D.uasset"
-[2019.01.31-00.39.37:559][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Cut_Stone_N.uasset"
-[2019.01.31-00.39.37:586][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Hewn_Stone_D.uasset"
-[2019.01.31-00.39.37:612][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Hewn_Stone_M.uasset"
-[2019.01.31-00.39.37:645][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Brick_Hewn_Stone_N.uasset"
-[2019.01.31-00.39.37:646][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Burst_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Burst_M.uasset"
-[2019.01.31-00.39.37:649][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Bush_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Bush_D.uasset"
-[2019.01.31-00.39.37:652][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Bush_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Bush_N.uasset"
-[2019.01.31-00.39.37:654][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Ceramic_Tile_M.uasset"
-[2019.01.31-00.39.37:655][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Ceramic_Tile_N.uasset"
-[2019.01.31-00.39.37:658][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Chair_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Chair_M.uasset"
-[2019.01.31-00.39.37:666][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Chair_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Chair_N.uasset"
-[2019.01.31-00.39.37:667][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Checker_Noise_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Checker_Noise_M.uasset"
-[2019.01.31-00.39.37:715][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Pebble_D.uasset"
-[2019.01.31-00.39.37:721][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Pebble_M.uasset"
-[2019.01.31-00.39.37:768][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Pebble_N.uasset"
-[2019.01.31-00.39.37:789][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Rough_D.uasset"
-[2019.01.31-00.39.37:802][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Rough_N.uasset"
-[2019.01.31-00.39.37:834][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Smooth_D.uasset"
-[2019.01.31-00.39.37:856][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Smooth_M.uasset"
-[2019.01.31-00.39.37:888][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_CobbleStone_Smooth_N.uasset"
-[2019.01.31-00.39.37:933][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Grime_D.uasset"
-[2019.01.31-00.39.37:996][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Panels_D.uasset"
-[2019.01.31-00.39.38:114][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Panels_N.uasset"
-[2019.01.31-00.39.38:457][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Poured_D.uasset"
-[2019.01.31-00.39.38:599][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Poured_N.uasset"
-[2019.01.31-00.39.38:674][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Tiles_D.uasset"
-[2019.01.31-00.39.38:738][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Tiles_M.uasset"
-[2019.01.31-00.39.38:967][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Tiles_N.uasset"
-[2019.01.31-00.39.38:970][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Concrete_Tiles_Variation_M.uasset"
-[2019.01.31-00.39.38:982][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Detail_Rocky_N.uasset"
-[2019.01.31-00.39.38:987][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Door_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Door_M.uasset"
-[2019.01.31-00.39.38:992][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Door_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Door_N.uasset"
-[2019.01.31-00.39.38:993][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Dust_Particle_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Dust_Particle_D.uasset"
-[2019.01.31-00.39.39:011][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Explosion_SubUV.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Explosion_SubUV.uasset"
-[2019.01.31-00.39.39:019][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Fire_SubUV.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Fire_SubUV.uasset"
-[2019.01.31-00.39.39:031][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Fire_Tiled_D.uasset"
-[2019.01.31-00.39.39:040][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Frame_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Frame_M.uasset"
-[2019.01.31-00.39.39:056][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Frame_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Frame_N.uasset"
-[2019.01.31-00.39.39:058][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Gradinet_01.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Gradinet_01.uasset"
-[2019.01.31-00.39.39:268][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Grass_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Ground_Grass_D.uasset"
-[2019.01.31-00.39.39:468][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Grass_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Ground_Grass_N.uasset"
-[2019.01.31-00.39.39:543][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Ground_Gravel_D.uasset"
-[2019.01.31-00.39.39:606][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Ground_Gravel_N.uasset"
-[2019.01.31-00.39.39:749][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_ground_Moss_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_ground_Moss_D.uasset"
-[2019.01.31-00.39.39:822][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Ground_Moss_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Ground_Moss_N.uasset"
-[2019.01.31-00.39.39:830][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Lamp_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Lamp_M.uasset"
-[2019.01.31-00.39.39:848][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Lamp_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Lamp_N.uasset"
-[2019.01.31-00.39.39:944][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_MacroVariation.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_MacroVariation.uasset"
-[2019.01.31-00.39.40:011][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Aluminum_D.uasset"
-[2019.01.31-00.39.40:087][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Copper_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Copper_D.uasset"
-[2019.01.31-00.39.40:404][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Gold_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Gold_D.uasset"
-[2019.01.31-00.39.40:506][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Gold_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Gold_N.uasset"
-[2019.01.31-00.39.40:675][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Rust_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Rust_D.uasset"
-[2019.01.31-00.39.40:734][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Rust_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Rust_N.uasset"
-[2019.01.31-00.39.40:764][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Steel_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Steel_D.uasset"
-[2019.01.31-00.39.40:797][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Metal_Steel_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Metal_Steel_N.uasset"
-[2019.01.31-00.39.40:856][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Perlin_Noise_M.uasset"
-[2019.01.31-00.39.40:882][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_RockMesh_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_RockMesh_M.uasset"
-[2019.01.31-00.39.40:926][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_RockMesh_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_RockMesh_N.uasset"
-[2019.01.31-00.39.41:031][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Basalt_D.uasset"
-[2019.01.31-00.39.41:082][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Basalt_N.uasset"
-[2019.01.31-00.39.41:116][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Marble_Polished_D.uasset"
-[2019.01.31-00.39.41:189][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Sandstone_D.uasset"
-[2019.01.31-00.39.41:285][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Sandstone_N.uasset"
-[2019.01.31-00.39.41:406][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Slate_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Slate_D.uasset"
-[2019.01.31-00.39.41:483][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Slate_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Slate_N.uasset"
-[2019.01.31-00.39.41:750][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Rock_Smooth_Granite_D.uasset"
-[2019.01.31-00.39.41:756][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Shelf_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Shelf_M.uasset"
-[2019.01.31-00.39.41:764][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Shelf_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Shelf_N.uasset"
-[2019.01.31-00.39.41:765][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Single_Tile_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Single_Tile_N.uasset"
-[2019.01.31-00.39.41:778][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Smoke_SubUV.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Smoke_SubUV.uasset"
-[2019.01.31-00.39.41:789][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Smoke_Tiled_D.uasset"
-[2019.01.31-00.39.41:791][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Spark_Core.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Spark_Core.uasset"
-[2019.01.31-00.39.41:796][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Statue_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Statue_M.uasset"
-[2019.01.31-00.39.41:800][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Statue_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Statue_N.uasset"
-[2019.01.31-00.39.41:806][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_TableRound_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_TableRound_M.uasset"
-[2019.01.31-00.39.41:812][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_TableRound_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_TableRound_N.uasset"
-[2019.01.31-00.39.41:814][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Dot_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Tech_Dot_M.uasset"
-[2019.01.31-00.39.41:817][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Dot_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Tech_Dot_N.uasset"
-[2019.01.31-00.39.41:829][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Tech_Hex_Tile_M.uasset"
-[2019.01.31-00.39.41:832][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Tech_Hex_Tile_N.uasset"
-[2019.01.31-00.39.41:845][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Panel_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Tech_Panel_M.uasset"
-[2019.01.31-00.39.41:862][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Tech_Panel_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Tech_Panel_N.uasset"
-[2019.01.31-00.39.41:878][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Water_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Water_M.uasset"
-[2019.01.31-00.39.41:907][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Water_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Water_N.uasset"
-[2019.01.31-00.39.41:945][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Floor_Walnut_D.uasset"
-[2019.01.31-00.39.41:984][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Floor_Walnut_M.uasset"
-[2019.01.31-00.39.42:003][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Floor_Walnut_N.uasset"
-[2019.01.31-00.39.42:073][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Oak_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Oak_D.uasset"
-[2019.01.31-00.39.42:135][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Oak_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Oak_N.uasset"
-[2019.01.31-00.39.42:244][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Pine_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Pine_D.uasset"
-[2019.01.31-00.39.42:275][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Pine_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Pine_N.uasset"
-[2019.01.31-00.39.42:293][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Walnut_D.uasset"
-[2019.01.31-00.39.42:309][  0]LogPackFactory: Copied "../../../Samples/StarterContent/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset" to "../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Textures/T_Wood_Walnut_N.uasset"
-[2019.01.31-00.39.42:318][  0]LogStaticMesh: Building static mesh Floor_400x400...
-[2019.01.31-00.39.42:320][  0]LogStaticMesh: Built static mesh [0.00s] /Game/StarterContent/Architecture/Floor_400x400.Floor_400x400
-[2019.01.31-00.39.42:356][  0]LogRenderer: Reallocating scene render targets to support 256x256 Format 10 NumSamples 1 (Frame:1).
-[2019.01.31-00.39.42:474][  0]LogSavePackage: Moving '../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Saved/Floor_400x400CD3023DE48017291F79F86987429F95A.tmp' to '../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Architecture/Floor_400x400.uasset'
-[2019.01.31-00.39.42:476][  0]LogFeaturePack: Warning: Inserted 1 feature packs
-[2019.01.31-00.39.42:477][  0]Cmd: MAP LOAD FILE="../../../../../../Users/jarr0036/Desktop/Terminus_22XX/Content/StarterContent/Maps/Minimal_Default.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.01.31-00.39.42:478][  0]LightingResults: New page: Lighting Build
-[2019.01.31-00.39.42:480][  0]MapCheck: New page: Map Check
-[2019.01.31-00.39.42:480][  0]LightingResults: New page: Lighting Build
-[2019.01.31-00.39.42:828][  0]LogAIModule: Creating AISystem for world Minimal_Default
-[2019.01.31-00.39.42:834][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.01.31-00.39.42:853][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.01.31-00.39.42:925][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 72.164ms to complete.
-[2019.01.31-00.39.42:925][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.448
-[2019.01.31-00.39.43:048][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.31-00.39.43:056][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.31-00.39.43:061][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.31-00.39.43:068][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.31-00.39.43:075][  0]LogCollectionManager: Loaded 0 collections in 0.001074 seconds
-[2019.01.31-00.39.43:120][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jarr0036/Desktop/Terminus_22XX/Saved/Collections/' took 0.01s
-[2019.01.31-00.39.43:120][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jarr0036/Desktop/Terminus_22XX/Content/Developers/jarr0036/Collections/' took 0.01s
-[2019.01.31-00.39.43:120][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jarr0036/Desktop/Terminus_22XX/Content/Collections/' took 0.01s
-[2019.01.31-00.39.43:120][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
-[2019.01.31-00.39.43:130][  0]LogContentBrowser: Native class hierarchy populated in 0.0082 seconds. Added 2573 classes and 605 folders.
-[2019.01.31-00.39.43:138][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2019.01.31-00.39.43:225][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2019.01.31-00.39.43:235][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
-[2019.01.31-00.39.43:264][  0]LogSlate: Took 0.000294 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.01.31-00.39.43:266][  0]LogSlate: Took 0.000307 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.01.31-00.39.43:273][  0]LogSlate: Took 0.001258 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.01.31-00.39.43:322][  0]LogRenderer: Reallocating scene render targets to support 1616x812 Format 10 NumSamples 1 (Frame:1).
-[2019.01.31-00.39.43:413][  0]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2019.01.31-00.39.43:424][  0]LogSlate: Window 'Tutorials' being destroyed
-[2019.01.31-00.39.43:452][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2019.01.31-00.39.43:452][  0]LogLoad: (Engine Initialization) Total time: 13.23 seconds
-[2019.01.31-00.39.43:452][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.01.31-00.39.43:462][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2019.01.31-00.39.43:480][  0]LogAssetRegistry: Asset discovery search completed in 9.9759 seconds
-[2019.01.31-00.39.43:482][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
-[2019.01.31-00.39.43:482][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000039 seconds (updated 0 objects)
-[2019.01.31-00.39.43:570][  0]LogContentStreaming: Texture pool size now 3000 MB
-[2019.01.31-00.39.48:899][625]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.01.31-00.39.49:032][641]LogTemp: Repeating last play command: Selected Viewport
-[2019.01.31-00.39.49:037][641]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2019.01.31-00.39.49:037][641]LogPlayLevel: PlayLevel: No blueprints needed recompiling
-[2019.01.31-00.39.49:051][641]PIE: New page: PIE session: Minimal_Default (Jan 30, 2019, 2:39:49 PM)
-[2019.01.31-00.39.49:051][641]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
-[2019.01.31-00.39.49:054][641]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002963s)
-[2019.01.31-00.39.49:054][641]LogAIModule: Creating AISystem for world Minimal_Default
-[2019.01.31-00.39.49:054][641]LogPlayLevel: PIE: World Init took: (0.000519s)
-[2019.01.31-00.39.49:054][641]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.003593s)
-[2019.01.31-00.39.49:072][641]LogInit: XAudio2 using 'DELL P2715Q (NVIDIA High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
-[2019.01.31-00.39.49:077][641]LogInit: FAudioDevice initialized.
-[2019.01.31-00.39.49:119][641]LogUObjectGlobals: Warning: Failed to find object 'Class /Script/Terminus_22XX.Terminus_22XXGameMode'
-[2019.01.31-00.39.49:120][641]LogLoad: Game class is 'GameModeBase'
-[2019.01.31-00.39.49:121][641]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2019.01.30-19.39.49
-[2019.01.31-00.39.49:121][641]LogWorld: Bringing up level for play took: 0.000614
-[2019.01.31-00.39.49:138][641]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0003 seconds. Added 10 classes and 0 folders.
-[2019.01.31-00.39.49:139][641]PIE: Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.737
-[2019.01.31-00.39.49:139][641]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2019.01.31-00.40.02:817][278]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2019.01.31-00.40.02:818][278]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.31-00.40.02:849][278]LogPlayLevel: Display: Shutting down PIE online subsystems
-[2019.01.31-00.40.02:850][278]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
-[2019.01.31-00.40.02:866][278]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.01.31-00.40.02:917][281]LogPlayLevel: Display: Destroying online subsystem :Context_2
-[2019.01.31-00.40.04:218][433]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.01.31-00.40.14:961][718]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
-[2019.01.31-00.40.16:238][859]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (BP_Sky_Sphere)
-[2019.01.31-00.40.17:343][988]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.01.31-00.40.19:195][205]LogSlate: Window 'Terminus_22XX - Unreal Editor' being destroyed
-[2019.01.31-00.40.19:375][206]Cmd: QUIT_EDITOR
-[2019.01.31-00.40.19:683][206]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2019.01.31-00.40.19:722][206]LogExit: Preparing to exit.
-[2019.01.31-00.40.20:289][206]LogExit: Editor shut down
-[2019.01.31-00.40.20:289][206]LogExit: Transaction tracking system shut down
-[2019.01.31-00.40.20:723][206]LogExit: Object subsystem successfully closed.
-[2019.01.31-00.40.20:736][206]LogShaderCompilers: Display: Shaders left to compile 0
-[2019.01.31-00.40.20:738][206]LogD3D11RHI: Shutdown
-[2019.01.31-00.40.20:738][206]LogD3D11RHI: CleanupD3DDevice
-[2019.01.31-00.40.20:740][206]LogD3D11RHI: ~FD3D11DynamicRHI
-[2019.01.31-00.40.20:759][206]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (618)
-[2019.01.31-00.40.20:759][206]LogModuleManager: Shutting down and abandoning module Voice (616)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (614)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module SceneOutliner (612)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module AddContentDialog (610)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module WidgetCarousel (609)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module EditorWidgets (606)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module CollectionManager (604)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module StatsViewer (602)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module MeshBuilder (600)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module FoliageEdit (598)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module LandscapeEditor (596)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module MeshPaintMode (594)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (592)
-[2019.01.31-00.40.20:760][206]LogModuleManager: Shutting down and abandoning module ActorPickerMode (590)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module GeometryMode (588)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module TextureAlignMode (586)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module BspMode (584)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (582)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (580)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AutomationWorker (578)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (576)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module SequenceRecorder (575)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (572)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (570)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module PlacementMode (569)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module MaterialEditor (568)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (564)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (562)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (560)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (558)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (556)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (554)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (552)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (550)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (548)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (546)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (544)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (542)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (540)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module CharacterAI (538)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module SmartSnapping (536)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module SessionServices (534)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module ViewportSnapping (532)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module ViewportInteraction (530)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module ClothPainter (528)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (527)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module LogVisualizer (524)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module IntroTutorials (522)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (521)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (518)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (516)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (514)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (512)
-[2019.01.31-00.40.20:761][206]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (511)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (508)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (506)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (504)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (502)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module InputBindingEditor (500)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module MergeActors (498)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (496)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module LocalizationService (495)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module HardwareTargeting (492)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (490)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module UndoHistory (488)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module XmlParser (486)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module Blutility (484)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (482)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (481)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (478)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module SettingsEditor (476)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module ProjectLauncher (474)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module SessionFrontend (472)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module ProfilerClient (470)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module DeviceManager (468)
-[2019.01.31-00.40.21:079][206]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (467)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module AutomationController (464)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module AutomationWindow (462)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module Layers (460)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (458)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module DetailCustomizations (456)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module PackagesDialog (454)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module Persona (452)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (451)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module AnimGraph (449)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module Kismet (446)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module GraphEditor (444)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module ClassViewer (442)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module Toolbox (440)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module DesktopPlatform (439)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module ModuleUI (436)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module MovieSceneTools (434)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module OutputLog (432)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module GammaUI (430)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module Documentation (428)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (426)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module MovieScene (424)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (422)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module LauncherPlatform (420)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module AnalyticsET (418)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module PortalServices (416)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module PortalRpc (414)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module MessagingRpc (412)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module AIModule (410)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module GameplayDebugger (409)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module AITestSuite (407)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module NavigationSystem (405)
-[2019.01.31-00.40.21:143][206]LogModuleManager: Shutting down and abandoning module ProfilerService (402)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module TaskGraph (400)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module SteamVRController (398)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (396)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (394)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module OculusInput (392)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (390)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module EditableMesh (388)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (386)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module CableComponent (384)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module AudioCapture (382)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (380)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module AndroidPermission (378)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (376)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (374)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (372)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module MediaCompositing (370)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module LinearTimecode (368)
-[2019.01.31-00.40.21:364][206]LogModuleManager: Shutting down and abandoning module ImgMedia (366)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module HTML5Networking (364)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (362)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (360)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module BackChannel (358)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module AppleVision (356)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module AppleImageUtils (354)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module AlembicImporter (352)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module AlembicLibrary (351)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module GeometryCache (350)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (349)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (344)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module DatasmithContent (342)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (340)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module PluginBrowser (338)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (336)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module PolygonModeling (334)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module MeshEditor (332)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (330)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module CryptoKeys (328)
-[2019.01.31-00.40.21:366][206]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (326)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (324)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module UObjectPlugin (322)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (320)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (318)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module GitSourceControl (316)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module SourceControl (315)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (312)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (310)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (308)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (306)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module Paper2DEditor (304)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module MeshPaint (303)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module Terminus_22XX (300)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (298)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (296)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module PhysXVehicles (294)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module OculusEditor (292)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (290)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module ImmediatePhysicsEditor (288)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module ImmediatePhysics (286)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module ActorSequence (284)
-[2019.01.31-00.40.21:367][206]LogModuleManager: Shutting down and abandoning module UdpMessaging (282)
-[2019.01.31-00.40.21:468][206]LogModuleManager: Shutting down and abandoning module TcpMessaging (280)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (278)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (276)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (274)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module FacialAnimation (272)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module DataValidation (270)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (268)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module LevelEditor (267)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (266)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (264)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module MainFrame (262)
-[2019.01.31-00.40.21:568][206]LogModuleManager: Shutting down and abandoning module HotReload (261)
-[2019.01.31-00.40.21:569][206]LogModuleManager: Shutting down and abandoning module ContentBrowser (257)
-[2019.01.31-00.40.21:569][206]LogModuleManager: Shutting down and abandoning module TreeMap (255)
-[2019.01.31-00.40.21:569][206]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (252)
-[2019.01.31-00.40.21:569][206]LogModuleManager: Shutting down and abandoning module AISupportModule (250)
-[2019.01.31-00.40.21:569][206]LogModuleManager: Shutting down and abandoning module Paper2D (248)
-[2019.01.31-00.40.21:569][206]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (246)
-[2019.01.31-00.40.21:569][206]LogModuleManager: Shutting down and abandoning module WmfMedia (244)
-[2019.01.31-00.40.21:570][206]LogModuleManager: Shutting down and abandoning module Media (243)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module PacketHandler (240)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (238)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (236)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module MediaAssets (234)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module Overlay (232)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module OverlayEditor (231)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module VREditor (228)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module StringTableEditor (226)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (224)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (222)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module FunctionalTesting (220)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (218)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (217)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module UMG (214)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module UMGEditor (213)
-[2019.01.31-00.40.21:577][206]LogModuleManager: Shutting down and abandoning module Sequencer (212)
-[2019.01.31-00.40.21:578][206]LogModuleManager: Shutting down and abandoning module MessageLog (209)
-[2019.01.31-00.40.21:578][206]LogModuleManager: Shutting down and abandoning module SlateReflector (204)
-[2019.01.31-00.40.21:578][206]LogModuleManager: Shutting down and abandoning module Slate (202)
-[2019.01.31-00.40.21:578][206]LogModuleManager: Shutting down and abandoning module EditorStyle (200)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module MRMesh (198)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (196)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (194)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module XAudio2 (192)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module Networking (190)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module Core (188)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module LevelSequence (186)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module KismetCompiler (184)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module MeshUtilities (182)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (181)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (180)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (179)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (177)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (175)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (173)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module MaterialBaking (169)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (165)
-[2019.01.31-00.40.21:579][206]LogModuleManager: Shutting down and abandoning module DerivedDataCache (162)
-[2019.01.31-00.40.21:974][206]LogDerivedDataCache: Shutdown
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module XGEController (160)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TargetPlatform (158)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (157)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (155)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (153)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (151)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (149)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (147)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (145)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (143)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (141)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (139)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module ImageWrapper (138)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (135)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (133)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (131)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (129)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (127)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (125)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (123)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (121)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (119)
-[2019.01.31-00.40.21:974][206]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (117)
-[2019.01.31-00.40.21:975][206]LogModuleManager: Shutting down and abandoning module Messaging (115)
-[2019.01.31-00.40.21:975][206]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (113)
-[2019.01.31-00.40.21:975][206]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (111)
-[2019.01.31-00.40.21:975][206]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (109)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (107)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (105)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (103)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (101)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (99)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (97)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (95)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (93)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (91)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module InputCore (88)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module Settings (86)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module PhysXCooking (84)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module SteamVR (82)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module OculusHMD (80)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (78)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (76)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (74)
-[2019.01.31-00.40.21:980][206]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (70)
-[2019.01.31-00.40.21:981][206]LogModuleManager: Shutting down and abandoning module XMPP (65)
-[2019.01.31-00.40.21:981][206]LogModuleManager: Shutting down and abandoning module WebSockets (64)
-[2019.01.31-00.40.21:997][206]LogModuleManager: Shutting down and abandoning module HTTP (61)
-[2019.01.31-00.40.21:997][206]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
-[2019.01.31-00.40.21:997][206]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B0C2A8192-4C40-F558-C5C5-6E8807D23808%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.20.0-4212847%2B%2B%2BUE4%2BRelease-4.20&UserID=bbe0968745d5411d8e26739d837c6f0c%7C2bd54f50d3474bbaa066b5568058959f%7C3accedf6-b590-40bb-a071-6c5cbc8d5e09&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
-[2019.01.31-00.40.22:006][206]LogModuleManager: Shutting down and abandoning module SSL (60)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapEmulator (56)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapPrivileges (54)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (52)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (50)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (48)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (46)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapGestures (44)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (42)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeapController (40)
-[2019.01.31-00.40.22:007][206]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module MagicLeap (38)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module AnimationModifiers (36)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module PropertyEditor (35)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module AudioEditor (32)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module TextureCompressor (30)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module ShaderCore (28)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module Landscape (26)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module OpenGLDrv (22)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module D3D11RHI (20)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (18)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module Renderer (16)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module Engine (14)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module CoreUObject (12)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module NetworkFile (10)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (8)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
-[2019.01.31-00.40.22:007][206]LogModuleManager: Shutting down and abandoning module PakFile (2)
-[2019.01.31-00.40.22:011][206]LogExit: Exiting.
-[2019.01.31-00.40.22:025][206]Log file closed, 01/30/19 19:40:22
+[2019.02.01-20.44.39:744][  0]LogInit: Selected Device Profile: [Windows]
+[2019.02.01-20.44.39:744][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.02.01-20.44.39:755][  0]LogHAL: Display: Platform has ~ 16 GB [17136545792 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.02.01-20.44.39:755][  0]LogInit: Setting Device Profile CVar: [[r.Vulkan.UseRealUBs:1]]
+[2019.02.01-20.44.39:755][  0]LogInit: Going up to parent DeviceProfile []
+[2019.02.01-20.44.39:755][  0]LogInit: Computer: RENZY-GAMING
+[2019.02.01-20.44.39:755][  0]LogInit: User: Renzy
+[2019.02.01-20.44.39:755][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.02.01-20.44.39:755][  0]LogInit: High frequency timer resolution =3.421876 MHz
+[2019.02.01-20.44.39:756][  0]LogMemory: Memory total: Physical=16.0GB (16GB approx)
+[2019.02.01-20.44.39:756][  0]LogMemory: Platform Memory Stats for Windows
+[2019.02.01-20.44.39:756][  0]LogMemory: Process Physical Memory: 101.19 MB used, 101.19 MB peak
+[2019.02.01-20.44.39:756][  0]LogMemory: Process Virtual Memory: 84.29 MB used, 84.29 MB peak
+[2019.02.01-20.44.39:756][  0]LogMemory: Physical Memory: 7884.24 MB used,  8458.45 MB free, 16342.68 MB total
+[2019.02.01-20.44.39:756][  0]LogMemory: Virtual Memory: 4625.35 MB used,  8458.45 MB free, 134217728.00 MB total
+[2019.02.01-20.44.39:833][  0]LogInit: Using OS detected language (en-US).
+[2019.02.01-20.44.39:833][  0]LogInit: Using OS detected locale (en-CA).
+[2019.02.01-20.44.39:834][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.02.01-20.44.40:108][  0]LogStreaming: Display: Took  0.274s to InitEngineTextLocalization.
+[2019.02.01-20.44.40:108][  0]LogInit: Setting process to per monitor DPI aware
+[2019.02.01-20.44.40:160][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.02.01-20.44.40:160][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.02.01-20.44.40:418][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.02.01-20.44.40:418][  0]LogD3D11RHI: D3D11 adapters:
+[2019.02.01-20.44.40:479][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1060 6GB' (Feature Level 11_0)
+[2019.02.01-20.44.40:479][  0]LogD3D11RHI:       6052/0/8171 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2019.02.01-20.44.40:483][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.02.01-20.44.40:483][  0]LogD3D11RHI:       0/0/8171 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.02.01-20.44.40:483][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.02.01-20.44.40:489][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.02.01-20.44.40:489][  0]LogD3D11RHI:     GPU DeviceId: 0x1c03 (for the marketing name, search the web for "GPU Device Id")
+[2019.02.01-20.44.40:489][  0]LogWindows: EnumDisplayDevices:
+[2019.02.01-20.44.40:489][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1060 6GB' (P:1 D:1)
+[2019.02.01-20.44.40:490][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:1)
+[2019.02.01-20.44.40:490][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:0)
+[2019.02.01-20.44.40:490][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1060 6GB' (P:0 D:0)
+[2019.02.01-20.44.40:490][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2019.02.01-20.44.40:490][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1060 6GB
+[2019.02.01-20.44.40:490][  0]LogD3D11RHI:   Driver Version: 417.71 (internal:25.21.14.1771, unified:417.71)
+[2019.02.01-20.44.40:490][  0]LogD3D11RHI:      Driver Date: 1-11-2019
+[2019.02.01-20.44.40:491][  0]LogRHI: Texture pool is 4236 MB (70% of 6052 MB)
+[2019.02.01-20.44.40:526][  0]LogD3D11RHI: Async texture creation enabled
+[2019.02.01-20.44.40:555][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2019.02.01-20.44.40:645][  0]LogShaderCompilers: Guid format shader working directory is -64 characters bigger than the processId version (../../../../../../Renzy/Documents/Algonquin/Term 4/GAM1528 - High Level Development 2/Assignments/GOOB-master/Intermediate/Shaders/WorkingDirectory/14924/).
+[2019.02.01-20.44.40:645][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/Renzy/AppData/Local/Temp/UnrealShaderWorkingDir/258B60134E6D41F4F38A6DAE9401834B/'.
+[2019.02.01-20.44.40:848][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2019.02.01-20.44.40:859][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2019.02.01-20.44.40:871][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2019.02.01-20.44.40:883][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2019.02.01-20.44.40:893][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2019.02.01-20.44.40:905][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2019.02.01-20.44.40:917][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2019.02.01-20.44.40:929][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2019.02.01-20.44.40:936][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:996][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.01-20.44.40:999][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2019.02.01-20.44.41:062][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.02.01-20.44.41:062][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.02.01-20.44.41:082][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.02.01-20.44.41:082][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.02.01-20.44.41:093][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2019.02.01-20.44.41:105][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2019.02.01-20.44.41:116][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2019.02.01-20.44.41:129][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2019.02.01-20.44.41:138][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
+[2019.02.01-20.44.41:138][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.02.01-20.44.41:236][  0]LogXGEController: Cleaning working directory: C:/Users/Renzy/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.02.01-20.44.41:236][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.02.01-20.44.41:236][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.02.01-20.44.41:236][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.02.01-20.44.41:764][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.02.01-20.44.41:807][  0]LogDerivedDataCache: Loaded boot cache 0.04s 71MB C:/Users/Renzy/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2019.02.01-20.44.41:808][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/Renzy/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc
+[2019.02.01-20.44.41:808][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Renzy/Documents/Algonquin/Term 4/GAM1528 - High Level Development 2/Assignments/GOOB-master/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.02.01-20.44.41:808][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.02.01-20.44.41:808][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Renzy/Documents/Algonquin/Term 4/GAM1528 - High Level Development 2/Assignments/GOOB-master/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.02.01-20.44.41:808][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.02.01-20.44.41:818][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.02.01-20.44.41:831][  0]LogDerivedDataCache: Using Local data cache path C:/Users/Renzy/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.02.01-20.44.41:831][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.02.01-20.44.41:831][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.02.01-20.44.41:845][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.02.01-20.44.41:846][  0]LogSlate: Using FreeType 2.6.0
+[2019.02.01-20.44.41:847][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.02.01-20.44.41:917][  0]LogAssetRegistry: FAssetRegistry took 0.0260 seconds to start up
+[2019.02.01-20.44.42:147][  0]LogInit: Selected Device Profile: [Windows]
+[2019.02.01-20.44.42:203][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2019.02.01-20.44.42:209][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2019.02.01-20.44.42:209][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.02.01-20.44.42:209][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.02.01-20.44.42:210][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2019.02.01-20.44.42:287][  0]LogNetVersion: Terminus_22XX 1.0.0, NetCL: 4212847, EngineNetVer: 5, GameNetVer: 0 (Checksum: 1011408813)
+[2019.02.01-20.44.42:720][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.106587 seconds
+[2019.02.01-20.44.42:725][  0]LogUObjectArray: 38425 objects as part of root set at end of initial load.
+[2019.02.01-20.44.42:725][  0]LogUObjectAllocator: 6690872 out of 0 bytes used by permanent object pool.
+[2019.02.01-20.44.42:725][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.02.01-20.44.43:555][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.02.01-20.44.43:571][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.02.01-20.44.43:749][  0]SourceControl: Source control is disabled
+[2019.02.01-20.44.43:749][  0]SourceControl: Source control is disabled
+[2019.02.01-20.44.43:752][  0]SourceControl: Source control is disabled
+[2019.02.01-20.44.43:755][  0]SourceControl: Source control is disabled
+[2019.02.01-20.44.44:013][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.02.01-20.44.44:140][  0]LogOcInput: OculusInput pre-init called
+[2019.02.01-20.44.44:202][  0]LogEngine: Initializing Engine...
+[2019.02.01-20.44.44:203][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.02.01-20.44.44:204][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.02.01-20.44.44:204][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.02.01-20.44.44:205][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.02.01-20.44.44:205][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.02.01-20.44.44:356][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.02.01-20.44.44:365][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.02.01-20.44.44:431][  0]LogInit: XAudio2 using 'Speakers (Sound BlasterX AE-5)' : 6 channels at 48 kHz using 32 bits per sample (channel mask 0x3f)
+[2019.02.01-20.44.44:451][  0]LogInit: FAudioDevice initialized.
+[2019.02.01-20.44.44:451][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.02.01-20.44.44:512][  0]LogDerivedDataCache: Saved boot cache 0.06s 71MB C:/Users/Renzy/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2019.02.01-20.44.44:519][  0]LogInit: Texture streaming: Enabled
+[2019.02.01-20.44.44:537][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.02.01-20.44.44:546][  0]LogInit: Transaction tracking system initialized
+[2019.02.01-20.44.44:569][  0]BlueprintLog: New page: Editor Load
+[2019.02.01-20.44.44:664][  0]LocalizationService: Localization service is disabled
+[2019.02.01-20.44.44:895][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.02.01-20.44.44:895][  0]LogCook: Display: Mobile HDR setting 1
+[2019.02.01-20.44.44:895][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2019.02.01-20.44.44:895][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.02.01-20.44.44:895][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.02.01-20.44.44:896][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.02.01-20.44.44:896][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.02.01-20.44.45:038][  0]LogFileCache: Scanning file cache for directory 'F:/Renzy/Documents/Algonquin/Term 4/GAM1528 - High Level Development 2/Assignments/GOOB-master/Content/' took 0.01s
+[2019.02.01-20.44.45:038][  0]SourceControl: Source control is disabled
+[2019.02.01-20.44.45:039][  0]LightingResults: New page: Lighting Build
+[2019.02.01-20.44.45:041][  0]MapCheck: New page: Map Check
+[2019.02.01-20.44.45:041][  0]LightingResults: New page: Lighting Build
+[2019.02.01-20.44.45:297][  0]LogAIModule: Creating AISystem for world Minimal_Default
+[2019.02.01-20.44.45:304][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.02.01-20.44.45:323][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.02.01-20.44.45:379][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 56.056ms to complete.
+[2019.02.01-20.44.45:379][  0]LogFileHelpers: Loading map 'Minimal_Default' took 0.340
+[2019.02.01-20.44.45:510][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.44.45:517][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.44.45:522][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.44.45:528][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.44.45:534][  0]LogCollectionManager: Loaded 0 collections in 0.001047 seconds
+[2019.02.01-20.44.45:585][  0]LogFileCache: Scanning file cache for directory 'F:/Renzy/Documents/Algonquin/Term 4/GAM1528 - High Level Development 2/Assignments/GOOB-master/Saved/Collections/' took 0.01s
+[2019.02.01-20.44.45:585][  0]LogFileCache: Scanning file cache for directory 'F:/Renzy/Documents/Algonquin/Term 4/GAM1528 - High Level Development 2/Assignments/GOOB-master/Content/Developers/Renzy/Collections/' took 0.01s
+[2019.02.01-20.44.45:585][  0]LogFileCache: Scanning file cache for directory 'F:/Renzy/Documents/Algonquin/Term 4/GAM1528 - High Level Development 2/Assignments/GOOB-master/Content/Collections/' took 0.01s
+[2019.02.01-20.44.45:585][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2019.02.01-20.44.45:593][  0]LogContentBrowser: Native class hierarchy populated in 0.0074 seconds. Added 2574 classes and 605 folders.
+[2019.02.01-20.44.45:597][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.02.01-20.44.45:652][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.02.01-20.44.45:657][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0004 seconds. Added 1 classes and 2 folders.
+[2019.02.01-20.44.45:711][  0]LogSlate: Took 0.000215 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.02.01-20.44.45:714][  0]LogSlate: Took 0.000182 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.02.01-20.44.45:719][  0]LogSlate: Took 0.000225 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.02.01-20.44.45:777][  0]LogRenderer: Reallocating scene render targets to support 1208x576 Format 10 NumSamples 1 (Frame:1).
+[2019.02.01-20.44.45:899][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.02.01-20.44.45:900][  0]LogLoad: (Engine Initialization) Total time: 7.97 seconds
+[2019.02.01-20.44.45:900][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.02.01-20.44.45:910][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.02.01-20.44.45:928][  0]LogAssetRegistry: Asset discovery search completed in 4.0345 seconds
+[2019.02.01-20.44.45:930][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000000 seconds (found 0 objects)
+[2019.02.01-20.44.45:930][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000097 seconds (updated 0 objects)
+[2019.02.01-20.44.45:931][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.02.01-20.44.45:994][  0]LogSlate: Took 0.000164 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.02.01-20.44.46:734][ 86]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.01-20.44.46:801][ 94]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.01-20.44.46:814][ 94]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.44.46:814][ 94]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.01-20.44.46:827][ 94]PIE: New page: PIE session: Minimal_Default (Feb 1, 2019, 10:44:46 AM)
+[2019.02.01-20.44.46:827][ 94]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2019.02.01-20.44.46:831][ 94]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003169s)
+[2019.02.01-20.44.46:831][ 94]LogAIModule: Creating AISystem for world Minimal_Default
+[2019.02.01-20.44.46:831][ 94]LogPlayLevel: PIE: World Init took: (0.000651s)
+[2019.02.01-20.44.46:831][ 94]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.004091s)
+[2019.02.01-20.44.46:871][ 94]LogInit: XAudio2 using 'Speakers (Sound BlasterX AE-5)' : 6 channels at 48 kHz using 32 bits per sample (channel mask 0x3f)
+[2019.02.01-20.44.46:885][ 94]LogInit: FAudioDevice initialized.
+[2019.02.01-20.44.46:930][ 94]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.01-20.44.46:931][ 94]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2019.02.01-15.44.46
+[2019.02.01-20.44.46:931][ 94]LogWorld: Bringing up level for play took: 0.000683
+[2019.02.01-20.44.46:947][ 94]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0004 seconds. Added 10 classes and 0 folders.
+[2019.02.01-20.44.46:948][ 94]PIE: Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default -0.731
+[2019.02.01-20.44.46:949][ 94]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.45.13:605][287]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.45.13:605][287]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.45.13:642][287]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.01-20.45.13:642][287]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.45.13:660][287]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.45.13:707][292]LogPlayLevel: Display: Destroying online subsystem :Context_1
+[2019.02.01-20.45.18:015][809]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.01-20.45.18:082][817]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.01-20.45.18:096][817]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.45.18:096][817]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.01-20.45.18:096][817]PIE: New page: PIE session: Minimal_Default (Feb 1, 2019, 10:45:18 AM)
+[2019.02.01-20.45.18:097][817]LogPlayLevel: Creating play world package: /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default
+[2019.02.01-20.45.18:099][817]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002254s)
+[2019.02.01-20.45.18:100][817]LogAIModule: Creating AISystem for world Minimal_Default
+[2019.02.01-20.45.18:100][817]LogPlayLevel: PIE: World Init took: (0.000921s)
+[2019.02.01-20.45.18:100][817]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/StarterContent/Maps/Minimal_Default.Minimal_Default to /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default (0.003614s)
+[2019.02.01-20.45.18:139][817]LogInit: XAudio2 using 'Speakers (Sound BlasterX AE-5)' : 6 channels at 48 kHz using 32 bits per sample (channel mask 0x3f)
+[2019.02.01-20.45.18:154][817]LogInit: FAudioDevice initialized.
+[2019.02.01-20.45.18:188][817]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.01-20.45.18:189][817]LogWorld: Bringing World /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default.Minimal_Default up for play (max tick rate 0) at 2019.02.01-15.45.18
+[2019.02.01-20.45.18:190][817]LogWorld: Bringing up level for play took: 0.000850
+[2019.02.01-20.45.18:203][817]PIE: Play in editor start time for /Game/StarterContent/Maps/UEDPIE_0_Minimal_Default 0.523
+[2019.02.01-20.45.18:203][817]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.45.23:836][491]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.45.23:836][491]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.45.23:874][491]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.01-20.45.23:874][491]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel' has LevelScriptBlueprint '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default' with GeneratedClass '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default_C' with ClassGeneratedBy '/Game/StarterContent/Maps/Minimal_Default.Minimal_Default:PersistentLevel.Minimal_Default'
+[2019.02.01-20.45.23:892][491]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.01-20.45.23:938][496]LogPlayLevel: Display: Destroying online subsystem :Context_2
+[2019.02.01-20.45.33:664][663]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.01-20.45.33:821][673]LogSlate: Window 'Terminus_22XX - Unreal Editor' being destroyed
+[2019.02.01-20.45.33:821][673]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.02.01-20.45.33:823][673]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.02.01-20.45.33:985][674]Cmd: QUIT_EDITOR
+[2019.02.01-20.45.34:709][674]LogExit: Preparing to exit.
+[2019.02.01-20.45.35:045][674]LogExit: Editor shut down
+[2019.02.01-20.45.35:045][674]LogExit: Transaction tracking system shut down
+[2019.02.01-20.45.35:668][674]LogExit: Object subsystem successfully closed.
+[2019.02.01-20.45.35:687][674]LogShaderCompilers: Display: Shaders left to compile 0
+[2019.02.01-20.45.35:690][674]LogD3D11RHI: Shutdown
+[2019.02.01-20.45.35:690][674]LogD3D11RHI: CleanupD3DDevice
+[2019.02.01-20.45.35:691][674]LogD3D11RHI: ~FD3D11DynamicRHI
+[2019.02.01-20.45.35:699][674]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (616)
+[2019.02.01-20.45.35:699][674]LogModuleManager: Shutting down and abandoning module Voice (614)
+[2019.02.01-20.45.35:699][674]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (612)
+[2019.02.01-20.45.35:699][674]LogModuleManager: Shutting down and abandoning module SceneOutliner (610)
+[2019.02.01-20.45.35:699][674]LogModuleManager: Shutting down and abandoning module AddContentDialog (608)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module WidgetCarousel (607)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module EditorWidgets (604)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module CollectionManager (602)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module StatsViewer (600)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module FoliageEdit (598)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module LandscapeEditor (596)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module MeshPaintMode (594)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (592)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module ActorPickerMode (590)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module GeometryMode (588)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module TextureAlignMode (586)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module BspMode (584)
+[2019.02.01-20.45.35:700][674]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (582)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (580)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module AutomationWorker (578)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (576)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module SequenceRecorder (575)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (572)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (570)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module PlacementMode (569)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module MaterialEditor (568)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (564)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (562)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (560)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (558)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (556)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (554)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (552)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (550)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (548)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (546)
+[2019.02.01-20.45.35:701][674]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (544)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (542)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (540)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module CharacterAI (538)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module SmartSnapping (536)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module SessionServices (534)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module ViewportSnapping (532)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module ViewportInteraction (530)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module ClothPainter (528)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (527)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module LogVisualizer (524)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module IntroTutorials (522)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (521)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (518)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (516)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (514)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (512)
+[2019.02.01-20.45.35:702][674]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (511)
+[2019.02.01-20.45.35:876][674]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (508)
+[2019.02.01-20.45.35:876][674]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (506)
+[2019.02.01-20.45.35:876][674]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (504)
+[2019.02.01-20.45.35:876][674]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (502)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module InputBindingEditor (500)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module MergeActors (498)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (496)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module LocalizationService (495)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module HardwareTargeting (492)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (490)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module UndoHistory (488)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module XmlParser (486)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module Blutility (484)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (482)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (481)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (478)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module SettingsEditor (476)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module ProjectLauncher (474)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module SessionFrontend (472)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module ProfilerClient (470)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module DeviceManager (468)
+[2019.02.01-20.45.35:877][674]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (467)
+[2019.02.01-20.45.35:933][674]LogModuleManager: Shutting down and abandoning module AutomationController (464)
+[2019.02.01-20.45.35:933][674]LogModuleManager: Shutting down and abandoning module AutomationWindow (462)
+[2019.02.01-20.45.35:933][674]LogModuleManager: Shutting down and abandoning module Layers (460)
+[2019.02.01-20.45.35:933][674]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (458)
+[2019.02.01-20.45.35:933][674]LogModuleManager: Shutting down and abandoning module DetailCustomizations (456)
+[2019.02.01-20.45.35:937][674]LogModuleManager: Shutting down and abandoning module PackagesDialog (454)
+[2019.02.01-20.45.35:937][674]LogModuleManager: Shutting down and abandoning module Persona (452)
+[2019.02.01-20.45.35:938][674]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (451)
+[2019.02.01-20.45.35:941][674]LogModuleManager: Shutting down and abandoning module AnimGraph (449)
+[2019.02.01-20.45.35:942][674]LogModuleManager: Shutting down and abandoning module Kismet (446)
+[2019.02.01-20.45.35:943][674]LogModuleManager: Shutting down and abandoning module GraphEditor (444)
+[2019.02.01-20.45.35:944][674]LogModuleManager: Shutting down and abandoning module ClassViewer (442)
+[2019.02.01-20.45.35:944][674]LogModuleManager: Shutting down and abandoning module Toolbox (440)
+[2019.02.01-20.45.35:945][674]LogModuleManager: Shutting down and abandoning module DesktopPlatform (439)
+[2019.02.01-20.45.35:945][674]LogModuleManager: Shutting down and abandoning module ModuleUI (436)
+[2019.02.01-20.45.35:946][674]LogModuleManager: Shutting down and abandoning module MovieSceneTools (434)
+[2019.02.01-20.45.35:947][674]LogModuleManager: Shutting down and abandoning module OutputLog (432)
+[2019.02.01-20.45.35:947][674]LogModuleManager: Shutting down and abandoning module GammaUI (430)
+[2019.02.01-20.45.35:949][674]LogModuleManager: Shutting down and abandoning module Documentation (428)
+[2019.02.01-20.45.35:949][674]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (426)
+[2019.02.01-20.45.35:951][674]LogModuleManager: Shutting down and abandoning module MovieScene (424)
+[2019.02.01-20.45.35:951][674]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (422)
+[2019.02.01-20.45.35:954][674]LogModuleManager: Shutting down and abandoning module LauncherPlatform (420)
+[2019.02.01-20.45.35:954][674]LogModuleManager: Shutting down and abandoning module AnalyticsET (418)
+[2019.02.01-20.45.35:956][674]LogModuleManager: Shutting down and abandoning module PortalServices (416)
+[2019.02.01-20.45.35:956][674]LogModuleManager: Shutting down and abandoning module PortalRpc (414)
+[2019.02.01-20.45.35:956][674]LogModuleManager: Shutting down and abandoning module MessagingRpc (412)
+[2019.02.01-20.45.35:956][674]LogModuleManager: Shutting down and abandoning module AIModule (410)
+[2019.02.01-20.45.35:957][674]LogModuleManager: Shutting down and abandoning module GameplayDebugger (409)
+[2019.02.01-20.45.35:957][674]LogModuleManager: Shutting down and abandoning module AITestSuite (407)
+[2019.02.01-20.45.35:957][674]LogModuleManager: Shutting down and abandoning module NavigationSystem (405)
+[2019.02.01-20.45.35:958][674]LogModuleManager: Shutting down and abandoning module ProfilerService (402)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module TaskGraph (400)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module SteamVRController (398)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (396)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (394)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module OculusInput (392)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (390)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module EditableMesh (388)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (386)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module CableComponent (384)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module AudioCapture (382)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (380)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module AndroidPermission (378)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (376)
+[2019.02.01-20.45.36:002][674]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (374)
+[2019.02.01-20.45.36:003][674]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (372)
+[2019.02.01-20.45.36:003][674]LogModuleManager: Shutting down and abandoning module MediaCompositing (370)
+[2019.02.01-20.45.36:003][674]LogModuleManager: Shutting down and abandoning module LinearTimecode (368)
+[2019.02.01-20.45.36:003][674]LogModuleManager: Shutting down and abandoning module ImgMedia (366)
+[2019.02.01-20.45.36:011][674]LogModuleManager: Shutting down and abandoning module HTML5Networking (364)
+[2019.02.01-20.45.36:011][674]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (362)
+[2019.02.01-20.45.36:011][674]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (360)
+[2019.02.01-20.45.36:011][674]LogModuleManager: Shutting down and abandoning module BackChannel (358)
+[2019.02.01-20.45.36:011][674]LogModuleManager: Shutting down and abandoning module AppleVision (356)
+[2019.02.01-20.45.36:011][674]LogModuleManager: Shutting down and abandoning module AppleImageUtils (354)
+[2019.02.01-20.45.36:012][674]LogModuleManager: Shutting down and abandoning module AlembicImporter (352)
+[2019.02.01-20.45.36:012][674]LogModuleManager: Shutting down and abandoning module AlembicLibrary (351)
+[2019.02.01-20.45.36:012][674]LogModuleManager: Shutting down and abandoning module GeometryCache (350)
+[2019.02.01-20.45.36:012][674]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (349)
+[2019.02.01-20.45.36:012][674]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (344)
+[2019.02.01-20.45.36:012][674]LogModuleManager: Shutting down and abandoning module DatasmithContent (342)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (340)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module PluginBrowser (338)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (336)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module PolygonModeling (334)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module MeshEditor (332)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (330)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module CryptoKeys (328)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (326)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (324)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module UObjectPlugin (322)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (320)
+[2019.02.01-20.45.36:013][674]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (318)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module GitSourceControl (316)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module SourceControl (315)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (312)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (310)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (308)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (306)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module Paper2DEditor (304)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module MeshPaint (303)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module Terminus_22XX (300)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (298)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (296)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module PhysXVehicles (294)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module OculusEditor (292)
+[2019.02.01-20.45.36:014][674]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (290)
+[2019.02.01-20.45.36:016][674]LogModuleManager: Shutting down and abandoning module ImmediatePhysicsEditor (288)
+[2019.02.01-20.45.36:016][674]LogModuleManager: Shutting down and abandoning module ImmediatePhysics (286)
+[2019.02.01-20.45.36:017][674]LogModuleManager: Shutting down and abandoning module ActorSequence (284)
+[2019.02.01-20.45.36:017][674]LogModuleManager: Shutting down and abandoning module UdpMessaging (282)
+[2019.02.01-20.45.36:118][674]LogModuleManager: Shutting down and abandoning module TcpMessaging (280)
+[2019.02.01-20.45.36:219][674]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (278)
+[2019.02.01-20.45.36:219][674]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (276)
+[2019.02.01-20.45.36:219][674]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (274)
+[2019.02.01-20.45.36:219][674]LogModuleManager: Shutting down and abandoning module FacialAnimation (272)
+[2019.02.01-20.45.36:219][674]LogModuleManager: Shutting down and abandoning module DataValidation (270)
+[2019.02.01-20.45.36:219][674]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (268)
+[2019.02.01-20.45.36:219][674]LogModuleManager: Shutting down and abandoning module LevelEditor (267)
+[2019.02.01-20.45.36:220][674]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (266)
+[2019.02.01-20.45.36:220][674]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (264)
+[2019.02.01-20.45.36:221][674]LogModuleManager: Shutting down and abandoning module MainFrame (262)
+[2019.02.01-20.45.36:221][674]LogModuleManager: Shutting down and abandoning module HotReload (261)
+[2019.02.01-20.45.36:221][674]LogModuleManager: Shutting down and abandoning module ContentBrowser (257)
+[2019.02.01-20.45.36:223][674]LogModuleManager: Shutting down and abandoning module TreeMap (255)
+[2019.02.01-20.45.36:223][674]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (252)
+[2019.02.01-20.45.36:223][674]LogModuleManager: Shutting down and abandoning module AISupportModule (250)
+[2019.02.01-20.45.36:223][674]LogModuleManager: Shutting down and abandoning module Paper2D (248)
+[2019.02.01-20.45.36:223][674]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (246)
+[2019.02.01-20.45.36:223][674]LogModuleManager: Shutting down and abandoning module WmfMedia (244)
+[2019.02.01-20.45.36:229][674]LogModuleManager: Shutting down and abandoning module Media (243)
+[2019.02.01-20.45.36:235][674]LogModuleManager: Shutting down and abandoning module PacketHandler (240)
+[2019.02.01-20.45.36:235][674]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (238)
+[2019.02.01-20.45.36:236][674]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (236)
+[2019.02.01-20.45.36:236][674]LogModuleManager: Shutting down and abandoning module MediaAssets (234)
+[2019.02.01-20.45.36:236][674]LogModuleManager: Shutting down and abandoning module Overlay (232)
+[2019.02.01-20.45.36:236][674]LogModuleManager: Shutting down and abandoning module OverlayEditor (231)
+[2019.02.01-20.45.36:236][674]LogModuleManager: Shutting down and abandoning module VREditor (228)
+[2019.02.01-20.45.36:236][674]LogModuleManager: Shutting down and abandoning module StringTableEditor (226)
+[2019.02.01-20.45.36:236][674]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (224)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (222)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module FunctionalTesting (220)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (218)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (217)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module UMG (214)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module UMGEditor (213)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module Sequencer (212)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module MessageLog (209)
+[2019.02.01-20.45.36:237][674]LogModuleManager: Shutting down and abandoning module SlateReflector (204)
+[2019.02.01-20.45.36:238][674]LogModuleManager: Shutting down and abandoning module Slate (202)
+[2019.02.01-20.45.36:238][674]LogModuleManager: Shutting down and abandoning module EditorStyle (200)
+[2019.02.01-20.45.36:240][674]LogModuleManager: Shutting down and abandoning module MRMesh (198)
+[2019.02.01-20.45.36:240][674]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (196)
+[2019.02.01-20.45.36:240][674]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (194)
+[2019.02.01-20.45.36:240][674]LogModuleManager: Shutting down and abandoning module XAudio2 (192)
+[2019.02.01-20.45.36:241][674]LogModuleManager: Shutting down and abandoning module Networking (190)
+[2019.02.01-20.45.36:241][674]LogModuleManager: Shutting down and abandoning module Core (188)
+[2019.02.01-20.45.36:241][674]LogModuleManager: Shutting down and abandoning module LevelSequence (186)
+[2019.02.01-20.45.36:241][674]LogModuleManager: Shutting down and abandoning module KismetCompiler (184)
+[2019.02.01-20.45.36:241][674]LogModuleManager: Shutting down and abandoning module MeshUtilities (182)
+[2019.02.01-20.45.36:241][674]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (181)
+[2019.02.01-20.45.36:241][674]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (180)
+[2019.02.01-20.45.36:242][674]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (179)
+[2019.02.01-20.45.36:242][674]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (177)
+[2019.02.01-20.45.36:242][674]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (175)
+[2019.02.01-20.45.36:242][674]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (173)
+[2019.02.01-20.45.36:242][674]LogModuleManager: Shutting down and abandoning module MaterialBaking (169)
+[2019.02.01-20.45.36:242][674]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (165)
+[2019.02.01-20.45.36:242][674]LogModuleManager: Shutting down and abandoning module DerivedDataCache (162)
+[2019.02.01-20.45.36:430][674]LogDerivedDataCache: Shutdown
+[2019.02.01-20.45.36:430][674]LogModuleManager: Shutting down and abandoning module XGEController (160)
+[2019.02.01-20.45.36:430][674]LogXGEController: Cleaning working directory: C:/Users/Renzy/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module TargetPlatform (158)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (157)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (155)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (153)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (151)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (149)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (147)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (145)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (143)
+[2019.02.01-20.45.36:431][674]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (141)
+[2019.02.01-20.45.36:433][674]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (139)
+[2019.02.01-20.45.36:433][674]LogModuleManager: Shutting down and abandoning module ImageWrapper (138)
+[2019.02.01-20.45.36:433][674]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (135)
+[2019.02.01-20.45.36:433][674]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (133)
+[2019.02.01-20.45.36:434][674]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (131)
+[2019.02.01-20.45.36:434][674]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (129)
+[2019.02.01-20.45.36:434][674]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (127)
+[2019.02.01-20.45.36:434][674]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (125)
+[2019.02.01-20.45.36:434][674]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (123)
+[2019.02.01-20.45.36:434][674]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (121)
+[2019.02.01-20.45.36:434][674]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (119)
+[2019.02.01-20.45.36:435][674]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (117)
+[2019.02.01-20.45.36:436][674]LogModuleManager: Shutting down and abandoning module Messaging (115)
+[2019.02.01-20.45.36:436][674]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (113)
+[2019.02.01-20.45.36:436][674]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (111)
+[2019.02.01-20.45.36:437][674]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (109)
+[2019.02.01-20.45.36:444][674]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (107)
+[2019.02.01-20.45.36:444][674]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (105)
+[2019.02.01-20.45.36:444][674]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (103)
+[2019.02.01-20.45.36:444][674]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (101)
+[2019.02.01-20.45.36:444][674]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (99)
+[2019.02.01-20.45.36:444][674]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (97)
+[2019.02.01-20.45.36:444][674]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (95)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (93)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (91)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module InputCore (88)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module Settings (86)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module PhysXCooking (84)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module SteamVR (82)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module OculusHMD (80)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (78)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (76)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (74)
+[2019.02.01-20.45.36:445][674]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (70)
+[2019.02.01-20.45.36:447][674]LogModuleManager: Shutting down and abandoning module XMPP (65)
+[2019.02.01-20.45.36:448][674]LogModuleManager: Shutting down and abandoning module WebSockets (64)
+[2019.02.01-20.45.36:457][674]LogModuleManager: Shutting down and abandoning module HTTP (61)
+[2019.02.01-20.45.36:457][674]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2019.02.01-20.45.36:457][674]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B3C544615-4651-AEAE-7748-F0A918F2D704%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.20.3-4369336%2B%2B%2BUE4%2BRelease-4.20&UserID=d2d2c5d64e9a564b2d095eb70c098350%7C27350404f3bb4f2791c9f6bae70f1cac%7C0fc99a33-513b-48b1-9fb5-b5212c68fc71&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2019.02.01-20.45.36:484][674]LogModuleManager: Shutting down and abandoning module SSL (60)
+[2019.02.01-20.45.36:485][674]LogModuleManager: Shutting down and abandoning module MagicLeapEmulator (56)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapPrivileges (54)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (52)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (50)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (48)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (46)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapGestures (44)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (42)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeapController (40)
+[2019.02.01-20.45.36:486][674]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module MagicLeap (38)
+[2019.02.01-20.45.36:486][674]LogModuleManager: Shutting down and abandoning module AnimationModifiers (36)
+[2019.02.01-20.45.36:487][674]LogModuleManager: Shutting down and abandoning module PropertyEditor (35)
+[2019.02.01-20.45.36:487][674]LogModuleManager: Shutting down and abandoning module AudioEditor (32)
+[2019.02.01-20.45.36:487][674]LogModuleManager: Shutting down and abandoning module TextureCompressor (30)
+[2019.02.01-20.45.36:489][674]LogModuleManager: Shutting down and abandoning module ShaderCore (28)
+[2019.02.01-20.45.36:489][674]LogModuleManager: Shutting down and abandoning module Landscape (26)
+[2019.02.01-20.45.36:489][674]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module OpenGLDrv (22)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module D3D11RHI (20)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (18)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module Renderer (16)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module Engine (14)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module CoreUObject (12)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module NetworkFile (10)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (8)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
+[2019.02.01-20.45.36:490][674]LogModuleManager: Shutting down and abandoning module PakFile (2)
+[2019.02.01-20.45.36:502][674]LogExit: Exiting.
+[2019.02.01-20.45.36:513][674]Log file closed, 02/01/19 15:45:36
