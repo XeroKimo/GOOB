@@ -42,19 +42,37 @@ private:
 
 public:
 	UPROPERTY(Category = "Movement", EditAnywhere)
-		float BaseMovementSpeed;
+		float MaxWalkSpeed = 1000.0f;
 
 	UPROPERTY(Category = "Movement", EditAnywhere)
-		float BaseTurnSpeed;
+		float BaseTurnSpeed = 1.0f;
+
+	UPROPERTY(Category = "Movement", EditAnywhere)
+		float MaxAcceleration = 2048.f;
+
+	UPROPERTY(Category = "Movement", EditAnywhere)
+		float JumpZVelocity = 420.f;
 
 	UPROPERTY(Category = "Movement", EditAnywhere)
 		float JumpForce = 12000.f;
 
 	UPROPERTY(Category = "Movement", EditAnywhere)
-		float BaseSuperJumpMultiplier = 0.8f;
+		float BaseSuperJumpMultiplier = 0.5f;
 
 	UPROPERTY(Category = "Movement", EditAnywhere)
 		float AddedSuperJumpMultiplier = 0.7f;
+
+	//The normal Gravity scale
+	UPROPERTY(Category = "Movement", EditAnywhere)
+		float BaseGravityScale = 2.0f;
+
+	//The Gravity Scale when player prepares a super jump
+	UPROPERTY(Category = "Movement", EditAnywhere)
+		float WeakenedGravityScale = 0.05f;
+
+	//This is a multiplier, taking the power being JumpVelocity * JumpForce * MaxSuperJumpPowerScale
+	UPROPERTY(Category = "Movement", EditAnywhere)
+		float MaxSuperJumpPowerScale = 2.0f;
 
 	UPROPERTY(Category = "Status", EditAnywhere)
 		float MaxHealth;
@@ -62,11 +80,17 @@ public:
 	UPROPERTY(Category = "Weapon", EditAnywhere)
 		class AActor* Weapon;
 
+	//How much time before the super jump auto releases
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
 		float ReleaseSuperJumpTime = 2.0f;
 
+	//How much time before the super jump starts preparing
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
-		float SuperJumpTimerDelay = 0.1f;
+		float SuperJumpTimerDelay = 0.2f;
+
+	//How much time it takes for super jump to reach max power
+	UPROPERTY(Category = "MovementTimer", EditAnywhere)
+		float MaxPowerSuperJump = 1.0f;
 
 	float CurrentHealth;
 

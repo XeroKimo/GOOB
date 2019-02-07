@@ -24,12 +24,22 @@ APlayerCharacter::APlayerCharacter()
 	FirstPersonCamera->SetupAttachment(GetCapsuleComponent());
 
 	JumpMaxCount = 2;
+	
+
+	MaxPowerSuperJump = FMath::Min(MaxPowerSuperJump, ReleaseSuperJumpTime + SuperJumpTimerDelay);
 }
 
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
-	Super::BeginPlay();
+	Super::BeginPlay(); 
+	
+	UCharacterMovementComponent* characterMovement = GetCharacterMovement();
+
+	characterMovement->MaxWalkSpeed = MaxWalkSpeed;
+	characterMovement->MaxAcceleration = MaxAcceleration;
+	characterMovement->GravityScale = BaseGravityScale;
+	characterMovement->JumpZVelocity = JumpZVelocity;
 	
 }
 
@@ -38,6 +48,12 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (GetWorldTimerManager().IsTimerActive(SuperJumpTimer))
+	{
+		float totalTimeForSJTimer = ReleaseSuperJumpTime + SuperJumpTimerDelay;
+		float elapsedTime = totalTimeForSJTimer - GetWorldTimerManager().GetTimerRemaining(SuperJumpTimer);
+		GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Red, "Super Jump Time Elapsed: " + FString::SanitizeFloat(elapsedTime));
+	}
 }
 
 // Called to bind functionality to input
@@ -84,31 +100,48 @@ void APlayerCharacter::LookSideways(float Val)
 
 void APlayerCharacter::Jump()
 {
-	if (JumpCurrentCount == 0)
-		Super::Jump();
-	else if (CanJump())
+	bool isFalling = GetCharacterMovement()->IsFalling();
+	if ((isFalling || JumpCurrentCount >= 1) && CanJump())
 	{
 		GetWorldTimerManager().SetTimer(SuperJumpTimer, this, &APlayerCharacter::StopJumping, 10.f, false, ReleaseSuperJumpTime + SuperJumpTimerDelay);
 		GetWorldTimerManager().SetTimer(SlowDescentTimer, this, &APlayerCharacter::ForceStopAndSlowDescent, 10.f, false, SuperJumpTimerDelay);
+
+		if (JumpCurrentCount == 0 && isFalling)
+			JumpCurrentCount++;
+
 		JumpCurrentCount++;
 	}
-	//AddMovementInput(GetActorUpVector(), JumpForce,true);
+	else 
+		Super::Jump();
 
 }
 
 void APlayerCharacter::StopJumping()
 {
-	if (JumpCurrentCount == 2 && !CanJump())
+	FTimerManager& timerManager = GetWorldTimerManager();
+
+	if (timerManager.TimerExists(SuperJumpTimer))
 	{
-		if (GetWorldTimerManager().IsTimerActive(SlowDescentTimer) == false)
+		if (timerManager.IsTimerActive(SlowDescentTimer) == false)
 		{
-			float elapsedTime = GetWorldTimerManager().GetTimerRemaining(SuperJumpTimer);
-			if (elapsedTime > 1.0f + SuperJumpTimerDelay)
+			float totalTimeForSJTimer = ReleaseSuperJumpTime + SuperJumpTimerDelay;
+			float elapsedTime = totalTimeForSJTimer - timerManager.GetTimerRemaining(SuperJumpTimer);
+			if (elapsedTime >= MaxPowerSuperJump + SuperJumpTimerDelay)
 				elapsedTime = 1.0f;
+
+			float MaxSuperJump = JumpZVelocity * JumpForce * MaxSuperJumpPowerScale;
+
 			FVector cameraDirection = FirstPersonCamera->GetComponentRotation().Vector().GetSafeNormal();
-			FVector baseForce = cameraDirection * GetCharacterMovement()->JumpZVelocity;
+			FVector baseForce = cameraDirection * JumpZVelocity;
 			FVector storedForce = cameraDirection * StoredSpeedBeforeJump * (BaseSuperJumpMultiplier + AddedSuperJumpMultiplier * (elapsedTime / 1.0f));
 			FVector newForceVector = (baseForce + storedForce) * JumpForce;
+
+			if (newForceVector.Size() > MaxSuperJump)
+			{
+				newForceVector = newForceVector.GetUnsafeNormal() * MaxSuperJump;
+			}
+
+			
 			GetCharacterMovement()->AddForce(newForceVector);
 		}
 		else
@@ -118,10 +151,8 @@ void APlayerCharacter::StopJumping()
 		}
 		GetWorldTimerManager().ClearTimer(SlowDescentTimer);
 		GetWorldTimerManager().ClearTimer(SuperJumpTimer);
-
-		JumpCurrentCount++;
 	}
-	GetCharacterMovement()->GravityScale = 1.0f;
+	GetCharacterMovement()->GravityScale = BaseGravityScale;
 	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Normal");
 	Super::StopJumping();
 }
@@ -138,7 +169,7 @@ void APlayerCharacter::ForceStopAndSlowDescent()
 	StoreCurrentSpeed();
 	GetCharacterMovement()->StopActiveMovement();
 	GetCharacterMovement()->StopMovementImmediately();
-	GetCharacterMovement()->GravityScale = 0.05f;
+	GetCharacterMovement()->GravityScale = WeakenedGravityScale;
 	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Lowered");
 }
 
