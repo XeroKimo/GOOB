@@ -19,6 +19,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void PostInitializeComponents() override;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -35,8 +37,11 @@ public:
 	void Jump() override;
 	void StopJumping() override;
 	void FireWeapon();
+	void StopFireWeapon();
 	
 	void ForceStopAndSlowDescent();
+
+	class USkeletalMeshComponent* GetCharacterMesh() { return CharacterMesh; }
 private:
 	void StoreCurrentSpeed();
 
@@ -78,7 +83,7 @@ public:
 		float MaxHealth;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
-		class AActor* Weapon;
+		class ABaseGun* CurrentWeapon;
 
 	//How much time before the super jump auto releases
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
@@ -90,16 +95,21 @@ public:
 
 	//How much time it takes for super jump to reach max power
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
-		float MaxPowerSuperJump = 1.0f;
+		float MaxPowerSuperJumpTime = 1.0f;
 
 	float CurrentHealth;
 
+	UPROPERTY(Category = "Weapon", EditAnywhere)
+		TSubclassOf<ABaseGun> DebugWeapon;
 private:
-	UPROPERTY(Category = "Visual", VisibleDefaultsOnly)
+	UPROPERTY(Category = "Visual", VisibleAnywhere)
 		class USkeletalMeshComponent* CharacterMesh;
 
 	UPROPERTY(Category = "Visual", VisibleDefaultsOnly)
 		class UCameraComponent* FirstPersonCamera;
+
+    UPROPERTY(Category = "Visual", VisibleAnywhere)
+        class USkeletalMeshComponent* CurrentGunMesh;
 
 	float StoredSpeedBeforeJump;
 

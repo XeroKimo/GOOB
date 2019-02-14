@@ -6,6 +6,8 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Public/TimerManager.h"
+#include "BaseGun.h"
+#include "T22XX_Shotgun.h"
 
 #include "DrawDebugHelpers.h"
 
@@ -23,10 +25,12 @@ APlayerCharacter::APlayerCharacter()
 	FirstPersonCamera->bUsePawnControlRotation = true;
 	FirstPersonCamera->SetupAttachment(GetCapsuleComponent());
 
-	JumpMaxCount = 2;
-	
+	CurrentGunMesh = CreateDefaultSubobject<USkeletalMeshComponent>("Gun Mesh");
+	CurrentGunMesh->SetupAttachment(CharacterMesh);
+	CurrentGunMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
-	MaxPowerSuperJump = FMath::Min(MaxPowerSuperJump, ReleaseSuperJumpTime + SuperJumpTimerDelay);
+
+	JumpMaxCount = 2;
 }
 
 // Called when the game starts or when spawned
@@ -34,13 +38,34 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay(); 
 	
+
+	
+}
+
+void APlayerCharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	if (DebugWeapon != NULL)
+	{
+		FActorSpawnParameters SpawnParams;
+		SpawnParams.Instigator = this;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		ABaseGun* weapon = GetWorld()->SpawnActor<ABaseGun>(DebugWeapon, SpawnParams);
+		CurrentWeapon = weapon;
+		CurrentWeapon->SetOwner(this);
+
+		CurrentGunMesh = CurrentWeapon->GetGunMesh();
+		CurrentWeapon->Attach(this);
+	}
+
 	UCharacterMovementComponent* characterMovement = GetCharacterMovement();
+	MaxPowerSuperJumpTime = FMath::Min(MaxPowerSuperJumpTime, ReleaseSuperJumpTime + SuperJumpTimerDelay);
 
 	characterMovement->MaxWalkSpeed = MaxWalkSpeed;
 	characterMovement->MaxAcceleration = MaxAcceleration;
 	characterMovement->GravityScale = BaseGravityScale;
 	characterMovement->JumpZVelocity = JumpZVelocity;
-	
+
 }
 
 // Called every frame
@@ -48,12 +73,6 @@ void APlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (GetWorldTimerManager().IsTimerActive(SuperJumpTimer))
-	{
-		float totalTimeForSJTimer = ReleaseSuperJumpTime + SuperJumpTimerDelay;
-		float elapsedTime = totalTimeForSJTimer - GetWorldTimerManager().GetTimerRemaining(SuperJumpTimer);
-		GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Red, "Super Jump Time Elapsed: " + FString::SanitizeFloat(elapsedTime));
-	}
 }
 
 // Called to bind functionality to input
@@ -70,6 +89,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 	PlayerInputComponent->BindAction("Jump", EInputEvent::IE_Released, this, &APlayerCharacter::StopJumping);
 
 	PlayerInputComponent->BindAction("Fire", EInputEvent::IE_Pressed, this, &APlayerCharacter::FireWeapon);
+	PlayerInputComponent->BindAction("Fire", EInputEvent::IE_Released, this, &APlayerCharacter::StopFireWeapon);
 }
 
 void APlayerCharacter::MoveForeward(float Val)
@@ -103,8 +123,8 @@ void APlayerCharacter::Jump()
 	bool isFalling = GetCharacterMovement()->IsFalling();
 	if ((isFalling || JumpCurrentCount >= 1) && CanJump())
 	{
-		GetWorldTimerManager().SetTimer(SuperJumpTimer, this, &APlayerCharacter::StopJumping, 10.f, false, ReleaseSuperJumpTime + SuperJumpTimerDelay);
-		GetWorldTimerManager().SetTimer(SlowDescentTimer, this, &APlayerCharacter::ForceStopAndSlowDescent, 10.f, false, SuperJumpTimerDelay);
+		GetWorldTimerManager().SetTimer(SuperJumpTimer, this, &APlayerCharacter::StopJumping, ReleaseSuperJumpTime, false, ReleaseSuperJumpTime + SuperJumpTimerDelay );
+		GetWorldTimerManager().SetTimer(SlowDescentTimer, this, &APlayerCharacter::ForceStopAndSlowDescent, SuperJumpTimerDelay, false);
 
 		if (JumpCurrentCount == 0 && isFalling)
 			JumpCurrentCount++;
@@ -125,8 +145,8 @@ void APlayerCharacter::StopJumping()
 		if (timerManager.IsTimerActive(SlowDescentTimer) == false)
 		{
 			float totalTimeForSJTimer = ReleaseSuperJumpTime + SuperJumpTimerDelay;
-			float elapsedTime = totalTimeForSJTimer - timerManager.GetTimerRemaining(SuperJumpTimer);
-			if (elapsedTime >= MaxPowerSuperJump + SuperJumpTimerDelay)
+			float elapsedTime = timerManager.GetTimerElapsed(SuperJumpTimer);
+			if (elapsedTime >= MaxPowerSuperJumpTime + SuperJumpTimerDelay)
 				elapsedTime = 1.0f;
 
 			float MaxSuperJump = JumpZVelocity * JumpForce * MaxSuperJumpPowerScale;
@@ -146,7 +166,8 @@ void APlayerCharacter::StopJumping()
 		}
 		else
 		{
-			FVector jumpVector = GetActorUpVector() * GetCharacterMovement()->JumpZVelocity*JumpForce;
+            float cancelVector = GetVelocity().Z;
+			FVector jumpVector = GetActorUpVector() * (GetCharacterMovement()->JumpZVelocity - cancelVector)*JumpForce;
 			GetCharacterMovement()->AddForce(jumpVector);
 		}
 		GetWorldTimerManager().ClearTimer(SlowDescentTimer);
@@ -161,7 +182,19 @@ void APlayerCharacter::StopJumping()
 
 void APlayerCharacter::FireWeapon()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Weapon Fired");
+	if (CurrentWeapon)
+	{
+        GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Red, "Character Rotation: " + FString::SanitizeFloat(GetControlRotation().Yaw) + " : "+ FString::SanitizeFloat(GetControlRotation().Pitch));
+		CurrentWeapon->PullTrigger();
+	}
+}
+
+void APlayerCharacter::StopFireWeapon()
+{
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->ReleaseTrigger();
+	}
 }
 
 void APlayerCharacter::ForceStopAndSlowDescent()
