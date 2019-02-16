@@ -30,7 +30,8 @@ ABaseGun::ABaseGun()
 void ABaseGun::BeginPlay()
 {
 	Super::BeginPlay();
-	FireRateinSeconds = 60.f / (float)FireRate;
+	FireRateinSeconds = 60.f / (float)FireRate; 
+	TimeSinceLastShot = GetWorld()->TimeSeconds;
 	
 }
 
@@ -43,6 +44,7 @@ void ABaseGun::Tick(float DeltaTime)
 		if (!InfiniteClipSize && MaxStockAmmo >= 0)
 			StartReloading();
 	}
+
 }
 
 void ABaseGun::SpawnBullets()
@@ -58,16 +60,21 @@ void ABaseGun::SpawnBullets()
             FVector bulletSpawnRot = FMath::VRandCone(weaponRot.Vector(), FMath::DegreesToRadians(WeaponSpread));
             FRotator temp = bulletSpawnRot.Rotation();
 
-			GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "WeaponRotation - " + FString::SanitizeFloat(temp.Yaw) + " , " + FString::SanitizeFloat(temp.Pitch));
+			//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "WeaponRotation - " + FString::SanitizeFloat(temp.Yaw) + " , " + FString::SanitizeFloat(temp.Pitch));
 
 			FVector spawnLoc = GunMuzzleLocation->GetComponentLocation();
 
 			FActorSpawnParameters spawnParams;
-			spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
+			spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+			spawnParams.Owner = GetOwner();
+			spawnParams.Instigator = OwnedCharacter;
 
 			ABaseBullet* spawnedBullet = world->SpawnActor<ABaseBullet>(BulletClassType, spawnLoc, weaponRot, spawnParams);
 			if (spawnedBullet)
+			{
 				spawnedBullet->SetBulletDamage(BulletDamage);
+				spawnedBullet->SetBulletDirection(bulletSpawnRot.GetSafeNormal());
+			}
 		}
 	}
 }
@@ -75,14 +82,14 @@ void ABaseGun::SpawnBullets()
 void ABaseGun::WillShoot()
 {
 	CanFire = true;
-    GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Can Shoot");
+    //GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Can Shoot");
 }
 
 void ABaseGun::Fire()
 {
 	if (BulletClassType != NULL)
 	{
-        GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Weapon Fired");
+        //GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Weapon Fired");
 		SpawnBullets();
         CanFire = false;
         if (!InfiniteClipSize)
@@ -91,7 +98,7 @@ void ABaseGun::Fire()
 		if (ShootingStyle == EFireStyle::FS_Burst)
 		{
 			CurrentBurstShot++;
-            GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Current Burst shot = " + FString::FromInt(CurrentBurstShot));
+            //GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Current Burst shot = " + FString::FromInt(CurrentBurstShot));
 			FTimerManager & timerManager = GetWorldTimerManager();
 			if (CurrentBurstShot == ShotsPerBurst)
 			{
@@ -124,7 +131,10 @@ void ABaseGun::PullTrigger()
             else if (ShootingStyle == EFireStyle::FS_Single)
             {
                 Fire();
-                timerManager.SetTimer(CanShootTimer, this, &ABaseGun::WillShoot, FireRateinSeconds, false);
+				if (PumpTime !=0.0f)
+					timerManager.SetTimer(CanShootTimer, this, &ABaseGun::WillShoot, PumpTime, false);
+				else
+					timerManager.SetTimer(CanShootTimer, this, &ABaseGun::WillShoot, FireRateinSeconds, false);
             }
             else if (ShootingStyle == EFireStyle::FS_Burst)
             { 

@@ -15,16 +15,18 @@ public:
 	// Sets default values for this actor's properties
 	ABaseBullet();
 
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void PostInitializeComponents() override;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	UPROPERTY(Category = "Movement", BlueprintReadWrite)
+	UPROPERTY(Category = "Movement", VisibleAnywhere)
 		class UProjectileMovementComponent* MovementComponent;
 
 	UPROPERTY(Category = "Bullet", BlueprintReadOnly)
@@ -42,6 +44,7 @@ protected:
 
 public:
 	void SetBulletDamage(float NewDamage) { BulletDamage = NewDamage; }
+	void SetBulletDirection(FVector Direction);
 protected:
 	UFUNCTION()
 		void ComponentHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);

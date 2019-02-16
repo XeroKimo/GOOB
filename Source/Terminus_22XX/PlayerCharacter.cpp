@@ -25,12 +25,12 @@ APlayerCharacter::APlayerCharacter()
 	FirstPersonCamera->bUsePawnControlRotation = true;
 	FirstPersonCamera->SetupAttachment(GetCapsuleComponent());
 
-	CurrentGunMesh = CreateDefaultSubobject<USkeletalMeshComponent>("Gun Mesh");
-	CurrentGunMesh->SetupAttachment(CharacterMesh);
-	CurrentGunMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	GunLocation = CreateDefaultSubobject<USceneComponent>("Gun Location");
+	GunLocation->SetupAttachment(CharacterMesh);
 
 
 	JumpMaxCount = 2;
+	bUseControllerRotationPitch = true;
 }
 
 // Called when the game starts or when spawned
@@ -53,9 +53,8 @@ void APlayerCharacter::PostInitializeComponents()
 		ABaseGun* weapon = GetWorld()->SpawnActor<ABaseGun>(DebugWeapon, SpawnParams);
 		CurrentWeapon = weapon;
 		CurrentWeapon->SetOwner(this);
-
-		CurrentGunMesh = CurrentWeapon->GetGunMesh();
 		CurrentWeapon->Attach(this);
+		CurrentWeapon->SetActorRelativeLocation(GunLocation->RelativeLocation);
 	}
 
 	UCharacterMovementComponent* characterMovement = GetCharacterMovement();
@@ -149,12 +148,12 @@ void APlayerCharacter::StopJumping()
 			if (elapsedTime >= MaxPowerSuperJumpTime + SuperJumpTimerDelay)
 				elapsedTime = 1.0f;
 
-			float MaxSuperJump = JumpZVelocity * JumpForce * MaxSuperJumpPowerScale;
+			float MaxSuperJump = JumpZVelocity * MaxSuperJumpPowerScale;
 
 			FVector cameraDirection = FirstPersonCamera->GetComponentRotation().Vector().GetSafeNormal();
 			FVector baseForce = cameraDirection * JumpZVelocity;
 			FVector storedForce = cameraDirection * StoredSpeedBeforeJump * (BaseSuperJumpMultiplier + AddedSuperJumpMultiplier * (elapsedTime / 1.0f));
-			FVector newForceVector = (baseForce + storedForce) * JumpForce;
+			FVector newForceVector = (baseForce + storedForce);
 
 			if (newForceVector.Size() > MaxSuperJump)
 			{
@@ -162,19 +161,19 @@ void APlayerCharacter::StopJumping()
 			}
 
 			
-			GetCharacterMovement()->AddForce(newForceVector);
+			GetCharacterMovement()->AddImpulse(newForceVector, true);
 		}
 		else
 		{
             float cancelVector = GetVelocity().Z;
-			FVector jumpVector = GetActorUpVector() * (GetCharacterMovement()->JumpZVelocity - cancelVector)*JumpForce;
-			GetCharacterMovement()->AddForce(jumpVector);
+			FVector jumpVector = GetActorUpVector() * (GetCharacterMovement()->JumpZVelocity - cancelVector);
+			GetCharacterMovement()->AddImpulse(jumpVector, true);
 		}
 		GetWorldTimerManager().ClearTimer(SlowDescentTimer);
 		GetWorldTimerManager().ClearTimer(SuperJumpTimer);
 	}
 	GetCharacterMovement()->GravityScale = BaseGravityScale;
-	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Normal");
+	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Normal");
 	Super::StopJumping();
 }
 
@@ -184,7 +183,7 @@ void APlayerCharacter::FireWeapon()
 {
 	if (CurrentWeapon)
 	{
-        GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Red, "Character Rotation: " + FString::SanitizeFloat(GetControlRotation().Yaw) + " : "+ FString::SanitizeFloat(GetControlRotation().Pitch));
+        //GEngine->AddOnScreenDebugMessage(-1, 1, FColor::Red, "Character Rotation: " + FString::SanitizeFloat(GetControlRotation().Yaw) + " : "+ FString::SanitizeFloat(GetControlRotation().Pitch));
 		CurrentWeapon->PullTrigger();
 	}
 }
@@ -203,7 +202,7 @@ void APlayerCharacter::ForceStopAndSlowDescent()
 	GetCharacterMovement()->StopActiveMovement();
 	GetCharacterMovement()->StopMovementImmediately();
 	GetCharacterMovement()->GravityScale = WeakenedGravityScale;
-	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Lowered");
+	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Lowered");
 }
 
 void APlayerCharacter::StoreCurrentSpeed()

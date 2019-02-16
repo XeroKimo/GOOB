@@ -13,12 +13,24 @@ ABaseBullet::ABaseBullet()
 	BulletHitbox = CreateDefaultSubobject<UCapsuleComponent>("Hitbox");
 	RootComponent = BulletHitbox;
 	BulletHitbox->RelativeRotation.Pitch = 90.f;
+	BulletHitbox->SetCollisionObjectType(ECollisionChannel::ECC_GameTraceChannel1);
+
+	FCollisionResponseContainer responseContainer;
+	responseContainer.SetAllChannels(ECollisionResponse::ECR_Ignore);
+	responseContainer.SetResponse(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Block);
+	responseContainer.SetResponse(ECollisionChannel::ECC_WorldDynamic, ECollisionResponse::ECR_Block);
+	responseContainer.SetResponse(ECollisionChannel::ECC_WorldStatic, ECollisionResponse::ECR_Block);
+	responseContainer.SetResponse(ECollisionChannel::ECC_PhysicsBody, ECollisionResponse::ECR_Block);
+
+	BulletHitbox->SetCollisionResponseToChannels(responseContainer);
 
 	BulletMesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
 	BulletMesh->SetupAttachment(RootComponent);
 	BulletMesh->SetCollisionProfileName("NoCollision");
 
 	MovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>("Movement Component");
+	MovementComponent->UpdatedComponent = BulletHitbox;
+
 	InitialLifeSpan = 3.f;
 }
 
@@ -29,6 +41,12 @@ void ABaseBullet::BeginPlay()
 	
 }
 
+void ABaseBullet::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	MovementComponent->InitialSpeed = BulletSpeed;
+}
+
 // Called every frame
 void ABaseBullet::Tick(float DeltaTime)
 {
@@ -36,7 +54,17 @@ void ABaseBullet::Tick(float DeltaTime)
 
 }
 
+void ABaseBullet::SetBulletDirection(FVector Direction)
+{
+	MovementComponent->Velocity = Direction * BulletSpeed;
+}
+
 void ABaseBullet::ComponentHit(UPrimitiveComponent * HitComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const FHitResult & Hit)
 {
+	if (OtherActor != nullptr && OtherActor != this && OtherComp != nullptr)
+	{
+		FDamageEvent DamageEvent;
+		OtherActor->TakeDamage(BulletDamage, DamageEvent ,GetInstigatorController() , this);
+	}
 }
 

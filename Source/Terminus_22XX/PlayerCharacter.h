@@ -56,16 +56,13 @@ public:
 		float MaxAcceleration = 2048.f;
 
 	UPROPERTY(Category = "Movement", EditAnywhere)
-		float JumpZVelocity = 420.f;
+		float JumpZVelocity = 1000.f;
 
 	UPROPERTY(Category = "Movement", EditAnywhere)
-		float JumpForce = 12000.f;
+		float BaseSuperJumpMultiplier = 0.3f;
 
 	UPROPERTY(Category = "Movement", EditAnywhere)
-		float BaseSuperJumpMultiplier = 0.5f;
-
-	UPROPERTY(Category = "Movement", EditAnywhere)
-		float AddedSuperJumpMultiplier = 0.7f;
+		float AddedSuperJumpMultiplier = 1.2f;
 
 	//The normal Gravity scale
 	UPROPERTY(Category = "Movement", EditAnywhere)
@@ -87,15 +84,15 @@ public:
 
 	//How much time before the super jump auto releases
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
-		float ReleaseSuperJumpTime = 2.0f;
+		float ReleaseSuperJumpTime = 1.0f;
 
 	//How much time before the super jump starts preparing
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
-		float SuperJumpTimerDelay = 0.2f;
+		float SuperJumpTimerDelay = 0.15f;
 
 	//How much time it takes for super jump to reach max power
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
-		float MaxPowerSuperJumpTime = 1.0f;
+		float MaxPowerSuperJumpTime = 0.5f;
 
 	float CurrentHealth;
 
@@ -109,7 +106,7 @@ private:
 		class UCameraComponent* FirstPersonCamera;
 
     UPROPERTY(Category = "Visual", VisibleAnywhere)
-        class USkeletalMeshComponent* CurrentGunMesh;
+        class USceneComponent* GunLocation;
 
 	float StoredSpeedBeforeJump;
 
