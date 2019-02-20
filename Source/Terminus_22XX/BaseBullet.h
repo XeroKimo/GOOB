@@ -40,7 +40,10 @@ protected:
 		class UCapsuleComponent* BulletHitbox;
 
 	UPROPERTY(Category = "Bullet", EditAnywhere)
-		float BulletSpeed;
+		float BulletSpeed; 
+
+private:
+		FVector BulletDirection;
 
 public:
 	void SetBulletDamage(float NewDamage) { BulletDamage = NewDamage; }

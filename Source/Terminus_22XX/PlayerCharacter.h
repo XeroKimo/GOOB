@@ -38,10 +38,19 @@ public:
 	void StopJumping() override;
 	void FireWeapon();
 	void StopFireWeapon();
+	void Reload();
+
+	void SwitchWeapon(float Val);
+	void NextWeapon();
+	void PreviousWeapon();
+	void SwitchToShotgun();
+	void SwitchToVampyr();
+	void SwitchToRailgun();
 	
 	void ForceStopAndSlowDescent();
 
 	class USkeletalMeshComponent* GetCharacterMesh() { return CharacterMesh; }
+	class USceneComponent* GetGunScene() { return GunLocation; }
 private:
 	void StoreCurrentSpeed();
 
@@ -97,7 +106,10 @@ public:
 	float CurrentHealth;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
-		TSubclassOf<ABaseGun> DebugWeapon;
+		TArray<TSubclassOf<ABaseGun>> DebugWeapons;
+
+	UPROPERTY(Category = "Weapon", EditAnywhere)
+		bool EnableWeaponScrolling = false;
 private:
 	UPROPERTY(Category = "Visual", VisibleAnywhere)
 		class USkeletalMeshComponent* CharacterMesh;
@@ -108,8 +120,13 @@ private:
     UPROPERTY(Category = "Visual", VisibleAnywhere)
         class USceneComponent* GunLocation;
 
+	class UInventoryComponent* WeaponInventory;
+
 	float StoredSpeedBeforeJump;
 
 	FTimerHandle SuperJumpTimer;
 	FTimerHandle SlowDescentTimer;
+
+private:
+	void AttachNewWeapon(ABaseGun* nextGun);
 };

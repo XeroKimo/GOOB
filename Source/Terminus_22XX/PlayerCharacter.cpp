@@ -8,6 +8,7 @@
 #include "Public/TimerManager.h"
 #include "BaseGun.h"
 #include "T22XX_Shotgun.h"
+#include "InventoryComponent.h"
 
 #include "DrawDebugHelpers.h"
 
@@ -28,9 +29,12 @@ APlayerCharacter::APlayerCharacter()
 	GunLocation = CreateDefaultSubobject<USceneComponent>("Gun Location");
 	GunLocation->SetupAttachment(CharacterMesh);
 
+	WeaponInventory = CreateDefaultSubobject<UInventoryComponent>("Inventory");
 
 	JumpMaxCount = 2;
 	bUseControllerRotationPitch = true;
+
+	Tags.Add("Player");
 }
 
 // Called when the game starts or when spawned
@@ -45,18 +49,24 @@ void APlayerCharacter::BeginPlay()
 void APlayerCharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-	if (DebugWeapon != NULL)
+	for (int i = 0; i < DebugWeapons.Num(); i++)
 	{
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Instigator = this;
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-		ABaseGun* weapon = GetWorld()->SpawnActor<ABaseGun>(DebugWeapon, SpawnParams);
-		CurrentWeapon = weapon;
-		CurrentWeapon->SetOwner(this);
-		CurrentWeapon->Attach(this);
-		CurrentWeapon->SetActorRelativeLocation(GunLocation->RelativeLocation);
+		SpawnParams.Owner = this;
+		ABaseGun* weapon = GetWorld()->SpawnActor<ABaseGun>(DebugWeapons[i], SpawnParams);
+		WeaponInventory->AddWeapon(weapon);
+		if (weapon)
+		{
+			weapon->SetOwnedCharacter(this);
+		}
 	}
-
+	CurrentWeapon = WeaponInventory->GetAWeapon();
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->Attach();
+	}
 	UCharacterMovementComponent* characterMovement = GetCharacterMovement();
 	MaxPowerSuperJumpTime = FMath::Min(MaxPowerSuperJumpTime, ReleaseSuperJumpTime + SuperJumpTimerDelay);
 
@@ -89,6 +99,11 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 	PlayerInputComponent->BindAction("Fire", EInputEvent::IE_Pressed, this, &APlayerCharacter::FireWeapon);
 	PlayerInputComponent->BindAction("Fire", EInputEvent::IE_Released, this, &APlayerCharacter::StopFireWeapon);
+
+	PlayerInputComponent->BindAxis("SwitchWeapon", this, &APlayerCharacter::SwitchWeapon);
+	PlayerInputComponent->BindAction("Shotgun", EInputEvent::IE_Pressed, this, &APlayerCharacter::SwitchToShotgun);
+	PlayerInputComponent->BindAction("Vampyr", EInputEvent::IE_Pressed, this, &APlayerCharacter::SwitchToVampyr);
+	PlayerInputComponent->BindAction("Railgun", EInputEvent::IE_Pressed, this, &APlayerCharacter::SwitchToRailgun);
 }
 
 void APlayerCharacter::MoveForeward(float Val)
@@ -196,6 +211,50 @@ void APlayerCharacter::StopFireWeapon()
 	}
 }
 
+void APlayerCharacter::Reload()
+{
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->StartReloading();
+	}
+}
+
+void APlayerCharacter::SwitchWeapon(float Val)
+{
+	if (EnableWeaponScrolling)
+	{
+		if (Val > 0)
+			NextWeapon();
+		else if (Val < 0)
+			PreviousWeapon();
+	}
+}
+
+void APlayerCharacter::NextWeapon()
+{
+	AttachNewWeapon( WeaponInventory->NextWeapon());
+}
+
+void APlayerCharacter::PreviousWeapon()
+{
+	AttachNewWeapon( WeaponInventory->PreviousWeapon());
+}
+
+void APlayerCharacter::SwitchToShotgun()
+{
+	AttachNewWeapon(WeaponInventory->GetShotgun());
+}
+
+void APlayerCharacter::SwitchToVampyr()
+{
+	AttachNewWeapon(WeaponInventory->GetVampyr());
+}
+
+void APlayerCharacter::SwitchToRailgun()
+{
+	AttachNewWeapon(WeaponInventory->GetRailgun());
+}
+
 void APlayerCharacter::ForceStopAndSlowDescent()
 {
 	StoreCurrentSpeed();
@@ -208,4 +267,15 @@ void APlayerCharacter::ForceStopAndSlowDescent()
 void APlayerCharacter::StoreCurrentSpeed()
 {
 	StoredSpeedBeforeJump = GetVelocity().Size();
+}
+
+void APlayerCharacter::AttachNewWeapon(ABaseGun * nextGun)
+{
+	if (nextGun->GetWeaponIndex() != CurrentWeapon->GetWeaponIndex())
+	{
+		CurrentWeapon->StopFiring();
+		CurrentWeapon->Detach();
+		CurrentWeapon = nextGun;
+		CurrentWeapon->Attach();
+	}
 }

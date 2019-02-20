@@ -41,8 +41,7 @@ void ABaseGun::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 	if (CurrentClipSize == 0 && CurrentStockAmmo > 0)
 	{
-		if (!InfiniteClipSize && MaxStockAmmo >= 0)
-			StartReloading();
+		StartReloading();
 	}
 
 }
@@ -119,9 +118,9 @@ void ABaseGun::StopFiring()
 void ABaseGun::PullTrigger()
 {
 	FTimerManager& timerManager = GetWorldTimerManager();
-	CheckForWeaponJam();
-	if ((CurrentClipSize > 0 || InfiniteClipSize) && !IsReloading)
+	if (CurrentClipSize > 0 || InfiniteClipSize)
 	{
+		CheckForWeaponJam();
         if (CanFire)
         {
             if (ShootingStyle == EFireStyle::FS_FullAuto)
@@ -144,8 +143,16 @@ void ABaseGun::PullTrigger()
                 timerManager.SetTimer(CanShootTimer, this, &ABaseGun::WillShoot, shootingTime, false);
             }
         }
+		else
+		{
+			if (ShootingStyle == EFireStyle::FS_FullAuto)
+			{
+				float remainingTime = timerManager.GetTimerRemaining(CanShootTimer);
+				timerManager.SetTimer(FireWeaponTimer, this, &ABaseGun::Fire, FireRateinSeconds,true, remainingTime);
+			}
+		}
 	}
-	else if (!IsReloading)
+	else
 	{
 		StartReloading();
 	}
@@ -166,7 +173,7 @@ void ABaseGun::ReleaseTrigger()
 
 void ABaseGun::Reload()
 {
-	if (CurrentStockAmmo > 0 && CurrentClipSize < MaxClipSize && MaxStockAmmo > 0)
+	if (CurrentStockAmmo > 0 && MaxStockAmmo > 0)
 	{
 		int ammoToTransfer = MaxClipSize - CurrentClipSize;
 		CurrentStockAmmo -= ammoToTransfer;
@@ -179,7 +186,7 @@ void ABaseGun::Reload()
 
 		CurrentClipSize += ammoToTransfer;
 	}
-	else if (MaxStockAmmo < 0 && CurrentClipSize < MaxClipSize)
+	else if (MaxStockAmmo < 0)
 	{
 		int ammoToTransfer = MaxClipSize - CurrentClipSize;
 		CurrentClipSize += ammoToTransfer;
@@ -187,16 +194,27 @@ void ABaseGun::Reload()
 	IsReloading = false;
 }
 
-void ABaseGun::Attach(APlayerCharacter * Character)
+void ABaseGun::SetOwnedCharacter(APlayerCharacter * Character)
 {
-	AttachToComponent(Character->GetCharacterMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale);
-	FRotator meshRot = Character->GetCharacterMesh()->RelativeRotation;
+	OwnedCharacter = Character;
+}
+
+void ABaseGun::Attach()
+{
+	AttachToComponent(OwnedCharacter->GetGunScene(), FAttachmentTransformRules::SnapToTargetIncludingScale);
+	FRotator meshRot = OwnedCharacter->GetCharacterMesh()->RelativeRotation;
 	meshRot.Yaw *= -1;
 	GunMesh->AddRelativeRotation(meshRot.Quaternion());
-	//TSharedPtr<float> tempCharPitch = Character->GetControlRotation().Pitch;
-	OwnedCharacter = Character;
 
-	//OwnedCharacterPitch = Character->GetControlRotation().Pitch;
+	GunMesh->SetVisibility(true);
+	SetActorHiddenInGame(false);
+}
+
+void ABaseGun::Detach()
+{
+	GunMesh->SetVisibility(false);
+	SetActorHiddenInGame(true);
+	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 }
 
 void ABaseGun::CheckForWeaponJam()
@@ -209,6 +227,9 @@ void ABaseGun::CheckForWeaponJam()
 
 void ABaseGun::StartReloading()
 {
-	GetWorldTimerManager().SetTimer(ReloadTimer, this, &ABaseGun::Reload, ReloadSpeed, false);
-	IsReloading = true;
+	if (!IsReloading && CurrentClipSize < MaxClipSize && !InfiniteClipSize)
+	{
+		GetWorldTimerManager().SetTimer(ReloadTimer, this, &ABaseGun::Reload, ReloadSpeed, false);
+		IsReloading = true;
+	}
 }

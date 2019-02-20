@@ -48,11 +48,14 @@ protected:
 	UPROPERTY(Category = "Visual", VisibleAnywhere)
 		class USkeletalMeshComponent* GunMesh;
 
+	UPROPERTY(Category = "Gun", VisibleAnywhere)
+		class UArrowComponent* GunMuzzleLocation;
+
 	UPROPERTY(Category = "Gun", EditAnywhere)
 		TEnumAsByte<EFireStyle> ShootingStyle;
 
-	UPROPERTY(Category = "Gun", VisibleAnywhere)
-		class UArrowComponent* GunMuzzleLocation;
+	UPROPERTY(Category = "Gun", BlueprintReadOnly)
+		int WeaponIndex = -1;
 	//How many bullets will be shot in a minute
 	UPROPERTY(Category = "Gun", EditAnywhere)
 		int FireRate;
@@ -111,10 +114,13 @@ protected:
 	float FireRateinSeconds;
 
 	class APlayerCharacter* OwnedCharacter;
-
+	
 public:
 		class USkeletalMeshComponent* GetGunMesh() { return GunMesh; }
-		void Attach(class APlayerCharacter* Character);
+		void SetOwnedCharacter(class APlayerCharacter* Character);
+		void Attach();
+		void Detach();
+		int GetWeaponIndex() { return WeaponIndex; }
 
 private:
 	void CheckForWeaponJam();
