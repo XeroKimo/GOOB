@@ -49,6 +49,9 @@ public:
 	
 	void ForceStopAndSlowDescent();
 
+    UFUNCTION(BlueprintCallable, Category = "Status")
+        float GetHealthPercentage(float CurrentHealth);
+
 	class USkeletalMeshComponent* GetCharacterMesh() { return CharacterMesh; }
 	class USceneComponent* GetGunScene() { return GunLocation; }
 private:
@@ -85,7 +88,7 @@ public:
 	UPROPERTY(Category = "Movement", EditAnywhere)
 		float MaxSuperJumpPowerScale = 2.0f;
 
-	UPROPERTY(Category = "Status", EditAnywhere)
+	UPROPERTY(BlueprintReadWrite, Category = "Status", EditAnywhere)
 		float MaxHealth;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
@@ -103,7 +106,8 @@ public:
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
 		float MaxPowerSuperJumpTime = 0.5f;
 
-	float CurrentHealth;
+    UPROPERTY(BlueprintReadWrite, Category = "Status", EditAnywhere)
+	    float CurrentHealth;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
 		TArray<TSubclassOf<ABaseGun>> DebugWeapons;

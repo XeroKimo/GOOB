@@ -1,0 +1,994 @@
+﻿Log file open, 02/20/19 15:46:19
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
+LogWindows: File 'VSPerf140.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogInit: Display: Running engine for game: Terminus_22XX
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 1.445598
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MeshEditor
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleVision
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapEmulator
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin LinearTimecode
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin ImmediatePhysics
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Plugin shader directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders found
+LogPluginManager: Mapping shader source directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders to virtual directory /Plugin/OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogStreaming: Display: Took  0.161s to configure plugins.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2h
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogInit: Build: ++UE4+Release-4.20-CL-4233996
+LogInit: Engine Version: 4.20.1-4233996+++UE4+Release-4.20
+LogInit: Compatible Engine Version: 4.20.0-4212847+++UE4+Release-4.20
+LogInit: Net CL: 4212847
+LogInit: OS: Windows 10 (), CPU:        Intel(R) Core(TM) i7-3770K CPU @ 3.50GHz, GPU: NVIDIA GeForce GTX 670
+LogInit: Compiled (64-bit): Jul 26 2018 10:07:30
+LogInit: Compiled with Visual C++: 19.13.26129.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.20
+LogInit: Command Line:  -skipcompile
+LogInit: Base Directory: D:/Program Files/Epic Games/UE_4.20/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 20
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 24
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 34
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 26
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 9
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 2
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 12
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 1
+LogStreaming: Display: Took  0.007s to delete old logs.
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2019.02.20-20.46.20:251][  0]LogInit: Selected Device Profile: [Windows]
+[2019.02.20-20.46.20:251][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.02.20-20.46.20:280][  0]LogHAL: Display: Platform has ~ 16 GB [17121808384 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.02.20-20.46.20:280][  0]LogInit: Setting Device Profile CVar: [[r.Vulkan.UseRealUBs:1]]
+[2019.02.20-20.46.20:280][  0]LogInit: Going up to parent DeviceProfile []
+[2019.02.20-20.46.20:281][  0]LogInit: Computer: WJ316-24
+[2019.02.20-20.46.20:281][  0]LogInit: User: pola0023
+[2019.02.20-20.46.20:281][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.02.20-20.46.20:281][  0]LogInit: High frequency timer resolution =3.428035 MHz
+[2019.02.20-20.46.20:281][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2019.02.20-20.46.20:281][  0]LogMemory: Platform Memory Stats for Windows
+[2019.02.20-20.46.20:282][  0]LogMemory: Process Physical Memory: 105.14 MB used, 105.14 MB peak
+[2019.02.20-20.46.20:282][  0]LogMemory: Process Virtual Memory: 89.69 MB used, 89.69 MB peak
+[2019.02.20-20.46.20:282][  0]LogMemory: Physical Memory: 8078.75 MB used,  8249.88 MB free, 16328.63 MB total
+[2019.02.20-20.46.20:282][  0]LogMemory: Virtual Memory: 542.04 MB used,  8249.88 MB free, 134217728.00 MB total
+[2019.02.20-20.46.20:926][  0]LogInit: Using OS detected language (en-US).
+[2019.02.20-20.46.20:926][  0]LogInit: Using OS detected locale (en-US).
+[2019.02.20-20.46.20:927][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.02.20-20.46.21:533][  0]LogStreaming: Display: Took  0.607s to InitEngineTextLocalization.
+[2019.02.20-20.46.21:564][  0]LogInit: Setting process to per monitor DPI aware
+[2019.02.20-20.46.21:771][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.02.20-20.46.21:772][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.02.20-20.46.22:350][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.02.20-20.46.22:350][  0]LogD3D11RHI: D3D11 adapters:
+[2019.02.20-20.46.22:432][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 670' (Feature Level 11_0)
+[2019.02.20-20.46.22:432][  0]LogD3D11RHI:       4052/0/8164 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2019.02.20-20.46.22:446][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.02.20-20.46.22:446][  0]LogD3D11RHI:       0/0/8164 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.02.20-20.46.22:446][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.02.20-20.46.22:451][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.02.20-20.46.22:459][  0]LogD3D11RHI:     GPU DeviceId: 0x1189 (for the marketing name, search the web for "GPU Device Id")
+[2019.02.20-20.46.22:459][  0]LogWindows: EnumDisplayDevices:
+[2019.02.20-20.46.22:459][  0]LogWindows:    0. 'NVIDIA GeForce GTX 670' (P:1 D:1)
+[2019.02.20-20.46.22:460][  0]LogWindows:    1. 'NVIDIA GeForce GTX 670' (P:0 D:0)
+[2019.02.20-20.46.22:460][  0]LogWindows:    2. 'NVIDIA GeForce GTX 670' (P:0 D:0)
+[2019.02.20-20.46.22:460][  0]LogWindows:    3. 'NVIDIA GeForce GTX 670' (P:0 D:0)
+[2019.02.20-20.46.22:460][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2019.02.20-20.46.22:460][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 670
+[2019.02.20-20.46.22:460][  0]LogD3D11RHI:   Driver Version: 391.35 (internal:23.21.13.9135, unified:391.35)
+[2019.02.20-20.46.22:460][  0]LogD3D11RHI:      Driver Date: 3-23-2018
+[2019.02.20-20.46.22:460][  0]LogRHI: Texture pool is 2836 MB (70% of 4052 MB)
+[2019.02.20-20.46.22:504][  0]LogD3D11RHI: Async texture creation enabled
+[2019.02.20-20.46.22:523][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2019.02.20-20.46.22:525][  0]LogShaderCompilers: Guid format shader working directory is 10 characters bigger than the processId version (C:/Users/pola0023/Documents/GitHub/GOOB/Intermediate/Shaders/WorkingDirectory/3284/).
+[2019.02.20-20.46.22:525][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/pola0023/AppData/Local/Temp/UnrealShaderWorkingDir/344877844039F0CF9B43F0A238B91A45/'.
+[2019.02.20-20.46.22:870][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2019.02.20-20.46.22:896][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2019.02.20-20.46.22:915][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2019.02.20-20.46.22:933][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2019.02.20-20.46.22:973][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2019.02.20-20.46.22:995][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2019.02.20-20.46.23:013][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2019.02.20-20.46.23:039][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2019.02.20-20.46.23:052][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:170][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:171][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:171][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:171][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:171][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:171][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:171][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:171][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.20-20.46.23:180][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2019.02.20-20.46.23:273][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.02.20-20.46.23:273][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.02.20-20.46.23:313][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.02.20-20.46.23:313][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.02.20-20.46.23:336][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2019.02.20-20.46.23:358][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2019.02.20-20.46.23:377][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2019.02.20-20.46.23:397][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2019.02.20-20.46.23:410][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
+[2019.02.20-20.46.23:411][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.02.20-20.46.23:748][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.02.20-20.46.23:748][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.02.20-20.46.23:748][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.02.20-20.46.24:878][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.02.20-20.46.25:378][  0]LogDerivedDataCache: Loaded boot cache 0.50s 87MB C:/Users/pola0023/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2019.02.20-20.46.25:379][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/pola0023/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc
+[2019.02.20-20.46.25:379][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/pola0023/Documents/GitHub/GOOB/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.02.20-20.46.25:379][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.02.20-20.46.25:379][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/pola0023/Documents/GitHub/GOOB/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.02.20-20.46.25:379][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.02.20-20.46.25:405][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.02.20-20.46.25:419][  0]LogDerivedDataCache: Using Local data cache path C:/Users/pola0023/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.02.20-20.46.25:419][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.02.20-20.46.25:419][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.02.20-20.46.25:442][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.02.20-20.46.25:443][  0]LogSlate: Using FreeType 2.6.0
+[2019.02.20-20.46.25:499][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.02.20-20.46.25:693][  0]LogAssetRegistry: FAssetRegistry took 0.0294 seconds to start up
+[2019.02.20-20.46.26:157][  0]LogInit: Selected Device Profile: [Windows]
+[2019.02.20-20.46.26:511][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2019.02.20-20.46.26:561][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2019.02.20-20.46.26:561][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.02.20-20.46.26:561][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.02.20-20.46.26:561][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2019.02.20-20.46.26:576][  0]LogNetVersion: Terminus_22XX 1.0.0, NetCL: 4212847, EngineNetVer: 5, GameNetVer: 0 (Checksum: 1011408813)
+[2019.02.20-20.46.27:197][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.104274 seconds
+[2019.02.20-20.46.27:205][  0]LogUObjectArray: 38425 objects as part of root set at end of initial load.
+[2019.02.20-20.46.27:205][  0]LogUObjectAllocator: 6690872 out of 0 bytes used by permanent object pool.
+[2019.02.20-20.46.27:205][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.02.20-20.46.31:249][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.02.20-20.46.31:282][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.02.20-20.46.31:814][  0]SourceControl: Source control is disabled
+[2019.02.20-20.46.31:814][  0]SourceControl: Source control is disabled
+[2019.02.20-20.46.31:849][  0]SourceControl: Source control is disabled
+[2019.02.20-20.46.31:858][  0]SourceControl: Source control is disabled
+[2019.02.20-20.46.32:529][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.02.20-20.46.32:685][  0]LogOcInput: OculusInput pre-init called
+[2019.02.20-20.46.32:814][  0]LogEngine: Initializing Engine...
+[2019.02.20-20.46.32:815][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.02.20-20.46.32:817][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.02.20-20.46.32:817][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.02.20-20.46.32:817][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.02.20-20.46.32:817][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.02.20-20.46.33:041][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.02.20-20.46.33:172][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.02.20-20.46.33:197][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-20.46.33:222][  0]LogInit: FAudioDevice initialized.
+[2019.02.20-20.46.33:222][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.02.20-20.46.33:309][  0]LogDerivedDataCache: Saved boot cache 0.09s 87MB C:/Users/pola0023/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2019.02.20-20.46.33:313][  0]LogInit: Texture streaming: Enabled
+[2019.02.20-20.46.33:406][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.02.20-20.46.33:449][  0]LogInit: Transaction tracking system initialized
+[2019.02.20-20.46.33:603][  0]BlueprintLog: New page: Editor Load
+[2019.02.20-20.46.34:011][  0]LocalizationService: Localization service is disabled
+[2019.02.20-20.46.34:634][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.02.20-20.46.34:634][  0]LogCook: Display: Mobile HDR setting 1
+[2019.02.20-20.46.34:635][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2019.02.20-20.46.34:635][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.02.20-20.46.34:635][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.02.20-20.46.34:635][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.02.20-20.46.34:635][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.02.20-20.46.34:642][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/' took 0.02s
+[2019.02.20-20.46.35:288][  0]SourceControl: Source control is disabled
+[2019.02.20-20.46.35:288][  0]Cmd: MAP LOAD FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Levels/Test_Level.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.02.20-20.46.35:289][  0]LightingResults: New page: Lighting Build
+[2019.02.20-20.46.35:331][  0]MapCheck: New page: Map Check
+[2019.02.20-20.46.35:331][  0]LightingResults: New page: Lighting Build
+[2019.02.20-20.46.35:408][  0]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-20.46.35:419][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.02.20-20.46.35:440][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.02.20-20.46.35:508][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 68.226ms to complete.
+[2019.02.20-20.46.35:509][  0]LogFileHelpers: Loading map 'Test_Level' took 0.221
+[2019.02.20-20.46.35:738][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-20.46.35:749][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-20.46.35:761][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-20.46.35:771][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-20.46.35:816][  0]LogCollectionManager: Loaded 0 collections in 0.000959 seconds
+[2019.02.20-20.46.35:875][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/Collections/' took 0.01s
+[2019.02.20-20.46.35:875][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Developers/pola0023/Collections/' took 0.01s
+[2019.02.20-20.46.35:875][  0]LogFileCache: Scanning file cache for directory 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Collections/' took 0.01s
+[2019.02.20-20.46.35:875][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2019.02.20-20.46.35:886][  0]LogContentBrowser: Native class hierarchy populated in 0.0103 seconds. Added 2581 classes and 605 folders.
+[2019.02.20-20.46.35:911][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.02.20-20.46.36:171][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0005 seconds. Added 0 classes and 0 folders.
+[2019.02.20-20.46.36:207][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0005 seconds. Added 1 classes and 2 folders.
+[2019.02.20-20.46.36:237][  0]LogSlate: Took 0.008573 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.02.20-20.46.36:246][  0]LogSlate: Took 0.007620 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.02.20-20.46.36:259][  0]LogSlate: Took 0.007084 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.02.20-20.46.36:377][  0]LogRenderer: Reallocating scene render targets to support 1208x576 Format 10 NumSamples 1 (Frame:1).
+[2019.02.20-20.46.36:500][  0]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.20-20.46.36:526][  0]LogSlate: Window 'Tutorials' being destroyed
+[2019.02.20-20.46.36:581][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.02.20-20.46.36:581][  0]LogLoad: (Engine Initialization) Total time: 20.06 seconds
+[2019.02.20-20.46.36:581][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.02.20-20.46.36:591][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.02.20-20.46.36:610][  0]LogContentStreaming: Texture pool size now 3000 MB
+[2019.02.20-20.46.36:660][  1]LogAssetRegistry: Asset discovery search completed in 10.9912 seconds
+[2019.02.20-20.46.36:661][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2019.02.20-20.46.36:662][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000148 seconds (updated 0 objects)
+[2019.02.20-20.46.39:162][276]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.20-20.46.39:264][287]LogSlate: Took 0.000560 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.02.20-20.46.40:073][380]LogSlate: Took 0.000346 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.02.20-20.46.40:102][380]LogAssetEditorManager: Opening Asset editor for WidgetBlueprint /Game/Blueprints/DesignBlueprints/User_Interface_BP.User_Interface_BP
+[2019.02.20-20.46.40:727][380]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0010 seconds. Added 116 classes and 0 folders.
+[2019.02.20-20.46.41:774][380]LogSlate: Took 0.000321 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2019.02.20-20.46.43:326][489]LogSlate: Took 0.002026 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansFallback.ttf' (3848K)
+[2019.02.20-20.47.44:225][490]LogSlate: Window 'User_Interface_BP' being destroyed
+[2019.02.20-20.47.44:229][490]LogSlate: Window 'User_Interface_BP' being destroyed
+[2019.02.20-20.47.51:718][365]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-20.47.54:311][490]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-20.47.54:372][490]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-20.49.51:639][137]LogSlate: Took 0.000436 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2019.02.20-20.51.23:012][294]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-20.51.23:284][294]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterE31129D84D93E0051F4457B9E1ECB401.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.51.23:623][314]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter21019BDC4EB2C86C866FDF9C0604597A.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.51.24:701][409]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-20.51.24:705][409]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-20.51.25:372][468]Candidate modules for hot reload:
+[2019.02.20-20.51.25:372][468]  Terminus_22XX
+[2019.02.20-20.51.25:372][468]Launching UnrealBuildTool... [D:/Program Files/Epic Games/UE_4.20/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Terminus_22XX,2528 Win64 Development -TargetType=Editor -Project="C:/Users/pola0023/Documents/GitHub/GOOB/Terminus_22XX.uproject" -canskiplink "C:/Users/pola0023/Documents/GitHub/GOOB/Terminus_22XX.uproject" ]
+[2019.02.20-20.51.25:374][468]Warning: Starting HotReload took  0.1s.
+[2019.02.20-20.51.45:035][739]CompilerResultsLog: New page: Compilation - Feb 20, 2019, 10:51:45 AM
+[2019.02.20-20.51.45:038][739]CompilerResultsLog: Performing full C++ include scan (hot reloading a new target)
+[2019.02.20-20.51.45:038][739]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2019.02.20-20.51.45:038][739]CompilerResultsLog: Creating makefile for hot reloading Terminus_22XXEditor (no existing makefile)
+[2019.02.20-20.51.45:038][739]CompilerResultsLog: Compiling game modules for hot reload
+[2019.02.20-20.51.45:039][739]CompilerResultsLog: Using Visual Studio 2017 14.14.26428 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.14.26428) and Windows 10.0.17134.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.02.20-20.51.45:039][739]CompilerResultsLog: Parsing headers for Terminus_22XXEditor
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\pola0023\Documents\GitHub\GOOB\Terminus_22XX.uproject" "C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Terminus_22XXEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.02.20-20.51.45:039][739]CompilerResultsLog: Reflection code generated for Terminus_22XXEditor in 11.0295244 seconds
+[2019.02.20-20.51.45:039][739]CompilerResultsLog: Building 6 actions with 8 processes...
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   Terminus_22XX.init.gen.cpp
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   PlayerCharacter.gen.cpp
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   BaseGun.cpp
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   c:\users\pola0023\documents\github\goob\source\terminus_22xx\BaseGun.h(55): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+[2019.02.20-20.51.45:039][739]CompilerResultsLog:   PlayerCharacter.cpp
+[2019.02.20-20.51.45:040][739]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2019.02.20-20.51.45:040][739]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+[2019.02.20-20.51.45:040][739]CompilerResultsLog:   c:\users\pola0023\documents\github\goob\source\terminus_22xx\BaseGun.h(55): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+[2019.02.20-20.51.45:040][739]CompilerResultsLog:   UE4Editor-Terminus_22XX-2528.lib
+[2019.02.20-20.51.45:040][739]CompilerResultsLog:      Creating library C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-2528.lib and object C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-2528.exp
+[2019.02.20-20.51.45:040][739]CompilerResultsLog:   UE4Editor-Terminus_22XX-2528.dll
+[2019.02.20-20.51.45:040][739]CompilerResultsLog:      Creating library C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-2528.suppressed.lib and object C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-2528.suppressed.exp
+[2019.02.20-20.51.45:040][739]CompilerResultsLog: Total build time: 19.23 seconds (Parallel executor: 2.30 seconds)
+[2019.02.20-20.51.45:046][739]LogMainFrame: MainFrame: Module compiling took 19.720 seconds
+[2019.02.20-20.51.45:096][739]LogClass: Could not find existing class PlayerCharacter in package /Script/Terminus_22XX for HotReload, assuming new class
+[2019.02.20-20.51.45:096][739]LogClass: Function GetHealthPercentage is new.
+[2019.02.20-20.51.45:104][739]LogClass: EFireStyle HotReload.
+[2019.02.20-20.51.45:116][739]LogHotReload: Re-instancing PlayerCharacter after hot-reload.
+[2019.02.20-20.51.45:382][739]LogContentBrowser: Native class hierarchy updated for 'Terminus_22XX' in 0.0004 seconds. Added 9 classes and 2 folders.
+[2019.02.20-20.51.45:385][739]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2019.02.20-20.51.45:876][739]LogContentBrowser: Native class hierarchy populated in 0.0122 seconds. Added 2582 classes and 607 folders.
+[2019.02.20-20.51.45:950][739]Display: HotReload took 20.7s.
+[2019.02.20-20.51.48:302][ 19]LogAssetEditorManager: Opening Asset editor for WidgetBlueprint /Game/Blueprints/DesignBlueprints/User_Interface_BP.User_Interface_BP
+[2019.02.20-20.52.05:715][684]BlueprintLog: New page: Compile User_Interface_BP
+[2019.02.20-20.52.05:815][684]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.52.05:847][684]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BP165F286448ECD2A88C7AE49C98A620B7.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.52.31:923][452]BlueprintLog: New page: Compile User_Interface_BP
+[2019.02.20-20.52.31:993][452]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.52.32:017][452]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BP650EFB28495540748D24BEA667959523.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.52.32:531][503]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.52.32:556][503]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BPF321DD0D468BC3EEC46B3696865BD293.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.52.48:407][245]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.52.48:433][245]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BPC2E546564B45E8CBDCF48CA20B92FBAA.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.52.52:662][724]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.52.52:688][724]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BPBC1690DD450168D3D342578373ACEB5F.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.53.10:588][640]BlueprintLog: New page: Compile User_Interface_BP
+[2019.02.20-20.53.10:637][640]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.53.10:661][640]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BPC5C0820D4C46F5BA64B87EAD0A7EBB5A.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.53.10:941][668]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.53.10:965][668]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BP641890B24796C261F230B7944E3A502E.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.53.11:667][749]LogSlate: Window 'User_Interface_BP' being destroyed
+[2019.02.20-20.53.11:670][749]LogSlate: Window 'User_Interface_BP' being destroyed
+[2019.02.20-20.53.14:514][ 68]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-20.54.27:290][265]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-20.54.27:566][265]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter085B3F2B4948E3130967809884F236B6.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.54.27:856][279]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter23AE8C5D41DE348B943B32A30F81991F.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.54.54:342][575]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-20.54.54:345][575]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-20.54.55:066][651]Candidate modules for hot reload:
+[2019.02.20-20.54.55:066][651]  Terminus_22XX
+[2019.02.20-20.54.55:067][651]Launching UnrealBuildTool... [D:/Program Files/Epic Games/UE_4.20/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Terminus_22XX,130 Win64 Development -TargetType=Editor -Project="C:/Users/pola0023/Documents/GitHub/GOOB/Terminus_22XX.uproject" -canskiplink "C:/Users/pola0023/Documents/GitHub/GOOB/Terminus_22XX.uproject" ]
+[2019.02.20-20.54.55:069][651]Warning: Starting HotReload took  0.0s.
+[2019.02.20-20.55.07:492][136]CompilerResultsLog: New page: Compilation - Feb 20, 2019, 10:55:07 AM
+[2019.02.20-20.55.07:503][136]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2019.02.20-20.55.07:503][136]CompilerResultsLog: Compiling game modules for hot reload
+[2019.02.20-20.55.07:503][136]CompilerResultsLog: Parsing headers for Terminus_22XXEditor
+[2019.02.20-20.55.07:503][136]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\pola0023\Documents\GitHub\GOOB\Terminus_22XX.uproject" "C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Terminus_22XXEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.02.20-20.55.07:503][136]CompilerResultsLog: Error: C:/Users/pola0023/Documents/GitHub/GOOB/Source/Terminus_22XX/PlayerCharacter.h(92)  : Error: 'BlueprintCallable' is only allowed on a property when it is a multicast delegate
+[2019.02.20-20.55.07:503][136]CompilerResultsLog: UnrealHeaderTool failed for target 'Terminus_22XXEditor' (platform: Win64, module info: C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Terminus_22XXEditor.uhtmanifest).
+[2019.02.20-20.55.07:503][136]LogMainFrame: MainFrame: Module compiling took 12.440 seconds
+[2019.02.20-20.55.07:503][136]Warning: HotReload failed, recompile failed
+[2019.02.20-20.56.25:384][470]LogSlate: Window 'Message Log' being destroyed
+[2019.02.20-20.56.25:388][470]LogSlate: Window 'Message Log' being destroyed
+[2019.02.20-20.56.38:232][676]Candidate modules for hot reload:
+[2019.02.20-20.56.38:232][676]  Terminus_22XX
+[2019.02.20-20.56.38:232][676]Launching UnrealBuildTool... [D:/Program Files/Epic Games/UE_4.20/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Terminus_22XX,3672 Win64 Development -TargetType=Editor -Project="C:/Users/pola0023/Documents/GitHub/GOOB/Terminus_22XX.uproject" -canskiplink "C:/Users/pola0023/Documents/GitHub/GOOB/Terminus_22XX.uproject" ]
+[2019.02.20-20.56.38:235][676]Warning: Starting HotReload took  0.0s.
+[2019.02.20-20.56.53:020][415]CompilerResultsLog: New page: Compilation - Feb 20, 2019, 10:56:53 AM
+[2019.02.20-20.56.53:020][415]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build.
+[2019.02.20-20.56.53:020][415]CompilerResultsLog: Compiling game modules for hot reload
+[2019.02.20-20.56.53:020][415]CompilerResultsLog: Parsing headers for Terminus_22XXEditor
+[2019.02.20-20.56.53:020][415]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\pola0023\Documents\GitHub\GOOB\Terminus_22XX.uproject" "C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Terminus_22XXEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.02.20-20.56.53:020][415]CompilerResultsLog: Reflection code generated for Terminus_22XXEditor in 10.9152733 seconds
+[2019.02.20-20.56.53:020][415]CompilerResultsLog: Building 6 actions with 8 processes...
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   Terminus_22XX.init.gen.cpp
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   PlayerCharacter.gen.cpp
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   BaseGun.cpp
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   c:\users\pola0023\documents\github\goob\source\terminus_22xx\BaseGun.h(55): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   PlayerCharacter.cpp
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   d:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+[2019.02.20-20.56.53:021][415]CompilerResultsLog:   c:\users\pola0023\documents\github\goob\source\terminus_22xx\BaseGun.h(55): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+[2019.02.20-20.56.53:022][415]CompilerResultsLog:   UE4Editor-Terminus_22XX-3672.lib
+[2019.02.20-20.56.53:022][415]CompilerResultsLog:      Creating library C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-3672.lib and object C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-3672.exp
+[2019.02.20-20.56.53:022][415]CompilerResultsLog:   UE4Editor-Terminus_22XX-3672.dll
+[2019.02.20-20.56.53:022][415]CompilerResultsLog:      Creating library C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-3672.suppressed.lib and object C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX-3672.suppressed.exp
+[2019.02.20-20.56.53:022][415]CompilerResultsLog: Total build time: 14.52 seconds (Parallel executor: 2.29 seconds)
+[2019.02.20-20.56.53:022][415]LogMainFrame: MainFrame: Module compiling took 14.794 seconds
+[2019.02.20-20.56.53:066][415]LogClass: Could not find existing class PlayerCharacter in package /Script/Terminus_22XX for HotReload, assuming new class
+[2019.02.20-20.56.53:066][415]LogClass: Function GetHealthPercentage is new.
+[2019.02.20-20.56.53:074][415]LogClass: EFireStyle HotReload.
+[2019.02.20-20.56.53:086][415]LogHotReload: Re-instancing PlayerCharacter after hot-reload.
+[2019.02.20-20.56.53:328][415]LogContentBrowser: Native class hierarchy updated for 'Terminus_22XX' in 0.0005 seconds. Added 9 classes and 2 folders.
+[2019.02.20-20.56.53:332][415]Display: HotReload successful (2 functions remapped  0 scriptstructs remapped)
+[2019.02.20-20.56.53:767][415]LogContentBrowser: Native class hierarchy populated in 0.0125 seconds. Added 2582 classes and 607 folders.
+[2019.02.20-20.56.53:767][415]Display: HotReload took 15.5s.
+[2019.02.20-20.56.55:592][612]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-20.57.16:976][561]LogSlate: Took 0.008323 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensedItalic.ttf' (160K)
+[2019.02.20-20.57.27:658][569]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-20.57.27:982][569]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter68FC7D9C4D0FCEDDF220F382D1610E48.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.57.44:567][103]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-20.57.44:866][103]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterEE9B5FED4FE663C862E51BAA01E99622.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.57.45:257][130]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter54C68C3D4E1F90BE60DB0A87DBA33030.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.58.00:837][700]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-20.58.01:056][700]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterEF3249EF46D7E38BDE688EB5F3930B17.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.58.01:458][731]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter415424554971081BA3C0F8B367953AE0.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-20.58.02:973][884]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-20.58.02:977][884]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-20.58.05:115][122]LogAssetEditorManager: Opening Asset editor for WidgetBlueprint /Game/Blueprints/DesignBlueprints/User_Interface_BP.User_Interface_BP
+[2019.02.20-20.58.18:409][335]LogEditorTransaction: Undo Add Node
+[2019.02.20-20.59.36:637][393]BlueprintLog: New page: Compile User_Interface_BP
+[2019.02.20-20.59.36:688][393]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.59.36:716][393]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BP6F6C80AA4E7DB148AD4E5BA56F419A59.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-20.59.37:172][441]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-20.59.37:197][441]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BP9FE26DCD46BD5996FF572FB7E55DFADC.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-21.00.15:734][591]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/DesignBlueprints/User_Interface_BP" FILE="C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset" SILENT=true
+[2019.02.20-21.00.15:759][591]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/User_Interface_BP9FFB8FB94181B20B135B10828A20A5CC.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/DesignBlueprints/User_Interface_BP.uasset'
+[2019.02.20-21.00.17:482][788]LogSlate: Window 'User_Interface_BP' being destroyed
+[2019.02.20-21.00.17:486][788]LogSlate: Window 'User_Interface_BP' being destroyed
+[2019.02.20-21.01.27:654][945]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-21.02.04:402][622]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/Test_Level' took 0.030
+[2019.02.20-21.02.04:411][622]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter] ([1] browsable assets)...
+[2019.02.20-21.02.04:428][622]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter]
+[2019.02.20-21.02.04:429][622]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter]
+[2019.02.20-21.02.04:466][622]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter_Auto13CD2DE7F4611B0C38E86CFA8B277EC60.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/Autosaves/Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter_Auto1.uasset'
+[2019.02.20-21.02.04:468][622]LogFileHelpers: Auto-saving content packages took 0.065
+[2019.02.20-21.02.31:435][232]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-21.02.31:445][232]LogBlueprint: Warning: [Compiler TestPlayerCharacter] Sequence  has no valid output
+[2019.02.20-21.02.31:630][232]LogBlueprint: Warning: [Compiler TestPlayerCharacter] [0975.11] Compile of TestPlayerCharacter successful, but with 1 Warning(s) [in 194 ms] (/Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter)
+[2019.02.20-21.02.31:971][248]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterB56CD5D446067BE6A2C35296246B9F03.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.05.03:985][426]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-21.05.04:231][426]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterA50AF2FA42C37BE82BF909BCA70C5C8E.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.05.04:548][449]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter716FABCB4C7A7BBA606D0AB5E169EFF8.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.05.06:151][602]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-21.05.06:154][602]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-21.05.07:295][728]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.20-21.05.07:314][728]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.20-21.05.07:328][728]PIE: New page: PIE session: Test_Level (Feb 20, 2019, 11:05:07 AM)
+[2019.02.20-21.05.07:328][728]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level
+[2019.02.20-21.05.07:348][728]LogPlayLevel: PIE: StaticDuplicateObject took: (0.019924s)
+[2019.02.20-21.05.07:349][728]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-21.05.07:349][728]LogPlayLevel: PIE: World Init took: (0.000848s)
+[2019.02.20-21.05.07:350][728]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level.Test_Level to /Game/Levels/UEDPIE_0_Test_Level.Test_Level (0.021138s)
+[2019.02.20-21.05.07:404][728]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-21.05.07:464][728]LogInit: FAudioDevice initialized.
+[2019.02.20-21.05.07:533][728]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.20-21.05.07:535][728]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level.Test_Level up for play (max tick rate 0) at 2019.02.20-16.05.07
+[2019.02.20-21.05.07:536][728]LogWorld: Bringing up level for play took: 0.002254
+[2019.02.20-21.05.07:648][728]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0005 seconds. Added 10 classes and 0 folders.
+[2019.02.20-21.05.07:721][728]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level 0.547
+[2019.02.20-21.05.14:870][575]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.05.14:908][575]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.20-21.05.14:933][575]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.05.14:975][577]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2019.02.20-21.05.21:420][314]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.20-21.05.21:574][331]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-21.05.35:734][522]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-21.05.35:973][522]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter3F88EAA04DC2F6E35BB9F4891CFEA9C8.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.05.36:325][548]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter4E9A5B5A4D18240CB6FF68AA74A5CAAC.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.05.37:293][640]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-21.05.37:298][640]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-21.05.37:821][694]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.20-21.05.37:838][694]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.20-21.05.37:838][694]PIE: New page: PIE session: Test_Level (Feb 20, 2019, 11:05:37 AM)
+[2019.02.20-21.05.37:838][694]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level
+[2019.02.20-21.05.37:860][694]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021327s)
+[2019.02.20-21.05.37:860][694]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-21.05.37:861][694]LogPlayLevel: PIE: World Init took: (0.000838s)
+[2019.02.20-21.05.37:861][694]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level.Test_Level to /Game/Levels/UEDPIE_0_Test_Level.Test_Level (0.022559s)
+[2019.02.20-21.05.37:892][694]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-21.05.37:904][694]LogInit: FAudioDevice initialized.
+[2019.02.20-21.05.37:955][694]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.20-21.05.37:957][694]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level.Test_Level up for play (max tick rate 0) at 2019.02.20-16.05.37
+[2019.02.20-21.05.37:957][694]LogWorld: Bringing up level for play took: 0.001668
+[2019.02.20-21.05.37:973][694]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level 0.799
+[2019.02.20-21.05.42:829][270]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.05.42:866][270]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.20-21.05.42:891][270]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.05.42:932][272]LogPlayLevel: Display: Destroying online subsystem :Context_20
+[2019.02.20-21.05.44:021][394]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.20-21.05.44:147][407]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-21.06.45:177][749]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-21.06.45:432][749]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter49B7F5A14AB842558E02F7AAF68CBC39.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.06.45:725][769]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter3ECCFEE246A1DD8FFC2C428C46F243E6.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.06.50:049][186]LogSlate: Window 'TestPlayerCharacter*' being destroyed
+[2019.02.20-21.06.50:052][186]LogSlate: Window 'TestPlayerCharacter*' being destroyed
+[2019.02.20-21.06.50:682][254]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.20-21.06.50:698][254]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.20-21.06.50:698][254]PIE: New page: PIE session: Test_Level (Feb 20, 2019, 11:06:50 AM)
+[2019.02.20-21.06.50:699][254]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level
+[2019.02.20-21.06.50:719][254]LogPlayLevel: PIE: StaticDuplicateObject took: (0.020653s)
+[2019.02.20-21.06.50:720][254]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-21.06.50:720][254]LogPlayLevel: PIE: World Init took: (0.000993s)
+[2019.02.20-21.06.50:721][254]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level.Test_Level to /Game/Levels/UEDPIE_0_Test_Level.Test_Level (0.022037s)
+[2019.02.20-21.06.50:752][254]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-21.06.50:763][254]LogInit: FAudioDevice initialized.
+[2019.02.20-21.06.50:800][254]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.20-21.06.50:802][254]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level.Test_Level up for play (max tick rate 0) at 2019.02.20-16.06.50
+[2019.02.20-21.06.50:802][254]LogWorld: Bringing up level for play took: 0.001541
+[2019.02.20-21.06.50:818][254]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level -0.355
+[2019.02.20-21.06.55:560][815]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.06.55:602][815]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.20-21.06.55:628][815]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.06.55:667][817]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2019.02.20-21.06.56:793][944]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.20-21.06.56:935][959]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-21.06.58:175][ 21]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterD29260DD405A553750C833B8B2169D67.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.07.05:938][651]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-21.07.06:222][651]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterDCDD453443F63FF4A32F8F8FBAA1AA50.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.07.06:415][656]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacterB56B39194E050921B133A9BF8CE03055.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.07.07:619][746]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-21.07.07:623][746]LogSlate: Window 'TestPlayerCharacter' being destroyed
+[2019.02.20-21.07.08:255][811]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.20-21.07.08:271][811]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.20-21.07.08:272][811]PIE: New page: PIE session: Test_Level (Feb 20, 2019, 11:07:08 AM)
+[2019.02.20-21.07.08:272][811]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level
+[2019.02.20-21.07.08:294][811]LogPlayLevel: PIE: StaticDuplicateObject took: (0.021719s)
+[2019.02.20-21.07.08:294][811]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-21.07.08:295][811]LogPlayLevel: PIE: World Init took: (0.000967s)
+[2019.02.20-21.07.08:295][811]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level.Test_Level to /Game/Levels/UEDPIE_0_Test_Level.Test_Level (0.023102s)
+[2019.02.20-21.07.08:321][811]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-21.07.08:333][811]LogInit: FAudioDevice initialized.
+[2019.02.20-21.07.08:370][811]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.20-21.07.08:372][811]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level.Test_Level up for play (max tick rate 0) at 2019.02.20-16.07.08
+[2019.02.20-21.07.08:373][811]LogWorld: Bringing up level for play took: 0.001555
+[2019.02.20-21.07.08:389][811]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level -0.784
+[2019.02.20-21.07.17:245][852]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.07.17:285][852]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.20-21.07.17:313][852]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.07.17:351][854]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2019.02.20-21.07.18:281][961]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.20-21.07.18:417][975]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter
+[2019.02.20-21.07.25:111][500]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter8110FFA942944C0B26BC5B9BE60448E4.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.07.25:809][559]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.20-21.07.25:829][559]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.20-21.07.25:830][559]PIE: New page: PIE session: Test_Level (Feb 20, 2019, 11:07:25 AM)
+[2019.02.20-21.07.25:830][559]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level
+[2019.02.20-21.07.25:851][559]LogPlayLevel: PIE: StaticDuplicateObject took: (0.020883s)
+[2019.02.20-21.07.25:852][559]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-21.07.25:852][559]LogPlayLevel: PIE: World Init took: (0.001044s)
+[2019.02.20-21.07.25:852][559]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level.Test_Level to /Game/Levels/UEDPIE_0_Test_Level.Test_Level (0.022338s)
+[2019.02.20-21.07.25:882][559]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-21.07.25:893][559]LogInit: FAudioDevice initialized.
+[2019.02.20-21.07.25:933][559]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.20-21.07.25:935][559]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level.Test_Level up for play (max tick rate 0) at 2019.02.20-16.07.25
+[2019.02.20-21.07.25:935][559]LogWorld: Bringing up level for play took: 0.001470
+[2019.02.20-21.07.25:951][559]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level 0.778
+[2019.02.20-21.07.25:967][559]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 298
+[2019.02.20-21.07.25:968][559]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.07.26:012][559]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_4.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.07.26:012][559]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_4.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.07.33:125][560]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 298
+[2019.02.20-21.07.33:125][560]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.07.33:135][560]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_4.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.07.36:016][561]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 298
+[2019.02.20-21.07.36:016][561]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.07.36:026][561]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_4.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.07.37:799][562]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 298
+[2019.02.20-21.07.37:799][562]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.07.37:808][562]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_4.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.07.48:157][562]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.07.48:192][562]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.20-21.07.48:218][562]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.07.48:243][563]LogPlayLevel: Display: Destroying online subsystem :Context_26
+[2019.02.20-21.07.49:119][640]LogEditorTransaction: Undo Edit Current Health
+[2019.02.20-21.07.49:789][689]LogEditorTransaction: Undo Comment Changed
+[2019.02.20-21.07.50:021][707]LogEditorTransaction: Undo Create Pin Link
+[2019.02.20-21.07.50:209][722]LogEditorTransaction: Undo Move Node
+[2019.02.20-21.07.50:382][735]LogEditorTransaction: Undo Change Number Pin Value
+[2019.02.20-21.07.50:575][750]LogEditorTransaction: Undo Add Node
+[2019.02.20-21.07.50:752][764]LogEditorTransaction: Undo Move Node
+[2019.02.20-21.07.50:962][782]LogEditorTransaction: Undo Move Node
+[2019.02.20-21.07.51:149][796]LogEditorTransaction: Undo Add Node
+[2019.02.20-21.07.51:335][811]LogEditorTransaction: Undo Move Node
+[2019.02.20-21.07.51:519][826]LogEditorTransaction: Undo Add Node
+[2019.02.20-21.07.51:701][841]LogEditorTransaction: Undo Move Node
+[2019.02.20-21.07.51:863][854]LogEditorTransaction: Undo Create Pin Link
+[2019.02.20-21.07.52:044][869]LogEditorTransaction: Undo Move Node
+[2019.02.20-21.07.52:268][889]LogEditorTransaction: Undo Move Node
+[2019.02.20-21.07.52:584][919]LogEditorTransaction: Undo Delete current selection
+[2019.02.20-21.07.52:802][937]LogEditorTransaction: Undo Add Node
+[2019.02.20-21.07.53:013][955]LogEditorTransaction: Undo Delete current selection
+[2019.02.20-21.07.53:214][972]LogEditorTransaction: Undo Change Number Pin Value
+[2019.02.20-21.07.54:928][148]LogEditorTransaction: Redo Change Number Pin Value
+[2019.02.20-21.07.55:240][176]LogEditorTransaction: Redo Delete current selection
+[2019.02.20-21.07.55:792][230]LogEditorTransaction: Undo Delete current selection
+[2019.02.20-21.08.01:073][700]BlueprintLog: New page: Compile TestPlayerCharacter
+[2019.02.20-21.08.01:089][700]LogSpawn: Warning: UWorld::DestroyActor: World has no context! World: World_19, Actor: /Engine/Transient.World_19:PersistentLevel.REINST_TestPlayerCharacter_C_0
+[2019.02.20-21.08.01:089][700]LogSceneComponent: Error: Component 'SceneComponent /Engine/Transient.World_19:PersistentLevel.REINST_TestPlayerCharacter_C_0.Gun Location' has 'SkeletalMeshComponent /Engine/Transient.World_19:PersistentLevel.TestT22XX_Shotgun_C_0.Gun Mesh' in its AttachChildren array, however, 'SkeletalMeshComponent /Engine/Transient.World_19:PersistentLevel.TestT22XX_Shotgun_C_0.Gun Mesh' believes it is not attached to anything
+[2019.02.20-21.08.01:328][700]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter182421FC403139E62CDE7F915B1F7498.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.08.02:270][779]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.20-21.08.02:290][779]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.20-21.08.02:290][779]PIE: New page: PIE session: Test_Level (Feb 20, 2019, 11:08:02 AM)
+[2019.02.20-21.08.02:290][779]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level
+[2019.02.20-21.08.02:310][779]LogPlayLevel: PIE: StaticDuplicateObject took: (0.020014s)
+[2019.02.20-21.08.02:311][779]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-21.08.02:311][779]LogPlayLevel: PIE: World Init took: (0.000843s)
+[2019.02.20-21.08.02:312][779]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level.Test_Level to /Game/Levels/UEDPIE_0_Test_Level.Test_Level (0.021247s)
+[2019.02.20-21.08.02:343][779]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-21.08.02:358][779]LogInit: FAudioDevice initialized.
+[2019.02.20-21.08.02:397][779]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.20-21.08.02:399][779]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level.Test_Level up for play (max tick rate 0) at 2019.02.20-16.08.02
+[2019.02.20-21.08.02:399][779]LogWorld: Bringing up level for play took: 0.001506
+[2019.02.20-21.08.02:414][779]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level -0.758
+[2019.02.20-21.08.02:415][779]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 254
+[2019.02.20-21.08.02:415][779]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.08.02:427][779]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_5.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.02:427][779]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_5.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.04:939][780]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 254
+[2019.02.20-21.08.04:939][780]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.08.04:948][780]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_5.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.07:542][781]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 254
+[2019.02.20-21.08.07:542][781]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.08.07:552][781]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_5.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.12:857][782]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_VariableSet', from offset 254
+[2019.02.20-21.08.12:857][782]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ReceiveTick
+	Function /Game/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.TestPlayerCharacter_C:ExecuteUbergraph_TestPlayerCharacter
+
+[2019.02.20-21.08.12:867][782]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_5.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.15:975][782]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.08.16:017][782]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.20-21.08.16:044][782]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.20-21.08.16:067][783]LogPlayLevel: Display: Destroying online subsystem :Context_27
+[2019.02.20-21.08.23:252][393]LogSlate: Window 'TestPlayerCharacter*' being destroyed
+[2019.02.20-21.08.23:256][393]LogSlate: Window 'TestPlayerCharacter*' being destroyed
+[2019.02.20-21.08.25:979][675]LogSavePackage: Moving 'C:/Users/pola0023/Documents/GitHub/GOOB/Saved/TestPlayerCharacter13A27FC348B0EA6CAC6DB68157870C51.tmp' to 'C:/Users/pola0023/Documents/GitHub/GOOB/Content/Blueprints/ProgrammingBlueprints/TestPlayerCharacter.uasset'
+[2019.02.20-21.08.27:855][891]LogAssetEditorManager: Opening Asset editor for WidgetBlueprint /Game/Blueprints/DesignBlueprints/User_Interface_BP.User_Interface_BP
+[2019.02.20-21.08.48:450][872]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.20-21.08.48:469][872]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.20-21.08.48:470][872]PIE: New page: PIE session: Test_Level (Feb 20, 2019, 11:08:48 AM)
+[2019.02.20-21.08.48:470][872]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Test_Level
+[2019.02.20-21.08.48:489][872]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018497s)
+[2019.02.20-21.08.48:489][872]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.20-21.08.48:490][872]LogPlayLevel: PIE: World Init took: (0.000865s)
+[2019.02.20-21.08.48:490][872]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Test_Level.Test_Level to /Game/Levels/UEDPIE_0_Test_Level.Test_Level (0.019743s)
+[2019.02.20-21.08.48:517][872]LogSceneComponent: Error: Component 'SceneComponent /Engine/Transient.World_19:PersistentLevel.TestPlayerCharacter_C_0.Gun Location' has 'SkeletalMeshComponent /Engine/Transient.World_19:PersistentLevel.TestT22XX_Shotgun_C_0.Gun Mesh' in its AttachChildren array, however, 'SkeletalMeshComponent /Engine/Transient.World_19:PersistentLevel.TestT22XX_Shotgun_C_0.Gun Mesh' believes it is not attached to anything
+[2019.02.20-21.08.48:525][872]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.02.20-21.08.48:537][872]LogInit: FAudioDevice initialized.
+[2019.02.20-21.08.48:574][872]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.20-21.08.48:577][872]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Test_Level.Test_Level up for play (max tick rate 0) at 2019.02.20-16.08.48
+[2019.02.20-21.08.48:577][872]LogWorld: Bringing up level for play took: 0.001583
+[2019.02.20-21.08.48:592][872]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Test_Level -0.581
+[2019.02.20-21.08.48:625][872]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_FunctionResult', from offset 132
+[2019.02.20-21.08.48:626][872]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/DesignBlueprints/User_Interface_BP.User_Interface_BP_C:GetHealthPercentage
+
+[2019.02.20-21.08.48:637][872]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_6.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.48:638][872]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_6.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.48:671][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:689][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:707][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:726][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:744][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:762][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:779][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:797][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:814][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:830][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:848][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:864][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:881][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:898][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:917][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:934][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:951][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:971][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.48:989][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:006][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:022][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:040][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:057][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:074][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:090][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:108][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:124][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:141][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:160][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:178][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:195][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:213][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:230][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:247][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:267][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:285][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:306][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:323][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:342][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:360][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:380][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:399][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:417][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:435][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:453][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:470][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:488][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:506][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:523][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:540][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:557][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:580][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:599][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:618][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:637][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:655][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:674][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:692][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:710][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:726][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:744][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:761][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:779][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:799][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:817][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:834][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:851][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:868][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:886][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:904][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:921][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:938][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:956][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:975][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.49:993][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:011][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:028][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:046][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:063][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:080][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:098][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:116][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:132][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:149][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:166][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:184][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:201][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:219][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:236][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:252][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:270][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:289][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:308][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:324][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:341][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:358][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:374][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:392][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:410][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:427][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:444][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:461][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:478][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:495][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:511][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:527][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:545][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:562][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:579][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:596][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:614][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:632][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:652][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:669][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:685][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:701][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:717][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:733][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:750][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:766][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:783][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:799][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:816][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:834][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:851][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:867][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:884][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:900][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:917][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:933][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:950][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:968][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.50:985][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:002][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:020][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:041][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:060][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:077][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:093][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:110][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:126][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:143][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:159][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:175][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:192][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:209][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:228][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:245][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:263][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:280][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:298][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:316][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:333][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:349][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:366][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:382][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:398][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:417][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:435][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:452][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:468][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:488][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:505][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:522][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:539][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:555][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:572][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:588][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:606][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:623][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:645][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:664][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:681][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:699][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:717][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:734][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:751][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:768][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:785][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:802][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:820][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:838][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:854][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:871][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:888][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:904][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:921][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:937][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:955][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:973][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.51:991][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:009][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:027][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:046][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:064][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:082][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:100][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:117][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:136][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:153][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:171][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:188][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:206][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:223][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:243][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:261][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:282][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:301][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:319][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:337][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:353][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:371][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:388][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:407][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:424][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:445][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:467][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:474][872]LogBlueprintDebug: Warning: Hit breakpoint on node 'K2Node_FunctionResult', from offset 132
+[2019.02.20-21.08.52:475][872]LogBlueprintDebug: 
+Script call stack:
+	Function /Game/Blueprints/DesignBlueprints/User_Interface_BP.User_Interface_BP_C:GetHealthPercentage
+
+[2019.02.20-21.08.52:484][872]LogScriptCore: Warning: Cannot call UnrealScript (FloatBinding /Engine/Transient.UnrealEdEngine_0:GameInstance_6.User_Interface_BP_C_0.WidgetTree_0.ProgressBar_139.FloatBinding_0 - Function /Script/UMG.FloatBinding:GetValue) while stopped at a breakpoint.
+[2019.02.20-21.08.52:498][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:521][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:538][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:554][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:572][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:589][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:607][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:625][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:646][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:666][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:683][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:699][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:716][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:732][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:749][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:766][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:783][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:800][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:816][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:834][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:853][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2019.02.20-21.08.52:871][872]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer

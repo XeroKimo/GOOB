@@ -264,6 +264,11 @@ void APlayerCharacter::ForceStopAndSlowDescent()
 	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Lowered");
 }
 
+float APlayerCharacter::GetHealthPercentage(float CurrentHealth)
+{
+    return (CurrentHealth / MaxHealth);
+}
+
 void APlayerCharacter::StoreCurrentSpeed()
 {
 	StoredSpeedBeforeJump = GetVelocity().Size();
