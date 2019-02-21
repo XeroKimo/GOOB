@@ -116,7 +116,7 @@ public:
 		bool EnableWeaponScrolling = false;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
-		float WeaponSwitchLockout = 1.0f;
+		float WeaponSwitchLockout = 0.125f;
 private:
 	UPROPERTY(Category = "Visual", VisibleAnywhere)
 		class USkeletalMeshComponent* CharacterMesh;
