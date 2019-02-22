@@ -18,6 +18,9 @@ protected:
 
         UPROPERTY(Category = "Health", EditAnywhere)
         class UStaticMeshComponent* HealthMesh;
+
+		UPROPERTY(Category = "Health", EditAnywhere)
+			float HealAmount;
 	
 public:
     AHealthPickUp();

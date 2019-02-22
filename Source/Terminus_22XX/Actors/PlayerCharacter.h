@@ -46,11 +46,14 @@ public:
 	void SwitchToShotgun();
 	void SwitchToVampyr();
 	void SwitchToRailgun();
-	
+	bool AddWeaponToInvetory(class ABaseGun* AGun);
+
+	bool AddHealth(float Amount);
+
 	void ForceStopAndSlowDescent();
 
     UFUNCTION(BlueprintCallable, Category = "Status")
-        float GetHealthPercentage(float CurrentHealth);
+        float GetHealthPercentage();
 
 	class USkeletalMeshComponent* GetCharacterMesh() { return CharacterMesh; }
 	class USceneComponent* GetGunScene() { return GunLocation; }
@@ -110,9 +113,6 @@ public:
 	    float CurrentHealth;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
-		TArray<TSubclassOf<ABaseGun>> DebugWeapons;
-
-	UPROPERTY(Category = "Weapon", EditAnywhere)
 		bool EnableWeaponScrolling = false;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
@@ -127,13 +127,14 @@ private:
     UPROPERTY(Category = "Visual", VisibleAnywhere)
         class USceneComponent* GunLocation;
 
-	class UInventoryComponent* WeaponInventory;
-
 	float StoredSpeedBeforeJump;
 
 	FTimerHandle SuperJumpTimer;
 	FTimerHandle SlowDescentTimer;
 	FTimerHandle WeaponSwitchTimer;
+
+protected:
+	class UInventoryComponent* WeaponInventory;
 
 private:
 	void AttachNewWeapon(ABaseGun* nextGun);

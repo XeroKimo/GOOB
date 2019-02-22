@@ -42,6 +42,9 @@ protected:
 	UPROPERTY(Category = "Bullet", EditAnywhere)
 		float BulletSpeed; 
 
+	UPROPERTY(Category = "Bullet", EditAnywhere)
+		float BulletLifeSpan = 3.0f;
+
 private:
 		FVector BulletDirection;
 

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "Actors/PickUpActor.h"
 #include "BaseGun.generated.h"
 
 UENUM(BlueprintType)
@@ -24,7 +24,7 @@ enum EGunName
 };
 
 UCLASS()
-class TERMINUS_22XX_API ABaseGun : public AActor
+class TERMINUS_22XX_API ABaseGun : public APickUpActor
 {
 	GENERATED_BODY()
 	
@@ -40,7 +40,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void SpawnBullets();
+	virtual void SpawnBullets();
 	void WillShoot();
 	void Fire();
 	void StopFiring();
@@ -125,11 +125,18 @@ protected:
 	class APlayerCharacter* OwnedCharacter;
 	
 public:
-		class USkeletalMeshComponent* GetGunMesh() { return GunMesh; }
 		void SetOwnedCharacter(class APlayerCharacter* Character);
 		void Attach();
 		void Detach();
 		int GetWeaponIndex() { return WeaponIndex; }
+		
+		UFUNCTION()
+			void OnOverlapBegin(UPrimitiveComponent* OverlappedComponent,
+				AActor* OtherActor,
+				UPrimitiveComponent* OtherComp,
+				int32 OtherBodyIndex,
+				bool bFromSweep,
+				const FHitResult &SweepResult);
 
 private:
 	void CheckForWeaponJam();

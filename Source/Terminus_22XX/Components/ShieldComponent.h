@@ -25,14 +25,15 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION()
-		void OnTakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+		void ComponentHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
-	virtual void SetupAttachment(USceneComponent* scene);
+	virtual void SetupAttachment(USceneComponent* Scene, FName SocketName = NAME_None);
 
 	void DecrementActiveGenerators();
 
 protected:
 	bool IsShieldActive;
+	UPROPERTY(VisibleAnywhere)
 	class UStaticMeshComponent* ShieldMesh;
 
 	UPROPERTY(VisibleAnywhere, Category = "Shield")

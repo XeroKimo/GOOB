@@ -3,6 +3,7 @@
 #include "ShieldComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Actors/ShieldGenerator.h"
+#include "Guns/BaseBullet.h"
 
 
 // Sets default values for this component's properties
@@ -44,21 +45,27 @@ void UShieldComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	// ...
 }
 
-void UShieldComponent::OnTakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
+
+void UShieldComponent::ComponentHit(UPrimitiveComponent * HitComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const FHitResult & Hit)
 {
-	if (CanBeDestroyed && IsShieldActive)
+	if (OtherActor->ActorHasTag("Bullet"))
 	{
-		CurrentShieldHealth -= Damage;
-		if (CurrentShieldHealth < 0.f)
+		ABaseBullet* bullet = Cast<ABaseBullet>(OtherActor);
+		if (CanBeDestroyed && IsShieldActive)
 		{
-			CurrentShieldHealth = 0.f;
-			IsShieldActive = false;
+			CurrentShieldHealth -= bullet->BulletDamage;
+			if (CurrentShieldHealth < 0.f)
+			{
+				CurrentShieldHealth = 0.f;
+				IsShieldActive = false;
+			}
 		}
 	}
 }
 
-void UShieldComponent::SetupAttachment(USceneComponent * scene)
+void UShieldComponent::SetupAttachment(USceneComponent* Scene, FName SocketName)
 {
+	ShieldMesh->SetupAttachment(Scene, SocketName);
 }
 
 void UShieldComponent::DecrementActiveGenerators()

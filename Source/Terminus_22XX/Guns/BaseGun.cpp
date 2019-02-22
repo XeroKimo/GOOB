@@ -5,6 +5,7 @@
 #include "Components/SkeletalMeshComponent.h"
 #include "BaseBullet.h"
 #include "Components/ArrowComponent.h"
+#include "Components/SphereComponent.h"
 #include "Public/TimerManager.h"
 
 #include "Actors/PlayerCharacter.h"
@@ -16,12 +17,16 @@ ABaseGun::ABaseGun()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	RootComponent = SphereCollision;
+	SphereCollision->OnComponentBeginOverlap.AddDynamic(this, &ABaseGun::OnOverlapBegin);
+
 	GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>("Gun Mesh");
-	RootComponent = GunMesh;
+	GunMesh->SetupAttachment(SphereCollision);
 	GunMesh->SetCollisionProfileName("NoCollision");
 
 	GunMuzzleLocation = CreateDefaultSubobject<UArrowComponent>("Muzzle Location");
-	GunMuzzleLocation->SetupAttachment(RootComponent);
+	GunMuzzleLocation->SetupAttachment(GunMesh);
+	
 
 	CurrentBurstShot = 0;
 }
@@ -32,6 +37,9 @@ void ABaseGun::BeginPlay()
 	Super::BeginPlay();
 	FireRateinSeconds = 60.f / (float)FireRate; 
 	TimeSinceLastShot = GetWorld()->TimeSeconds;
+	PelletsPerShot = (PelletsPerShot < 1) ? 1 : PelletsPerShot;
+	if (GetOwner() != nullptr)
+		SphereCollision->SetCollisionProfileName("NoCollision");
 	
 }
 
@@ -39,7 +47,7 @@ void ABaseGun::BeginPlay()
 void ABaseGun::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	if (CurrentClipSize == 0 && CurrentStockAmmo > 0)
+	if ((CurrentClipSize == 0 && CurrentStockAmmo > 0)|| (CurrentClipSize == 0 && MaxStockAmmo < 0))
 	{
 		StartReloading();
 	}
@@ -211,6 +219,20 @@ void ABaseGun::Detach()
 	GunMesh->SetVisibility(false);
 	SetActorHiddenInGame(true);
 	DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+}
+
+void ABaseGun::OnOverlapBegin(UPrimitiveComponent * OverlappedComponent, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
+{
+	if (OtherActor)
+	{
+		APlayerCharacter* character = Cast<APlayerCharacter>(OtherActor);
+		if (character)
+		{
+			if (character->AddWeaponToInvetory(this))
+				SphereCollision->SetCollisionProfileName("NoCollision");
+
+		}
+	}
 }
 
 void ABaseGun::CheckForWeaponJam()

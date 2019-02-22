@@ -23,7 +23,8 @@ private:
 	UPROPERTY(Category = "Hitbox", EditAnywhere)
 		class UCapsuleComponent* GeneratorHitBox;
 
-	float GeneratorHealth = 1.0f;
+	UPROPERTY(Category = "Defaults", EditAnywhere)
+		float GeneratorHealth = 300.0f;
 
 	UPROPERTY(Category = "Defaults", EditInstanceOnly)
 	bool GeneratorIsActive;

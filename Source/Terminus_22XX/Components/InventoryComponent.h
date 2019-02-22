@@ -28,12 +28,13 @@ public:
 
 	ABaseGun* NextWeapon();
 	ABaseGun* PreviousWeapon();
+	ABaseGun* SwitchToGun(int index);
 
 	ABaseGun* GetShotgun();
 	ABaseGun* GetVampyr();
 	ABaseGun* GetRailgun();
 
-	void AddWeapon(ABaseGun* AGun);
+	bool AddWeapon(ABaseGun* AGun);
 
 	ABaseGun* GetCurrentWeapon() { return Weapons[CurrentWeaponIndex]; }
 private:

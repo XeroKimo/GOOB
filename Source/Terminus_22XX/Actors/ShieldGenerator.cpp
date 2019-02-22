@@ -53,6 +53,8 @@ void AShieldGenerator::AddShield(UShieldComponent* Shield)
 
 void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
+	if (DamageCauser->ActorHasTag("ShotgunBullets"))
+	{
 		GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
 		GeneratorHealth -= Damage;
 		if (GeneratorHealth <= 0)
@@ -63,7 +65,7 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 		{
 			return;
 		}
-	
+	}
 }
 
 

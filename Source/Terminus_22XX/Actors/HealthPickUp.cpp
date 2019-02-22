@@ -37,11 +37,14 @@ void AHealthPickUp::OnOverlapBegin(UPrimitiveComponent * OverlappedComponent, AA
         APlayerCharacter* Player = Cast<APlayerCharacter>(OtherActor);
         if (Player)
         {
-            GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green,
-                "AMyPickupActor::OnOverlapBegin Overlapped with - "
-                + OtherActor->GetName());
+			if (Player->AddHealth(HealAmount))
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green,
+					"AMyPickupActor::OnOverlapBegin Overlapped with - "
+					+ OtherActor->GetName());
 
-            Destroy();
+				Destroy();
+			}
         }
 
     }

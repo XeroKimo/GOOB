@@ -9,7 +9,7 @@
 #include "Guns/BaseGun.h"
 #include "Components/InventoryComponent.h"
 #include "Components/SphereComponent.h"
-
+#include "Terminus_22XXGameModeBase.h"
 #include "DrawDebugHelpers.h"
 
 // Sets default values
@@ -37,6 +37,9 @@ APlayerCharacter::APlayerCharacter()
 	WeaponInventory = CreateDefaultSubobject<UInventoryComponent>("Inventory");
 
 	JumpMaxCount = 2;
+	MaxHealth = 100.0f;
+	CurrentHealth = MaxHealth;
+	CurrentWeapon = nullptr;
 
 	Tags.Add("Player");
 }
@@ -44,33 +47,17 @@ APlayerCharacter::APlayerCharacter()
 // Called when the game starts or when spawned
 void APlayerCharacter::BeginPlay()
 {
-	Super::BeginPlay(); 
-	
-
+	Super::BeginPlay();
+	ATerminus_22XXGameModeBase* mode = Cast<ATerminus_22XXGameModeBase>(GetWorld()->GetAuthGameMode());
+	if (mode)
+		mode->SpawnStartingWeapons(this);
+	AttachNewWeapon(WeaponInventory->GetAWeapon());
 	
 }
 
 void APlayerCharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
-	for (int i = 0; i < DebugWeapons.Num(); i++)
-	{
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Instigator = this;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-		SpawnParams.Owner = this;
-		ABaseGun* weapon = GetWorld()->SpawnActor<ABaseGun>(DebugWeapons[i], SpawnParams);
-		WeaponInventory->AddWeapon(weapon);
-		if (weapon)
-		{
-			weapon->SetOwnedCharacter(this);
-		}
-	}
-	CurrentWeapon = WeaponInventory->GetAWeapon();
-	if (CurrentWeapon)
-	{
-		CurrentWeapon->Attach();
-	}
 	UCharacterMovementComponent* characterMovement = GetCharacterMovement();
 	MaxPowerSuperJumpTime = FMath::Min(MaxPowerSuperJumpTime, ReleaseSuperJumpTime + SuperJumpTimerDelay);
 
@@ -272,6 +259,29 @@ void APlayerCharacter::SwitchToRailgun()
 	AttachNewWeapon(WeaponInventory->GetRailgun());
 }
 
+bool APlayerCharacter::AddWeaponToInvetory(ABaseGun * AGun)
+{
+	if (WeaponInventory->AddWeapon(AGun))
+	{
+		AGun->SetOwnedCharacter(this);
+		AGun->SetOwner(this);
+		AttachNewWeapon(WeaponInventory->SwitchToGun(AGun->GetWeaponIndex()));
+		return true;
+	}
+	return false;
+}
+
+bool APlayerCharacter::AddHealth(float Amount)
+{
+	if (CurrentHealth < MaxHealth)
+	{
+		CurrentHealth += Amount;
+		CurrentHealth = (CurrentHealth > MaxHealth) ? MaxHealth : CurrentHealth;
+		return true;
+	}
+	return false;
+}
+
 void APlayerCharacter::ForceStopAndSlowDescent()
 {
 	StoreCurrentSpeed();
@@ -281,9 +291,9 @@ void APlayerCharacter::ForceStopAndSlowDescent()
 	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Lowered");
 }
 
-float APlayerCharacter::GetHealthPercentage(float CurrentHealth)
+float APlayerCharacter::GetHealthPercentage()
 {
-    return (CurrentHealth / MaxHealth);
+    return (this->CurrentHealth / MaxHealth);
 }
 
 void APlayerCharacter::StoreCurrentSpeed()
@@ -293,11 +303,20 @@ void APlayerCharacter::StoreCurrentSpeed()
 
 void APlayerCharacter::AttachNewWeapon(ABaseGun * nextGun)
 {
-	if (nextGun->GetWeaponIndex() != CurrentWeapon->GetWeaponIndex())
+	if (nextGun != nullptr && CurrentWeapon != nullptr)
 	{
-		CurrentWeapon->StopFiring();
-		CurrentWeapon->Detach();
+		if (nextGun->GetWeaponIndex() != CurrentWeapon->GetWeaponIndex())
+		{
+			CurrentWeapon->StopFiring();
+			CurrentWeapon->Detach();
+			CurrentWeapon = nextGun;
+			CurrentWeapon->Attach();
+		}
+	}
+	else if (CurrentWeapon == nullptr)
+	{
 		CurrentWeapon = nextGun;
-		CurrentWeapon->Attach();
+		if (CurrentWeapon)
+			CurrentWeapon->Attach();
 	}
 }

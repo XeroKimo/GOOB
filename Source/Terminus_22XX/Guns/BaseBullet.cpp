@@ -32,7 +32,9 @@ ABaseBullet::ABaseBullet()
 	MovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>("Movement Component");
 	MovementComponent->UpdatedComponent = BulletHitbox;
 
-	InitialLifeSpan = 3.f;
+	InitialLifeSpan = BulletLifeSpan;
+
+	Tags.Add("Bullet");
 }
 
 // Called when the game starts or when spawned

@@ -62,6 +62,12 @@ ABaseGun * UInventoryComponent::PreviousWeapon()
 	return Weapons[CurrentWeaponIndex];
 }
 
+ABaseGun * UInventoryComponent::SwitchToGun(int index)
+{
+	SwitchWeapon(index);
+	return Weapons[CurrentWeaponIndex];
+}
+
 ABaseGun * UInventoryComponent::GetShotgun()
 {
 	SwitchWeapon(EGunName::GN_Shotgun);
@@ -80,13 +86,16 @@ ABaseGun * UInventoryComponent::GetRailgun()
 	return Weapons[CurrentWeaponIndex];
 }
 
-void UInventoryComponent::AddWeapon(ABaseGun * AGun)
+bool UInventoryComponent::AddWeapon(ABaseGun * AGun)
 {
 	if (AGun)
 	{
 		int gunIndex = AGun->GetWeaponIndex();
-		Weapons[gunIndex] = (WeaponExists(gunIndex)) ? Weapons[gunIndex] : AGun;
+		bool exists = WeaponExists(gunIndex);
+		Weapons[gunIndex] = (exists) ? Weapons[gunIndex] : AGun;
+		return !exists;
 	}
+	return false;
 }
 
 void UInventoryComponent::SwitchWeapon(int newIndex)
