@@ -3,7 +3,7 @@
 #include "Enemy.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
-
+#include "Components/CapsuleShieldComponent.h"
 
 
 // Sets default values
@@ -18,13 +18,16 @@ AEnemy::AEnemy()
     //Create Enemy
     EnemyMesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
     EnemyMesh->SetCollisionProfileName("No Collision");
-    RootComponent = EnemyMesh;
+	EnemyMesh->SetupAttachment(RootComponent);
 
     //Create Hitbox
     HitBox = CreateDefaultSubobject<UCapsuleComponent>("HitBox");
     HitBox->SetCollisionProfileName("BlockAll");
     HitBox->SetNotifyRigidBodyCollision(true);
-    HitBox->SetupAttachment(RootComponent);
+	RootComponent = HitBox;
+
+	Shield = CreateDefaultSubobject<UCapsuleShieldComponent>("Shield");
+	Shield->SetupAttachment(RootComponent);
 
     bCanBeDamage = true;
 
@@ -49,6 +52,8 @@ void AEnemy::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageTyp
     GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
     EnemyHealth = -Damage;
     GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, "Health - " + FString::FromInt(EnemyHealth));
+	if (EnemyHealth < 0)
+		Destroy();
 }
 
 void AEnemy::MoveToNextPatrolPoint()

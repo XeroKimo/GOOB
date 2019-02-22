@@ -36,6 +36,8 @@ APlayerCharacter::APlayerCharacter()
 
 	WeaponInventory = CreateDefaultSubobject<UInventoryComponent>("Inventory");
 
+	OnTakeAnyDamage.AddDynamic(this, &APlayerCharacter::TakeAnyDamage);
+
 	JumpMaxCount = 2;
 	MaxHealth = 100.0f;
 	CurrentHealth = MaxHealth;
@@ -294,6 +296,14 @@ void APlayerCharacter::ForceStopAndSlowDescent()
 float APlayerCharacter::GetHealthPercentage()
 {
     return (this->CurrentHealth / MaxHealth);
+}
+
+void APlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
+{
+	if (InstigatedBy->GetOwner() != this)
+	{
+		CurrentHealth -= Damage;
+	}
 }
 
 void APlayerCharacter::StoreCurrentSpeed()

@@ -31,6 +31,9 @@ protected:
     UPROPERTY(EditAnywhere, Category = "HitBox")
         class UCapsuleComponent* HitBox;
 
+	UPROPERTY(VisibleAnywhere, Category = "Shield")
+		class UCapsuleShieldComponent* Shield;
+
     UPROPERTY(EditInstanceOnly, Category = "AI")
         bool bPatrol;
 

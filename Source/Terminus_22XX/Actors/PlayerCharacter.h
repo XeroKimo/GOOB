@@ -55,6 +55,9 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Status")
         float GetHealthPercentage();
 
+	UFUNCTION()
+		void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+
 	class USkeletalMeshComponent* GetCharacterMesh() { return CharacterMesh; }
 	class USceneComponent* GetGunScene() { return GunLocation; }
 private:
