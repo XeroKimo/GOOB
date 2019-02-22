@@ -1,0 +1,1076 @@
+﻿Log file open, 02/21/19 16:11:42
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
+LogWindows: File 'VSPerf140.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogInit: Display: Running engine for game: Terminus_22XX
+LogPlatformFile: Not using cached read wrapper
+LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.275918
+LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
+LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin AISupport
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CLionSourceCodeAccess
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioCodeSourceCodeAccess
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin CryptoKeys
+LogPluginManager: Mounting plugin DataValidation
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MacGraphicsSwitching
+LogPluginManager: Mounting plugin MeshEditor
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin DatasmithContent
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin AppleImageUtils
+LogPluginManager: Mounting plugin AppleVision
+LogPluginManager: Mounting plugin BackChannel
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin GeometryCache
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin ProxyLODPlugin
+LogPluginManager: Mounting plugin MagicLeap
+LogPluginManager: Mounting plugin MagicLeapEmulator
+LogPluginManager: Mounting plugin MagicLeapMedia
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin ImgMedia
+LogPluginManager: Mounting plugin LinearTimecode
+LogPluginManager: Mounting plugin MediaCompositing
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin ActorSequence
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin NetcodeUnitTest
+LogPluginManager: Mounting plugin NUTUnrealEngine4
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin LauncherChunkInstaller
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin EditableMesh
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin ImmediatePhysics
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Plugin shader directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders found
+LogPluginManager: Mapping shader source directory ../../../Engine/Plugins/Runtime/Oculus/OculusVR/Shaders to virtual directory /Plugin/OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogStreaming: Display: Took  0.119s to configure plugins.
+LogInit: Using libcurl 7.55.1-DEV
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2h
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connections to a host
+LogInit:  - LocalHostAddr = Default
+LogInit:  - BufferSize = 65536
+LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+LogInit: Build: ++UE4+Release-4.20-CL-4233996
+LogInit: Engine Version: 4.20.1-4233996+++UE4+Release-4.20
+LogInit: Compatible Engine Version: 4.20.0-4212847+++UE4+Release-4.20
+LogInit: Net CL: 4212847
+LogInit: OS: Windows 10 (), CPU:        Intel(R) Core(TM) i7-3770K CPU @ 3.50GHz, GPU: NVIDIA GeForce GTX 670
+LogInit: Compiled (64-bit): Jul 26 2018 10:07:30
+LogInit: Compiled with Visual C++: 19.13.26129.00
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.20
+LogInit: Command Line:  
+LogInit: Base Directory: D:/Program Files/Epic Games/UE_4.20/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogDevObjectVersion: Number of dev versions registered: 20
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 24
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 34
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 2
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 26
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 9
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 2
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 3
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 17
+LogDevObjectVersion:   Dev-ReflectionCapture (6B266CEC-1EC7-4B8F-A30B-E4D90942FC07): 1
+LogDevObjectVersion:   Dev-Automation (0DF73D61-A23F-47EA-B727-89E90C41499A): 1
+LogDevObjectVersion:   FortniteMain (601D1886-AC64-4F84-AA16-D3DE0DEAC7D6): 12
+LogDevObjectVersion:   Dev-Enterprise (9DFFBCD6-494F-0158-E221-12823C92A888): 1
+LogStreaming: Display: Took  0.005s to delete old logs.
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2019.02.21-21.11.43:105][  0]LogInit: Selected Device Profile: [Windows]
+[2019.02.21-21.11.43:105][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.02.21-21.11.43:115][  0]LogHAL: Display: Platform has ~ 16 GB [17121808384 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.02.21-21.11.43:115][  0]LogInit: Setting Device Profile CVar: [[r.Vulkan.UseRealUBs:1]]
+[2019.02.21-21.11.43:115][  0]LogInit: Going up to parent DeviceProfile []
+[2019.02.21-21.11.43:116][  0]LogInit: Computer: WJ316-27
+[2019.02.21-21.11.43:116][  0]LogInit: User: jone0641
+[2019.02.21-21.11.43:116][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.02.21-21.11.43:116][  0]LogInit: High frequency timer resolution =3.428041 MHz
+[2019.02.21-21.11.43:116][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2019.02.21-21.11.43:116][  0]LogMemory: Platform Memory Stats for Windows
+[2019.02.21-21.11.43:116][  0]LogMemory: Process Physical Memory: 101.59 MB used, 101.59 MB peak
+[2019.02.21-21.11.43:116][  0]LogMemory: Process Virtual Memory: 89.48 MB used, 89.48 MB peak
+[2019.02.21-21.11.43:116][  0]LogMemory: Physical Memory: 3508.91 MB used,  12819.72 MB free, 16328.63 MB total
+[2019.02.21-21.11.43:116][  0]LogMemory: Virtual Memory: 541.31 MB used,  12819.72 MB free, 134217728.00 MB total
+[2019.02.21-21.11.43:135][  0]LogInit: Using OS detected language (en-US).
+[2019.02.21-21.11.43:135][  0]LogInit: Using OS detected locale (en-US).
+[2019.02.21-21.11.43:136][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.02.21-21.11.43:475][  0]LogStreaming: Display: Took  0.338s to InitEngineTextLocalization.
+[2019.02.21-21.11.43:475][  0]LogInit: Setting process to per monitor DPI aware
+[2019.02.21-21.11.43:503][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.02.21-21.11.43:503][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.02.21-21.11.43:805][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.02.21-21.11.43:805][  0]LogD3D11RHI: D3D11 adapters:
+[2019.02.21-21.11.43:853][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 670' (Feature Level 11_0)
+[2019.02.21-21.11.43:853][  0]LogD3D11RHI:       4052/0/8164 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2019.02.21-21.11.43:856][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.02.21-21.11.43:856][  0]LogD3D11RHI:       0/0/8164 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.02.21-21.11.43:856][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.02.21-21.11.43:860][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.02.21-21.11.43:860][  0]LogD3D11RHI:     GPU DeviceId: 0x1189 (for the marketing name, search the web for "GPU Device Id")
+[2019.02.21-21.11.43:860][  0]LogWindows: EnumDisplayDevices:
+[2019.02.21-21.11.43:860][  0]LogWindows:    0. 'NVIDIA GeForce GTX 670' (P:1 D:1)
+[2019.02.21-21.11.43:860][  0]LogWindows:    1. 'NVIDIA GeForce GTX 670' (P:0 D:1)
+[2019.02.21-21.11.43:860][  0]LogWindows:    2. 'NVIDIA GeForce GTX 670' (P:0 D:0)
+[2019.02.21-21.11.43:860][  0]LogWindows:    3. 'NVIDIA GeForce GTX 670' (P:0 D:0)
+[2019.02.21-21.11.43:861][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2019.02.21-21.11.43:861][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 670
+[2019.02.21-21.11.43:861][  0]LogD3D11RHI:   Driver Version: 391.35 (internal:23.21.13.9135, unified:391.35)
+[2019.02.21-21.11.43:861][  0]LogD3D11RHI:      Driver Date: 3-23-2018
+[2019.02.21-21.11.43:861][  0]LogRHI: Texture pool is 2836 MB (70% of 4052 MB)
+[2019.02.21-21.11.43:894][  0]LogD3D11RHI: Async texture creation enabled
+[2019.02.21-21.11.43:914][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2019.02.21-21.11.43:916][  0]LogShaderCompilers: Guid format shader working directory is 10 characters bigger than the processId version (C:/Users/jone0641/Documents/GitHub/GOOB/Intermediate/Shaders/WorkingDirectory/1280/).
+[2019.02.21-21.11.43:916][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/jone0641/AppData/Local/Temp/UnrealShaderWorkingDir/938BFECB4611F0913D4E2199951F61DB/'.
+[2019.02.21-21.11.44:155][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2019.02.21-21.11.44:169][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2019.02.21-21.11.44:182][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2019.02.21-21.11.44:195][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2019.02.21-21.11.44:208][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2019.02.21-21.11.44:221][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2019.02.21-21.11.44:234][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2019.02.21-21.11.44:247][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2019.02.21-21.11.44:253][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2019.02.21-21.11.44:329][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:329][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:329][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:330][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2019.02.21-21.11.44:331][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2019.02.21-21.11.44:392][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.02.21-21.11.44:392][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2019.02.21-21.11.44:431][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.02.21-21.11.44:431][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2019.02.21-21.11.44:444][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2019.02.21-21.11.44:457][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2019.02.21-21.11.44:470][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2019.02.21-21.11.44:484][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2019.02.21-21.11.44:492][  0]LogTemp: Display: Loaded TP LuminTargetPlatform
+[2019.02.21-21.11.44:492][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.02.21-21.11.44:534][  0]LogXGEController: Cleaning working directory: C:/Users/jone0641/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.02.21-21.11.44:534][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.02.21-21.11.44:534][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.02.21-21.11.44:534][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.02.21-21.11.45:273][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.02.21-21.11.45:324][  0]LogDerivedDataCache: Loaded boot cache 0.05s 87MB C:/Users/jone0641/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2019.02.21-21.11.45:324][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/jone0641/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc
+[2019.02.21-21.11.45:324][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file C:/Users/jone0641/Documents/GitHub/GOOB/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.02.21-21.11.45:324][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.02.21-21.11.45:324][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file C:/Users/jone0641/Documents/GitHub/GOOB/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.02.21-21.11.45:324][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.02.21-21.11.45:337][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.02.21-21.11.45:349][  0]LogDerivedDataCache: Using Local data cache path C:/Users/jone0641/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.02.21-21.11.45:349][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.02.21-21.11.45:349][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.02.21-21.11.45:368][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.02.21-21.11.45:369][  0]LogSlate: Using FreeType 2.6.0
+[2019.02.21-21.11.45:370][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.02.21-21.11.45:463][  0]LogAssetRegistry: FAssetRegistry took 0.0260 seconds to start up
+[2019.02.21-21.11.45:816][  0]LogInit: Selected Device Profile: [Windows]
+[2019.02.21-21.11.45:944][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2019.02.21-21.11.45:947][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2019.02.21-21.11.45:947][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.02.21-21.11.45:947][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.02.21-21.11.45:947][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2019.02.21-21.11.45:963][  0]LogNetVersion: Terminus_22XX 1.0.0, NetCL: 4212847, EngineNetVer: 5, GameNetVer: 0 (Checksum: 1011408813)
+[2019.02.21-21.11.46:432][  0]LogPackageLocalizationCache: Processed 11 localized package path(s) for 2 prioritized culture(s) in 0.082864 seconds
+[2019.02.21-21.11.46:438][  0]LogUObjectArray: 38425 objects as part of root set at end of initial load.
+[2019.02.21-21.11.46:438][  0]LogUObjectAllocator: 6690864 out of 0 bytes used by permanent object pool.
+[2019.02.21-21.11.46:438][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.02.21-21.11.47:406][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.02.21-21.11.47:419][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.02.21-21.11.47:565][  0]SourceControl: Source control is disabled
+[2019.02.21-21.11.47:565][  0]SourceControl: Source control is disabled
+[2019.02.21-21.11.47:567][  0]SourceControl: Source control is disabled
+[2019.02.21-21.11.47:568][  0]SourceControl: Source control is disabled
+[2019.02.21-21.11.47:746][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.02.21-21.11.47:795][  0]LogOcInput: OculusInput pre-init called
+[2019.02.21-21.11.47:854][  0]LogEngine: Initializing Engine...
+[2019.02.21-21.11.47:855][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.02.21-21.11.47:857][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.02.21-21.11.47:857][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.02.21-21.11.47:857][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.02.21-21.11.47:857][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.02.21-21.11.48:055][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.02.21-21.11.48:066][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.02.21-21.11.48:074][  0]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.02.21-21.11.48:102][  0]LogInit: FAudioDevice initialized.
+[2019.02.21-21.11.48:103][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.02.21-21.11.48:192][  0]LogDerivedDataCache: Saved boot cache 0.09s 71MB C:/Users/jone0641/AppData/Local/UnrealEngine/4.20/DerivedDataCache/Boot.ddc.
+[2019.02.21-21.11.48:195][  0]LogInit: Texture streaming: Enabled
+[2019.02.21-21.11.48:209][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.02.21-21.11.48:209][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=AbnormalShutdown, SessionId={4D01F8D7-4AD7-4EB9-2586-898445899CA7}
+[2019.02.21-21.11.48:209][  0]LogEngineSessionManager: EngineSessionManager sent abnormal shutdown report. Type=Crashed, SessionId={FF548196-4D3D-9335-C960-CCA2603F6EB4}
+[2019.02.21-21.11.48:217][  0]LogInit: Transaction tracking system initialized
+[2019.02.21-21.11.48:234][  0]BlueprintLog: New page: Editor Load
+[2019.02.21-21.11.48:294][  0]LocalizationService: Localization service is disabled
+[2019.02.21-21.11.48:518][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.02.21-21.11.48:518][  0]LogCook: Display: Mobile HDR setting 1
+[2019.02.21-21.11.48:518][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2019.02.21-21.11.48:518][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI prefixes -  0.000 s
+[2019.02.21-21.11.48:518][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2019.02.21-21.11.48:519][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: ImportINI -  0.000 s
+[2019.02.21-21.11.48:519][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2019.02.21-21.11.48:621][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/' took 0.01s
+[2019.02.21-21.11.48:622][  0]SourceControl: Source control is disabled
+[2019.02.21-21.11.48:622][  0]Cmd: MAP LOAD FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Test_Level.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.02.21-21.11.48:622][  0]LightingResults: New page: Lighting Build
+[2019.02.21-21.11.48:624][  0]MapCheck: New page: Map Check
+[2019.02.21-21.11.48:624][  0]LightingResults: New page: Lighting Build
+[2019.02.21-21.11.48:698][  0]LogAIModule: Creating AISystem for world Test_Level
+[2019.02.21-21.11.48:707][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.02.21-21.11.48:726][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.02.21-21.11.48:789][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 63.065ms to complete.
+[2019.02.21-21.11.48:789][  0]LogFileHelpers: Loading map 'Test_Level' took 0.168
+[2019.02.21-21.11.48:934][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.11.48:944][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.11.48:953][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.11.48:961][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.11.48:965][  0]LogCollectionManager: Loaded 0 collections in 0.000866 seconds
+[2019.02.21-21.11.49:006][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Collections/' took 0.01s
+[2019.02.21-21.11.49:006][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Developers/jone0641/Collections/' took 0.01s
+[2019.02.21-21.11.49:006][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Collections/' took 0.01s
+[2019.02.21-21.11.49:006][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
+[2019.02.21-21.11.49:017][  0]LogContentBrowser: Native class hierarchy populated in 0.0106 seconds. Added 2585 classes and 608 folders.
+[2019.02.21-21.11.49:022][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.02.21-21.11.49:070][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.02.21-21.11.49:074][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0005 seconds. Added 1 classes and 2 folders.
+[2019.02.21-21.11.49:088][  0]LogSlate: Took 0.000392 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.02.21-21.11.49:091][  0]LogSlate: Took 0.000423 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.02.21-21.11.49:097][  0]LogSlate: Took 0.000368 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.02.21-21.11.49:176][  0]LogRenderer: Reallocating scene render targets to support 1208x576 Format 10 NumSamples 1 (Frame:1).
+[2019.02.21-21.11.49:297][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.02.21-21.11.49:297][  0]LogLoad: (Engine Initialization) Total time: 7.66 seconds
+[2019.02.21-21.11.49:297][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.02.21-21.11.49:308][  0]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
+[2019.02.21-21.11.49:329][  0]LogContentStreaming: Texture pool size now 3000 MB
+[2019.02.21-21.11.49:462][  0]LogSlate: Took 0.000399 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.02.21-21.11.49:475][  1]LogAssetRegistry: Asset discovery search completed in 4.0334 seconds
+[2019.02.21-21.11.49:477][  1]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2019.02.21-21.11.49:477][  1]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000039 seconds (updated 0 objects)
+[2019.02.21-21.11.58:940][132]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.12.01:436][427]LogSlate: Took 0.000318 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.02.21-21.12.01:773][427]LogAIModule: Creating AISystem for world Terminus_22XX
+[2019.02.21-21.12.01:805][427]LogAssetEditorManager: Opening Asset editor for World /Game/Levels/Terminus_22XX.Terminus_22XX
+[2019.02.21-21.12.01:826][427]Cmd: MAP LOAD FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.02.21-21.12.01:826][427]LightingResults: New page: Lighting Build
+[2019.02.21-21.12.01:827][427]LoadErrors: New page: Loading map: Terminus_22XX.umap
+[2019.02.21-21.12.01:828][427]MapCheck: New page: Map Check
+[2019.02.21-21.12.01:828][427]LightingResults: New page: Lighting Build
+[2019.02.21-21.12.01:854][427]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.02.21-21.12.01:900][427]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.02.21-21.12.01:969][427]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 68.355ms to complete.
+[2019.02.21-21.12.01:969][427]LogFileHelpers: Loading map 'Terminus_22XX' took 0.144
+[2019.02.21-21.12.07:249][ 33]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.12.19:950][554]LogEditorViewport: Clicking on Actor (LMB): BP_Skybox_C (BP_Skybox)
+[2019.02.21-21.12.21:122][689]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.13.17:797][465]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.13.21:306][882]LogEditorViewport: Clicking Background
+[2019.02.21-21.13.23:267][116]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.13.27:373][601]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.13.37:979][842]LogEditorViewport: Clicking Background
+[2019.02.21-21.13.41:832][297]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.13.47:640][974]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.13.47:805][992]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Terminus_22XX" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2019.02.21-21.13.48:044][992]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XXCD9420514B10391DDF460382B9BCAE11.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX.umap'
+[2019.02.21-21.13.48:083][992]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Terminus_22XX_BuiltData" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX_BuiltData.uasset" SILENT=true
+[2019.02.21-21.13.48:230][992]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XX_BuiltDataCD91A8FF40C0BD21A9294B869C6EB649.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX_BuiltData.uasset'
+[2019.02.21-21.14.04:275][886]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.14.12:663][876]LogGeometryMode: Warning: Unable to find Hall_StartSub2 Brush(s) in new BSP
+[2019.02.21-21.14.12:663][876]LogGeometryMode: Warning: Unable to find all previously selected geometry data, resetting selection
+[2019.02.21-21.14.46:487][898]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.14.51:779][430]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2019.02.21-21.14.55:999][906]LogEditorViewport: Clicking Background
+[2019.02.21-21.14.57:520][ 85]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.14.59:138][279]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.14.59:217][287]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Terminus_22XX" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2019.02.21-21.14.59:457][287]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XX8FE54A0048FBE4B61F49F5928A07B062.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX.umap'
+[2019.02.21-21.14.59:490][287]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Terminus_22XX_BuiltData" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX_BuiltData.uasset" SILENT=true
+[2019.02.21-21.14.59:606][287]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XX_BuiltData25E9EF81473749406C101DAAAE53C8F6.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX_BuiltData.uasset'
+[2019.02.21-21.15.13:495][951]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.15.19:632][687]LogEditorViewport: Clicking on Actor (LMB): Brush (Hall_StartSub2)
+[2019.02.21-21.15.33:480][316]LogEditorViewport: Clicking on Actor (LMB): Brush (Hall_EndSub2)
+[2019.02.21-21.15.35:628][569]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.15.44:950][675]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.16.10:536][673]LogEditorViewport: Clicking Background
+[2019.02.21-21.16.21:786][ 14]LogEditorViewport: Clicking on Actor (LMB): Brush (Hall_StartSub2)
+[2019.02.21-21.16.38:182][908]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.16.40:798][221]LogEditorViewport: Clicking Background
+[2019.02.21-21.17.05:779][200]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.17.24:409][365]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.17.52:683][397]LogSlate: Window 'Select Path' being destroyed
+[2019.02.21-21.17.52:693][397]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.17.52:762][397]LogStaticMesh: Building static mesh Hall_Ramp_SM...
+[2019.02.21-21.17.52:774][397]LogStaticMesh: Built static mesh [0.01s] /Game/Meshes/Hall_Ramp_SM.Hall_Ramp_SM
+[2019.02.21-21.17.52:779][397]LogActorFactory: Actor Factory created Hall_Ramp_SM
+[2019.02.21-21.17.52:828][397]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Hall_EndSub2' is marked pending kill and cannot be converted
+[2019.02.21-21.17.52:828][397]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Hall_StartSub2' is marked pending kill and cannot be converted
+[2019.02.21-21.17.52:828][397]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Runner_L4' is marked pending kill and cannot be converted
+[2019.02.21-21.17.52:828][397]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Runner_R2' is marked pending kill and cannot be converted
+[2019.02.21-21.17.52:828][397]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.S_Hall_Base2' is marked pending kill and cannot be converted
+[2019.02.21-21.17.52:828][397]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Vent4' is marked pending kill and cannot be converted
+[2019.02.21-21.17.52:828][397]EditorErrors: New page: Actor Reattachment
+[2019.02.21-21.17.55:764][736]LogSlate: Took 0.000442 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2019.02.21-21.17.59:857][226]Cmd: TRANSACTION UNDO
+[2019.02.21-21.17.59:857][226]LogEditorTransaction: Undo Convert Actors
+[2019.02.21-21.18.08:627][211]LogEditorViewport: Clicking Background
+[2019.02.21-21.18.15:115][982]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.18.29:596][684]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.18.30:534][794]LogEditorViewport: Clicking Background
+[2019.02.21-21.18.44:482][418]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.18.59:741][214]LogSlate: Window 'Select Path' being destroyed
+[2019.02.21-21.19.02:886][354]LogSlate: Window 'Delete Assets' being destroyed
+[2019.02.21-21.19.02:896][354]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.19.02:912][354]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.19.09:376][113]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.19.29:004][448]LogSlate: Window 'Select Path' being destroyed
+[2019.02.21-21.19.29:014][448]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.19.29:069][448]LogStaticMesh: Building static mesh Hall_Ramp_SM...
+[2019.02.21-21.19.29:079][448]LogStaticMesh: Built static mesh [0.01s] /Game/Meshes/Hall_Ramp_SM.Hall_Ramp_SM
+[2019.02.21-21.19.29:083][448]LogActorFactory: Actor Factory created Hall_Ramp_SM
+[2019.02.21-21.19.29:130][448]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.S_Hall_Base4' is marked pending kill and cannot be converted
+[2019.02.21-21.19.29:130][448]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Runner_L5' is marked pending kill and cannot be converted
+[2019.02.21-21.19.29:130][448]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Runner_R3' is marked pending kill and cannot be converted
+[2019.02.21-21.19.29:130][448]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Hall_EndSub3' is marked pending kill and cannot be converted
+[2019.02.21-21.19.29:130][448]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Hall_StartSub5' is marked pending kill and cannot be converted
+[2019.02.21-21.19.29:130][448]LogEditor: Error: Actor 'Brush /Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Vent5' is marked pending kill and cannot be converted
+[2019.02.21-21.19.29:130][448]EditorErrors: New page: Actor Reattachment
+[2019.02.21-21.19.35:818][171]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.19.39:142][539]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Meshes/Hall_Ramp_SM" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Meshes/Hall_Ramp_SM.uasset" SILENT=true
+[2019.02.21-21.19.39:155][539]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Hall_Ramp_SMF9E3C8BD4855AC08533993A3058AAF43.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Meshes/Hall_Ramp_SM.uasset'
+[2019.02.21-21.19.42:063][865]LogEditorViewport: Clicking Background
+[2019.02.21-21.19.50:833][907]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.20.06:311][756]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.20.24:606][916]LogEditorViewport: Clicking Background
+[2019.02.21-21.20.46:132][453]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.20.47:691][637]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2019.02.21-21.20.57:990][842]LogEditorViewport: Clicking Background
+[2019.02.21-21.20.58:469][897]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.21.01:541][265]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.21.28:704][424]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.21.55:801][622]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.22.09:479][232]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Straight_SM3)
+[2019.02.21-21.22.10:870][394]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Straight_SM3)
+[2019.02.21-21.22.40:136][901]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.22.50:179][ 92]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.23.09:524][342]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.24.23:901][156]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Straight_SM3)
+[2019.02.21-21.24.46:913][882]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Straight_SM4)
+[2019.02.21-21.24.49:040][135]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.24.53:710][682]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Straight_SM4)
+[2019.02.21-21.24.55:822][929]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight21)
+[2019.02.21-21.25.01:184][526]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.25.24:115][217]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.25.37:587][806]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.25.46:931][918]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.25.50:029][285]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.26.03:326][847]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.26.07:379][329]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight33)
+[2019.02.21-21.26.21:674][996]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight34)
+[2019.02.21-21.26.22:737][115]Cmd: DELETE
+[2019.02.21-21.26.22:737][115]Cmd: ACTOR DELETE
+[2019.02.21-21.26.22:743][115]LogEditorActor: Deleted Actor: PointLight
+[2019.02.21-21.26.22:763][115]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2019.02.21-21.26.36:313][735]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.26.48:043][132]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.26.53:188][746]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight33)
+[2019.02.21-21.27.05:989][252]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight35)
+[2019.02.21-21.27.10:333][753]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight35)
+[2019.02.21-21.27.14:271][211]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight33)
+[2019.02.21-21.27.28:707][903]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.28.07:421][545]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight33)
+[2019.02.21-21.28.21:649][245]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight34)
+[2019.02.21-21.28.37:534][143]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight38)
+[2019.02.21-21.28.45:697][115]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight34)
+[2019.02.21-21.28.50:636][700]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.28.55:178][238]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight38)
+[2019.02.21-21.29.13:682][425]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight36)
+[2019.02.21-21.29.17:322][855]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight37)
+[2019.02.21-21.29.20:485][228]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight35)
+[2019.02.21-21.29.21:758][376]Cmd: DELETE
+[2019.02.21-21.29.21:758][376]Cmd: ACTOR DELETE
+[2019.02.21-21.29.21:765][376]LogEditorActor: Deleted Actor: PointLight
+[2019.02.21-21.29.21:785][376]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2019.02.21-21.29.24:150][658]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight33)
+[2019.02.21-21.29.24:496][694]Cmd: DELETE
+[2019.02.21-21.29.24:496][694]Cmd: ACTOR DELETE
+[2019.02.21-21.29.24:503][694]LogEditorActor: Deleted Actor: PointLight
+[2019.02.21-21.29.24:520][694]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2019.02.21-21.29.26:100][881]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.29.28:463][164]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight34)
+[2019.02.21-21.29.31:775][547]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight38)
+[2019.02.21-21.29.37:075][165]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight37)
+[2019.02.21-21.29.40:231][537]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight36)
+[2019.02.21-21.29.43:019][861]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.29.43:297][893]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.29.43:633][932]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.29.53:732][100]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.30.01:724][ 41]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight16)
+[2019.02.21-21.30.11:428][175]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.30.51:770][903]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.30.56:623][469]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.31.02:033][105]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight17)
+[2019.02.21-21.31.20:872][335]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.31.30:325][447]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight17)
+[2019.02.21-21.31.43:584][  5]LogEditorViewport: Clicking on Actor (LMB): PointLight (PointLight34)
+[2019.02.21-21.31.51:561][954]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight17)
+[2019.02.21-21.31.56:084][488]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.32.04:321][460]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight17)
+[2019.02.21-21.32.09:326][ 47]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight17)
+[2019.02.21-21.32.10:302][160]Cmd: DELETE
+[2019.02.21-21.32.10:302][160]Cmd: ACTOR DELETE
+[2019.02.21-21.32.10:309][160]LogEditorActor: Deleted Actor: SpotLight
+[2019.02.21-21.32.10:328][160]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2019.02.21-21.32.11:723][325]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.32.11:992][356]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.32.12:301][392]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.32.22:930][661]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.32.23:009][669]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Terminus_22XX" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2019.02.21-21.32.23:275][669]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XX436E46C24C96CFB64E3B3F8565CECA59.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX.umap'
+[2019.02.21-21.32.23:321][669]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Terminus_22XX_BuiltData" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX_BuiltData.uasset" SILENT=true
+[2019.02.21-21.32.23:436][669]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XX_BuiltDataB85B053B49BAF00CB181F4B18D74827B.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Levels/Terminus_22XX_BuiltData.uasset'
+[2019.02.21-21.32.26:483][ 33]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight18)
+[2019.02.21-21.32.34:991][ 32]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.32.44:460][156]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.33.02:392][299]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.33.22:988][765]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.33.37:265][452]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.33.51:425][109]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight19)
+[2019.02.21-21.33.57:423][818]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.34.24:582][ 15]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.34.40:733][923]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.34.47:674][741]LogEditorViewport: Clicking on Actor (LMB): SpotLight (SpotLight18)
+[2019.02.21-21.34.55:748][693]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.34.59:354][111]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.35.10:306][419]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.35.11:768][593]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.35.11:799][595]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.35.13:971][849]MapCheck: New page: Map Check
+[2019.02.21-21.35.13:983][849]Cmd: MAP REBUILD ALLVISIBLE
+[2019.02.21-21.35.13:983][849]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2019.02.21-21.35.14:072][849]LightingResults: New page: Lighting Build - Feb 21, 2019, 11:35:14 AM
+[2019.02.21-21.35.14:115][849]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2019.02.21-21.35.14:163][849]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2019.02.21-21.35.14:176][849]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2019.02.21-21.35.14:690][849]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2019.02.21-21.35.14:690][849]LogSwarmInterface: [TryOpenConnection] Local Process ID is 1280
+[2019.02.21-21.35.17:281][849]LightingResults: Warning: No importance volume found and the scene is so large that the automatically synthesized volume will not yield good results.  Please add a tightly bounding lightmass importance volume to optimize your scene's quality and lighting build times.
+[2019.02.21-21.35.17:282][849]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2019.02.21-21.35.17:282][849]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2019.02.21-21.35.17:282][849]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2019.02.21-21.35.17:282][849]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2019.02.21-21.35.17:282][849]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2019.02.21-21.35.17:400][849]LogEditorBuildUtils: Build time 0:03
+[2019.02.21-21.35.22:567][142]Job is a success!
+[2019.02.21-21.35.22:686][143]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.072s
+[2019.02.21-21.35.22:686][143]LogVolumetricLightmapImport:      Indirection Texture 32x32x32 = 0.1Mb
+[2019.02.21-21.35.22:686][143]LogVolumetricLightmapImport:      BrickData 40x5x5 = 0.0Mb
+[2019.02.21-21.35.22:686][143]LogVolumetricLightmapImport:      Bricks at Level
+[2019.02.21-21.35.22:686][143]LogVolumetricLightmapImport:          0: 100.0% covering 100.0% of volume
+[2019.02.21-21.35.22:686][143]LogVolumetricLightmapImport:          1: 0.0% covering 0.0% of volume
+[2019.02.21-21.35.22:686][143]LogVolumetricLightmapImport:          2: 0.0% covering 0.0% of volume
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: HQ_Lightmap1_1 (AutoDXT, 1024X1024)
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: LQ_Lightmap_1_1 (DXT1, 1024X1024)
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: HQ_Lightmap1_2 (AutoDXT, 512X512)
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: LQ_Lightmap_1_2 (DXT1, 512X512)
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: HQ_Lightmap0_3 (AutoDXT, 64X64)
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: LQ_Lightmap_0_3 (DXT1, 64X64)
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: HQ_Lightmap0_4 (AutoDXT, 8X8)
+[2019.02.21-21.35.23:072][143]LogTexture: Display: Building textures: LQ_Lightmap_0_4 (DXT1, 8X8)
+[2019.02.21-21.35.23:272][143]LogTexture: Display: Building textures: ShadowMapTexture2D_2 (G8, 32X32)
+[2019.02.21-21.35.23:272][143]LogTexture: Display: Building textures: ShadowMapTexture2D_1 (BGRA8, 256X256)
+[2019.02.21-21.35.23:327][143]LogTexture: Display: Building textures: ShadowMapTexture2D_0 (G8, 1024X1024)
+[2019.02.21-21.35.23:362][143]Lightmass on WJ316-27: 4.64 sec total, 78 ms importing, 6 ms setup, 977 ms photons, 3.54 sec processing, 0 ms extra exporting [248/248 mappings]. Threads: 24.6 sec total, 5.23 sec processing.
+[2019.02.21-21.35.23:402][143]LogStaticLightingSystem: Illumination: 9.31 sec (306 ms encoding lightmaps, 251 ms encoding shadowmaps)
+[2019.02.21-21.35.23:402][143]LogStaticLightingSystem: Lightmap texture memory:  2.5 MB (2.0 MB streaming, 0.5 MB non-streaming), 8 textures
+[2019.02.21-21.35.23:402][143]LogStaticLightingSystem: Shadowmap texture memory: 1.7 MB (1.3 MB streaming, 0.3 MB non-streaming), 3 textures
+[2019.02.21-21.35.24:285][143]DumpUnbuiltLightIteractions
+[2019.02.21-21.35.24:285][143]Lights with unbuilt interactions: 0
+[2019.02.21-21.35.24:285][143]
+[2019.02.21-21.35.24:285][143]Primitives with unbuilt interactions: 0
+[2019.02.21-21.35.24:337][144]Cmd: MAP CHECK NOTIFYRESULTS
+[2019.02.21-21.35.24:337][144]MapCheck: New page: Terminus_22XX - Feb 21, 2019, 11:35:24 AM
+[2019.02.21-21.35.24:338][144]MapCheck: Warning: BP_Skybox_2 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.35.24:340][144]MapCheck: Warning: Sun_Inner_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.35.24:340][144]MapCheck: Warning: Sun_Outer_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.35.24:414][144]MapCheck: Map check complete: 0 Error(s), 3 Warning(s), took 77.039ms to complete.
+[2019.02.21-21.35.27:439][488]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.35.27:442][488]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.35.29:900][782]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.21-21.35.29:916][782]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.35.29:916][782]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.21-21.35.29:928][782]PIE: New page: PIE session: Terminus_22XX (Feb 21, 2019, 11:35:29 AM)
+[2019.02.21-21.35.29:928][782]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Terminus_22XX
+[2019.02.21-21.35.29:948][782]LogPlayLevel: PIE: StaticDuplicateObject took: (0.019656s)
+[2019.02.21-21.35.29:949][782]LogAIModule: Creating AISystem for world Terminus_22XX
+[2019.02.21-21.35.29:949][782]LogPlayLevel: PIE: World Init took: (0.000811s)
+[2019.02.21-21.35.29:949][782]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Terminus_22XX.Terminus_22XX to /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX (0.020677s)
+[2019.02.21-21.35.29:971][782]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.02.21-21.35.29:982][782]LogInit: FAudioDevice initialized.
+[2019.02.21-21.35.30:107][782]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.21-21.35.30:111][782]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX up for play (max tick rate 0) at 2019.02.21-16.35.30
+[2019.02.21-21.35.30:112][782]LogWorld: Bringing up level for play took: 0.002976
+[2019.02.21-21.35.30:127][782]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0005 seconds. Added 10 classes and 0 folders.
+[2019.02.21-21.35.30:130][782]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Terminus_22XX -0.006
+[2019.02.21-21.35.30:130][782]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.35.31:437][922]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.35.31:437][922]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.35.31:470][922]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.21-21.35.31:470][922]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.35.31:490][922]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.35.31:538][927]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2019.02.21-21.35.37:039][585]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.35.38:409][723]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.35.39:991][903]LogAssetEditorManager: Opening Asset editor for StaticMesh /Game/Meshes/Hall_Ramp_SM.Hall_Ramp_SM
+[2019.02.21-21.35.59:634][810]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.36.18:839][697]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Meshes/Hall_Ramp_SM" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Meshes/Hall_Ramp_SM.uasset" SILENT=true
+[2019.02.21-21.36.18:868][697]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Hall_Ramp_SMB507E9064292523BBFCD6F97E9D43247.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Meshes/Hall_Ramp_SM.uasset'
+[2019.02.21-21.36.19:284][736]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Meshes/Hall_Ramp_SM" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Content/Meshes/Hall_Ramp_SM.uasset" SILENT=true
+[2019.02.21-21.36.19:305][736]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Hall_Ramp_SM94FF88394A86EC6D1DB9169D99C3FAAA.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Content/Meshes/Hall_Ramp_SM.uasset'
+[2019.02.21-21.36.20:595][860]LogSlate: Window 'Hall_Ramp_SM' being destroyed
+[2019.02.21-21.36.20:598][860]LogSlate: Window 'Hall_Ramp_SM' being destroyed
+[2019.02.21-21.36.25:066][367]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.36.26:037][483]MapCheck: New page: Map Check
+[2019.02.21-21.36.26:049][483]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.36.26:051][483]Cmd: MAP REBUILD ALLVISIBLE
+[2019.02.21-21.36.26:051][483]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2019.02.21-21.36.26:155][483]LightingResults: New page: Lighting Build - Feb 21, 2019, 11:36:26 AM
+[2019.02.21-21.36.26:167][483]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2019.02.21-21.36.26:168][483]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2019.02.21-21.36.26:168][483]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2019.02.21-21.36.26:169][483]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2019.02.21-21.36.26:169][483]LogSwarmInterface: [TryOpenConnection] Local Process ID is 1280
+[2019.02.21-21.36.30:715][483]LightingResults: Warning: No importance volume found and the scene is so large that the automatically synthesized volume will not yield good results.  Please add a tightly bounding lightmass importance volume to optimize your scene's quality and lighting build times.
+[2019.02.21-21.36.30:716][483]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2019.02.21-21.36.30:716][483]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2019.02.21-21.36.30:716][483]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2019.02.21-21.36.30:716][483]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2019.02.21-21.36.30:716][483]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2019.02.21-21.36.30:849][483]LogEditorBuildUtils: Build time 0:04
+[2019.02.21-21.36.36:358][849]Job is a success!
+[2019.02.21-21.36.36:380][850]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.36.36:473][850]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.073s
+[2019.02.21-21.36.36:473][850]LogVolumetricLightmapImport:      Indirection Texture 32x32x32 = 0.1Mb
+[2019.02.21-21.36.36:473][850]LogVolumetricLightmapImport:      BrickData 40x5x5 = 0.0Mb
+[2019.02.21-21.36.36:473][850]LogVolumetricLightmapImport:      Bricks at Level
+[2019.02.21-21.36.36:473][850]LogVolumetricLightmapImport:          0: 100.0% covering 100.0% of volume
+[2019.02.21-21.36.36:473][850]LogVolumetricLightmapImport:          1: 0.0% covering 0.0% of volume
+[2019.02.21-21.36.36:473][850]LogVolumetricLightmapImport:          2: 0.0% covering 0.0% of volume
+[2019.02.21-21.36.37:054][850]LogTexture: Display: Building textures: HQ_Lightmap0_1 (AutoDXT, 1024X1024)
+[2019.02.21-21.36.37:054][850]LogTexture: Display: Building textures: LQ_Lightmap_0_1 (DXT1, 1024X1024)
+[2019.02.21-21.36.37:054][850]LogTexture: Display: Building textures: HQ_Lightmap0_2 (AutoDXT, 1024X1024)
+[2019.02.21-21.36.37:055][850]LogTexture: Display: Building textures: LQ_Lightmap_0_2 (DXT1, 1024X1024)
+[2019.02.21-21.36.37:055][850]LogTexture: Display: Building textures: HQ_Lightmap1_3 (AutoDXT, 512X512)
+[2019.02.21-21.36.37:055][850]LogTexture: Display: Building textures: LQ_Lightmap_1_3 (DXT1, 512X512)
+[2019.02.21-21.36.37:055][850]LogTexture: Display: Building textures: HQ_Lightmap1_4 (AutoDXT, 64X64)
+[2019.02.21-21.36.37:055][850]LogTexture: Display: Building textures: LQ_Lightmap_1_4 (DXT1, 64X64)
+[2019.02.21-21.36.37:254][850]LogTexture: Display: Building textures: ShadowMapTexture2D_5 (G8, 32X32)
+[2019.02.21-21.36.37:254][850]LogTexture: Display: Building textures: ShadowMapTexture2D_4 (BGRA8, 256X256)
+[2019.02.21-21.36.37:303][850]LogTexture: Display: Building textures: ShadowMapTexture2D_3 (G8, 1024X1024)
+[2019.02.21-21.36.37:321][850]Lightmass on WJ316-27: 5.99 sec total, 76 ms importing, 6 ms setup, 983 ms photons, 4.89 sec processing, 0 ms extra exporting [248/248 mappings]. Threads: 34.0 sec total, 9.68 sec processing.
+[2019.02.21-21.36.37:355][850]LogStaticLightingSystem: Illumination: 11.1 sec (488 ms encoding lightmaps, 244 ms encoding shadowmaps)
+[2019.02.21-21.36.37:355][850]LogStaticLightingSystem: Lightmap texture memory:  4.5 MB (4.0 MB streaming, 0.5 MB non-streaming), 8 textures
+[2019.02.21-21.36.37:355][850]LogStaticLightingSystem: Shadowmap texture memory: 1.7 MB (1.3 MB streaming, 0.3 MB non-streaming), 3 textures
+[2019.02.21-21.36.37:716][850]DumpUnbuiltLightIteractions
+[2019.02.21-21.36.37:716][850]Lights with unbuilt interactions: 0
+[2019.02.21-21.36.37:716][850]
+[2019.02.21-21.36.37:716][850]Primitives with unbuilt interactions: 0
+[2019.02.21-21.36.37:761][851]Cmd: MAP CHECK NOTIFYRESULTS
+[2019.02.21-21.36.37:762][851]MapCheck: New page: Terminus_22XX - Feb 21, 2019, 11:36:37 AM
+[2019.02.21-21.36.37:762][851]MapCheck: Warning: BP_Skybox_2 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.36.37:765][851]MapCheck: Warning: Sun_Inner_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.36.37:766][851]MapCheck: Warning: Sun_Outer_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.36.37:849][851]MapCheck: Map check complete: 0 Error(s), 3 Warning(s), took 87.996ms to complete.
+[2019.02.21-21.36.39:611][ 52]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.36.39:719][ 65]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.36.39:722][ 65]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.36.43:769][548]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.36.43:877][561]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.21-21.36.43:893][561]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.36.43:893][561]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.21-21.36.43:893][561]PIE: New page: PIE session: Terminus_22XX (Feb 21, 2019, 11:36:43 AM)
+[2019.02.21-21.36.43:893][561]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Terminus_22XX
+[2019.02.21-21.36.43:911][561]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017477s)
+[2019.02.21-21.36.43:911][561]LogAIModule: Creating AISystem for world Terminus_22XX
+[2019.02.21-21.36.43:912][561]LogPlayLevel: PIE: World Init took: (0.000690s)
+[2019.02.21-21.36.43:912][561]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Terminus_22XX.Terminus_22XX to /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX (0.018327s)
+[2019.02.21-21.36.43:933][561]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.02.21-21.36.43:942][561]LogInit: FAudioDevice initialized.
+[2019.02.21-21.36.43:975][561]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.21-21.36.43:979][561]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX up for play (max tick rate 0) at 2019.02.21-16.36.43
+[2019.02.21-21.36.43:980][561]LogWorld: Bringing up level for play took: 0.002951
+[2019.02.21-21.36.43:994][561]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Terminus_22XX -0.143
+[2019.02.21-21.36.43:994][561]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.37.12:936][832]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.37.12:937][832]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.37.12:976][832]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.21-21.37.12:976][832]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.37.12:995][832]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.37.13:038][836]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2019.02.21-21.37.19:555][604]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.37.33:574][278]Cmd: DELETE
+[2019.02.21-21.37.33:574][278]Cmd: ACTOR DELETE
+[2019.02.21-21.37.33:580][278]LogEditorActor: Deleted Actor: StaticMeshActor
+[2019.02.21-21.37.33:582][278]LogEditorActor: Deleted Actor: PointLight
+[2019.02.21-21.37.33:582][278]LogEditorActor: Deleted Actor: PointLight
+[2019.02.21-21.37.33:582][278]LogEditorActor: Deleted Actor: PointLight
+[2019.02.21-21.37.33:583][278]LogEditorActor: Deleted Actor: PointLight
+[2019.02.21-21.37.33:583][278]LogEditorActor: Deleted Actor: SpotLight
+[2019.02.21-21.37.33:584][278]LogEditorActor: Deleted Actor: SpotLight
+[2019.02.21-21.37.33:603][278]LogEditorActor: Deleted 7 Actors (0.029 secs)
+[2019.02.21-21.37.47:173][893]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.38.08:378][427]EditorErrors: New page: Actor attachment
+[2019.02.21-21.39.09:470][617]LogEditorViewport: Clicking Background
+[2019.02.21-21.39.11:811][895]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.39.19:545][803]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.39.24:611][401]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.39.34:377][552]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.39.46:769][ 19]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.39.58:811][443]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.39.59:460][520]MapCheck: New page: Map Check
+[2019.02.21-21.39.59:472][520]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.39.59:474][520]Cmd: MAP REBUILD ALLVISIBLE
+[2019.02.21-21.39.59:475][520]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2019.02.21-21.39.59:559][520]LightingResults: New page: Lighting Build - Feb 21, 2019, 11:39:59 AM
+[2019.02.21-21.39.59:569][520]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2019.02.21-21.39.59:572][520]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2019.02.21-21.39.59:572][520]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2019.02.21-21.39.59:573][520]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2019.02.21-21.39.59:573][520]LogSwarmInterface: [TryOpenConnection] Local Process ID is 1280
+[2019.02.21-21.40.04:110][520]LightingResults: Warning: No importance volume found and the scene is so large that the automatically synthesized volume will not yield good results.  Please add a tightly bounding lightmass importance volume to optimize your scene's quality and lighting build times.
+[2019.02.21-21.40.04:111][520]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2019.02.21-21.40.04:111][520]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2019.02.21-21.40.04:111][520]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2019.02.21-21.40.04:111][520]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2019.02.21-21.40.04:111][520]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2019.02.21-21.40.04:242][520]LogEditorBuildUtils: Build time 0:04
+[2019.02.21-21.40.09:544][943]Job is a success!
+[2019.02.21-21.40.09:566][945]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.40.09:657][945]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.070s
+[2019.02.21-21.40.09:657][945]LogVolumetricLightmapImport:      Indirection Texture 32x32x32 = 0.1Mb
+[2019.02.21-21.40.09:657][945]LogVolumetricLightmapImport:      BrickData 40x5x5 = 0.0Mb
+[2019.02.21-21.40.09:657][945]LogVolumetricLightmapImport:      Bricks at Level
+[2019.02.21-21.40.09:657][945]LogVolumetricLightmapImport:          0: 100.0% covering 100.0% of volume
+[2019.02.21-21.40.09:657][945]LogVolumetricLightmapImport:          1: 0.0% covering 0.0% of volume
+[2019.02.21-21.40.09:657][945]LogVolumetricLightmapImport:          2: 0.0% covering 0.0% of volume
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: HQ_Lightmap1_1 (AutoDXT, 1024X1024)
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: LQ_Lightmap_1_1 (DXT1, 1024X1024)
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: HQ_Lightmap1_2 (AutoDXT, 1024X1024)
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: LQ_Lightmap_1_2 (DXT1, 1024X1024)
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: HQ_Lightmap0_3 (AutoDXT, 512X512)
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: LQ_Lightmap_0_3 (DXT1, 512X512)
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: HQ_Lightmap0_4 (AutoDXT, 64X64)
+[2019.02.21-21.40.10:188][945]LogTexture: Display: Building textures: LQ_Lightmap_0_4 (DXT1, 64X64)
+[2019.02.21-21.40.10:388][945]LogTexture: Display: Building textures: ShadowMapTexture2D_8 (G8, 32X32)
+[2019.02.21-21.40.10:388][945]LogTexture: Display: Building textures: ShadowMapTexture2D_7 (BGRA8, 256X256)
+[2019.02.21-21.40.10:458][945]LogTexture: Display: Building textures: ShadowMapTexture2D_6 (G8, 1024X1024)
+[2019.02.21-21.40.10:475][945]Lightmass on WJ316-27: 5.76 sec total, 73 ms importing, 7 ms setup, 994 ms photons, 4.65 sec processing, 0 ms extra exporting [248/248 mappings]. Threads: 32.4 sec total, 9.30 sec processing.
+[2019.02.21-21.40.10:511][945]LogStaticLightingSystem: Illumination: 10.9 sec (437 ms encoding lightmaps, 266 ms encoding shadowmaps)
+[2019.02.21-21.40.10:511][945]LogStaticLightingSystem: Lightmap texture memory:  4.5 MB (4.0 MB streaming, 0.5 MB non-streaming), 8 textures
+[2019.02.21-21.40.10:511][945]LogStaticLightingSystem: Shadowmap texture memory: 1.7 MB (1.3 MB streaming, 0.3 MB non-streaming), 3 textures
+[2019.02.21-21.40.11:114][945]DumpUnbuiltLightIteractions
+[2019.02.21-21.40.11:114][945]Lights with unbuilt interactions: 0
+[2019.02.21-21.40.11:114][945]
+[2019.02.21-21.40.11:114][945]Primitives with unbuilt interactions: 0
+[2019.02.21-21.40.11:156][946]Cmd: MAP CHECK NOTIFYRESULTS
+[2019.02.21-21.40.11:156][946]MapCheck: New page: Terminus_22XX - Feb 21, 2019, 11:40:11 AM
+[2019.02.21-21.40.11:157][946]MapCheck: Warning: BP_Skybox_2 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.40.11:160][946]MapCheck: Warning: Sun_Inner_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.40.11:160][946]MapCheck: Warning: Sun_Outer_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.40.11:235][946]MapCheck: Map check complete: 0 Error(s), 3 Warning(s), took 78.926ms to complete.
+[2019.02.21-21.40.13:397][185]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.40.13:463][193]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.40.13:470][193]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.40.14:194][280]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.40.14:260][288]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.21-21.40.14:276][288]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.40.14:276][288]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.21-21.40.14:276][288]PIE: New page: PIE session: Terminus_22XX (Feb 21, 2019, 11:40:14 AM)
+[2019.02.21-21.40.14:277][288]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Terminus_22XX
+[2019.02.21-21.40.14:294][288]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017545s)
+[2019.02.21-21.40.14:295][288]LogAIModule: Creating AISystem for world Terminus_22XX
+[2019.02.21-21.40.14:295][288]LogPlayLevel: PIE: World Init took: (0.000749s)
+[2019.02.21-21.40.14:295][288]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Terminus_22XX.Terminus_22XX to /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX (0.018453s)
+[2019.02.21-21.40.14:315][288]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.02.21-21.40.14:326][288]LogInit: FAudioDevice initialized.
+[2019.02.21-21.40.14:356][288]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.21-21.40.14:359][288]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX up for play (max tick rate 0) at 2019.02.21-16.40.14
+[2019.02.21-21.40.14:359][288]LogWorld: Bringing up level for play took: 0.002666
+[2019.02.21-21.40.14:373][288]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Terminus_22XX 0.235
+[2019.02.21-21.40.14:374][288]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.40.42:640][845]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.40.42:641][845]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.40.42:678][845]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.21-21.40.42:679][845]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.40.42:698][845]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.40.42:748][849]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2019.02.21-21.41.08:012][869]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Turn_SM)
+[2019.02.21-21.41.20:470][346]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.41.38:731][500]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.41.57:286][697]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.42.08:562][ 42]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Turn_SM2)
+[2019.02.21-21.42.50:065][937]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.43.09:256][220]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.43.51:125][224]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM)
+[2019.02.21-21.44.01:557][461]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.44.10:729][549]Cmd: TRANSACTION UNDO
+[2019.02.21-21.44.10:729][549]LogEditorTransaction: Undo Rotate Actors
+[2019.02.21-21.44.10:733][549]LogActorComponent: ~FComponentReregisterContext: (/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.PointLight45.LightComponent0) Component already registered.
+[2019.02.21-21.44.14:568][998]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.44.16:690][251]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.44.42:188][279]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.44.56:768][ 27]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.45.00:702][498]LogEditorViewport: Clicking Background
+[2019.02.21-21.45.01:433][583]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.45.08:177][386]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM2)
+[2019.02.21-21.45.26:218][522]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.02:035][799]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.07:216][419]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.07:307][428]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.07:964][505]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.07:999][508]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.11:515][928]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.22:732][271]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.22:780][275]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.23:332][340]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.46.25:548][603]MapCheck: New page: Map Check
+[2019.02.21-21.46.25:561][603]Cmd: MAP REBUILD ALLVISIBLE
+[2019.02.21-21.46.25:562][603]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2019.02.21-21.46.25:649][603]LightingResults: New page: Lighting Build - Feb 21, 2019, 11:46:25 AM
+[2019.02.21-21.46.25:660][603]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2019.02.21-21.46.25:661][603]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2019.02.21-21.46.25:661][603]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2019.02.21-21.46.25:662][603]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2019.02.21-21.46.25:662][603]LogSwarmInterface: [TryOpenConnection] Local Process ID is 1280
+[2019.02.21-21.46.30:230][603]LightingResults: Warning: No importance volume found and the scene is so large that the automatically synthesized volume will not yield good results.  Please add a tightly bounding lightmass importance volume to optimize your scene's quality and lighting build times.
+[2019.02.21-21.46.30:231][603]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2019.02.21-21.46.30:231][603]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2019.02.21-21.46.30:231][603]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2019.02.21-21.46.30:231][603]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2019.02.21-21.46.30:231][603]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2019.02.21-21.46.30:361][603]LogEditorBuildUtils: Build time 0:04
+[2019.02.21-21.46.38:889][299]Job is a success!
+[2019.02.21-21.46.39:006][301]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.070s
+[2019.02.21-21.46.39:006][301]LogVolumetricLightmapImport:      Indirection Texture 32x32x32 = 0.1Mb
+[2019.02.21-21.46.39:006][301]LogVolumetricLightmapImport:      BrickData 40x5x5 = 0.0Mb
+[2019.02.21-21.46.39:006][301]LogVolumetricLightmapImport:      Bricks at Level
+[2019.02.21-21.46.39:006][301]LogVolumetricLightmapImport:          0: 100.0% covering 100.0% of volume
+[2019.02.21-21.46.39:006][301]LogVolumetricLightmapImport:          1: 0.0% covering 0.0% of volume
+[2019.02.21-21.46.39:006][301]LogVolumetricLightmapImport:          2: 0.0% covering 0.0% of volume
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: HQ_Lightmap0_1 (AutoDXT, 1024X1024)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: LQ_Lightmap_0_1 (DXT1, 1024X1024)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: HQ_Lightmap0_2 (AutoDXT, 1024X1024)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: LQ_Lightmap_0_2 (DXT1, 1024X1024)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: HQ_Lightmap1_3 (AutoDXT, 1024X1024)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: LQ_Lightmap_1_3 (DXT1, 1024X1024)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: HQ_Lightmap1_4 (AutoDXT, 512X512)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: LQ_Lightmap_1_4 (DXT1, 512X512)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: HQ_Lightmap0_5 (AutoDXT, 64X64)
+[2019.02.21-21.46.39:928][301]LogTexture: Display: Building textures: LQ_Lightmap_0_5 (DXT1, 64X64)
+[2019.02.21-21.46.40:128][301]LogTexture: Display: Building textures: ShadowMapTexture2D_12 (G8, 32X32)
+[2019.02.21-21.46.40:128][301]LogTexture: Display: Building textures: ShadowMapTexture2D_11 (BGRA8, 256X256)
+[2019.02.21-21.46.40:128][301]LogTexture: Display: Building textures: ShadowMapTexture2D_10 (G8, 1024X512)
+[2019.02.21-21.46.40:206][301]LogTexture: Display: Building textures: ShadowMapTexture2D_9 (G8, 1024X1024)
+[2019.02.21-21.46.40:225][301]Lightmass on WJ316-27: 9.36 sec total, 76 ms importing, 8 ms setup, 1.26 sec photons, 7.98 sec processing, 0 ms extra exporting [251/251 mappings]. Threads: 55.7 sec total, 27.3 sec processing.
+[2019.02.21-21.46.40:261][301]LogStaticLightingSystem: Illumination: 14.5 sec (788 ms encoding lightmaps, 272 ms encoding shadowmaps)
+[2019.02.21-21.46.40:261][301]LogStaticLightingSystem: Lightmap texture memory:  6.5 MB (6.0 MB streaming, 0.5 MB non-streaming), 10 textures
+[2019.02.21-21.46.40:261][301]LogStaticLightingSystem: Shadowmap texture memory: 2.3 MB (2.0 MB streaming, 0.3 MB non-streaming), 4 textures
+[2019.02.21-21.46.41:233][301]DumpUnbuiltLightIteractions
+[2019.02.21-21.46.41:233][301]Lights with unbuilt interactions: 0
+[2019.02.21-21.46.41:233][301]
+[2019.02.21-21.46.41:233][301]Primitives with unbuilt interactions: 0
+[2019.02.21-21.46.41:279][302]Cmd: MAP CHECK NOTIFYRESULTS
+[2019.02.21-21.46.41:279][302]MapCheck: New page: Terminus_22XX - Feb 21, 2019, 11:46:41 AM
+[2019.02.21-21.46.41:280][302]MapCheck: Warning: BP_Skybox_2 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.46.41:283][302]MapCheck: Warning: Sun_Inner_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.46.41:284][302]MapCheck: Warning: Sun_Outer_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.46.41:361][302]MapCheck: Map check complete: 0 Error(s), 3 Warning(s), took 81.94ms to complete.
+[2019.02.21-21.46.42:630][435]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.46.42:634][435]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.46.43:586][549]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.21-21.46.43:602][549]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.46.43:602][549]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.21-21.46.43:603][549]PIE: New page: PIE session: Terminus_22XX (Feb 21, 2019, 11:46:43 AM)
+[2019.02.21-21.46.43:603][549]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Terminus_22XX
+[2019.02.21-21.46.43:622][549]LogPlayLevel: PIE: StaticDuplicateObject took: (0.019091s)
+[2019.02.21-21.46.43:622][549]LogAIModule: Creating AISystem for world Terminus_22XX
+[2019.02.21-21.46.43:623][549]LogPlayLevel: PIE: World Init took: (0.000752s)
+[2019.02.21-21.46.43:623][549]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Terminus_22XX.Terminus_22XX to /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX (0.020013s)
+[2019.02.21-21.46.43:643][549]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.02.21-21.46.43:654][549]LogInit: FAudioDevice initialized.
+[2019.02.21-21.46.43:681][549]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.21-21.46.43:685][549]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX up for play (max tick rate 0) at 2019.02.21-16.46.43
+[2019.02.21-21.46.43:685][549]LogWorld: Bringing up level for play took: 0.003202
+[2019.02.21-21.46.43:700][549]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Terminus_22XX -0.442
+[2019.02.21-21.46.43:700][549]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.49.43:677][ 40]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.49.43:677][ 40]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.49.43:716][ 40]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.21-21.49.43:717][ 40]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.49.43:737][ 40]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.49.43:777][ 43]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2019.02.21-21.50.05:938][698]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.50.30:393][619]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.51.49:599][ 68]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.52.04:904][701]Cmd: TRANSACTION UNDO
+[2019.02.21-21.52.04:904][701]LogEditorTransaction: Undo Clicking on Actors
+[2019.02.21-21.52.05:604][763]Cmd: TRANSACTION UNDO
+[2019.02.21-21.52.05:604][763]LogEditorTransaction: Undo Move World Outliner Items
+[2019.02.21-21.52.17:813][198]LogEditorViewport: Clicking Background
+[2019.02.21-21.52.26:829][276]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Ramp_SM2)
+[2019.02.21-21.52.36:516][409]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.52.40:007][612]LogSlate: Window 'Delete Assets' being destroyed
+[2019.02.21-21.52.53:867][ 64]LogActorFactory: Actor Factory created Hall_Straight_SM
+[2019.02.21-21.52.55:190][221]LogActorFactory: Actor Factory created Hall_Straight_SM
+[2019.02.21-21.53.02:591][ 77]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.53.51:103][852]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.53.51:154][852]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Terminus_22XX" FILE="C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Autosaves/Game/Levels/Terminus_22XX_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2019.02.21-21.53.51:398][852]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XX_Auto1A653C8AE4D6490378801F3A845CB73F4.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Autosaves/Game/Levels/Terminus_22XX_Auto1.umap'
+[2019.02.21-21.53.51:403][852]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/Terminus_22XX' took 0.270
+[2019.02.21-21.53.51:403][852]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.270
+[2019.02.21-21.53.51:404][852]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Levels/Terminus_22XX_BuiltData] ([1] browsable assets)...
+[2019.02.21-21.53.51:404][852]OBJ SavePackage: Finished generating thumbnails for package [/Game/Levels/Terminus_22XX_BuiltData]
+[2019.02.21-21.53.51:447][852]LogSavePackage: Moving 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Terminus_22XX_BuiltData_Auto1769F6FDD4047C8C012D89AB8774F8006.tmp' to 'C:/Users/jone0641/Documents/GitHub/GOOB/Saved/Autosaves/Game/Levels/Terminus_22XX_BuiltData_Auto1.uasset'
+[2019.02.21-21.53.51:449][852]LogFileHelpers: Auto-saving content packages took 0.045
+[2019.02.21-21.56.28:097][632]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.21-21.56.28:113][632]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.56.28:113][632]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.21-21.56.28:114][632]PIE: New page: PIE session: Terminus_22XX (Feb 21, 2019, 11:56:28 AM)
+[2019.02.21-21.56.28:114][632]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Terminus_22XX
+[2019.02.21-21.56.28:131][632]LogPlayLevel: PIE: StaticDuplicateObject took: (0.017188s)
+[2019.02.21-21.56.28:131][632]LogAIModule: Creating AISystem for world Terminus_22XX
+[2019.02.21-21.56.28:132][632]LogPlayLevel: PIE: World Init took: (0.000783s)
+[2019.02.21-21.56.28:132][632]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Terminus_22XX.Terminus_22XX to /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX (0.018136s)
+[2019.02.21-21.56.28:154][632]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.02.21-21.56.28:165][632]LogInit: FAudioDevice initialized.
+[2019.02.21-21.56.28:196][632]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.21-21.56.28:200][632]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX up for play (max tick rate 0) at 2019.02.21-16.56.28
+[2019.02.21-21.56.28:200][632]LogWorld: Bringing up level for play took: 0.003396
+[2019.02.21-21.56.28:214][632]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Terminus_22XX 0.067
+[2019.02.21-21.56.28:214][632]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.56.32:516][146]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.56.32:516][146]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.56.32:549][146]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.21-21.56.32:549][146]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.56.32:570][146]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.56.32:618][150]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2019.02.21-21.56.38:468][840]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.56.39:478][959]MapCheck: New page: Map Check
+[2019.02.21-21.56.39:486][959]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.56.39:488][959]Cmd: MAP REBUILD ALLVISIBLE
+[2019.02.21-21.56.39:488][959]LogEditorServer: Rebuildmap Clear paths rebuilt
+[2019.02.21-21.56.39:574][959]LightingResults: New page: Lighting Build - Feb 21, 2019, 11:56:39 AM
+[2019.02.21-21.56.39:584][959]LogSwarmInterface: [OpenConnection] Registering TCP channel ...
+[2019.02.21-21.56.39:586][959]LogSwarmInterface: [OpenConnection] Connecting to agent ...
+[2019.02.21-21.56.39:586][959]LogSwarmInterface: [TryOpenConnection] Testing the Agent
+[2019.02.21-21.56.39:586][959]LogSwarmInterface: [TryOpenConnection] Opening Connection to Agent
+[2019.02.21-21.56.39:586][959]LogSwarmInterface: [TryOpenConnection] Local Process ID is 1280
+[2019.02.21-21.56.44:124][959]LightingResults: Warning: No importance volume found and the scene is so large that the automatically synthesized volume will not yield good results.  Please add a tightly bounding lightmass importance volume to optimize your scene's quality and lighting build times.
+[2019.02.21-21.56.44:125][959]LogStaticLightingSystem: Running Lightmass w/ ImmediateImport mode ENABLED
+[2019.02.21-21.56.44:125][959]LogStaticLightingSystem: Running Lightmass w/ ImmediateProcess mode ENABLED
+[2019.02.21-21.56.44:125][959]LogStaticLightingSystem: Running Lightmass w/ Sorting mode ENABLED
+[2019.02.21-21.56.44:125][959]LogStaticLightingSystem: Running Lightmass w/ Mapping paddings ENABLED
+[2019.02.21-21.56.44:125][959]LogStaticLightingSystem: Running Lightmass w/ Mapping debug paddings DISABLED
+[2019.02.21-21.56.44:276][959]LogEditorBuildUtils: Build time 0:04
+[2019.02.21-21.56.53:996][821]Job is a success!
+[2019.02.21-21.56.54:018][822]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.56.54:112][822]LogVolumetricLightmapImport: Imported Volumetric Lightmap in 0.071s
+[2019.02.21-21.56.54:112][822]LogVolumetricLightmapImport:      Indirection Texture 32x32x32 = 0.1Mb
+[2019.02.21-21.56.54:112][822]LogVolumetricLightmapImport:      BrickData 40x5x5 = 0.0Mb
+[2019.02.21-21.56.54:112][822]LogVolumetricLightmapImport:      Bricks at Level
+[2019.02.21-21.56.54:112][822]LogVolumetricLightmapImport:          0: 100.0% covering 100.0% of volume
+[2019.02.21-21.56.54:112][822]LogVolumetricLightmapImport:          1: 0.0% covering 0.0% of volume
+[2019.02.21-21.56.54:112][822]LogVolumetricLightmapImport:          2: 0.0% covering 0.0% of volume
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: HQ_Lightmap1_1 (AutoDXT, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: LQ_Lightmap_1_1 (DXT1, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: HQ_Lightmap1_2 (AutoDXT, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: LQ_Lightmap_1_2 (DXT1, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: HQ_Lightmap0_3 (AutoDXT, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: LQ_Lightmap_0_3 (DXT1, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: HQ_Lightmap0_4 (AutoDXT, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: LQ_Lightmap_0_4 (DXT1, 1024X1024)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: HQ_Lightmap1_5 (AutoDXT, 512X512)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: LQ_Lightmap_1_5 (DXT1, 512X512)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: HQ_Lightmap0_6 (AutoDXT, 64X64)
+[2019.02.21-21.56.55:121][822]LogTexture: Display: Building textures: LQ_Lightmap_0_6 (DXT1, 64X64)
+[2019.02.21-21.56.55:321][822]LogTexture: Display: Building textures: ShadowMapTexture2D_16 (G8, 32X32)
+[2019.02.21-21.56.55:321][822]LogTexture: Display: Building textures: ShadowMapTexture2D_15 (BGRA8, 256X256)
+[2019.02.21-21.56.55:393][822]LogTexture: Display: Building textures: ShadowMapTexture2D_13 (G8, 1024X1024)
+[2019.02.21-21.56.55:393][822]LogTexture: Display: Building textures: ShadowMapTexture2D_14 (G8, 1024X1024)
+[2019.02.21-21.56.55:411][822]Lightmass on WJ316-27: 10.6 sec total, 77 ms importing, 7 ms setup, 1.70 sec photons, 8.86 sec processing, 0 ms extra exporting [252/252 mappings]. Threads: 1:01 min total, 32.3 sec processing.
+[2019.02.21-21.56.55:447][822]LogStaticLightingSystem: Illumination: 15.8 sec (858 ms encoding lightmaps, 266 ms encoding shadowmaps)
+[2019.02.21-21.56.55:447][822]LogStaticLightingSystem: Lightmap texture memory:  8.5 MB (8.0 MB streaming, 0.5 MB non-streaming), 12 textures
+[2019.02.21-21.56.55:447][822]LogStaticLightingSystem: Shadowmap texture memory: 3.0 MB (2.7 MB streaming, 0.3 MB non-streaming), 4 textures
+[2019.02.21-21.56.56:128][822]DumpUnbuiltLightIteractions
+[2019.02.21-21.56.56:128][822]Lights with unbuilt interactions: 0
+[2019.02.21-21.56.56:128][822]
+[2019.02.21-21.56.56:128][822]Primitives with unbuilt interactions: 0
+[2019.02.21-21.56.56:171][823]Cmd: MAP CHECK NOTIFYRESULTS
+[2019.02.21-21.56.56:171][823]MapCheck: New page: Terminus_22XX - Feb 21, 2019, 11:56:56 AM
+[2019.02.21-21.56.56:172][823]MapCheck: Warning: BP_Skybox_2 Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.56.56:176][823]MapCheck: Warning: Sun_Inner_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.56.56:176][823]MapCheck: Warning: Sun_Outer_Ring_StaticMesh Large actor receives a pre-shadow and will cause an extreme performance hit unless bCastDynamicShadow is set to false. 
+[2019.02.21-21.56.56:268][823]MapCheck: Map check complete: 0 Error(s), 3 Warning(s), took 96.533ms to complete.
+[2019.02.21-21.56.58:029][ 16]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.56.58:111][ 26]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.56.58:114][ 26]LogSlate: Window 'Message Log' being destroyed
+[2019.02.21-21.57.00:937][363]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.57.01:036][375]LogTemp: Repeating last play command: Selected Viewport
+[2019.02.21-21.57.01:052][375]LogBlueprintUserMessages: Early PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.57.01:052][375]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2019.02.21-21.57.01:053][375]PIE: New page: PIE session: Terminus_22XX (Feb 21, 2019, 11:57:01 AM)
+[2019.02.21-21.57.01:053][375]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Terminus_22XX
+[2019.02.21-21.57.01:071][375]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018462s)
+[2019.02.21-21.57.01:072][375]LogAIModule: Creating AISystem for world Terminus_22XX
+[2019.02.21-21.57.01:072][375]LogPlayLevel: PIE: World Init took: (0.000706s)
+[2019.02.21-21.57.01:072][375]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Terminus_22XX.Terminus_22XX to /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX (0.019338s)
+[2019.02.21-21.57.01:092][375]LogInit: XAudio2 using 'Realtek Digital Output(Optical) (Realtek High Definition Audio)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2019.02.21-21.57.01:102][375]LogInit: FAudioDevice initialized.
+[2019.02.21-21.57.01:135][375]LogLoad: Game class is 'Test_Terminus_22XXGameModeBase_C'
+[2019.02.21-21.57.01:139][375]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Terminus_22XX.Terminus_22XX up for play (max tick rate 0) at 2019.02.21-16.57.01
+[2019.02.21-21.57.01:139][375]LogWorld: Bringing up level for play took: 0.003273
+[2019.02.21-21.57.01:153][375]PIE: Play in editor start time for /Game/Levels/UEDPIE_0_Terminus_22XX 1.006
+[2019.02.21-21.57.01:153][375]LogBlueprintUserMessages: Late PlayInEditor Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.57.13:434][460]LogBlueprintUserMessages: Early EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.57.13:434][460]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.57.13:472][460]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2019.02.21-21.57.13:472][460]LogBlueprintUserMessages: Late EndPlayMap Detection: Level '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel' has LevelScriptBlueprint '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX' with GeneratedClass '/Game/Levels/Terminus_22XX.Terminus_22XX_C' with ClassGeneratedBy '/Game/Levels/Terminus_22XX.Terminus_22XX:PersistentLevel.Terminus_22XX'
+[2019.02.21-21.57.13:492][460]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.02.21-21.57.13:540][463]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2019.02.21-21.57.25:899][923]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Straight_SM4)
+[2019.02.21-21.57.36:348][144]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-21.57.39:313][495]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2019.02.21-21.57.43:270][963]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.57.45:974][278]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.57.53:493][149]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-21.58.06:068][587]Cmd: DELETE
+[2019.02.21-21.58.06:068][587]Cmd: ACTOR DELETE
+[2019.02.21-21.58.06:076][587]LogEditorActor: Deleted Actor: Brush
+[2019.02.21-21.58.06:116][587]LogEditorActor: Deleted 1 Actors (0.048 secs)
+[2019.02.21-21.58.09:017][922]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Hall_Straight_SM4)
+[2019.02.21-21.58.09:970][ 20]Cmd: DELETE
+[2019.02.21-21.58.09:970][ 20]Cmd: ACTOR DELETE
+[2019.02.21-21.58.09:977][ 20]LogEditorActor: Deleted Actor: StaticMeshActor
+[2019.02.21-21.58.09:995][ 20]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2019.02.21-21.58.17:909][900]Cmd: CAMERA ALIGN ACTIVEVIEWPORTONLY
+[2019.02.21-21.58.19:100][ 42]LogEditorViewport: Clicking Background
+[2019.02.21-22.00.22:667][758]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.00.24:207][937]Cmd: BRUSH ADD SELECTNEWBRUSH
+[2019.02.21-22.00.43:670][205]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.01.03:250][534]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.01.30:507][741]LogEditorViewport: Clicking Background
+[2019.02.21-22.01.39:328][792]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.01.41:988][111]LogEditorViewport: Clicking Background
+[2019.02.21-22.01.50:404][ 98]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.02.20:704][711]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.02.56:954][982]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.02.57:070][996]Cmd: ACTOR ALIGN VERTS
+[2019.02.21-22.03.29:603][815]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.04.25:601][410]LogEditorViewport: Clicking on Actor (LMB): Brush (Box Brush2)
+[2019.02.21-22.04.33:966][379]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.04.39:509][ 33]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.04.46:325][845]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.04.52:862][613]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.05.07:644][351]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.05.20:549][887]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.05.27:794][748]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.05.27:877][758]Cmd: ACTOR ALIGN VERTS
+[2019.02.21-22.05.47:081][ 32]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.05.53:811][803]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.05.57:380][224]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.06.47:869][193]LogEditorViewport: Clicking on Actor (LMB): Brush (Box Brush2)
+[2019.02.21-22.06.49:333][364]LogEditorViewport: Clicking on Actor (LMB): Brush (Box Brush2)
+[2019.02.21-22.06.50:261][472]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.06.59:880][610]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.07.14:869][364]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.07.22:415][236]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.07.36:011][838]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.02.21-22.07.44:478][840]LogSlate: FSceneViewport::OnFocusLost() reason 0
+[2019.02.21-22.07.44:553][849]Cmd: ACTOR ALIGN VERTS
+[2019.02.21-22.07.44:586][849]LogWindows: Windows GetLastError: The operation completed successfully. (0)
