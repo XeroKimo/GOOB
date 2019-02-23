@@ -300,7 +300,7 @@ float APlayerCharacter::GetHealthPercentage()
 
 void APlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
-	if (InstigatedBy->GetOwner() != this)
+	if (InstigatedBy->GetPawn() != this)
 	{
 		CurrentHealth -= Damage;
 	}

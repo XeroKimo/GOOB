@@ -49,7 +49,6 @@ public:
 	bool GetGeneratorIsActive() { return GeneratorIsActive; }
 	
 
-
 	
 	
 };
