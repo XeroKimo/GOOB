@@ -31,6 +31,7 @@ ABaseBullet::ABaseBullet()
 
 	MovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>("Movement Component");
 	MovementComponent->UpdatedComponent = BulletHitbox;
+	MovementComponent->ProjectileGravityScale = 0.0f;
 
 	InitialLifeSpan = BulletLifeSpan;
 

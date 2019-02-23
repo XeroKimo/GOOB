@@ -99,6 +99,11 @@ void ABaseGun::Fire()
         CanFire = false;
         if (!InfiniteClipSize)
             CurrentClipSize--;
+		if (CurrentClipSize == 0)
+		{
+			StopFiring();
+			StartReloading();
+		}
 
 		if (ShootingStyle == EFireStyle::FS_Burst)
 		{

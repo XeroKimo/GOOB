@@ -12,14 +12,15 @@ AShieldGenerator::AShieldGenerator()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	GeneratorHitBox = CreateDefaultSubobject<UCapsuleComponent>("Hitbox");
+	GeneratorHitBox->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	GeneratorHitBox->SetCollisionProfileName("BlockAll");
+	RootComponent = GeneratorHitBox;
+
 	//Setting Up Mesh
 	GeneratorMesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
-	GeneratorMesh->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	RootComponent = GeneratorMesh;
-
-	GeneratorHitBox = CreateDefaultSubobject<UCapsuleComponent>("Hitbox");
-	GeneratorHitBox->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-	GeneratorHitBox->AttachTo(RootComponent);
+	GeneratorMesh->SetCollisionProfileName("NoCollision");
+	GeneratorMesh->AttachTo(RootComponent);
 
 
 	bCanBeDamaged = true;

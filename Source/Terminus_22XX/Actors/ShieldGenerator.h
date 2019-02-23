@@ -41,18 +41,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	
 	void AddShield(class UShieldComponent* Shield);
-	void GeneratorSheild();
 
 	UFUNCTION()
 		void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
-	
-	//Setters
-	void SetGeneratorHealth(int health) { GeneratorHealth = health; }
-	void SetGeneratorIsActive(bool state) { GeneratorIsActive = state; }
-	
 	//Getters
-	int GetGeneratorHealth() { return GeneratorHealth; }
 	bool GetGeneratorIsActive() { return GeneratorIsActive; }
 	
 
