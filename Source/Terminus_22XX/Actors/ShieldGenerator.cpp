@@ -61,6 +61,8 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 		if (GeneratorHealth <= 0)
 		{
 			GeneratorIsActive = false;
+			for (UShieldComponent* shield : PointersToShields)
+				shield->DecrementActiveGenerators();
 		}
 		else
 		{

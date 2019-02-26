@@ -5,7 +5,6 @@
 #include "Actors/ShieldGenerator.h"
 #include "Guns/BaseBullet.h"
 
-
 // Sets default values for this component's properties
 UShieldComponent::UShieldComponent()
 {
@@ -24,7 +23,7 @@ void UShieldComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	for (AShieldGenerator* generator: ArrayOfShieldGenerators)
+	for (AShieldGenerator* generator : ArrayOfShieldGenerators)
 	{
 		generator->AddShield(this);
 		if (generator->GetGeneratorIsActive())
@@ -32,8 +31,8 @@ void UShieldComponent::BeginPlay()
 	}
 	if (ShieldGeneratorsAlive > 0)
 		IsShieldActive = true;
-	
-	
+
+
 }
 
 
@@ -58,14 +57,10 @@ void UShieldComponent::ComponentHit(UPrimitiveComponent * HitComp, AActor * Othe
 			{
 				CurrentShieldHealth = 0.f;
 				IsShieldActive = false;
+				DisableShieldCollisions();
 			}
 		}
 	}
-}
-
-void UShieldComponent::SetupAttachment(USceneComponent* Scene, FName SocketName)
-{
-	ShieldMesh->SetupAttachment(Scene, SocketName);
 }
 
 void UShieldComponent::DecrementActiveGenerators()
@@ -74,6 +69,16 @@ void UShieldComponent::DecrementActiveGenerators()
 	{
 		ShieldGeneratorsAlive--;
 		IsShieldActive = (ShieldGeneratorsAlive > 0) ? true : false;
+		if (!IsShieldActive)
+			DisableShieldCollisions();
 	}
+}
+
+void UShieldComponent::EnableShieldCollisions()
+{
+}
+
+void UShieldComponent::DisableShieldCollisions()
+{
 }
 

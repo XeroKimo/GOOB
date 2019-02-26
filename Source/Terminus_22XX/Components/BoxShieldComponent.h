@@ -15,12 +15,16 @@ class TERMINUS_22XX_API UBoxShieldComponent : public UShieldComponent
 	GENERATED_BODY()
 	
 	
-private:
-	UPROPERTY(VisibleAnywhere, Category = "Collision")
+protected:
+	UPROPERTY(EditInstanceOnly, Category = "Collision")
 		class UBoxComponent* BoxCollider;
 	
 public:
 	UBoxShieldComponent();
-	virtual void SetupAttachment(USceneComponent* Scene, FName SocketName = NAME_None) override;
-	class UBoxComponent* GetBox() { return BoxCollider; }
+
+	virtual void EnableShieldCollisions();
+
+	virtual void DisableShieldCollisions();
+protected:
+	void BeginPlay() override;
 };

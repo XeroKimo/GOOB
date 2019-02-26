@@ -10,11 +10,28 @@ UCapsuleShieldComponent::UCapsuleShieldComponent()
 	CapsuleCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	CapsuleCollider->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Block);
 	CapsuleCollider->OnComponentHit.AddDynamic(this, &UShieldComponent::ComponentHit);
-
+	CapsuleCollider->SetupAttachment(this);
 	ShieldMesh->SetupAttachment(CapsuleCollider);
+
+
+	EnabledCollisions = CapsuleCollider->GetCollisionResponseToChannels();
 }
 
-void UCapsuleShieldComponent::SetupAttachment(USceneComponent * Scene, FName SocketName)
+
+void UCapsuleShieldComponent::EnableShieldCollisions()
 {
-	CapsuleCollider->SetupAttachment(Scene, SocketName);
+	CapsuleCollider->SetCollisionResponseToChannels(EnabledCollisions);
+}
+void UCapsuleShieldComponent::DisableShieldCollisions()
+{
+	CapsuleCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+}
+void UCapsuleShieldComponent::BeginPlay()
+{
+	UShieldComponent::BeginPlay();
+
+	if (!IsShieldActive)
+	{
+		DisableShieldCollisions();
+	}
 }

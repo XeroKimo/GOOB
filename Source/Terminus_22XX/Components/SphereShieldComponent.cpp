@@ -10,12 +10,26 @@ USphereShieldComponent::USphereShieldComponent()
 	SphereCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	SphereCollider->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Block);
 	SphereCollider->OnComponentHit.AddDynamic(this, &UShieldComponent::ComponentHit);
-
+	SphereCollider->SetupAttachment(this);
 	ShieldMesh->SetupAttachment(SphereCollider);
 	
+	EnabledCollisions = SphereCollider->GetCollisionResponseToChannels();
 }
 
-void USphereShieldComponent::SetupAttachment(USceneComponent * Scene, FName SocketName)
+void USphereShieldComponent::EnableShieldCollisions()
 {
-	SphereCollider->SetupAttachment(Scene, SocketName);
+	SphereCollider->SetCollisionResponseToChannels(EnabledCollisions);
+}
+void USphereShieldComponent::DisableShieldCollisions()
+{
+	SphereCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+}
+void USphereShieldComponent::BeginPlay()
+{
+	UShieldComponent::BeginPlay();
+
+	if (!IsShieldActive)
+	{
+		DisableShieldCollisions();
+	}
 }

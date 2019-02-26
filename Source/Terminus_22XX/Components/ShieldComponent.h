@@ -3,12 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
+#include "Components/SceneComponent.h"
 #include "ShieldComponent.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class TERMINUS_22XX_API UShieldComponent : public UActorComponent
+class TERMINUS_22XX_API UShieldComponent : public USceneComponent
 {
 	GENERATED_BODY()
 
@@ -20,24 +20,26 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION()
 		void ComponentHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
-	virtual void SetupAttachment(USceneComponent* Scene, FName SocketName = NAME_None);
-
 	void DecrementActiveGenerators();
+
+	virtual void EnableShieldCollisions();
+
+	virtual void DisableShieldCollisions();
 
 protected:
 	bool IsShieldActive;
 	UPROPERTY(VisibleAnywhere)
-	class UStaticMeshComponent* ShieldMesh;
+		class UStaticMeshComponent* ShieldMesh;
 
-	UPROPERTY(VisibleAnywhere, Category = "Shield")
-	TArray<class AShieldGenerator*> ArrayOfShieldGenerators;
+	UPROPERTY(EditInstanceOnly, Category = "Shield")
+		TArray<class AShieldGenerator*> ArrayOfShieldGenerators;
 
 	int ShieldGeneratorsAlive = 0;
 
@@ -46,8 +48,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Shield")
 		float CurrentShieldHealth = 100.f;
-		
+
 	UPROPERTY(VisibleAnywhere, Category = "Shield")
 		bool CanBeDestroyed = false;
-	
+
+	FCollisionResponseContainer EnabledCollisions;
 };

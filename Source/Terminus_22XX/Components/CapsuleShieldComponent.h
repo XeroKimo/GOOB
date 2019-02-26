@@ -21,6 +21,10 @@ private:
 
 public:
 	UCapsuleShieldComponent();
-	virtual void SetupAttachment(USceneComponent* Scene, FName SocketName = NAME_None) override;
-	class UCapsuleComponent* GetCapsule() { return CapsuleCollider; }
+
+	virtual void EnableShieldCollisions();
+
+	virtual void DisableShieldCollisions();
+protected:
+	void BeginPlay() override;
 };
