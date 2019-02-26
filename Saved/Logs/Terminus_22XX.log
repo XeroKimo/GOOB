@@ -1,4 +1,4 @@
-﻿Log file open, 02/26/19 15:21:44
+﻿﻿Log file open, 02/26/19 15:21:44
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
@@ -9,8 +9,8 @@ LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
 LogWindows: File 'VtuneApi32e.dll' does not exist
 LogInit: Display: Running engine for game: Terminus_22XX
 LogPlatformFile: Not using cached read wrapper
-LogTaskGraph: Started task graph with 5 named threads and 14 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.453247
+LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.782136
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: Display: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -94,6 +94,157 @@ LogPluginManager: Mounting plugin RuntimePhysXCooking
 LogPluginManager: Mounting plugin SteamVR
 LogPluginManager: Mounting plugin WindowsMoviePlayer
 LogStreaming: Display: Took  0.146s to configure plugins.
+LogInit: Warning: Incompatible or missing module: Terminus_22XX
+Running C:/Program Files/Epic Games/UE_4.20/Engine/Binaries/DotNET/UnrealBuildTool.exe Development Win64 -Project="C:/Users/jone0641/Documents/GitHub/GOOB/Terminus_22XX.uproject" -TargetType=Editor -Progress -NoHotReloadFromIDE
+Performing full C++ include scan (building a new target)
+Using 'git status' to determine working set for adaptive non-unity build.
+Creating makefile for Terminus_22XXEditor (no existing makefile)
+Using Visual Studio 2017 14.14.26428 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.14.26428) and Windows 10.0.17134.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+@progress push 5%
+Parsing headers for Terminus_22XXEditor
+  Running UnrealHeaderTool "C:\Users\jone0641\Documents\GitHub\GOOB\Terminus_22XX.uproject" "C:\Users\jone0641\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Terminus_22XXEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+Reflection code generated for Terminus_22XXEditor in 7.5404335 seconds
+@progress pop
+Building 50 actions with 8 processes...
+  @progress 'Compiling C++ source code...' 0%
+  PCLaunch.rc
+  @progress 'Compiling C++ source code...' 2%
+  SharedPCH.Engine.cpp
+  @progress 'Compiling C++ source code...' 4%
+  HealthPickUp.gen.cpp
+  @progress 'Compiling C++ source code...' 6%
+  CapsuleShield.gen.cpp
+  @progress 'Compiling C++ source code...' 8%
+  Bullet_Railgun.gen.cpp
+  @progress 'Compiling C++ source code...' 10%
+  Enemy.gen.cpp
+  @progress 'Compiling C++ source code...' 12%
+  InventoryComponent.gen.cpp
+  @progress 'Compiling C++ source code...' 14%
+  CapsuleShieldComponent.gen.cpp
+  @progress 'Compiling C++ source code...' 16%
+  Bullet_Vampyr.gen.cpp
+  @progress 'Compiling C++ source code...' 18%
+  Bullet_Shotgun.gen.cpp
+  @progress 'Compiling C++ source code...' 20%
+  BoxShield.gen.cpp
+  @progress 'Compiling C++ source code...' 22%
+  ShieldGenerator.gen.cpp
+  @progress 'Compiling C++ source code...' 24%
+  PickUpActor.gen.cpp
+  @progress 'Compiling C++ source code...' 26%
+  ShieldComponent.gen.cpp
+  @progress 'Compiling C++ source code...' 28%
+  T22XX_Shotgun.gen.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\guns\BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 30%
+  SphereShield.gen.cpp
+  @progress 'Compiling C++ source code...' 32%
+  SphereShieldComponent.gen.cpp
+  @progress 'Compiling C++ source code...' 34%
+  T22XX_Railgun.gen.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\guns\BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 36%
+  Terminus_22XX.init.gen.cpp
+  @progress 'Compiling C++ source code...' 38%
+  T22XX_Vampyr.gen.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\guns\BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 40%
+  BaseBullet.gen.cpp
+  @progress 'Compiling C++ source code...' 42%
+  BaseGun.gen.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  C:\Users\jone0641\Documents\GitHub\GOOB\Source\Terminus_22XX/Guns/BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 44%
+  BoxShieldComponent.cpp
+  @progress 'Compiling C++ source code...' 46%
+  Terminus_22XXGameModeBase.gen.cpp
+  @progress 'Compiling C++ source code...' 48%
+  PlayerCharacter.gen.cpp
+  @progress 'Compiling C++ source code...' 50%
+  BoxShield.cpp
+  @progress 'Compiling C++ source code...' 52%
+  Terminus_22XXGameModeBase.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\Guns/BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 54%
+  CapsuleShield.cpp
+  @progress 'Compiling C++ source code...' 56%
+  Enemy.cpp
+  @progress 'Compiling C++ source code...' 58%
+  SphereShield.cpp
+  @progress 'Compiling C++ source code...' 60%
+  ShieldGenerator.cpp
+  C:\Users\jone0641\Documents\GitHub\GOOB\Source\Terminus_22XX\Actors\ShieldGenerator.cpp(23): warning C4996: 'USceneComponent::AttachTo': This function is deprecated, please use AttachToComponent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  C:\Program Files\Epic Games\UE_4.20\Engine\Source\Runtime\Engine\Classes\Components/SceneComponent.h(684): note: see declaration of 'USceneComponent::AttachTo'
+  @progress 'Compiling C++ source code...' 62%
+  T22XX_Vampyr.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\guns\BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 64%
+  PickUpActor.cpp
+  @progress 'Compiling C++ source code...' 66%
+  HealthPickUp.cpp
+  @progress 'Compiling C++ source code...' 68%
+  CapsuleShieldComponent.cpp
+  @progress 'Compiling C++ source code...' 70%
+  Bullet_Railgun.cpp
+  @progress 'Compiling C++ source code...' 72%
+  InventoryComponent.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  C:\Users\jone0641\Documents\GitHub\GOOB\Source\Terminus_22XX\Guns/BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 74%
+  BaseBullet.cpp
+  @progress 'Compiling C++ source code...' 76%
+  ShieldComponent.cpp
+  @progress 'Compiling C++ source code...' 78%
+  SphereShieldComponent.cpp
+  @progress 'Compiling C++ source code...' 80%
+  Bullet_Shotgun.cpp
+  @progress 'Compiling C++ source code...' 82%
+  PlayerCharacter.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  C:\Users\jone0641\Documents\GitHub\GOOB\Source\Terminus_22XX\Guns/BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 84%
+  Bullet_Vampyr.cpp
+  @progress 'Compiling C++ source code...' 86%
+  Terminus_22XX.cpp
+  @progress 'Compiling C++ source code...' 88%
+  T22XX_Railgun.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\guns\BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 90%
+  BaseGun.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\guns\BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 92%
+  T22XX_Shotgun.cpp
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(19): warning C4996: 'TEnumAsByte_EnumClass<true>': TEnumAsByte is not intended for use with enum classes - please derive your enum class from uint8 instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+  c:\program files\epic games\ue_4.20\engine\source\runtime\core\public\Containers/EnumAsByte.h(10): note: see declaration of 'TEnumAsByte_EnumClass<true>'
+  c:\users\jone0641\documents\github\goob\source\terminus_22xx\guns\BaseGun.h(64): note: see reference to class template instantiation 'TEnumAsByte<EFireStyle>' being compiled
+  @progress 'Compiling C++ source code...' 94%
+  BoxShieldComponent.gen.cpp
+  @progress 'Compiling C++ source code...' 96%
+  UE4Editor-Terminus_22XX.lib
+     Creating library C:\Users\jone0641\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX.lib and object C:\Users\jone0641\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX.exp
+  @progress 'Compiling C++ source code...' 98%
+  UE4Editor-Terminus_22XX.dll
+     Creating library C:\Users\jone0641\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX.suppressed.lib and object C:\Users\jone0641\Documents\GitHub\GOOB\Intermediate\Build\Win64\UE4Editor\Development\Terminus_22XX\UE4Editor-Terminus_22XX.suppressed.exp
+  @progress 'Compiling C++ source code...' 100%
+Total build time: 37.23 seconds (Parallel executor: 21.72 seconds)
 LogInit: Using libcurl 7.55.1-DEV
 LogInit:  - built for x86_64-pc-win32
 LogInit:  - supports SSL with OpenSSL/1.0.2h
@@ -114,17 +265,17 @@ LogInit:  - MaxHostConnections = 16  - Libcurl will limit the number of connecti
 LogInit:  - LocalHostAddr = Default
 LogInit:  - BufferSize = 65536
 LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
-LogInit: Build: ++UE4+Release-4.20-CL-4369336
-LogInit: Engine Version: 4.20.3-4369336+++UE4+Release-4.20
+LogInit: Build: ++UE4+Release-4.20-CL-4212847
+LogInit: Engine Version: 4.20.0-4212847+++UE4+Release-4.20
 LogInit: Compatible Engine Version: 4.20.0-4212847+++UE4+Release-4.20
 LogInit: Net CL: 4212847
-LogInit: OS: Windows 10 (), CPU: Intel(R) Core(TM) i5-6600K CPU @ 3.50GHz, GPU: NVIDIA GeForce GTX 1060 6GB
-LogInit: Compiled (64-bit): Sep 17 2018 12:26:19
+LogInit: OS: Windows 10 (), CPU: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz, GPU: NVIDIA GeForce GTX 970
+LogInit: Compiled (64-bit): Jul 14 2018 09:51:14
 LogInit: Compiled with Visual C++: 19.13.26129.00
 LogInit: Build Configuration: Development
 LogInit: Branch Name: ++UE4+Release-4.20
-LogInit: Command Line:  -skipcompile
-LogInit: Base Directory: F:/Program Files (x86)/Epic Games/UE_4.20/Engine/Binaries/Win64/
+LogInit: Command Line:  
+LogInit: Base Directory: C:/Program Files/Epic Games/UE_4.20/Engine/Binaries/Win64/
 LogInit: Installed Engine Build: 1
 LogDevObjectVersion: Number of dev versions registered: 20
 LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
