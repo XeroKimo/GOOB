@@ -6,7 +6,7 @@
 
 UBoxShieldComponent::UBoxShieldComponent()
 {
-	BoxCollider = CreateDefaultSubobject<UBoxComponent>("Hitbox");
+	BoxCollider = CreateDefaultSubobject<UBoxComponent>("Shield Hitbox");
 	BoxCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	BoxCollider->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Block);
 	BoxCollider->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Block);

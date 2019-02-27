@@ -15,19 +15,19 @@ AEnemy::AEnemy()
     Tags.Empty();
     Tags.Add("AIGuard");
 
+	//Create Hitbox
+	HitBox = CreateDefaultSubobject<UCapsuleComponent>("HitBox");
+	HitBox->SetCollisionProfileName("BlockAll");
+	HitBox->SetNotifyRigidBodyCollision(true);
+	RootComponent = HitBox;
+
     //Create Enemy
     EnemyMesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
     EnemyMesh->SetCollisionProfileName("No Collision");
 	EnemyMesh->SetupAttachment(RootComponent);
 
-    //Create Hitbox
-    HitBox = CreateDefaultSubobject<UCapsuleComponent>("HitBox");
-    HitBox->SetCollisionProfileName("BlockAll");
-    HitBox->SetNotifyRigidBodyCollision(true);
-	RootComponent = HitBox;
-
 	Shield = CreateDefaultSubobject<UCapsuleShieldComponent>("Shield");
-	Shield->SetupAttachment(RootComponent);
+	Shield->SetupAttachment(EnemyMesh);
 
     bCanBeDamage = true;
 
@@ -50,7 +50,7 @@ void AEnemy::BeginPlay()
 void AEnemy::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
     GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
-    EnemyHealth = -Damage;
+    EnemyHealth -= Damage;
     GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, "Health - " + FString::FromInt(EnemyHealth));
 	if (EnemyHealth < 0)
 		Destroy();

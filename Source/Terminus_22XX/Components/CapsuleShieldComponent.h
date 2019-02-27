@@ -25,6 +25,9 @@ public:
 	virtual void EnableShieldCollisions();
 
 	virtual void DisableShieldCollisions();
+
+	UFUNCTION()
+		void TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser);
 protected:
 	void BeginPlay() override;
 };

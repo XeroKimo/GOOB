@@ -6,7 +6,7 @@
 
 USphereShieldComponent::USphereShieldComponent()
 {
-	SphereCollider = CreateDefaultSubobject<USphereComponent>("Hitbox");
+	SphereCollider = CreateDefaultSubobject<USphereComponent>("Shield Hitbox");
 	SphereCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	SphereCollider->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Block);
 	SphereCollider->OnComponentHit.AddDynamic(this, &UShieldComponent::ComponentHit);
