@@ -20,10 +20,12 @@ UCapsuleShieldComponent::UCapsuleShieldComponent()
 
 void UCapsuleShieldComponent::EnableShieldCollisions()
 {
+    UShieldComponent::EnableShieldCollisions();
 	CapsuleCollider->SetCollisionResponseToChannels(EnabledCollisions);
 }
 void UCapsuleShieldComponent::DisableShieldCollisions()
 {
+    UShieldComponent::DisableShieldCollisions();
 	CapsuleCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 }
 void UCapsuleShieldComponent::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)

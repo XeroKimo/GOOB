@@ -76,9 +76,11 @@ void UShieldComponent::DecrementActiveGenerators()
 
 void UShieldComponent::EnableShieldCollisions()
 {
+    ShieldMesh->SetVisibility(true);
 }
 
 void UShieldComponent::DisableShieldCollisions()
 {
+    ShieldMesh->SetVisibility(false);
 }
 

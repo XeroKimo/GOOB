@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "ShieldGenerator.h"
-#include "Components/CapsuleComponent.h"
+#include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/ShieldComponent.h"
 
@@ -12,7 +12,7 @@ AShieldGenerator::AShieldGenerator()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	GeneratorHitBox = CreateDefaultSubobject<UCapsuleComponent>("Hitbox");
+	GeneratorHitBox = CreateDefaultSubobject<UBoxComponent>("Hitbox");
 	GeneratorHitBox->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	GeneratorHitBox->SetCollisionProfileName("BlockAll");
 	RootComponent = GeneratorHitBox;
@@ -56,18 +56,21 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 {
 	if (DamageCauser->ActorHasTag("ShotgunBullet"))
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
-		GeneratorHealth -= Damage;
-		if (GeneratorHealth <= 0)
-		{
-			GeneratorIsActive = false;
-			for (UShieldComponent* shield : PointersToShields)
-				shield->DecrementActiveGenerators();
-		}
-		else
-		{
-			return;
-		}
+        if (GeneratorIsActive)
+        {
+            GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
+            GeneratorHealth -= Damage;
+            if (GeneratorHealth <= 0)
+            {
+                GeneratorIsActive = false;
+                for (UShieldComponent* shield : PointersToShields)
+                    shield->DecrementActiveGenerators();
+            }
+            else
+            {
+                return;
+            }
+        }
 	}
 }
 

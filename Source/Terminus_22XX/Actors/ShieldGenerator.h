@@ -21,7 +21,7 @@ private:
 		class UStaticMeshComponent* GeneratorMesh;
 
 	UPROPERTY(Category = "Hitbox", EditAnywhere)
-		class UCapsuleComponent* GeneratorHitBox;
+		class UBoxComponent* GeneratorHitBox;
 
 	UPROPERTY(Category = "Defaults", EditAnywhere)
 		float GeneratorHealth = 300.0f;

@@ -19,10 +19,12 @@ UBoxShieldComponent::UBoxShieldComponent()
 }
 void UBoxShieldComponent::EnableShieldCollisions()
 {
+    UShieldComponent::EnableShieldCollisions();
 	BoxCollider->SetCollisionResponseToChannels(EnabledCollisions);
 }
 void UBoxShieldComponent::DisableShieldCollisions()
 {
+    UShieldComponent::DisableShieldCollisions();
 	BoxCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 }
 void UBoxShieldComponent::BeginPlay()

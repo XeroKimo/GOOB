@@ -18,10 +18,12 @@ USphereShieldComponent::USphereShieldComponent()
 
 void USphereShieldComponent::EnableShieldCollisions()
 {
+    UShieldComponent::EnableShieldCollisions();
 	SphereCollider->SetCollisionResponseToChannels(EnabledCollisions);
 }
 void USphereShieldComponent::DisableShieldCollisions()
 {
+    UShieldComponent::DisableShieldCollisions();
 	SphereCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 }
 void USphereShieldComponent::BeginPlay()

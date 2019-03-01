@@ -14,14 +14,17 @@ void ATerminus_22XXGameModeBase::SpawnStartingWeapons(APlayerCharacter * charact
 {
 	for (int i = 0; i < StartingWeapons.Num(); i++)
 	{
-		FActorSpawnParameters SpawnParams;
-		SpawnParams.Instigator = character;
-		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-		SpawnParams.Owner = character;
-		ABaseGun* weapon = GetWorld()->SpawnActor<ABaseGun>(StartingWeapons[i], SpawnParams);
-		if (!character->AddWeaponToInvetory(weapon))
-		{
-			weapon->Destroy();
-		}
+        if (StartingWeapons[i] != NULL)
+        {
+            FActorSpawnParameters SpawnParams;
+            SpawnParams.Instigator = character;
+            SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+            SpawnParams.Owner = character;
+            ABaseGun* weapon = GetWorld()->SpawnActor<ABaseGun>(StartingWeapons[i], SpawnParams);
+            if (!character->AddWeaponToInvetory(weapon))
+            {
+                weapon->Destroy();
+            }
+        }
 	}
 }
