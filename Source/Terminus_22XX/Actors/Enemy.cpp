@@ -49,16 +49,16 @@ void AEnemy::BeginPlay()
 
 void AEnemy::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
-    GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
+    //GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
     EnemyHealth -= Damage;
-    GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, "Health - " + FString::FromInt(EnemyHealth));
+    //GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, "Health - " + FString::FromInt(EnemyHealth));
 	if (EnemyHealth < 0)
 		Destroy();
 }
 
 void AEnemy::MoveToNextPatrolPoint()
 {
-    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "MoveToNextPatrolPoint - ");
+    //GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "MoveToNextPatrolPoint - ");
     // Assign next patrol point.
 
     if (CurrentPatrolPoint == nullptr || CurrentPatrolPoint == SecondPatrolPoint)

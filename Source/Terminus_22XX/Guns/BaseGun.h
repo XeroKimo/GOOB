@@ -83,7 +83,7 @@ protected:
 
     UPROPERTY(Category = "Gun", EditAnywhere)
         float AdditionalDelayBetweenBursts;
-	//How long it'll take before a gun can shoot, will be used over fire rate if > 0 value
+	//How long it'll take before a gun can shoot, will be used over fire rate if > 0 value on single fire style
 	UPROPERTY(Category = "Gun", EditAnywhere)
 		float PumpTime;
 

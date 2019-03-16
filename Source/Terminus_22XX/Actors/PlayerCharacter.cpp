@@ -11,6 +11,7 @@
 #include "Components/SphereComponent.h"
 #include "Terminus_22XXGameModeBase.h"
 #include "DrawDebugHelpers.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values
 APlayerCharacter::APlayerCharacter()
@@ -42,6 +43,9 @@ APlayerCharacter::APlayerCharacter()
 	MaxHealth = 100.0f;
 	CurrentHealth = MaxHealth;
 	CurrentWeapon = nullptr;
+
+	SetReplicates(true);
+	SetReplicateMovement(true);
 
 	Tags.Add("Player");
 }

@@ -69,10 +69,12 @@ void ABaseGun::SpawnBullets()
 
 			FVector spawnLoc = GunMuzzleLocation->GetComponentLocation();
 
+			GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Spawn Location - " + FString::SanitizeFloat(spawnLoc.X) + " , " + FString::SanitizeFloat(spawnLoc.Y) + " , " + FString::SanitizeFloat(spawnLoc.Z));
+
 			FActorSpawnParameters spawnParams;
 			spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 			spawnParams.Owner = GetOwner();
-			spawnParams.Instigator = OwnedCharacter;
+			spawnParams.Instigator = Cast<APawn>(GetOwner());// OwnedCharacter;
 
 			ABaseBullet* spawnedBullet = world->SpawnActor<ABaseBullet>(BulletClassType, spawnLoc, weaponRot, spawnParams);
 			if (spawnedBullet)
@@ -103,16 +105,21 @@ void ABaseGun::Fire()
 		{
 			StopFiring();
 			StartReloading();
+
+			if (ShootingStyle == EFireStyle::FS_Burst)
+			{
+				GetWorldTimerManager().ClearTimer(FireWeaponTimer);
+				CurrentBurstShot = 0;
+			}
 		}
 
 		if (ShootingStyle == EFireStyle::FS_Burst)
 		{
 			CurrentBurstShot++;
             //GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Current Burst shot = " + FString::FromInt(CurrentBurstShot));
-			FTimerManager & timerManager = GetWorldTimerManager();
 			if (CurrentBurstShot == ShotsPerBurst)
 			{
-				timerManager.ClearTimer(FireWeaponTimer);
+				GetWorldTimerManager().ClearTimer(FireWeaponTimer);
                 CurrentBurstShot = 0;
 			}
 		}
@@ -208,8 +215,8 @@ void ABaseGun::Reload()
 void ABaseGun::SetOwnedCharacter(APlayerCharacter * Character)
 {
 	OwnedCharacter = Character; 
-	GunMesh->SetVisibility(false);
-	SetActorHiddenInGame(true);
+	//GunMesh->SetVisibility(false);
+	//SetActorHiddenInGame(true);
 }
 
 void ABaseGun::Attach()
