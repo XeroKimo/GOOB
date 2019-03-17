@@ -147,6 +147,9 @@ private:
 	//delete later
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerSpawnGun();
+
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerCameraDebug(FRotator rot);
 public:
 
 	void NormalDescent();

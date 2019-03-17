@@ -15,6 +15,9 @@ class TERMINUS_22XX_API ANetPlayerController : public APlayerController
 	GENERATED_BODY()
 	
 public:
+	ANetPlayerController();
+
+public:
 	void AcknowledgePossession(class APawn* InPawn) override;
 
 protected:

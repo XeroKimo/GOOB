@@ -42,7 +42,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-
+	UPROPERTY(Category = "Weapon Config", EditAnywhere)
+		EFireStyle FireStyle = EFireStyle::FS_Single;
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		float BulletDamage = 0;
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
@@ -57,6 +58,8 @@ public:
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		int FireRate = 60;
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
+		float AdditionalBurstDelay = 0.f;
+	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		float ReloadRate = 1.f;
 
 	bool IsTriggerPulled = false;
@@ -66,8 +69,6 @@ public:
 		bool InfiniteClip = false;
 	bool CanFire = true;
 
-	UPROPERTY(Category = "Weapon Config", EditAnywhere)
-		EFireStyle FireStyle = EFireStyle::FS_Single;
 	UPROPERTY(Category = "Ammo Config", EditAnywhere)
 		TSubclassOf<ABaseBullet> BulletClass;
 public:

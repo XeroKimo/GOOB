@@ -23,6 +23,7 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 	FirstPersonCamera = CreateDefaultSubobject<UCameraComponent>("First Person Camera");
 	FirstPersonCamera->bUsePawnControlRotation = true;
 	FirstPersonCamera->SetupAttachment(RootComponent);
+	FirstPersonCamera->SetIsReplicated(true);
 
 
 	GunLocation = CreateDefaultSubobject<USceneComponent>("Gun Location");
@@ -74,8 +75,8 @@ void ANetPlayerCharacter::Tick(float DeltaTime)
 void ANetPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis("LookSideways", this, &APawn::AddControllerYawInput);
+	/*PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	PlayerInputComponent->BindAxis("LookSideways", this, &APawn::AddControllerYawInput);*/
 
 }
 
@@ -98,6 +99,8 @@ void ANetPlayerCharacter::MoveSideways(float Val)
 void ANetPlayerCharacter::LookUp(float Val)
 {
 	AddControllerPitchInput(BaseTurnSpeed*Val*GetWorld()->DeltaTimeSeconds);
+		if (Role < ROLE_Authority)
+			ServerCameraDebug(GetController()->GetControlRotation());
 }
 
 void ANetPlayerCharacter::LookSideways(float Val)
@@ -107,10 +110,21 @@ void ANetPlayerCharacter::LookSideways(float Val)
 
 void ANetPlayerCharacter::Jump()
 {
-	if ((GetCharacterMovement()->IsFalling() || JumpCurrentCount >= 1) && CanJump())
+	/*if (Role == ROLE_AutonomousProxy)
+		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Jump Autonomous");
+	if (Role == ROLE_Authority)
+		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, "Jump Authority");*/
+
+	if (!GetController()->IsLocalController())
+		return;
+	if (!CanJump())
+		return;
+	if (GetCharacterMovement()->IsFalling() || JumpCurrentCount >= 1)
 		PrepareSuperJump();
 	else
+	{
 		Super::Jump();
+	}
 }
 
 void ANetPlayerCharacter::StopJumping()
@@ -135,11 +149,14 @@ void ANetPlayerCharacter::PrepareSuperJump()
 {
 	GetWorldTimerManager().SetTimer(SuperJumpTimer, this, &ANetPlayerCharacter::StopJumping, ReleaseSuperJumpTime, false, ReleaseSuperJumpTime + SuperJumpTimerDelay);
 	GetWorldTimerManager().SetTimer(SlowDescentTimer, this, &ANetPlayerCharacter::ServerForceStopAndSlowDescent, SuperJumpTimerDelay, false);
+	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Player Jumped");
 
 	if (JumpCurrentCount == 0 && GetCharacterMovement()->IsFalling())
 		JumpCurrentCount++;
 
 	JumpCurrentCount++;
+
+	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Jump Current Count: " + FString::FromInt(JumpCurrentCount));
 }
 
 void ANetPlayerCharacter::ReleaseSuperJump()
@@ -160,7 +177,7 @@ void ANetPlayerCharacter::ReleaseSuperJump()
 
 		if (newForceVector.Size() > MaxSuperJump)
 		{
-			newForceVector = newForceVector.GetUnsafeNormal() * MaxSuperJump;
+			newForceVector = newForceVector.GetUnsafeNormal() * MaxSuperJump * 0.999997f;
 		}
 
 		ServerSuperJump(newForceVector);
@@ -177,6 +194,8 @@ void ANetPlayerCharacter::FireWeapon()
 {
 	if (CurrentWeapon)
 		CurrentWeapon->PullTrigger();
+	FRotator camRot = FirstPersonCamera->GetComponentRotation();
+	//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Red, "Gun Rotation - " + FString::SanitizeFloat(camRot.Yaw) + " , " + FString::SanitizeFloat(camRot.Pitch));
 }
 
 void ANetPlayerCharacter::StopFireWeapon()
@@ -207,6 +226,18 @@ void ANetPlayerCharacter::ServerSpawnGun_Implementation()
 }
 
 bool ANetPlayerCharacter::ServerSpawnGun_Validate()
+{
+	return true;
+}
+
+void ANetPlayerCharacter::ServerCameraDebug_Implementation(FRotator rot)
+{
+	//FRotator camRot = FirstPersonCamera->GetComponentRotation();
+	//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Red, "Gun Rotation - " + FString::SanitizeFloat(camRot.Yaw) + " , " + FString::SanitizeFloat(camRot.Pitch));
+	FirstPersonCamera->SetWorldRotation(rot);
+}
+
+bool ANetPlayerCharacter::ServerCameraDebug_Validate(FRotator rot)
 {
 	return true;
 }

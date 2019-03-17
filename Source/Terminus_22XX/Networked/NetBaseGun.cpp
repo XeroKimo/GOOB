@@ -90,7 +90,6 @@ void ANetBaseGun::FireWeapon()
 	if (FireStyle == EFireStyle::FS_Burst)
 	{
 		GetWorldTimerManager().SetTimer(ShootingTimer, this, &ANetBaseGun::BurstFire, FireRateInSeconds, true, 0.f);
-		GetWorldTimerManager().SetTimer(AllowFireTimer, this, &ANetBaseGun::AllowFire, FireRateInSeconds * MaxBurstCount*1.05f, false);
 	}
 	else
 	{
@@ -172,8 +171,14 @@ void ANetBaseGun::BurstFire()
 {
 	Fire();
 	BurstCounter++;
-	if (BurstCounter > MaxBurstCount - 1 || CurrentAmmoCount == 0)
+	if (BurstCounter > MaxBurstCount - 1 || (CurrentAmmoCount == 0 && !InfiniteClip))
+	{
 		StopFiring();
+		if (AdditionalBurstDelay > 0.f)
+			GetWorldTimerManager().SetTimer(AllowFireTimer, this, &ANetBaseGun::AllowFire, AdditionalBurstDelay, false);
+		else
+			AllowFire();
+	}
 }
 
 void ANetBaseGun::AutoReloadWeapon()
@@ -235,7 +240,7 @@ void ANetBaseGun::ServerSpawnBullets_Implementation()
 		FVector bulletSpawnRot = FMath::VRandCone(weaponRot.Vector(), FMath::DegreesToRadians(BulletSpread / 2.f));
 		FVector weaponLoc = GunMuzzleLocation->GetComponentLocation();
 		
-
+		//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Gun Rotation - " + FString::SanitizeFloat(weaponRot.Yaw) + " , " + FString::SanitizeFloat(weaponRot.Pitch));
 		//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Spawn Location - " + FString::SanitizeFloat(weaponLoc.X) + " , " + FString::SanitizeFloat(weaponLoc.Y) + " , " + FString::SanitizeFloat(weaponLoc.Z));
 
 		FActorSpawnParameters spawnParams;

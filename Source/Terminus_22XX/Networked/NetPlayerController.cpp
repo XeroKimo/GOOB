@@ -3,6 +3,12 @@
 #include "NetPlayerController.h"
 #include "Networked/NetPlayerCharacter.h"
 
+ANetPlayerController::ANetPlayerController()
+{
+	/*SetReplicates(true);
+	SetReplicateMovement(true);*/
+}
+
 void ANetPlayerController::AcknowledgePossession(class APawn* InPawn)
 {
 	APlayerController::AcknowledgePossession(InPawn);
@@ -17,7 +23,9 @@ void ANetPlayerController::SetupInputComponent()
 	InputComponent->BindAxis("MoveSideways", this, &ANetPlayerController::MoveSideways);
 
 	InputComponent->BindAxis("TurnUp", this, &ANetPlayerController::LookUp);
-	InputComponent->BindAxis("TurnSide", this, &ANetPlayerController::LookSideways);
+	InputComponent->BindAxis("TurnSide", this, &ANetPlayerController::LookSideways); 
+	InputComponent->BindAxis("LookUp", this, &ANetPlayerController::LookUp);
+	InputComponent->BindAxis("LookSideways", this, &ANetPlayerController::LookSideways);
 
 	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ANetPlayerController::Jump);
 	InputComponent->BindAction("Jump", EInputEvent::IE_Released, this, &ANetPlayerController::StopJumping);
