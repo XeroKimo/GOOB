@@ -49,7 +49,8 @@ void ABaseBullet::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
 	MovementComponent->InitialSpeed = BulletSpeed;
-
+    MovementComponent->Velocity = GetActorRotation().Vector().GetSafeNormal() * BulletSpeed;
+    //GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "BulletRotation - " + FString::SanitizeFloat(GetActorRotation().Yaw) + " , " + FString::SanitizeFloat(GetActorRotation().Pitch));
 }
 
 // Called every frame
