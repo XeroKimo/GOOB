@@ -7,7 +7,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Public/TimerManager.h"
 #include "Networked/NetBaseGun.h"
-#include "Components/InventoryComponent.h"
+#include "NetInventoryComponent.h"
 #include "Components/SphereComponent.h"
 #include "Terminus_22XXGameModeBase.h"
 #include "DrawDebugHelpers.h"
@@ -32,7 +32,7 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 	//GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	//GetCapsuleComponent()->SetGenerateOverlapEvents(true);
 
-	WeaponInventory = CreateDefaultSubobject<UInventoryComponent>("Inventory");
+	WeaponInventory = CreateDefaultSubobject<UNetInventoryComponent>("Inventory");
 
 	JumpMaxCount = 2;
 	//MaxHealth = 100.0f;
@@ -247,6 +247,39 @@ void ANetPlayerCharacter::NormalDescent()
 	GetCharacterMovement()->GravityScale = BaseGravityScale;
 }
 
+void ANetPlayerCharacter::ServerResetPickupState_Implementation()
+{
+    PickupSuccess = false;
+    OnRep_PickupSuccess();
+}
+bool ANetPlayerCharacter::ServerResetPickupState_Validate()
+{
+    return true;
+}
+void ANetPlayerCharacter::ServerAttachNewWeapon_Implementation(ANetBaseGun * nextGun)
+{
+    if (nextGun != nullptr && CurrentWeapon != nullptr)
+    {
+        if (nextGun->GetWeaponIndex() != CurrentWeapon->GetWeaponIndex())
+        {
+            CurrentWeapon->FullStop();
+            CurrentWeapon->ServerDetach();
+            CurrentWeapon = nextGun;
+            CurrentWeapon->ServerAttach(this);
+        }
+    }
+    else if (CurrentWeapon == nullptr)
+    {
+        CurrentWeapon = nextGun;
+        if (CurrentWeapon)
+            CurrentWeapon->ServerAttach(this);
+    }
+}
+bool ANetPlayerCharacter::ServerAttachNewWeapon_Validate(ANetBaseGun * nextGun)
+{
+    return true;
+}
+
 void ANetPlayerCharacter::NetMulticastNormalDescent_Implementation()
 {
 	NormalDescent();
@@ -305,6 +338,10 @@ bool ANetPlayerCharacter::ServerForceStopAndSlowDescent_Validate()
 	return true;
 }
 
+void ANetPlayerCharacter::OnRep_PickupSuccess()
+{
+}
+
 void ANetPlayerCharacter::StoreCurrentSpeed()
 {
 	StoredSpeedBeforeJump = GetVelocity().Size();
@@ -317,5 +354,23 @@ void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty 
 	//DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SuperJumpTimer, COND_OwnerOnly);
 	//DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SlowDescentTimer, COND_OwnerOnly);
 	DOREPLIFETIME_CONDITION(ANetPlayerCharacter, StoredSpeedBeforeJump, COND_OwnerOnly);
+    DOREPLIFETIME_CONDITION(ANetPlayerCharacter, PickupSuccess, COND_OwnerOnly);
 	DOREPLIFETIME(ANetPlayerCharacter, CurrentWeapon);
+
+}
+
+void ANetPlayerCharacter::ServerAddWeaponToInvetory_Implementation(ANetBaseGun * AGun)
+{
+    if (WeaponInventory->AddWeapon(AGun))
+    {
+        AGun->SetOwner(this);
+        ServerAttachNewWeapon(WeaponInventory->SwitchToGun(AGun->GetWeaponIndex()));
+        PickupSuccess = true;
+        OnRep_PickupSuccess();
+    }
+}
+
+bool ANetPlayerCharacter::ServerAddWeaponToInvetory_Validate(ANetBaseGun * AGun)
+{
+    return true;
 }

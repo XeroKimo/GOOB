@@ -47,12 +47,13 @@ public:
 	void SwitchToShotgun();
 	void SwitchToVampyr();
 	void SwitchToRailgun();
-	bool AddWeaponToInvetory(class ABaseGun* AGun);
 
+    bool AddWeaponToInventory(class ABaseGun* AGun);
 
 	bool AddHealth(float Amount);
 
-
+    UFUNCTION()
+    void OnRep_PickupSuccess();
 	//UFUNCTION(BlueprintCallable, Category = "Status")
 	//	float GetHealthPercentage();
 
@@ -130,13 +131,13 @@ private:
 	FTimerHandle WeaponSwitchTimer;
 
 protected:
-	class UInventoryComponent* WeaponInventory;
+	class UNetInventoryComponent* WeaponInventory;
 
 
 
 public:
 	UPROPERTY(Category = "Weapon", VisibleInstanceOnly, Replicated)
-		class ANetBaseGun* CurrentWeapon;
+		class ANetBaseGun* CurrentWeapon = nullptr;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
 		TSubclassOf<ANetBaseGun> testGun;
@@ -144,6 +145,8 @@ private:
 	UPROPERTY(Replicated)
 		float StoredSpeedBeforeJump;
 
+    UPROPERTY(ReplicatedUsing = OnRep_PickupSuccess)
+        bool PickupSuccess = false;
 	//delete later
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerSpawnGun();
@@ -160,6 +163,9 @@ public:
 	UFUNCTION(NetMulticast, Reliable, WithValidation)
 		void NetMulticastForceStopAndSlowDescent();
 
+    UFUNCTION(Server, Reliable, WithValidation)
+        void ServerResetPickupState();
+
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerNormalDescent();
 
@@ -169,9 +175,13 @@ public:
 	UFUNCTION(Server,Reliable, WithValidation)
 		void ServerForceStopAndSlowDescent();
 
+    UFUNCTION(Server, Reliable, WithValidation)
+    void ServerAddWeaponToInvetory(class ANetBaseGun* AGun);
+
+
 private:
-	//UFUNCTION(Server,Reliable,WithValidation)
-	//void ServerAttachNewWeapon(ABaseGun* nextGun);
+	UFUNCTION(Server,Reliable,WithValidation)
+	void ServerAttachNewWeapon(class ANetBaseGun* nextGun);
 
 	
 	

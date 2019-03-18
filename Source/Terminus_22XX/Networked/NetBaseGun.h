@@ -108,6 +108,7 @@ public:
 	void StopReloading();
 	void FullStop();
 
+    virtual int GetWeaponIndex() { return -1; }
 public:
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerAttach(class ANetPlayerCharacter* character);
