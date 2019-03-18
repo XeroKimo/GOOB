@@ -236,8 +236,8 @@ void ANetBaseGun::ServerSpawnBullets_Implementation()
 		ABaseBullet* spawnedBullet = GetWorld()->SpawnActor<ABaseBullet>(BulletClass, weaponLoc, bulletSpawnRot, spawnParams);
 		if (spawnedBullet)
 		{
-			spawnedBullet->SetBulletDamage(BulletDamage);
-			//spawnedBullet->SetBulletDirection(bulletSpawnRot.GetSafeNormal());
+			spawnedBullet->ServerSetBulletDamage(BulletDamage);
+			//spawnedBullet->NetMulticastSetBulletDirection(bulletSpawnRot.Vector());
 		}
 
 	}

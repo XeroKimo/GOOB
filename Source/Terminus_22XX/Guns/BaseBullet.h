@@ -29,7 +29,7 @@ public:
 	UPROPERTY(Category = "Movement", VisibleAnywhere)
 		class UProjectileMovementComponent* MovementComponent;
 
-	UPROPERTY(Category = "Bullet", BlueprintReadOnly)
+	UPROPERTY(Category = "Bullet", BlueprintReadOnly,Replicated)
 		float BulletDamage;
 
 protected:
@@ -49,8 +49,10 @@ private:
 		FVector BulletDirection;
 
 public:
-	void SetBulletDamage(float NewDamage) { BulletDamage = NewDamage; }
-	void SetBulletDirection(FVector Direction);
+    UFUNCTION(Server, Reliable, WithValidation)
+        void ServerSetBulletDamage(float NewDamage);
+    UFUNCTION(NetMulticast, Reliable)
+	    void NetMulticastSetBulletDirection(FVector Direction);
 protected:
 	UFUNCTION()
 		void ComponentHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);

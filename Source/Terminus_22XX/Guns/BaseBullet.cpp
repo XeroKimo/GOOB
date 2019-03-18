@@ -1,8 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BaseBullet.h"
+#include "BaseGun.h"
+#include "Networked/NetBaseGun.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Net/UnrealNetwork.h"
 #include "GameFramework/ProjectileMovementComponent.h"
 
 // Sets default values
@@ -35,6 +38,8 @@ ABaseBullet::ABaseBullet()
 
 	InitialLifeSpan = BulletLifeSpan;
 
+    SetReplicates(true);
+    SetReplicateMovement(true);
 	Tags.Add("Bullet");
 }
 
@@ -60,7 +65,16 @@ void ABaseBullet::Tick(float DeltaTime)
 
 }
 
-void ABaseBullet::SetBulletDirection(FVector Direction)
+void ABaseBullet::ServerSetBulletDamage_Implementation(float NewDamage)
+{
+    BulletDamage = NewDamage;
+}
+bool ABaseBullet::ServerSetBulletDamage_Validate(float NewDamage)
+{
+    return true;
+}
+
+void ABaseBullet::NetMulticastSetBulletDirection_Implementation(FVector Direction)
 {
 	MovementComponent->Velocity = Direction * BulletSpeed;
 	BulletDirection = Direction;
@@ -77,3 +91,8 @@ void ABaseBullet::ComponentHit(class UPrimitiveComponent* HitComp, class AActor*
 	Destroy();
 }
 
+void ABaseBullet::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
+{
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    DOREPLIFETIME(ABaseBullet, BulletDamage);
+}

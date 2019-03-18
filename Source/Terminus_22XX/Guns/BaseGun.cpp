@@ -79,8 +79,8 @@ void ABaseGun::SpawnBullets()
 			ABaseBullet* spawnedBullet = world->SpawnActor<ABaseBullet>(BulletClassType, spawnLoc, weaponRot, spawnParams);
 			if (spawnedBullet)
 			{
-				spawnedBullet->SetBulletDamage(BulletDamage);
-				spawnedBullet->SetBulletDirection(bulletSpawnRot.GetSafeNormal());
+				spawnedBullet->ServerSetBulletDamage(BulletDamage);
+				spawnedBullet->NetMulticastSetBulletDirection(bulletSpawnRot.GetSafeNormal());
 			}
 		}
 	}
