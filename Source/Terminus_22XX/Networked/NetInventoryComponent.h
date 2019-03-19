@@ -35,15 +35,24 @@ public:
 	ANetBaseGun* GetRailgun();
 
 	bool AddWeapon(ANetBaseGun* AGun);
+    UFUNCTION(Server,Reliable,WithValidation)
+        void ServerAddWeapon(ANetBaseGun* AGun);
 
 	ANetBaseGun* GetCurrentWeapon() { return Weapons[CurrentWeaponIndex]; }
 private:
 	void SwitchWeapon(int newIndex);
 	bool WeaponExists(int index) { return Weapons[index] != nullptr; }
+
+    UFUNCTION(Server, Reliable, WithValidation)
+        void ServerResetAddSuccess();
+    UFUNCTION()
+        void OnRep_AddSuccess();
 private:
     UPROPERTY(Replicated)
 	TArray<ANetBaseGun*> Weapons;
     UPROPERTY(Replicated)
 	int CurrentWeaponIndex = 0;
+    UPROPERTY(Replicated = OnOnRep_AddSuccess)
+        bool AddSuccess = false;
 	
 };

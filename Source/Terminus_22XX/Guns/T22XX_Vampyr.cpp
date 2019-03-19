@@ -4,13 +4,13 @@
 
 AT22XX_Vampyr::AT22XX_Vampyr()
 {
-	ShootingStyle = EFireStyle::FS_FullAuto;
-	CurrentClipSize = MaxClipSize = 50;
-	InfiniteClipSize = true;
-	MaxStockAmmo = 1000;
-	ReloadSpeed = 1.0f;
+	FireStyle = EFireStyle::FS_FullAuto;
+	CurrentAmmoCount = MaxAmmoCount = 50;
+	InfiniteClip = true;
+	MaxAmmoStock = 1000;
+	ReloadRate = 1.0f;
 	FireRate = 360;
-	PelletsPerShot = 1;
+	PelletCount = 1;
 
 	WeaponIndex = EGunName::GN_Vampyr;
 	Tags.Add("Vampyr");

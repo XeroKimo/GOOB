@@ -16,6 +16,8 @@ UNetInventoryComponent::UNetInventoryComponent()
 		ANetBaseGun* gun = nullptr;
 		Weapons.Push(gun);
 	}
+
+    SetIsReplicated(true);
 	// ...
 }
 
@@ -89,15 +91,33 @@ ANetBaseGun * UNetInventoryComponent::GetRailgun()
 
 bool UNetInventoryComponent::AddWeapon(ANetBaseGun * AGun)
 {
-	if (AGun)
-	{
-		int gunIndex = AGun->GetWeaponIndex();
-		bool exists = WeaponExists(gunIndex);
-		Weapons[gunIndex] = (exists) ? Weapons[gunIndex] : AGun;
-		return !exists;
-	}
-	return false;
+    ServerAddWeapon(AGun);
+    if (AddSuccess)
+    {
+        ServerResetAddSuccess();
+        OnRep_AddSuccess();
+        return true;
+    }
+    return false;
 }
+
+void UNetInventoryComponent::ServerAddWeapon_Implementation(ANetBaseGun * AGun)
+{
+    if (AGun)
+    {
+        int gunIndex = AGun->GetWeaponIndex();
+        bool exists = WeaponExists(gunIndex);
+        Weapons[gunIndex] = (exists) ? Weapons[gunIndex] : AGun;
+        AddSuccess = !exists;
+        OnRep_AddSuccess();
+    }
+}
+
+bool UNetInventoryComponent::ServerAddWeapon_Validate(ANetBaseGun * AGun)
+{
+    return true;
+}
+
 
 void UNetInventoryComponent::SwitchWeapon(int newIndex)
 {
@@ -105,6 +125,19 @@ void UNetInventoryComponent::SwitchWeapon(int newIndex)
 	CurrentWeaponIndex = newIndex;
 	if (!WeaponExists(CurrentWeaponIndex))
 		CurrentWeaponIndex = oldWeaponIndex;
+}
+
+void UNetInventoryComponent::OnRep_AddSuccess()
+{
+}
+
+void UNetInventoryComponent::ServerResetAddSuccess_Implementation()
+{
+    AddSuccess = false;
+}
+bool UNetInventoryComponent::ServerResetAddSuccess_Validate()
+{
+    return true;
 }
 
 void UNetInventoryComponent::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const

@@ -4,13 +4,12 @@
 
 AT22XX_Shotgun::AT22XX_Shotgun()
 {
-	CurrentClipSize = MaxClipSize = 6;
-	InfiniteClipSize = true;
-	MaxStockAmmo = 120;
-	ReloadSpeed = 1.0f;
+	CurrentAmmoCount = MaxAmmoCount = 6;
+	InfiniteClip = true;
+	MaxAmmoStock = 120;
+	ReloadRate = 1.0f;
 	FireRate = 30;
-	PelletsPerShot = 12;
-
+    PelletCount = 12;
 	WeaponIndex = EGunName::GN_Shotgun;
 	Tags.Add("Shotgun");
 }

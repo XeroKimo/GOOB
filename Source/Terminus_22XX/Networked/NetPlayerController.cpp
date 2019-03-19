@@ -33,13 +33,13 @@ void ANetPlayerController::SetupInputComponent()
 	InputComponent->BindAction("Fire", EInputEvent::IE_Pressed, this, &ANetPlayerController::FireWeapon);
 	InputComponent->BindAction("Fire", EInputEvent::IE_Released, this, &ANetPlayerController::StopFireWeapon);
 
-	//InputComponent->BindAxis("SwitchWeapon", this, &ANetPlayerController::SwitchWeapon);
-	//InputComponent->BindAction("NextWeapon", EInputEvent::IE_Pressed, this, &ANetPlayerController::NextWeapon);
-	//InputComponent->BindAction("PreviousWeapon", EInputEvent::IE_Pressed, this, &ANetPlayerController::PreviousWeapon);
-	//InputComponent->BindAction("Reload", EInputEvent::IE_Pressed, this, &ANetPlayerController::Reload);
-	//InputComponent->BindAction("Shotgun", EInputEvent::IE_Pressed, this, &ANetPlayerController::SwitchToShotgun);
-	//InputComponent->BindAction("Vampyr", EInputEvent::IE_Pressed, this, &ANetPlayerController::SwitchToVampyr);
-	//InputComponent->BindAction("Railgun", EInputEvent::IE_Pressed, this, &ANetPlayerController::SwitchToRailgun);
+	InputComponent->BindAxis("SwitchWeapon", this, &ANetPlayerController::SwitchWeapon);
+	InputComponent->BindAction("NextWeapon", EInputEvent::IE_Pressed, this, &ANetPlayerController::NextWeapon);
+	InputComponent->BindAction("PreviousWeapon", EInputEvent::IE_Pressed, this, &ANetPlayerController::PreviousWeapon);
+	InputComponent->BindAction("Reload", EInputEvent::IE_Pressed, this, &ANetPlayerController::Reload);
+	InputComponent->BindAction("Shotgun", EInputEvent::IE_Pressed, this, &ANetPlayerController::SwitchToShotgun);
+	InputComponent->BindAction("Vampyr", EInputEvent::IE_Pressed, this, &ANetPlayerController::SwitchToVampyr);
+	InputComponent->BindAction("Railgun", EInputEvent::IE_Pressed, this, &ANetPlayerController::SwitchToRailgun);
 }
 
 void ANetPlayerController::MoveForeward(float Val)
@@ -106,58 +106,58 @@ void ANetPlayerController::StopFireWeapon()
 	}
 }
 //
-//void ANetPlayerController::Reload()
-//{
-//	if (character)
-//	{
-//		character->Reload();
-//	}
-//}
-//
-//void ANetPlayerController::SwitchWeapon(float Val)
-//{
-//	if (character)
-//	{
-//		character->SwitchWeapon(Val);
-//	}
-//}
-//
-//void ANetPlayerController::NextWeapon()
-//{
-//	if (character)
-//	{
-//		character->NextWeapon();
-//	}
-//}
-//
-//void ANetPlayerController::PreviousWeapon()
-//{
-//	if (character)
-//	{
-//		character->PreviousWeapon();
-//	}
-//}
-//
-//void ANetPlayerController::SwitchToShotgun()
-//{
-//	if (character)
-//	{
-//		character->SwitchToShotgun();
-//	}
-//}
-//
-//void ANetPlayerController::SwitchToVampyr()
-//{
-//	if (character)
-//	{
-//		character->SwitchToVampyr();
-//	}
-//}
-//
-//void ANetPlayerController::SwitchToRailgun()
-//{
-//	if (character)
-//	{
-//		character->SwitchToRailgun();
-//	}
-//}
+void ANetPlayerController::Reload()
+{
+	if (character)
+	{
+		character->Reload();
+	}
+}
+
+void ANetPlayerController::SwitchWeapon(float Val)
+{
+	if (character)
+	{
+		character->SwitchWeapon(Val);
+	}
+}
+
+void ANetPlayerController::NextWeapon()
+{
+	if (character)
+	{
+		character->NextWeapon();
+	}
+}
+
+void ANetPlayerController::PreviousWeapon()
+{
+	if (character)
+	{
+		character->PreviousWeapon();
+	}
+}
+
+void ANetPlayerController::SwitchToShotgun()
+{
+	if (character)
+	{
+		character->SwitchToShotgun();
+	}
+}
+
+void ANetPlayerController::SwitchToVampyr()
+{
+	if (character)
+	{
+		character->SwitchToVampyr();
+	}
+}
+
+void ANetPlayerController::SwitchToRailgun()
+{
+	if (character)
+	{
+		character->SwitchToRailgun();
+	}
+}

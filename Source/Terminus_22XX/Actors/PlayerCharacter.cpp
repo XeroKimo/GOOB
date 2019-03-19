@@ -55,8 +55,8 @@ void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	ATerminus_22XXGameModeBase* mode = Cast<ATerminus_22XXGameModeBase>(GetWorld()->GetAuthGameMode());
-	if (mode)
-		mode->SpawnStartingWeapons(this);
+	/*if (mode)
+		mode->SpawnStartingWeapons(this);*/
 	AttachNewWeapon(WeaponInventory->GetAWeapon());
 	
 }

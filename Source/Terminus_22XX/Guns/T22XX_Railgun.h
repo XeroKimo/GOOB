@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BaseGun.h"
+#include "Networked/NetBaseGun.h"
 #include "T22XX_Railgun.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class TERMINUS_22XX_API AT22XX_Railgun : public ABaseGun
+class TERMINUS_22XX_API AT22XX_Railgun : public ANetBaseGun
 {
 	GENERATED_BODY()
 	

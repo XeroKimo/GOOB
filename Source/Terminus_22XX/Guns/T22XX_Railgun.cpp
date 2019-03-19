@@ -4,12 +4,12 @@
 
 AT22XX_Railgun::AT22XX_Railgun()
 {
-	CurrentClipSize = MaxClipSize = 100;
-	InfiniteClipSize = true;
-	MaxStockAmmo = 0;
-	ReloadSpeed = 2.0f;
+	CurrentAmmoCount = MaxAmmoCount = 100;
+	InfiniteClip = true;
+	MaxAmmoStock = 0;
+	ReloadRate = 2.0f;
 	FireRate = 30;
-	PelletsPerShot = 1;
+	PelletCount = 1;
 
 	WeaponIndex = EGunName::GN_Railgun;
 	Tags.Add("Railgun");

@@ -48,7 +48,8 @@ public:
 	void SwitchToVampyr();
 	void SwitchToRailgun();
 
-    bool AddWeaponToInventory(class ABaseGun* AGun);
+    //UFUNCTION(Client,Reliable)
+    //bool AddWeaponToInventory(class ANetBaseGun* AGun);
 
 	bool AddHealth(float Amount);
 
@@ -141,12 +142,13 @@ public:
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
 		TSubclassOf<ANetBaseGun> testGun;
+
+    UPROPERTY(ReplicatedUsing = OnRep_PickupSuccess)
+        bool PickupSuccess = false;
 private:
 	UPROPERTY(Replicated)
 		float StoredSpeedBeforeJump;
 
-    UPROPERTY(ReplicatedUsing = OnRep_PickupSuccess)
-        bool PickupSuccess = false;
 	//delete later
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerSpawnGun();

@@ -17,10 +17,12 @@ class TERMINUS_22XX_API ATerminus_22XXGameModeBase : public AGameModeBase
 public:
 	ATerminus_22XXGameModeBase();
 
-	void SpawnStartingWeapons(class APlayerCharacter* character);
+    UFUNCTION(Server, Reliable, WithValidation)
+    void SpawnStartingWeapons(class ANetPlayerCharacter* character);
+    //void SpawnStartingWeapons(class APlayerCharacter* character);
 private:
 	UPROPERTY(EditAnywhere)
-		TArray<TSubclassOf<class ABaseGun>> StartingWeapons;
+		TArray<TSubclassOf<class ANetBaseGun>> StartingWeapons;
 	
 	
 };

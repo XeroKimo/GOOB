@@ -88,6 +88,7 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 		class UArrowComponent* GunMuzzleLocation;
 
+    int WeaponIndex = -1;
 	FTimerHandle ShootingTimer;
 	FTimerHandle AllowFireTimer;
 	FTimerHandle ReloadTimer;
@@ -108,7 +109,7 @@ public:
 	void StopReloading();
 	void FullStop();
 
-    virtual int GetWeaponIndex() { return -1; }
+    int GetWeaponIndex() { return WeaponIndex; }
 public:
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerAttach(class ANetPlayerCharacter* character);

@@ -49,7 +49,10 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 void ANetPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	ServerSpawnGun();
+    ATerminus_22XXGameModeBase* mode = Cast<ATerminus_22XXGameModeBase>(GetWorld()->GetAuthGameMode());
+    if (mode)
+        mode->SpawnStartingWeapons(this);
+	//ServerSpawnGun();
 }
 
 void ANetPlayerCharacter::PostInitializeComponents()
@@ -346,18 +349,18 @@ void ANetPlayerCharacter::StoreCurrentSpeed()
 {
 	StoredSpeedBeforeJump = GetVelocity().Size();
 }
-
-
-void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
-{
-	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-	//DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SuperJumpTimer, COND_OwnerOnly);
-	//DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SlowDescentTimer, COND_OwnerOnly);
-	DOREPLIFETIME_CONDITION(ANetPlayerCharacter, StoredSpeedBeforeJump, COND_OwnerOnly);
-    DOREPLIFETIME_CONDITION(ANetPlayerCharacter, PickupSuccess, COND_OwnerOnly);
-	DOREPLIFETIME(ANetPlayerCharacter, CurrentWeapon);
-
-}
+//
+//bool ANetPlayerCharacter::AddWeaponToInventory_Implementation(ANetBaseGun* AGun)
+//{
+//    ServerAddWeaponToInvetory(AGun);
+//    if (PickupSuccess)
+//    {
+//        ServerResetPickupState();
+//        OnRep_PickupSuccess();
+//        return true;
+//    }
+//    return false;
+//}
 
 void ANetPlayerCharacter::ServerAddWeaponToInvetory_Implementation(ANetBaseGun * AGun)
 {
@@ -373,4 +376,67 @@ void ANetPlayerCharacter::ServerAddWeaponToInvetory_Implementation(ANetBaseGun *
 bool ANetPlayerCharacter::ServerAddWeaponToInvetory_Validate(ANetBaseGun * AGun)
 {
     return true;
+}
+
+void ANetPlayerCharacter::Reload()
+{
+    if (CurrentWeapon)
+    {
+        CurrentWeapon->PrepareReload();
+    }
+}
+
+void ANetPlayerCharacter::SwitchWeapon(float Val)
+{
+    if (EnableWeaponScrolling)
+    {
+        if (Val > 0)
+            NextWeapon();
+        else if (Val < 0)
+            PreviousWeapon();
+    }
+}
+
+void ANetPlayerCharacter::NextWeapon()
+{
+    if (!GetWorldTimerManager().IsTimerActive(WeaponSwitchTimer))
+    {
+        ServerAttachNewWeapon(WeaponInventory->NextWeapon());
+        GetWorldTimerManager().SetTimer(WeaponSwitchTimer, WeaponSwitchLockout, false);
+    }
+}
+
+void ANetPlayerCharacter::PreviousWeapon()
+{
+    if (!GetWorldTimerManager().IsTimerActive(WeaponSwitchTimer))
+    {
+        ServerAttachNewWeapon(WeaponInventory->PreviousWeapon());
+        GetWorldTimerManager().SetTimer(WeaponSwitchTimer, WeaponSwitchLockout, false);
+    }
+}
+
+void ANetPlayerCharacter::SwitchToShotgun()
+{
+    ServerAttachNewWeapon(WeaponInventory->GetShotgun());
+}
+
+void ANetPlayerCharacter::SwitchToVampyr()
+{
+    ServerAttachNewWeapon(WeaponInventory->GetVampyr());
+}
+
+void ANetPlayerCharacter::SwitchToRailgun()
+{
+    ServerAttachNewWeapon(WeaponInventory->GetRailgun());
+}
+
+void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
+{
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    //DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SuperJumpTimer, COND_OwnerOnly);
+    //DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SlowDescentTimer, COND_OwnerOnly);
+    DOREPLIFETIME_CONDITION(ANetPlayerCharacter, StoredSpeedBeforeJump, COND_OwnerOnly);
+    DOREPLIFETIME_CONDITION(ANetPlayerCharacter, PickupSuccess, COND_OwnerOnly);
+    DOREPLIFETIME(ANetPlayerCharacter, CurrentWeapon);
+
 }
