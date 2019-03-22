@@ -4,6 +4,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Actors/ShieldGenerator.h"
 #include "Guns/BaseBullet.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values for this component's properties
 UShieldComponent::UShieldComponent()
@@ -14,6 +15,7 @@ UShieldComponent::UShieldComponent()
 	ShieldMesh = CreateDefaultSubobject<UStaticMeshComponent>("Shield Mesh");
 	ShieldMesh->SetCollisionProfileName("NoCollision");
 	// ...
+	SetIsReplicated(true);
 }
 
 
@@ -22,16 +24,18 @@ void UShieldComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
-	for (AShieldGenerator* generator : ArrayOfShieldGenerators)
+	if (GetOwnerRole() == ROLE_Authority)
 	{
-		generator->AddShield(this);
-		if (generator->GetGeneratorIsActive())
-			ShieldGeneratorsAlive++;
+		for (AShieldGenerator* generator : ArrayOfShieldGenerators)
+		{
+			generator->AddShield(this);
+			if (generator->GetGeneratorIsActive())
+				ShieldGeneratorsAlive++;
+		}
+		OnRep_Generators();
+		if (ShieldGeneratorsAlive > 0)
+			IsShieldActive = true;
 	}
-	if (ShieldGeneratorsAlive > 0)
-		IsShieldActive = true;
-
 
 }
 
@@ -68,10 +72,31 @@ void UShieldComponent::DecrementActiveGenerators()
 	if (ShieldGeneratorsAlive > 0)
 	{
 		ShieldGeneratorsAlive--;
+		OnRep_Generators();
 		IsShieldActive = (ShieldGeneratorsAlive > 0) ? true : false;
 		if (!IsShieldActive)
-			DisableShieldCollisions();
+			NetMulticastDisableShieldCollisions();
 	}
+}
+
+void UShieldComponent::ServerDecrementActiveGenerators_Implementation()
+{
+	DecrementActiveGenerators();
+}
+
+bool UShieldComponent::ServerDecrementActiveGenerators_Validate()
+{
+	return true;
+}
+
+
+void UShieldComponent::NetMulticastDisableShieldCollisions_Implementation()
+{
+	DisableShieldCollisions();
+}
+
+void UShieldComponent::OnRep_Generators()
+{
 }
 
 void UShieldComponent::EnableShieldCollisions()
@@ -84,3 +109,10 @@ void UShieldComponent::DisableShieldCollisions()
     ShieldMesh->SetVisibility(false);
 }
 
+void UShieldComponent::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+	DOREPLIFETIME(UShieldComponent, ShieldGeneratorsAlive);
+	DOREPLIFETIME(UShieldComponent, IsShieldActive);
+
+}

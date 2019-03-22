@@ -41,7 +41,6 @@ void AShieldGenerator::BeginPlay()
 void AShieldGenerator::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void AShieldGenerator::AddShield(UShieldComponent* Shield)
@@ -56,21 +55,24 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 {
 	if (DamageCauser->ActorHasTag("ShotgunBullet"))
 	{
-        if (GeneratorIsActive)
-        {
-            GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
-            GeneratorHealth -= Damage;
-            if (GeneratorHealth <= 0)
-            {
-                GeneratorIsActive = false;
-                for (UShieldComponent* shield : PointersToShields)
-                    shield->DecrementActiveGenerators();
-            }
-            else
-            {
-                return;
-            }
-        }
+		if (GeneratorIsActive)
+		{
+			if (Role == ROLE_Authority)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
+				GeneratorHealth -= Damage;
+				if (GeneratorHealth <= 0)
+				{
+					GeneratorIsActive = false;
+					for (UShieldComponent* shield : PointersToShields)
+						shield->ServerDecrementActiveGenerators();
+				}
+				else
+				{
+					return;
+				}
+			}
+		}
 	}
 }
 

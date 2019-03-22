@@ -7,6 +7,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Actors/ShieldGenerator.h"
 
 // Sets default values
 ABaseBullet::ABaseBullet()
@@ -85,6 +86,12 @@ void ABaseBullet::ComponentHit(class UPrimitiveComponent* HitComp, class AActor*
 	if (OtherActor != nullptr && OtherActor != this && OtherComp != nullptr)
 	{
 		FDamageEvent DamageEvent;
+		AShieldGenerator* generator = Cast< AShieldGenerator>(OtherActor);
+		//if (generator)
+		//{
+		//	generator->TakeDamage(BulletDamage, DamageEvent, GetInstigatorController(), this);
+		//	//generator->TakeAnyDamage(generator, BulletDamage, nullptr, GetInstigatorController(), this);
+		//}
 		OtherActor->TakeDamage(BulletDamage, DamageEvent ,GetInstigatorController() , this);
 	}
 
