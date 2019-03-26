@@ -12,6 +12,7 @@ ABoxShield::ABoxShield()
 	Shield = CreateDefaultSubobject<UBoxShieldComponent>("Shield");
 	RootComponent = Shield;
 
+	SetReplicates(true);
 }
 
 // Called when the game starts or when spawned
