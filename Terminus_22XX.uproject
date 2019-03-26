@@ -12,5 +12,30 @@
 				"Engine"
 			]
 		}
+	],
+	"Plugins": [
+		{
+			"Name": "Paper2D",
+			"Enabled": false
+		},
+		{
+			"Name": "MagicLeapMedia",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Lumin"
+			]
+		},
+		{
+			"Name": "ExampleDeviceProfileSelector",
+			"Enabled": false
+		},
+		{
+			"Name": "WindowsDeviceProfileSelector",
+			"Enabled": true
+		},
+		{
+			"Name": "GameFrwkSessionsPlugin",
+			"Enabled": true
+		}
 	]
 }
