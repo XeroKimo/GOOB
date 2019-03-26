@@ -53,7 +53,7 @@ void AShieldGenerator::AddShield(UShieldComponent* Shield)
 
 void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
-	//if (DamageCauser->ActorHasTag("ShotgunBullet"))
+	if (DamageCauser->ActorHasTag("ShotgunBullet"))
 	{
 		if (GeneratorIsActive)
 		{
