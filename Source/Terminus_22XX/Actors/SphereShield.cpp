@@ -11,7 +11,6 @@ ASphereShield::ASphereShield()
 	PrimaryActorTick.bCanEverTick = true;
 	Shield = CreateDefaultSubobject<USphereShieldComponent>("Shield");
 	RootComponent = Shield;
-	SetReplicates(true);
 
 }
 
