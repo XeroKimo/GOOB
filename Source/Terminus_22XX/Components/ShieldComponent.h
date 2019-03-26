@@ -29,20 +29,11 @@ public:
 
 	void DecrementActiveGenerators();
 
-	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerDecrementActiveGenerators();
-
-	UFUNCTION(NetMulticast, Reliable)
-		void NetMulticastDisableShieldCollisions();
-	UFUNCTION()
-	void OnRep_Generators();
-
 	virtual void EnableShieldCollisions();
 
 	virtual void DisableShieldCollisions();
 
 protected:
-	UPROPERTY(Replicated)
 	bool IsShieldActive;
 	UPROPERTY(VisibleAnywhere)
 		class UStaticMeshComponent* ShieldMesh;
@@ -50,9 +41,7 @@ protected:
 	UPROPERTY(EditInstanceOnly, Category = "Shield")
 		TArray<class AShieldGenerator*> ArrayOfShieldGenerators;
 
-	UPROPERTY(ReplicatedUsing = OnRep_Generators)
-	//UPROPERTY(Replicated)
-		int ShieldGeneratorsAlive = 0;
+	int ShieldGeneratorsAlive = 0;
 
 	UPROPERTY(VisibleAnywhere, Category = "Shield")
 		float MaxShieldHealth = 100.f;

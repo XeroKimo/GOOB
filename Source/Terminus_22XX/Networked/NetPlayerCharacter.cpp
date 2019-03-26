@@ -52,7 +52,6 @@ void ANetPlayerCharacter::BeginPlay()
     ATerminus_22XXGameModeBase* mode = Cast<ATerminus_22XXGameModeBase>(GetWorld()->GetAuthGameMode());
     if (mode)
         mode->SpawnStartingWeapons(this);
-	ServerAttachNewWeapon( WeaponInventory->GetAWeapon());
 	//ServerSpawnGun();
 }
 
