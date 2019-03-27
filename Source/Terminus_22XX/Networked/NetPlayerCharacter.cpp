@@ -10,6 +10,8 @@
 #include "NetInventoryComponent.h"
 #include "Components/SphereComponent.h"
 #include "Terminus_22XXGameModeBase.h"
+#include "Terminus_22XX_GameState.h"
+#include "Networked/NetPlayerState.h"
 #include "DrawDebugHelpers.h"
 #include "Net/UnrealNetwork.h"
 
@@ -49,10 +51,8 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 void ANetPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-    ATerminus_22XXGameModeBase* mode = Cast<ATerminus_22XXGameModeBase>(GetWorld()->GetAuthGameMode());
-    if (mode)
-        mode->SpawnStartingWeapons(this);
 	ServerAttachNewWeapon( WeaponInventory->GetAWeapon());
+    
 	//ServerSpawnGun();
 }
 
@@ -429,6 +429,45 @@ void ANetPlayerCharacter::SwitchToVampyr()
 void ANetPlayerCharacter::SwitchToRailgun()
 {
     ServerAttachNewWeapon(WeaponInventory->GetRailgun());
+}
+
+void ANetPlayerCharacter::LogIn()
+{
+    if (Role == ROLE_Authority)
+        GetGameState()->ConnectedPlayers.Add(PlayerState);
+}
+
+void ANetPlayerCharacter::Respawn()
+{
+    if (Role == ROLE_Authority)
+    {
+        ATerminus_22XXGameModeBase* mode = Cast<ATerminus_22XXGameModeBase>(GetGameState()->AuthorityGameMode);
+        if (mode)
+        {
+            mode->RespawnPlayer(Cast<APlayerController>(GetController()));
+        }
+    }
+}
+
+void ANetPlayerCharacter::SetPlayerState(APlayerState * state)
+{
+    PlayerState = state;
+    TArray<ANetBaseGun*> guns = GetPlayerState()->CurrentGuns;
+    for (int i = 0; i < guns.Num(); i++)
+    {
+        ServerAddWeaponToInvetory(guns[i]);
+    }
+    GetPlayerState()->CurrentHealth = MaxHealth;
+}
+
+ANetPlayerState * ANetPlayerCharacter::GetPlayerState()
+{
+    return  Cast<ANetPlayerState>(PlayerState);
+}
+
+ATerminus_22XX_GameState* ANetPlayerCharacter::GetGameState()
+{
+    return Cast<ATerminus_22XX_GameState>(GetWorld()->GetGameState());
 }
 
 void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const

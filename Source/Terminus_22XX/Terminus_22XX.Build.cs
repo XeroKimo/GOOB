@@ -8,7 +8,7 @@ public class Terminus_22XX : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameFrwkSessionsPlugin", "OnlineSubsystem", "OnlineSubsystemUtils", "OnlineSubsystemNull" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameFrwkSessionsPlugin", "OnlineSubsystem", "OnlineSubsystemUtils", "OnlineSubsystemNull", "UMG" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

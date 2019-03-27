@@ -48,6 +48,13 @@ public:
 	void SwitchToVampyr();
 	void SwitchToRailgun();
 
+    void LogIn();
+    void Respawn();
+    void SetPlayerState(class APlayerState* state);
+
+    class ANetPlayerState* GetPlayerState();
+    class ATerminus_22XX_GameState* GetGameState();
+
     //UFUNCTION(Client,Reliable)
     //bool AddWeaponToInventory(class ANetBaseGun* AGun);
 
@@ -96,8 +103,8 @@ public:
 	UPROPERTY(Category = "Movement", EditAnywhere)
 		float MaxSuperJumpPowerScale = 2.0f;
 
-	///UPROPERTY(BlueprintReadWrite, Category = "Status", EditAnywhere)
-	///	float MaxHealth;
+	UPROPERTY(BlueprintReadWrite, Category = "Status", EditAnywhere)
+		float MaxHealth;
 
 	//How much time before the super jump auto releases
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)

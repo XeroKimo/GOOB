@@ -3,19 +3,21 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
+#include "GameFramework/GameMode.h"
 #include "Terminus_22XXGameModeBase.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class TERMINUS_22XX_API ATerminus_22XXGameModeBase : public AGameModeBase
+class TERMINUS_22XX_API ATerminus_22XXGameModeBase : public AGameMode
 {
 	GENERATED_BODY()
 	
 public:
 	ATerminus_22XXGameModeBase();
+    void HandleStartingNewPlayer_Implementation(APlayerController* NewPlayer) override;
+    void RespawnPlayer(APlayerController* NewPlayer, bool UseFirstCheckpoint = false);
 
     UFUNCTION(Server, Reliable, WithValidation)
     void SpawnStartingWeapons(class ANetPlayerCharacter* character);

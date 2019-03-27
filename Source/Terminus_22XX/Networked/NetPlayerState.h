@@ -15,6 +15,16 @@ class TERMINUS_22XX_API ANetPlayerState : public APlayerState
 	GENERATED_BODY()
 	
 	
+public:
+    UPROPERTY(BlueprintReadOnly, Replicated)
+        int CurrentCheckpointID;
 	
-	
+    UPROPERTY(BlueprintReadOnly, Replicated)
+        float CurrentHealth;
+
+    UPROPERTY(Replicated)
+        TArray<class ANetBaseGun*> CurrentGuns;
+
+    int StartingPointID;
+
 };
