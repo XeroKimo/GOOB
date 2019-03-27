@@ -205,7 +205,7 @@ void UOnlineGameInstance::OnCreateSessionComplete(FName SessionName, bool Succes
 	//World'/GameFrwkSessionsPlugin/Maps/Lobby.Lobby'
     /*Open the Lobby Level in listen mode*/
     //CALL ServerTravel() on the World and pass in the following string "/GameFrwkSessionsPlugin/Maps/Lobby?listen"
-	World->ServerTravel("/GameFrwkSessionsPlugin/Maps/Lobby?listen");
+	World->ServerTravel("/Game/Levels/Test_Level?listen");
 }
 
 //TODO Week 9: Refresh the List of Servers
