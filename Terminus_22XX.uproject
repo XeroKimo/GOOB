@@ -15,19 +15,15 @@
 	],
 	"Plugins": [
 		{
-			"Name": "Paper2D",
-			"Enabled": false
-		},
-		{
 			"Name": "MagicLeapMedia",
-			"Enabled": false,
+			"Enabled": true,
 			"SupportedTargetPlatforms": [
 				"Lumin"
 			]
 		},
 		{
 			"Name": "ExampleDeviceProfileSelector",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "WindowsDeviceProfileSelector",
