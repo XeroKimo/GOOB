@@ -79,7 +79,7 @@ void ATerminus_22XXGameModeBase::RespawnPlayer(APlayerController * NewPlayer, bo
     if (oldPawn)
     {
         if (UseFirstCheckpoint)
-            checkpointID = Cast<ANetPlayerState>(oldPawn->PlayerState)->CurrentCheckpointID;
+            checkpointID = Cast<ANetPlayerState>(oldPawn->PlayerState)->StartingPointID;
         else
             checkpointID = Cast<ANetPlayerState>(oldPawn->PlayerState)->CurrentCheckpointID;
     }
