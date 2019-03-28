@@ -211,29 +211,6 @@ void ANetPlayerCharacter::StopFireWeapon()
 	CurrentWeapon->ReleaseTrigger();
 }
 
-void ANetPlayerCharacter::ServerSpawnGun_Implementation()
-{
-	if (testGun != NULL)
-	{
-		FActorSpawnParameters spawnParams;
-		spawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-		spawnParams.Owner = this;
-		spawnParams.Instigator = this;
-		ANetBaseGun* spawnedGun = GetWorld()->SpawnActor<ANetBaseGun>(testGun,spawnParams);
-		if (spawnedGun)
-		{
-			spawnedGun->ServerAttach(this);
-			CurrentWeapon = spawnedGun;
-		}
-
-	}
-}
-
-bool ANetPlayerCharacter::ServerSpawnGun_Validate()
-{
-	return true;
-}
-
 void ANetPlayerCharacter::ServerCameraDebug_Implementation(FRotator rot)
 {
 	//FRotator camRot = FirstPersonCamera->GetComponentRotation();
@@ -251,15 +228,6 @@ void ANetPlayerCharacter::NormalDescent()
 	GetCharacterMovement()->GravityScale = BaseGravityScale;
 }
 
-void ANetPlayerCharacter::ServerResetPickupState_Implementation()
-{
-    PickupSuccess = false;
-    OnRep_PickupSuccess();
-}
-bool ANetPlayerCharacter::ServerResetPickupState_Validate()
-{
-    return true;
-}
 void ANetPlayerCharacter::ServerAttachNewWeapon_Implementation(ANetBaseGun * nextGun)
 {
     if (nextGun != nullptr && CurrentWeapon != nullptr)
@@ -342,41 +310,21 @@ bool ANetPlayerCharacter::ServerForceStopAndSlowDescent_Validate()
 	return true;
 }
 
-void ANetPlayerCharacter::OnRep_PickupSuccess()
-{
-}
-
 void ANetPlayerCharacter::StoreCurrentSpeed()
 {
 	StoredSpeedBeforeJump = GetVelocity().Size();
 }
-//
-//bool ANetPlayerCharacter::AddWeaponToInventory_Implementation(ANetBaseGun* AGun)
-//{
-//    ServerAddWeaponToInvetory(AGun);
-//    if (PickupSuccess)
-//    {
-//        ServerResetPickupState();
-//        OnRep_PickupSuccess();
-//        return true;
-//    }
-//    return false;
-//}
 
-void ANetPlayerCharacter::ServerAddWeaponToInvetory_Implementation(ANetBaseGun * AGun)
+bool ANetPlayerCharacter::AddWeaponToInventory(ANetBaseGun * AGun)
 {
-    if (WeaponInventory->AddWeapon(AGun))
-    {
-        AGun->SetOwner(this);
-        ServerAttachNewWeapon(WeaponInventory->SwitchToGun(AGun->GetWeaponIndex()));
-        PickupSuccess = true;
-        OnRep_PickupSuccess();
-    }
-}
-
-bool ANetPlayerCharacter::ServerAddWeaponToInvetory_Validate(ANetBaseGun * AGun)
-{
-    return true;
+	if (WeaponInventory->AddWeapon(AGun))
+	{
+		AGun->SetOwner(this);
+		ServerAttachNewWeapon(WeaponInventory->SwitchToGun(AGun->GetWeaponIndex()));
+		GetPlayerState()->CurrentGuns.Add(AGun);
+		return true;
+	}
+	return false;
 }
 
 void ANetPlayerCharacter::Reload()
@@ -455,7 +403,7 @@ void ANetPlayerCharacter::SetPlayerState(APlayerState * state)
     TArray<ANetBaseGun*> guns = GetPlayerState()->CurrentGuns;
     for (int i = 0; i < guns.Num(); i++)
     {
-        ServerAddWeaponToInvetory(guns[i]);
+        AddWeaponToInventory(guns[i]);
     }
     GetPlayerState()->CurrentHealth = MaxHealth;
 }
@@ -476,7 +424,6 @@ void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty 
     //DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SuperJumpTimer, COND_OwnerOnly);
     //DOREPLIFETIME_CONDITION(ANetPlayerCharacter, SlowDescentTimer, COND_OwnerOnly);
     DOREPLIFETIME_CONDITION(ANetPlayerCharacter, StoredSpeedBeforeJump, COND_OwnerOnly);
-    DOREPLIFETIME_CONDITION(ANetPlayerCharacter, PickupSuccess, COND_OwnerOnly);
     DOREPLIFETIME(ANetPlayerCharacter, CurrentWeapon);
 
 }

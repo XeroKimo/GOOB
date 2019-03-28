@@ -27,16 +27,18 @@ void ATerminus_22XXGameModeBase::SpawnStartingWeapons_Implementation(ANetPlayerC
             SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
             SpawnParams.Owner = character;
             ANetBaseGun* weapon = GetWorld()->SpawnActor<ANetBaseGun>(StartingWeapons[i], SpawnParams); 
-            character->ServerAddWeaponToInvetory(weapon);
-            if (!character->PickupSuccess)
-            {
-                weapon->Destroy();
-            }
-            else
-            {
-                character->GetPlayerState()->CurrentGuns.Add(weapon);
-                character->ServerResetPickupState();
-            }
+			if (!character->AddWeaponToInventory(weapon))
+				weapon->Destroy();
+			//character->ServerAddWeaponToInvetory(weapon);
+            //if (!character->PickupSuccess)
+            //{
+            //    weapon->Destroy();
+            //}
+            //else
+            //{
+            //    character->GetPlayerState()->CurrentGuns.Add(weapon);
+            //    character->ServerResetPickupState();
+            //}
         }
 	}
 }

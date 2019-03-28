@@ -59,9 +59,7 @@ public:
     //bool AddWeaponToInventory(class ANetBaseGun* AGun);
 
 	bool AddHealth(float Amount);
-
-    UFUNCTION()
-    void OnRep_PickupSuccess();
+	bool AddWeaponToInventory(class ANetBaseGun* AGun);
 	//UFUNCTION(BlueprintCallable, Category = "Status")
 	//	float GetHealthPercentage();
 
@@ -122,7 +120,7 @@ public:
 	///	float CurrentHealth;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
-		bool EnableWeaponScrolling = false;
+		bool EnableWeaponScrolling = true;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
 		float WeaponSwitchLockout = 0.125f;
@@ -147,19 +145,11 @@ public:
 	UPROPERTY(Category = "Weapon", VisibleInstanceOnly, Replicated)
 		class ANetBaseGun* CurrentWeapon = nullptr;
 
-	UPROPERTY(Category = "Weapon", EditAnywhere)
-		TSubclassOf<ANetBaseGun> testGun;
-
-    UPROPERTY(ReplicatedUsing = OnRep_PickupSuccess)
-        bool PickupSuccess = false;
 private:
 	UPROPERTY(Replicated)
 		float StoredSpeedBeforeJump;
 
 	//delete later
-	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerSpawnGun();
-
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerCameraDebug(FRotator rot);
 public:
@@ -172,9 +162,6 @@ public:
 	UFUNCTION(NetMulticast, Reliable, WithValidation)
 		void NetMulticastForceStopAndSlowDescent();
 
-    UFUNCTION(Server, Reliable, WithValidation)
-        void ServerResetPickupState();
-
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerNormalDescent();
 
@@ -183,9 +170,6 @@ public:
 
 	UFUNCTION(Server,Reliable, WithValidation)
 		void ServerForceStopAndSlowDescent();
-
-    UFUNCTION(Server, Reliable, WithValidation)
-    void ServerAddWeaponToInvetory(class ANetBaseGun* AGun);
 
 
 private:
