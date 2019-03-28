@@ -63,8 +63,8 @@ public:
 	//UFUNCTION(BlueprintCallable, Category = "Status")
 	//	float GetHealthPercentage();
 
-	///UFUNCTION()
-	///	void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+	UFUNCTION()
+		void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
 	class USceneComponent* GetGunScene() { return GunLocation; }
 private:
@@ -171,6 +171,8 @@ public:
 	UFUNCTION(Server,Reliable, WithValidation)
 		void ServerForceStopAndSlowDescent();
 
+    UFUNCTION(Server, Reliable, WithValidation)
+        void ServerRespawn();
 
 private:
 	UFUNCTION(Server,Reliable,WithValidation)

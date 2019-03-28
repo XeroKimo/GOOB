@@ -21,6 +21,7 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+    OnTakeAnyDamage.AddDynamic(this, &ANetPlayerCharacter::TakeAnyDamage);
 
 	FirstPersonCamera = CreateDefaultSubobject<UCameraComponent>("First Person Camera");
 	FirstPersonCamera->bUsePawnControlRotation = true;
@@ -72,7 +73,7 @@ void ANetPlayerCharacter::PostInitializeComponents()
 void ANetPlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+    GEngine->AddOnScreenDebugMessage(-1, DeltaTime * 1.01f, FColor::Red, "See T_22XXGameModeBase in order to spawn at camera Location");
 }
 
 // Called to bind functionality to input
@@ -102,14 +103,14 @@ void ANetPlayerCharacter::MoveSideways(float Val)
 
 void ANetPlayerCharacter::LookUp(float Val)
 {
-	AddControllerPitchInput(BaseTurnSpeed*Val*GetWorld()->DeltaTimeSeconds);
-		if (Role < ROLE_Authority)
+	AddControllerPitchInput(BaseTurnSpeed*Val);
+		if (Role < ROLE_Authority && GetController())
 			ServerCameraDebug(GetController()->GetControlRotation());
 }
 
 void ANetPlayerCharacter::LookSideways(float Val)
 {
-	AddControllerYawInput(BaseTurnSpeed*Val*GetWorld()->DeltaTimeSeconds);
+	AddControllerYawInput(BaseTurnSpeed*Val);
 }
 
 void ANetPlayerCharacter::Jump()
@@ -310,6 +311,15 @@ bool ANetPlayerCharacter::ServerForceStopAndSlowDescent_Validate()
 	return true;
 }
 
+void ANetPlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
+{
+    GetPlayerState()->CurrentHealth -= Damage;
+    if (GetPlayerState()->CurrentHealth <= 0)
+    {
+        Respawn();
+    }
+}
+
 void ANetPlayerCharacter::StoreCurrentSpeed()
 {
 	StoredSpeedBeforeJump = GetVelocity().Size();
@@ -395,6 +405,10 @@ void ANetPlayerCharacter::Respawn()
             mode->RespawnPlayer(Cast<APlayerController>(GetController()));
         }
     }
+    if (Role < ROLE_Authority)
+    {
+        ServerRespawn();
+    }
 }
 
 void ANetPlayerCharacter::SetPlayerState(APlayerState * state)
@@ -426,4 +440,13 @@ void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty 
     DOREPLIFETIME_CONDITION(ANetPlayerCharacter, StoredSpeedBeforeJump, COND_OwnerOnly);
     DOREPLIFETIME(ANetPlayerCharacter, CurrentWeapon);
 
+}
+
+void ANetPlayerCharacter::ServerRespawn_Implementation()
+{
+    Respawn();
+}
+bool ANetPlayerCharacter::ServerRespawn_Validate()
+{
+    return true;
 }

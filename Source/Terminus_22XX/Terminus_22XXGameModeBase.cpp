@@ -29,16 +29,6 @@ void ATerminus_22XXGameModeBase::SpawnStartingWeapons_Implementation(ANetPlayerC
             ANetBaseGun* weapon = GetWorld()->SpawnActor<ANetBaseGun>(StartingWeapons[i], SpawnParams); 
 			if (!character->AddWeaponToInventory(weapon))
 				weapon->Destroy();
-			//character->ServerAddWeaponToInvetory(weapon);
-            //if (!character->PickupSuccess)
-            //{
-            //    weapon->Destroy();
-            //}
-            //else
-            //{
-            //    character->GetPlayerState()->CurrentGuns.Add(weapon);
-            //    character->ServerResetPickupState();
-            //}
         }
 	}
 }
@@ -52,6 +42,8 @@ void ATerminus_22XXGameModeBase::HandleStartingNewPlayer_Implementation(APlayerC
 {
     Super::HandleStartingNewPlayer_Implementation(NewPlayer);
 
+
+    //Comment the code below in order to spawn from Camera Location
     if (!NewPlayer->GetPawn())
         RespawnPlayer(NewPlayer);
 
@@ -66,7 +58,7 @@ void ATerminus_22XXGameModeBase::HandleStartingNewPlayer_Implementation(APlayerC
         baseCharacter->LogIn();
         SpawnStartingWeapons(baseCharacter);
     }
-
+    ///Comment up to here
 }
 
 void ATerminus_22XXGameModeBase::RespawnPlayer(APlayerController * NewPlayer, bool UseFirstCheckpoint)
@@ -101,7 +93,7 @@ void ATerminus_22XXGameModeBase::RespawnPlayer(APlayerController * NewPlayer, bo
             if (oldPawn != nullptr)
                 baseCharacter->SetPlayerState(oldPawn->PlayerState);
             NewPlayer->AcknowledgePossession(baseCharacter);
-            //NewPlayer->SetPawn(pawn);
+            NewPlayer->SetPawn(pawn);
             if (oldPawn)
                 oldPawn->Destroy();
             RestartPlayer(NewPlayer);

@@ -5,14 +5,22 @@
 #include "Components/ArrowComponent.h"
 #include "Guns/BaseBullet.h"
 #include "Engine/World.h"
+#include "Networked/NetPlayerCharacter.h"
 
 AShootingEnemy::AShootingEnemy()
 {
+    PrimaryActorTick.bCanEverTick = true;
 	PlayerDetection = CreateDefaultSubobject<USphereComponent>("Player Detector");
 	PlayerDetection->SetCollisionProfileName("OverlapOnlyPawn");
 	PlayerDetection->SetGenerateOverlapEvents(true);
 	PlayerDetection->SetupAttachment(RootComponent);
 	PlayerDetection->SetSphereRadius(300.0f, true);
+
+    FCollisionResponseContainer responseContainer;
+    responseContainer.SetAllChannels(ECollisionResponse::ECR_Ignore);
+    responseContainer.SetResponse(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Overlap);
+    PlayerDetection->SetCollisionResponseToChannels(responseContainer);
+
 
 	ShootingArrow = CreateDefaultSubobject<UArrowComponent>("Shooting Arrow");
 	ShootingArrow->SetupAttachment(RootComponent);
@@ -29,7 +37,7 @@ void AShootingEnemy::Tick(float DeltaTime)
 void AShootingEnemy::DetectPlayer()
 {
 	TArray<AActor*> players;
-	PlayerDetection->GetOverlappingActors(players);
+	PlayerDetection->GetOverlappingActors(players,ANetPlayerCharacter::StaticClass());
 
 	if (players.Num() == 0)
 	{
@@ -44,7 +52,8 @@ void AShootingEnemy::DetectPlayer()
 	FRotator PlayerRot = players[0]->GetActorRotation();
 
 	FVector PosDifference = PlayerPos - GetActorLocation();
-	FMath::VInterpNormalRotationTo(PlayerRot.Vector(), PosDifference.GetUnsafeNormal(), 0.016f, RotationSpeed);
+	//SetActorRotation(PosDifference.Rotation());
+    SetActorRotation(FMath::VInterpNormalRotationTo(GetActorRotation().Vector(), PosDifference.GetUnsafeNormal(), 0.016f, RotationSpeed).Rotation());
 	ShootPlayer();
 }
 
@@ -53,12 +62,15 @@ void AShootingEnemy::ShootPlayer()
 	if (!CanShoot)
 		return;
 
+    FVector spawnLoc = ShootingArrow->GetComponentLocation();
+    FRotator spawnRot = ShootingArrow->GetComponentRotation();
+    spawnRot.Pitch -= 90.0f;
 	FActorSpawnParameters SpawnParams;
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButAlwaysSpawn;
 	SpawnParams.Owner = this;
 	SpawnParams.Instigator = this;
 
-	ABaseBullet* bullet = GetWorld()->SpawnActor<ABaseBullet>(BulletClass, ShootingArrow->GetComponentTransform(), SpawnParams);
+	ABaseBullet* bullet = GetWorld()->SpawnActor<ABaseBullet>(BulletClass, spawnLoc, spawnRot, SpawnParams);
 	if (bullet)
 	{
 		bullet->BulletDamage = Damage;
@@ -69,7 +81,7 @@ void AShootingEnemy::ShootPlayer()
 
 void AShootingEnemy::BeginPlay()
 {
-
+    Super::BeginPlay();
 }
 
 void AShootingEnemy::ResetShoot()

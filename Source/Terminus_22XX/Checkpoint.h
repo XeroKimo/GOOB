@@ -19,5 +19,8 @@ public:
 public:
     UPROPERTY(EditInstanceOnly, Category = "ID")
         int CheckpointID = 0;
+
+protected:
+    //UPROPERTY(VisibleAnywhere, Category = "HitDetection")
 	
 };

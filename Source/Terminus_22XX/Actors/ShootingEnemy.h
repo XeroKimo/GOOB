@@ -17,7 +17,7 @@ class TERMINUS_22XX_API AShootingEnemy : public AEnemy
 public:
 	AShootingEnemy();
 
-	void Tick(float DeltaTime);
+	void Tick(float DeltaTime) override;
 	void DetectPlayer();
 	void ShootPlayer();
 protected:
@@ -37,6 +37,7 @@ protected:
 	UPROPERTY(EditAnywhere, Category = "AI")
 		float RotationSpeed = 90.0f;
 
+    UPROPERTY(EditAnywhere, Category = "AI")
 	float TimeBetweenShots = 0.25f;
 	bool CanShoot = true;
 	FTimerHandle ShootingTimer;

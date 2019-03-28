@@ -160,7 +160,7 @@ void UOnlineGameInstance::CreateSession()
 		}
         //ENDIF
         //ASSIGN NumPublicConnections in SessionSettings to 5 /** The number of publicly available connections advertised */
-		SessionSettings.NumPublicConnections = 2;
+		SessionSettings.NumPublicConnections = 5;
         //ASSIGN bShouldAdvertise in SessionSettings to true /**this will advertise whether this match is advertized on the online service*/
 		SessionSettings.bShouldAdvertise = true;
         //ASSIGN bUsesPresence in SessionSettings to true /** Whether to display user presence information or not */

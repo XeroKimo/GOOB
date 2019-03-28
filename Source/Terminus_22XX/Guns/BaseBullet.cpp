@@ -63,7 +63,6 @@ void ABaseBullet::PostInitializeComponents()
 void ABaseBullet::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void ABaseBullet::ServerSetBulletDamage_Implementation(float NewDamage)
@@ -83,19 +82,17 @@ void ABaseBullet::NetMulticastSetBulletDirection_Implementation(FVector Directio
 
 void ABaseBullet::ComponentHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor != nullptr && OtherActor != this && OtherComp != nullptr)
+	if (OtherActor != nullptr && OtherActor != this && OtherComp != nullptr && OtherActor != GetOwner())
 	{
-		FDamageEvent DamageEvent;
-		AShieldGenerator* generator = Cast< AShieldGenerator>(OtherActor);
-		//if (generator)
-		//{
-		//	generator->TakeDamage(BulletDamage, DamageEvent, GetInstigatorController(), this);
-		//	//generator->TakeAnyDamage(generator, BulletDamage, nullptr, GetInstigatorController(), this);
-		//}
-		OtherActor->TakeDamage(BulletDamage, DamageEvent ,GetInstigatorController() , this);
+        if (Role == ROLE_Authority)
+        {
+            FDamageEvent DamageEvent;
+            AShieldGenerator* generator = Cast< AShieldGenerator>(OtherActor);
+            OtherActor->TakeDamage(BulletDamage, DamageEvent, GetInstigatorController(), this);
+        }
 	}
-
-	Destroy();
+    if (OtherActor != GetOwner())
+	    Destroy();
 }
 
 void ABaseBullet::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const

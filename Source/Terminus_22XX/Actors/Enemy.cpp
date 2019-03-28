@@ -23,7 +23,7 @@ AEnemy::AEnemy()
 
     //Create Enemy
     EnemyMesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
-    EnemyMesh->SetCollisionProfileName("No Collision");
+    EnemyMesh->SetCollisionProfileName("NoCollision");
 	EnemyMesh->SetupAttachment(RootComponent);
 
 	Shield = CreateDefaultSubobject<UCapsuleShieldComponent>("Shield");
