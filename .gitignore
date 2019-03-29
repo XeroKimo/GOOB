@@ -2,9 +2,12 @@
 /Intermediate
 /Binaries
 /.vs
-/Saved
 /Content/StarterContent/Architecture
 /Content/StarterContent/HDRI
 /Content/StarterContent/Maps
 /Content/StarterContent/Materials
 /Content/StarterContent/Textures
+/Build
+/Saved
+Saved
+Build
