@@ -48,9 +48,6 @@ void ATerminus_22XXGameModeBase::HandleStartingNewPlayer_Implementation(APlayerC
         RespawnPlayer(NewPlayer);
 
     ANetPlayerCharacter* baseCharacter = Cast<ANetPlayerCharacter>(NewPlayer->GetPawn());
-	if (!baseCharacter)
-		return;
-
     int playerCount = Cast<ATerminus_22XX_GameState>(GameState)->ConnectedPlayers.Num();
     Cast<ANetPlayerState>(NewPlayer->GetPawn()->PlayerState)->StartingPointID = playerCount;
 
@@ -69,12 +66,10 @@ void ATerminus_22XXGameModeBase::RespawnPlayer(APlayerController * NewPlayer, bo
     TArray<AActor*> PlayerStarts;
 
     UGameplayStatics::GetAllActorsOfClass(GetWorld(), ACheckpoint::StaticClass(), PlayerStarts);
-	if (PlayerStarts.Num() == 0)
-		return;
+
     APawn* oldPawn = NewPlayer->GetPawn();
     APawn* pawn = nullptr;
     int checkpointID = 0;
-
     if (oldPawn)
     {
         if (UseFirstCheckpoint)
