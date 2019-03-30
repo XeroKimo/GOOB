@@ -422,6 +422,14 @@ void ANetPlayerCharacter::SetPlayerState(APlayerState * state)
     GetPlayerState()->CurrentHealth = MaxHealth;
 }
 
+void ANetPlayerCharacter::SetActiveCheckpoint(int CheckpointID)
+{
+	if (GetPlayerState())
+	{
+		GetPlayerState()->CurrentCheckpointID = CheckpointID;
+	}
+}
+
 ANetPlayerState * ANetPlayerCharacter::GetPlayerState()
 {
     return  Cast<ANetPlayerState>(PlayerState);

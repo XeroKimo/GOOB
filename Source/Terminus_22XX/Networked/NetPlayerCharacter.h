@@ -51,6 +51,7 @@ public:
     void LogIn();
     void Respawn();
     void SetPlayerState(class APlayerState* state);
+	void SetActiveCheckpoint(int CheckpointID);
 
     class ANetPlayerState* GetPlayerState();
     class ATerminus_22XX_GameState* GetGameState();
