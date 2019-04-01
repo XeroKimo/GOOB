@@ -4,6 +4,7 @@
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/ShieldComponent.h"
+#include "Net/UnrealNetwork.h"
 
 
 // Sets default values
@@ -77,4 +78,10 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 }
 
 
+void AShieldGenerator::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
+{
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    DOREPLIFETIME(AShieldGenerator, GeneratorHealth);
+    DOREPLIFETIME(AShieldGenerator, GeneratorIsActive);
 
+}

@@ -23,10 +23,10 @@ private:
 	UPROPERTY(Category = "Hitbox", EditAnywhere)
 		class UBoxComponent* GeneratorHitBox;
 
-	UPROPERTY(Category = "Defaults", EditAnywhere)
+	UPROPERTY(Category = "Defaults", EditAnywhere, Replicated)
 		float GeneratorHealth = 300.0f;
 
-	UPROPERTY(Category = "Defaults", EditInstanceOnly)
+	UPROPERTY(Category = "Defaults", EditInstanceOnly, Replicated)
 	bool GeneratorIsActive;
 
 	TArray<class UShieldComponent*> PointersToShields;
