@@ -67,6 +67,7 @@ public:
 	UFUNCTION()
 		void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
+	void AddScore(int score);
 	class USceneComponent* GetGunScene() { return GunLocation; }
 private:
 	void StoreCurrentSpeed();
@@ -132,6 +133,11 @@ private:
 	UPROPERTY(Category = "Visual", VisibleAnywhere)
 		class USceneComponent* GunLocation;
 
+	UPROPERTY(VisibleAnywhere)
+		class UAudioComponent* AudioComponent;
+
+	UPROPERTY(EditAnywhere)
+		class USoundBase* WalkingSound;
 
 	FTimerHandle SuperJumpTimer;
 	FTimerHandle SlowDescentTimer;
@@ -152,7 +158,7 @@ private:
 
 	//delete later
 	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerCameraDebug(FRotator rot);
+		void ServerCameraRotate(FRotator rot);
 public:
 
 	void NormalDescent();

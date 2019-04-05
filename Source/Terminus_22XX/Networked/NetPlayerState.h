@@ -14,7 +14,6 @@ class TERMINUS_22XX_API ANetPlayerState : public APlayerState
 {
 	GENERATED_BODY()
 	
-	
 public:
     UPROPERTY(BlueprintReadOnly, Replicated)
         int CurrentCheckpointID;
@@ -22,9 +21,20 @@ public:
     UPROPERTY(BlueprintReadOnly, Replicated)
         float CurrentHealth;
 
+	UPROPERTY(BlueprintReadOnly, Replicated)
+		float MaxHealth;
+
     UPROPERTY(Replicated)
         TArray<class ANetBaseGun*> CurrentGuns;
+	
+    UPROPERTY(Replicated)
+		int StartingPointID;
 
-    int StartingPointID;
+	UPROPERTY(BlueprintReadOnly, Replicated)
+		int PlayerScore;
 
+
+public:
+	UFUNCTION(BlueprintCallable)
+		float GetPercentHealth();
 };

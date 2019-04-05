@@ -88,6 +88,12 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 		class UArrowComponent* GunMuzzleLocation;
 
+	UPROPERTY(VisibleAnywhere)
+	class UAudioComponent* AudioComponent;
+
+	UPROPERTY(Category = "Sound Effect", EditAnywhere)
+		class USoundBase* ShootingSound;
+
     int WeaponIndex = -1;
 	FTimerHandle ShootingTimer;
 	FTimerHandle AllowFireTimer;
