@@ -13,12 +13,12 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define GAMEFRWKSESSIONSPLUGIN_MainMenu_generated_h
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_13_GENERATED_BODY \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_13_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FServerData_Statics; \
 	GAMEFRWKSESSIONSPLUGIN_API static class UScriptStruct* StaticStruct();
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execQuitPressed) \
 	{ \
@@ -69,7 +69,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execQuitPressed) \
 	{ \
@@ -120,7 +120,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	}
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS_NO_PURE_DECLS \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUMainMenu(); \
 	friend struct Z_Construct_UClass_UMainMenu_Statics; \
@@ -129,7 +129,7 @@ public: \
 	DECLARE_SERIALIZER(UMainMenu)
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS \
 private: \
 	static void StaticRegisterNativesUMainMenu(); \
 	friend struct Z_Construct_UClass_UMainMenu_Statics; \
@@ -138,7 +138,7 @@ public: \
 	DECLARE_SERIALIZER(UMainMenu)
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_STANDARD_CONSTRUCTORS \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UMainMenu(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMainMenu) \
@@ -151,7 +151,7 @@ private: \
 public:
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_ENHANCED_CONSTRUCTORS \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UMainMenu(UMainMenu&&); \
@@ -162,7 +162,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMainMenu); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UMainMenu)
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_PRIVATE_PROPERTY_OFFSET \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__HostButton() { return STRUCT_OFFSET(UMainMenu, HostButton); } \
 	FORCEINLINE static uint32 __PPO__JoinButton() { return STRUCT_OFFSET(UMainMenu, JoinButton); } \
 	FORCEINLINE static uint32 __PPO__QuitButton() { return STRUCT_OFFSET(UMainMenu, QuitButton); } \
@@ -180,31 +180,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UMainMenu); \
 	FORCEINLINE static uint32 __PPO__ServerList() { return STRUCT_OFFSET(UMainMenu, ServerList); }
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_25_PROLOG
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_GENERATED_BODY_LEGACY \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_25_PROLOG
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_PRIVATE_PROPERTY_OFFSET \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_STANDARD_CONSTRUCTORS \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_PRIVATE_PROPERTY_OFFSET \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_GENERATED_BODY \
+#define GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_PRIVATE_PROPERTY_OFFSET \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS_NO_PURE_DECLS \
-	GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_ENHANCED_CONSTRUCTORS \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_PRIVATE_PROPERTY_OFFSET \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_RPC_WRAPPERS_NO_PURE_DECLS \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_INCLASS_NO_PURE_DECLS \
+	GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h_28_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID GOOB_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h
+#define CURRENT_FILE_ID GOOB_master_Plugins_GameFrwkSessionsPlugin_Source_GameFrwkSessionsPlugin_MenuSystem_MainMenu_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

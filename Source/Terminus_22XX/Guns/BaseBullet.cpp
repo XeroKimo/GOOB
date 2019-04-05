@@ -19,6 +19,8 @@ ABaseBullet::ABaseBullet()
 	BulletHitbox->RelativeRotation.Pitch = 90.f;
 	BulletHitbox->SetCollisionObjectType(ECollisionChannel::ECC_GameTraceChannel1);
 	BulletHitbox->OnComponentHit.AddDynamic(this, &ABaseBullet::ComponentHit);
+	BulletHitbox->OnComponentBeginOverlap.AddDynamic(this, &ABaseBullet::OnOverlapBegin);
+	BulletHitbox->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 
 	FCollisionResponseContainer responseContainer;
 	responseContainer.SetAllChannels(ECollisionResponse::ECR_Ignore);
@@ -87,13 +89,26 @@ void ABaseBullet::ComponentHit(class UPrimitiveComponent* HitComp, class AActor*
         if (Role == ROLE_Authority)
         {
             FDamageEvent DamageEvent;
-            AShieldGenerator* generator = Cast< AShieldGenerator>(OtherActor);
             OtherActor->TakeDamage(BulletDamage, DamageEvent, GetInstigatorController(), this);
         }
 	}
     if (OtherActor != GetOwner())
 	    Destroy();
 }
+
+void ABaseBullet::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (OtherActor != nullptr && OtherActor != this && OtherActor != GetOwner())
+	{
+		if (Role == ROLE_Authority)
+		{
+			FDamageEvent DamageEvent;
+			OtherActor->TakeDamage(BulletDamage, DamageEvent, GetInstigatorController(), this);
+			Destroy();
+		}
+	}
+}
+
 
 void ABaseBullet::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
 {

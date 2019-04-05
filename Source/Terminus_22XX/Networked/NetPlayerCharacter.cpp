@@ -32,8 +32,9 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 	GunLocation = CreateDefaultSubobject<USceneComponent>("Gun Location");
 	GunLocation->SetupAttachment(FirstPersonCamera);
 
-	//GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-	//GetCapsuleComponent()->SetGenerateOverlapEvents(true);
+	GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	GetCapsuleComponent()->SetGenerateOverlapEvents(true);
+	GetCapsuleComponent()->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Overlap);
 
 	WeaponInventory = CreateDefaultSubobject<UNetInventoryComponent>("Inventory");
 
