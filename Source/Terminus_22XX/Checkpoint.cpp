@@ -9,7 +9,6 @@ ACheckpoint::ACheckpoint(const FObjectInitializer & ObjectInitializer) :
 {
 	PlayerDetection = CreateDefaultSubobject<UBoxComponent>("Player Detector");
 	PlayerDetection->SetCollisionProfileName("OverlapOnlyPawn");
-	PlayerDetection->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Ignore);
 	PlayerDetection->SetupAttachment(RootComponent);
 	PlayerDetection->SetGenerateOverlapEvents(true);
 	PlayerDetection->OnComponentBeginOverlap.AddDynamic(this, &ACheckpoint::OnOverlapBegin);

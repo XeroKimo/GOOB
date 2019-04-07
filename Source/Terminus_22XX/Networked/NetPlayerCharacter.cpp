@@ -106,7 +106,7 @@ void ANetPlayerCharacter::LookUp(float Val)
 {
 	AddControllerPitchInput(BaseTurnSpeed*Val);
 		if (Role < ROLE_Authority && GetController())
-			ServerCameraRotate(GetController()->GetControlRotation());
+			ServerCameraDebug(GetController()->GetControlRotation());
 }
 
 void ANetPlayerCharacter::LookSideways(float Val)
@@ -213,14 +213,14 @@ void ANetPlayerCharacter::StopFireWeapon()
 	CurrentWeapon->ReleaseTrigger();
 }
 
-void ANetPlayerCharacter::ServerCameraRotate_Implementation(FRotator rot)
+void ANetPlayerCharacter::ServerCameraDebug_Implementation(FRotator rot)
 {
 	//FRotator camRot = FirstPersonCamera->GetComponentRotation();
 	//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Red, "Gun Rotation - " + FString::SanitizeFloat(camRot.Yaw) + " , " + FString::SanitizeFloat(camRot.Pitch));
 	FirstPersonCamera->SetWorldRotation(rot);
 }
 
-bool ANetPlayerCharacter::ServerCameraRotate_Validate(FRotator rot)
+bool ANetPlayerCharacter::ServerCameraDebug_Validate(FRotator rot)
 {
 	return true;
 }
@@ -319,11 +319,6 @@ void ANetPlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, con
     {
         Respawn();
     }
-}
-
-void ANetPlayerCharacter::AddScore(int score)
-{
-	GetPlayerState()->PlayerScore += score;
 }
 
 void ANetPlayerCharacter::StoreCurrentSpeed()
@@ -426,7 +421,6 @@ void ANetPlayerCharacter::SetPlayerState(APlayerState * state)
         AddWeaponToInventory(guns[i]);
     }
     GetPlayerState()->CurrentHealth = MaxHealth;
-	GetPlayerState()->MaxHealth = MaxHealth;
 }
 
 void ANetPlayerCharacter::SetActiveCheckpoint(int CheckpointID)
