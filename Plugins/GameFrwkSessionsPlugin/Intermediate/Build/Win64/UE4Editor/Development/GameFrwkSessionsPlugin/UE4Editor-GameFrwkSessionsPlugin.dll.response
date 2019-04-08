@@ -65,7 +65,13 @@
 "D:\Program Files\Epic Games\UE_4.20\Engine\Plugins\Online\OnlineSubsystemUtils\Intermediate\Build\Win64\UE4Editor\Development\OnlineSubsystemUtils\UE4Editor-OnlineSubsystemUtils.lib"
 "D:\Program Files\Epic Games\UE_4.20\Engine\Plugins\Online\OnlineSubsystemNull\Intermediate\Build\Win64\UE4Editor\Development\OnlineSubsystemNull\UE4Editor-OnlineSubsystemNull.lib"
 "D:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\UMG\UE4Editor-UMG.lib"
+<<<<<<< HEAD
 /OUT:"C:\Users\jone0641\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.dll"
 /IMPLIB:"C:\Users\jone0641\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.suppressed.lib"
 /PDB:"C:\Users\jone0641\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.pdb"
+=======
+/OUT:"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.dll"
+/IMPLIB:"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.suppressed.lib"
+/PDB:"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.pdb"
+>>>>>>> 25f910350ca952c76e5292ad3340d3578dcaace2
 /ignore:4078

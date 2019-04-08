@@ -5,6 +5,9 @@
 #include "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\MenuSystem\MenuInterface.cpp"
 #include "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\MenuSystem\MenuWidget.cpp"
 #include "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\MenuSystem\ServerRow.cpp"
+<<<<<<< HEAD
 #include "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\OnlineGameInstance.cpp"
+=======
+>>>>>>> 25f910350ca952c76e5292ad3340d3578dcaace2
 #include "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\OnlineGameMode.cpp"
 #include "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\Private\GameFrwkSessionsPlugin.cpp"

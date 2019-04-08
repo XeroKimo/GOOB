@@ -8,6 +8,10 @@
 /NODEFAULTLIB
 "C:\Users\alar0037\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h.obj"
 "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.cpp.obj"
+<<<<<<< HEAD
+=======
+"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\OnlineGameInstance.cpp.obj"
+>>>>>>> 25f910350ca952c76e5292ad3340d3578dcaace2
 "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp.obj"
 "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\PCLaunch.rc.res"
 /OUT:"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.lib"
