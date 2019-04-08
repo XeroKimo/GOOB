@@ -74,7 +74,6 @@ public:
 	UFUNCTION()
 		void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
-	void AddScore(int score);
 	class USceneComponent* GetGunScene() { return GunLocation; }
 private:
 	void StoreCurrentSpeed();
@@ -174,7 +173,7 @@ private:
 
 	//delete later
 	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerCameraRotate(FRotator rot);
+		void ServerCameraDebug(FRotator rot);
 public:
 
 	void NormalDescent();

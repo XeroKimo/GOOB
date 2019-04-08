@@ -7,11 +7,8 @@
 #include "NetPlayerCharacter.h"
 #include "Components/ArrowComponent.h"
 #include "Components/StaticMeshComponent.h"
-#include "Components/AudioComponent.h"
-#include "Sound/SoundBase.h"
 #include "Engine/World.h"
 #include "GameFramework/Character.h"
-
 
 // Sets default values
 ANetBaseGun::ANetBaseGun()
@@ -25,9 +22,6 @@ ANetBaseGun::ANetBaseGun()
 
 	GunMuzzleLocation = CreateDefaultSubobject<UArrowComponent>("Muzzle Location");
 	GunMuzzleLocation->SetupAttachment(GunMesh);
-
-	AudioComponent = CreateDefaultSubobject<UAudioComponent>("Audio Component");
-	AudioComponent->SetupAttachment(RootComponent);
 
 	BurstCounter = 0;
 
@@ -154,8 +148,6 @@ void ANetBaseGun::Fire()
 {
 	CanFire = false;
 	ServerFire();
-
-
 }
 
 void ANetBaseGun::BurstFire()
