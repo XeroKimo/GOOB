@@ -32,10 +32,6 @@
 /NODEFAULTLIB:"LIBCPD"
 "C:\Users\alar0037\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h.obj"
 "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.cpp.obj"
-<<<<<<< HEAD
-=======
-"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\OnlineGameInstance.cpp.obj"
->>>>>>> 25f910350ca952c76e5292ad3340d3578dcaace2
 "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp.obj"
 "C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\PCLaunch.rc.res"
 "delayimp.lib"
@@ -62,15 +58,6 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-<<<<<<< HEAD
-"C:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
-"C:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
-"C:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
-"C:\Program Files\Epic Games\UE_4.20\Engine\Plugins\Online\OnlineSubsystem\Intermediate\Build\Win64\UE4Editor\Development\OnlineSubsystem\UE4Editor-OnlineSubsystem.lib"
-"C:\Program Files\Epic Games\UE_4.20\Engine\Plugins\Online\OnlineSubsystemUtils\Intermediate\Build\Win64\UE4Editor\Development\OnlineSubsystemUtils\UE4Editor-OnlineSubsystemUtils.lib"
-"C:\Program Files\Epic Games\UE_4.20\Engine\Plugins\Online\OnlineSubsystemNull\Intermediate\Build\Win64\UE4Editor\Development\OnlineSubsystemNull\UE4Editor-OnlineSubsystemNull.lib"
-"C:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\UMG\UE4Editor-UMG.lib"
-=======
 "D:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
 "D:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
 "D:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
@@ -78,8 +65,6 @@
 "D:\Program Files\Epic Games\UE_4.20\Engine\Plugins\Online\OnlineSubsystemUtils\Intermediate\Build\Win64\UE4Editor\Development\OnlineSubsystemUtils\UE4Editor-OnlineSubsystemUtils.lib"
 "D:\Program Files\Epic Games\UE_4.20\Engine\Plugins\Online\OnlineSubsystemNull\Intermediate\Build\Win64\UE4Editor\Development\OnlineSubsystemNull\UE4Editor-OnlineSubsystemNull.lib"
 "D:\Program Files\Epic Games\UE_4.20\Engine\Intermediate\Build\Win64\UE4Editor\Development\UMG\UE4Editor-UMG.lib"
->>>>>>> 25f910350ca952c76e5292ad3340d3578dcaace2
-/OUT:"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.dll"
-/IMPLIB:"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.suppressed.lib"
-/PDB:"C:\Users\alar0037\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.pdb"
-/ignore:4078
+/OUT:"C:\Users\jone0641\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.dll"
+/IMPLIB:"C:\Users\jone0641\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.suppressed.lib"
+/PDB:"C:\Users\jone0641\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Binaries\Win64\UE4Editor-GameFrwkSessionsPlugin.pdb"
