@@ -71,6 +71,9 @@ public:
 
 	UPROPERTY(Category = "Ammo Config", EditAnywhere)
 		TSubclassOf<ABaseBullet> BulletClass;
+
+    UPROPERTY(EditAnywhere)
+        class USoundBase* ShootingSound;
 public:
 	UPROPERTY(Category = "Ammo Config", EditAnywhere, Replicated)
 		int MaxAmmoCount = 0;
@@ -87,6 +90,8 @@ protected:
 		class UStaticMeshComponent* GunMesh;
 	UPROPERTY(VisibleAnywhere)
 		class UArrowComponent* GunMuzzleLocation;
+    UPROPERTY(VisibleAnywhere)
+        class UAudioComponent* AudioComponent;
 
     int WeaponIndex = -1;
 	FTimerHandle ShootingTimer;
