@@ -13,7 +13,7 @@ AAudioTriggerVolume::AAudioTriggerVolume()
 	PrimaryActorTick.bCanEverTick = true;
 	TriggerVolume = CreateDefaultSubobject<UBoxComponent>("Trigger Volume");
 	RootComponent = TriggerVolume;
-	TriggerVolume->SetCollisionProfileName("Trigger");
+	TriggerVolume->SetCollisionProfileName("OverlapOnlyPawn");
 	TriggerVolume->SetCollisionResponseToChannel(ECollisionChannel::ECC_GameTraceChannel1, ECollisionResponse::ECR_Ignore);
 	TriggerVolume->OnComponentBeginOverlap.AddDynamic(this, &AAudioTriggerVolume::OnOverlapBegin);
 
