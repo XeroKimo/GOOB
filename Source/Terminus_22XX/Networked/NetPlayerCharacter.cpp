@@ -88,14 +88,16 @@ void ANetPlayerCharacter::Tick(float DeltaTime)
 		CurrentStatus = MovementStatus_Jumping;
 	else
 		CurrentStatus = MovementStatus_Walking;
+
 	if (CurrentStatus == MovementStatus_Walking && (PreviousStatus & (CurrentStatus | MovementStatus_Idle)) && GetVelocity().Size() != 0.0f)
 	{
 		if (!AudioComponent->IsPlaying())
 		{
 			if (WalkingSound)
 			{
-				AudioComponent->Sound = WalkingSound;
-				AudioComponent->Play();
+                ServerPlaySound(WalkingSound);
+				//AudioComponent->Sound = WalkingSound;
+				//AudioComponent->Play();
 			}
 		}
 	}
@@ -103,16 +105,18 @@ void ANetPlayerCharacter::Tick(float DeltaTime)
 	{
 		if (JumpingSound)
 		{
-			AudioComponent->Sound = JumpingSound;
-			AudioComponent->Play();
+            ServerPlaySound(JumpingSound);
+			//AudioComponent->Sound = JumpingSound;
+			//AudioComponent->Play();
 		}
 	}
 	else if ((CurrentStatus & (MovementStatus_Walking | MovementStatus_Idle)) && PreviousStatus == MovementStatus_Jumping)
 	{
 		if (LandingSound)
 		{
-			AudioComponent->Sound = LandingSound;
-			AudioComponent->Play();
+            ServerPlaySound(LandingSound);
+			//AudioComponent->Sound = LandingSound;
+			//AudioComponent->Play();
 		}
 	}
 	PreviousStatus = CurrentStatus;
@@ -285,6 +289,12 @@ void ANetPlayerCharacter::NormalDescent()
 	GetCharacterMovement()->GravityScale = BaseGravityScale;
 }
 
+void ANetPlayerCharacter::NetMulticastPlaySound_Implementation(class USoundBase* soundClip)
+{
+    AudioComponent->Sound = soundClip;
+    AudioComponent->Play();
+}
+
 void ANetPlayerCharacter::ServerAttachNewWeapon_Implementation(ANetBaseGun * nextGun)
 {
     if (nextGun != nullptr && CurrentWeapon != nullptr)
@@ -372,7 +382,12 @@ void ANetPlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, con
     GetPlayerState()->CurrentHealth -= Damage;
     if (GetPlayerState()->CurrentHealth <= 0)
     {
-        Respawn();
+        CurrentWeapon->FullStop();
+        CurrentWeapon->ServerDetach();
+        GetController()->DisableInput(Cast<APlayerController>(GetController()));
+        GetCapsuleComponent()->SetCollisionProfileName("NoCollision");
+        FTimerHandle RespawnTimer;
+        GetWorldTimerManager().SetTimer(RespawnTimer, this, &ANetPlayerCharacter::Respawn, RespawnDelay, false);
     }
 }
 
@@ -459,6 +474,7 @@ void ANetPlayerCharacter::Respawn()
         if (mode)
         {
             mode->RespawnPlayer(Cast<APlayerController>(GetController()));
+            GetController()->EnableInput(Cast<APlayerController>(GetController()));
         }
     }
     if (Role < ROLE_Authority)
@@ -475,6 +491,7 @@ void ANetPlayerCharacter::SetPlayerState(APlayerState * state)
     {
         AddWeaponToInventory(guns[i]);
     }
+    ServerAttachNewWeapon(WeaponInventory->GetAWeapon());
     GetPlayerState()->CurrentHealth = MaxHealth;
 }
 
@@ -511,6 +528,16 @@ void ANetPlayerCharacter::ServerRespawn_Implementation()
     Respawn();
 }
 bool ANetPlayerCharacter::ServerRespawn_Validate()
+{
+    return true;
+}
+
+void ANetPlayerCharacter::ServerPlaySound_Implementation(USoundBase * soundClip)
+{
+    NetMulticastPlaySound(soundClip);
+}
+
+bool ANetPlayerCharacter::ServerPlaySound_Validate(USoundBase * soundClip)
 {
     return true;
 }

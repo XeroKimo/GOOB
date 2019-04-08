@@ -43,7 +43,7 @@ void AAudioTriggerVolume::NetMulticastPlayAudio_Implementation()
 	PlayAudio();
 }
 
-void AAudioTriggerVolume::PlayAudio_Implementation()
+void AAudioTriggerVolume::PlayAudio()
 {
 	if (!SoundClip)
 		return;
@@ -72,9 +72,9 @@ void AAudioTriggerVolume::OnOverlapBegin(UPrimitiveComponent * OverlappedComp, A
 	if (HasBeenTriggered && TriggerOnce)
 		return;
 
-	PlayAudio();
 	if (Role == ROLE_Authority)
 	{
+        PlayAudio();
 		if (GlobalTrigger)
 			NetMulticastPlayAudio();
 		HasBeenTriggered = true;

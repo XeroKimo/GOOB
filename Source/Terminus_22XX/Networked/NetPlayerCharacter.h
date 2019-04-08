@@ -132,6 +132,9 @@ public:
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
 		float WeaponSwitchLockout = 0.125f;
+
+    UPROPERTY(Category = "Status", EditAnywhere)
+        float RespawnDelay = 1.0f;
 private:
 	UPROPERTY(Category = "Visual", VisibleDefaultsOnly)
 		class UCameraComponent* FirstPersonCamera;
@@ -183,6 +186,12 @@ public:
 
 	UFUNCTION(NetMulticast, Reliable, WithValidation)
 		void NetMulticastForceStopAndSlowDescent();
+
+    UFUNCTION(NetMulticast, Reliable)
+        void NetMulticastPlaySound(class USoundBase* soundClip);
+
+    UFUNCTION(Server, Reliable, WithValidation)
+        void ServerPlaySound(class USoundBase* soundClip);
 
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerNormalDescent();

@@ -43,7 +43,6 @@ private:
 	UPROPERTY(Replicated)
 	bool HasBeenTriggered = false;
 private:
-	UFUNCTION(Client, Reliable)
 	void PlayAudio();
 
 	UFUNCTION(NetMulticast, Reliable)
