@@ -155,11 +155,7 @@ void ANetBaseGun::Fire()
 	CanFire = false;
 	ServerFire();
 
-	if (ShootingSound)
-	{
-		AudioComponent->SetSound(ShootingSound);
-		AudioComponent->Play();
-	}
+
 }
 
 void ANetBaseGun::BurstFire()
@@ -190,6 +186,16 @@ void ANetBaseGun::Reload()
 	IsReloading = false;
 }
 
+void ANetBaseGun::NetMulticastFireSound_Implementation()
+{
+	if (ShootingSound)
+	{
+		AudioComponent->SetSound(ShootingSound);
+		AudioComponent->Play();
+	}
+}
+
+
 void ANetBaseGun::ServerReload_Implementation()
 {
 	int ammoTransfer = MaxAmmoCount - CurrentAmmoCount;
@@ -216,6 +222,7 @@ void ANetBaseGun::ServerFire_Implementation()
 {
 	if (BulletClass != NULL)
 	{
+		NetMulticastFireSound();
 		ServerSpawnBullets();
 		if (!InfiniteClip)
 			CurrentAmmoCount--;

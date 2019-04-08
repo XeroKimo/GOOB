@@ -21,7 +21,7 @@ AShieldGenerator::AShieldGenerator()
 	//Setting Up Mesh
 	GeneratorMesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
 	GeneratorMesh->SetCollisionProfileName("NoCollision");
-	GeneratorMesh->AttachTo(RootComponent);
+	GeneratorMesh->SetupAttachment(RootComponent);
 
 
 	bCanBeDamaged = true;
@@ -60,7 +60,7 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 		{
 			if (Role == ROLE_Authority)
 			{
-				GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
+				//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
 				GeneratorHealth -= Damage;
 				if (GeneratorHealth <= 0)
 				{

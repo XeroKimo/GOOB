@@ -134,4 +134,6 @@ private:
 	void ServerFire();
 	UFUNCTION(Server, Reliable, WithValidation)
 	void ServerSpawnBullets();
+	UFUNCTION(NetMulticast, Unreliable)
+		void NetMulticastFireSound();
 };

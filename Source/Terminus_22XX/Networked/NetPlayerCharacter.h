@@ -6,6 +6,13 @@
 #include "GameFramework/Character.h"
 #include "NetPlayerCharacter.generated.h"
 
+enum MovementStatus
+{
+	MovementStatus_Idle = 0x0001,
+	MovementStatus_Walking = 0x0002,
+	MovementStatus_Jumping = 0x0004,
+};
+
 UCLASS()
 class TERMINUS_22XX_API ANetPlayerCharacter : public ACharacter
 {
@@ -138,6 +145,14 @@ private:
 
 	UPROPERTY(EditAnywhere)
 		class USoundBase* WalkingSound;
+	UPROPERTY(EditAnywhere)
+		class USoundBase* JumpingSound;
+	UPROPERTY(EditAnywhere)
+		class USoundBase* LandingSound;
+	UPROPERTY(EditAnywhere)
+		class USoundBase* ChargingSound;
+	UPROPERTY(EditAnywhere)
+		class USoundBase* ReleaseSuperJumpSound;
 
 	FTimerHandle SuperJumpTimer;
 	FTimerHandle SlowDescentTimer;
@@ -146,7 +161,8 @@ private:
 protected:
 	class UNetInventoryComponent* WeaponInventory;
 
-
+	TEnumAsByte<MovementStatus> CurrentStatus;
+	TEnumAsByte<MovementStatus> PreviousStatus;
 
 public:
 	UPROPERTY(Category = "Weapon", VisibleInstanceOnly, Replicated)

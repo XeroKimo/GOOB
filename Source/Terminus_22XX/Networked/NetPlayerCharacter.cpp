@@ -3,16 +3,17 @@
 #include "NetPlayerCharacter.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SphereComponent.h"
+#include "Components/AudioComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Public/TimerManager.h"
 #include "Networked/NetBaseGun.h"
 #include "NetInventoryComponent.h"
-#include "Components/SphereComponent.h"
 #include "Terminus_22XXGameModeBase.h"
 #include "Terminus_22XX_GameState.h"
 #include "Networked/NetPlayerState.h"
-#include "DrawDebugHelpers.h"
+#include "Engine/Engine.h"
 #include "Net/UnrealNetwork.h"
 
 // Sets default values
@@ -38,10 +39,15 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 
 	WeaponInventory = CreateDefaultSubobject<UNetInventoryComponent>("Inventory");
 
+	AudioComponent = CreateDefaultSubobject<UAudioComponent>("AudioCopmonent");
+	AudioComponent->SetupAttachment(RootComponent);
+
 	JumpMaxCount = 2;
 	//MaxHealth = 100.0f;
 	//CurrentHealth = MaxHealth;
 	//CurrentWeapon = nullptr;
+
+	CurrentStatus = PreviousStatus = MovementStatus_Idle;
 
 	SetReplicates(true);
 	SetReplicateMovement(true);
@@ -54,7 +60,6 @@ void ANetPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	ServerAttachNewWeapon( WeaponInventory->GetAWeapon());
-    
 	//ServerSpawnGun();
 }
 
@@ -75,6 +80,42 @@ void ANetPlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
     GEngine->AddOnScreenDebugMessage(-1, DeltaTime * 1.01f, FColor::Red, "See T_22XXGameModeBase in order to spawn at camera Location");
+
+
+	if (GetVelocity().Size() == 0.0f)
+		CurrentStatus = MovementStatus_Idle;
+	else if (GetVelocity().Z != 0.0f)
+		CurrentStatus = MovementStatus_Jumping;
+	else
+		CurrentStatus = MovementStatus_Walking;
+	if (CurrentStatus == MovementStatus_Walking && (PreviousStatus & (CurrentStatus | MovementStatus_Idle)) && GetVelocity().Size() != 0.0f)
+	{
+		if (!AudioComponent->IsPlaying())
+		{
+			if (WalkingSound)
+			{
+				AudioComponent->Sound = WalkingSound;
+				AudioComponent->Play();
+			}
+		}
+	}
+	else if (CurrentStatus == MovementStatus_Jumping && (PreviousStatus & (MovementStatus_Walking | MovementStatus_Idle)))
+	{
+		if (JumpingSound)
+		{
+			AudioComponent->Sound = JumpingSound;
+			AudioComponent->Play();
+		}
+	}
+	else if ((CurrentStatus & (MovementStatus_Walking | MovementStatus_Idle)) && PreviousStatus == MovementStatus_Jumping)
+	{
+		if (LandingSound)
+		{
+			AudioComponent->Sound = LandingSound;
+			AudioComponent->Play();
+		}
+	}
+	PreviousStatus = CurrentStatus;
 }
 
 // Called to bind functionality to input
@@ -90,7 +131,7 @@ void ANetPlayerCharacter::MoveForeward(float Val)
 {
 	if (Val != 0.f)
 	{
-		AddMovementInput(GetActorForwardVector(), Val);
+		AddMovementInput(GetActorForwardVector(), Val); 
 	}
 }
 
@@ -125,6 +166,7 @@ void ANetPlayerCharacter::Jump()
 		return;
 	if (!CanJump())
 		return;
+
 	if (GetCharacterMovement()->IsFalling() || JumpCurrentCount >= 1)
 		PrepareSuperJump();
 	else
@@ -157,6 +199,11 @@ void ANetPlayerCharacter::PrepareSuperJump()
 	GetWorldTimerManager().SetTimer(SlowDescentTimer, this, &ANetPlayerCharacter::ServerForceStopAndSlowDescent, SuperJumpTimerDelay, false);
 	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Player Jumped");
 
+	if (ChargingSound)
+	{
+		AudioComponent->Sound = ChargingSound;
+		AudioComponent->Play();
+	}
 	if (JumpCurrentCount == 0 && GetCharacterMovement()->IsFalling())
 		JumpCurrentCount++;
 
@@ -185,6 +232,14 @@ void ANetPlayerCharacter::ReleaseSuperJump()
 		{
 			newForceVector = newForceVector.GetUnsafeNormal() * MaxSuperJump * 0.999997f;
 		}
+
+		if (ReleaseSuperJumpSound)
+		{
+			AudioComponent->Sound = ReleaseSuperJumpSound;
+			AudioComponent->Play();
+		}
+		else
+			AudioComponent->Stop();
 
 		ServerSuperJump(newForceVector);
 	}

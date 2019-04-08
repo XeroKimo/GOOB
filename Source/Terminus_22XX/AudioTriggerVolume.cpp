@@ -21,6 +21,7 @@ AAudioTriggerVolume::AAudioTriggerVolume()
 	AudioComponent->SetupAttachment(RootComponent);
 	//AudioComponent->AttenuationSettings->Attenuation.bAttenuate = false;
 
+	SetReplicates(true);
 }
 
 // Called when the game starts or when spawned
@@ -42,7 +43,7 @@ void AAudioTriggerVolume::NetMulticastPlayAudio_Implementation()
 	PlayAudio();
 }
 
-void AAudioTriggerVolume::PlayAudio()
+void AAudioTriggerVolume::PlayAudio_Implementation()
 {
 	if (!SoundClip)
 		return;
@@ -52,6 +53,16 @@ void AAudioTriggerVolume::PlayAudio()
 
 	AudioComponent->Sound = SoundClip;
 	AudioComponent->Play();
+}
+
+void AAudioTriggerVolume::ServerTrigger_Implementation()
+{
+	HasBeenTriggered = true;
+}
+
+bool AAudioTriggerVolume::ServerTrigger_Validate()
+{
+	return true;
 }
 
 void AAudioTriggerVolume::OnOverlapBegin(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
