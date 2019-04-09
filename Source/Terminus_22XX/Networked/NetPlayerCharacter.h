@@ -59,8 +59,9 @@ public:
     void Respawn();
     void SetPlayerState(class APlayerState* state);
 	void SetActiveCheckpoint(int CheckpointID);
-
-    class ANetPlayerState* GetPlayerState();
+	
+	UFUNCTION(BlueprintCallable)
+		class ANetPlayerState* GetPlayerState();
     class ATerminus_22XX_GameState* GetGameState();
 
     //UFUNCTION(Client,Reliable)

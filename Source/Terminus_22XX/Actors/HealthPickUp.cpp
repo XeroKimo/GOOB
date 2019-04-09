@@ -4,8 +4,9 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "PlayerCharacter.h"
+#include "Engine/Engine.h"
 
-
+// ---------- DEPRECATED CLASS ---------- //
 AHealthPickUp::AHealthPickUp() 
 {
 

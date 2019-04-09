@@ -9,6 +9,9 @@
 /**
  * 
  */
+
+
+ // ---------- DEPRECATED CLASS ---------- //
 UCLASS()
 class TERMINUS_22XX_API AHealthPickUp : public APickUpActor
 {

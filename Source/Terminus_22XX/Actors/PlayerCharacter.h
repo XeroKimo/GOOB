@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "PlayerCharacter.generated.h"
 
+// ---------- DEPRECATED CLASS ---------- //
 UCLASS()
 class TERMINUS_22XX_API APlayerCharacter : public ACharacter
 {

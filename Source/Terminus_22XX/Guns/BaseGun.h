@@ -6,6 +6,7 @@
 #include "Actors/PickUpActor.h"
 #include "BaseGun.generated.h"
 
+// ---------- DEPRECATED CLASS ---------- //
 UENUM(BlueprintType)
 enum class EFireStyle : uint8
 {

@@ -24,7 +24,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	UPROPERTY(EditAnywhere, Category = "Config")
+	UPROPERTY(EditAnywhere, Category = "Config", Replicated)
 		class USoundBase* SoundClip;
 protected:
 	UPROPERTY(EditAnywhere, Category = "Config")
@@ -43,7 +43,8 @@ private:
 	UPROPERTY(Replicated)
 	bool HasBeenTriggered = false;
 private:
-	void PlayAudio();
+	UFUNCTION(Client, Reliable)
+	void ClientPlayAudio();
 
 	UFUNCTION(NetMulticast, Reliable)
 		void NetMulticastPlayAudio();

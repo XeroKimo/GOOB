@@ -2,6 +2,7 @@
 
 #include "Terminus_22XX_GameState.h"
 #include "Net/UnrealNetwork.h"
+#include "Public/TimerManager.h"
 
 ATerminus_22XX_GameState::ATerminus_22XX_GameState()
 {
@@ -17,6 +18,7 @@ void ATerminus_22XX_GameState::BeginPlay()
 
 void ATerminus_22XX_GameState::Tick(float deltaTime)
 {
+	//Update time pass since game start
     if (Role == ROLE_Authority)
         CurrentGameTime += deltaTime;
 }

@@ -40,10 +40,10 @@ void AAudioTriggerVolume::Tick(float DeltaTime)
 
 void AAudioTriggerVolume::NetMulticastPlayAudio_Implementation()
 {
-	PlayAudio();
+	ClientPlayAudio();
 }
 
-void AAudioTriggerVolume::PlayAudio()
+void AAudioTriggerVolume::ClientPlayAudio_Implementation()
 {
 	if (!SoundClip)
 		return;
@@ -51,8 +51,8 @@ void AAudioTriggerVolume::PlayAudio()
 	if (AudioComponent->IsPlaying())
 		return;
 
-	AudioComponent->Sound = SoundClip;
-	AudioComponent->Play();
+		AudioComponent->Sound = SoundClip;
+		AudioComponent->Play();
 }
 
 void AAudioTriggerVolume::ServerTrigger_Implementation()
@@ -72,11 +72,18 @@ void AAudioTriggerVolume::OnOverlapBegin(UPrimitiveComponent * OverlappedComp, A
 	if (HasBeenTriggered && TriggerOnce)
 		return;
 
+	//TODO Audio: Add another audio component to player for audio triggers
+	//TODO Audio: Create a global audio trigger player so only one clip
+	//			  can be played globally, can queue clips
 	if (Role == ROLE_Authority)
 	{
-        PlayAudio();
 		if (GlobalTrigger)
 			NetMulticastPlayAudio();
+		else
+		{
+			AttachToActor(OtherActor,FAttachmentTransformRules::KeepWorldTransform);
+			ClientPlayAudio();
+		}
 		HasBeenTriggered = true;
 	}
 }
@@ -85,4 +92,5 @@ void AAudioTriggerVolume::GetLifetimeReplicatedProps(TArray< FLifetimeProperty >
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 	DOREPLIFETIME(AAudioTriggerVolume, HasBeenTriggered);
+	DOREPLIFETIME(AAudioTriggerVolume, SoundClip);
 }

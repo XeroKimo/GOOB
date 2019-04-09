@@ -19,6 +19,7 @@ void ACheckpoint::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 {
 	if (ANetPlayerCharacter* player = Cast<ANetPlayerCharacter>(OtherActor))
 	{
+		//Update the players current checkpoint
 		if (Role == ROLE_Authority)
 			player->SetActiveCheckpoint(CheckpointID);
 	}

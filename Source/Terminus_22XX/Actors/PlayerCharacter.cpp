@@ -13,6 +13,7 @@
 #include "DrawDebugHelpers.h"
 #include "Net/UnrealNetwork.h"
 
+// ---------- DEPRECATED CLASS ---------- //
 // Sets default values
 APlayerCharacter::APlayerCharacter()
 {

@@ -8,6 +8,7 @@
 
 class ABaseGun;
 
+// ---------- DEPRECATED CLASS ---------- //
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TERMINUS_22XX_API UInventoryComponent : public UActorComponent
 {

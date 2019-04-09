@@ -39,13 +39,16 @@ protected:
     UPROPERTY(VisibleAnywhere)
         class UBoxComponent* Hitbox;
 
+	//How long a actor must overlap the hitbox before teleporting
     UPROPERTY(EditAnywhere, Category = "Config")
         float TeleporterDelay = 1.5f;
+	//The point which the porting actor will teleport to
     UPROPERTY(EditAnywhere, Category = "Config")
         AActor* DestinationPoint;
 
     FTimerHandle TeleportTimer;
 
+	//The actor that will get teleported
     AActor* PortingActor;
 	
 };

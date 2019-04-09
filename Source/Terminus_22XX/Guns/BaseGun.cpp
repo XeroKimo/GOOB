@@ -7,10 +7,12 @@
 #include "Components/ArrowComponent.h"
 #include "Components/SphereComponent.h"
 #include "Public/TimerManager.h"
+#include "Engine/Engine.h"
 
 #include "Actors/PlayerCharacter.h"
 #include "DrawDebugHelpers.h"
 
+// ---------- DEPRECATED CLASS ---------- //
 // Sets default values
 ABaseGun::ABaseGun()
 {

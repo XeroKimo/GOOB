@@ -28,7 +28,8 @@ ATeleporter::ATeleporter()
 void ATeleporter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	PortingActor = nullptr;
 }
 
 // Called every frame
@@ -40,9 +41,12 @@ void ATeleporter::Tick(float DeltaTime)
 
 void ATeleporter::OnOverlapBegin(UPrimitiveComponent * OverlappedComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult)
 {
+	//Make sure the overlapped actor is a player
     if (OtherActor->ActorHasTag("Player"))
     {
+		//Set the player to be the actor that will be teleported
         PortingActor = OtherActor;
+		//Start the teleport timer
         GetWorldTimerManager().SetTimer(TeleportTimer, this, &ATeleporter::ServerMoveActor, TeleporterDelay, false);
     }
 }
@@ -51,14 +55,17 @@ void ATeleporter::OnOverlapEnd(UPrimitiveComponent * OverlappedComp, AActor * Ot
 {
     if (OtherActor == PortingActor)
     {
+		//If the player leaves the teleporting box
+		//Stop the timer
         GetWorldTimerManager().ClearTimer(TeleportTimer);
+		//Reset the porting actor
         PortingActor = nullptr;
     }
 }
 
 void ATeleporter::ServerMoveActor_Implementation()
 {
-    //PortingActor->GetController()->DisableInput(Cast<APlayerController>(PortingActor->GetController()));
+	//Teleport the actor to the destination point location
     PortingActor->SetActorLocation(DestinationPoint->GetActorLocation(), false, nullptr, ETeleportType::ResetPhysics);
     PortingActor = nullptr;
 }
