@@ -116,6 +116,8 @@ public:
 
     int GetWeaponIndex() { return WeaponIndex; }
 public:
+    UFUNCTION(Client, Reliable)
+        void ClientFullStop();
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerAttach(class ANetPlayerCharacter* character);
 	UFUNCTION(Server, Reliable, WithValidation)

@@ -56,12 +56,15 @@ void AEnemy::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageTyp
     //GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, "Health - " + FString::FromInt(EnemyHealth));
 	if (EnemyHealth < 0)
 	{
-		if (InstigatedBy->GetPawn())
-		{
-			if (ANetPlayerCharacter* character = Cast<ANetPlayerCharacter>(InstigatedBy->GetPawn()))
-				character->ServerAddScore(ScoreValue);
-		}
-		Destroy();
+        if (InstigatedBy)
+        {
+            if (InstigatedBy->GetPawn())
+            {
+                if (ANetPlayerCharacter* character = Cast<ANetPlayerCharacter>(InstigatedBy->GetPawn()))
+                    character->ServerAddScore(ScoreValue);
+            }
+            Destroy();
+        }
 	}
 }
 
