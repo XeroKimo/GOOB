@@ -47,7 +47,7 @@ void ATerminus_22XXGameModeBase::HandleStartingNewPlayer_Implementation(APlayerC
 
     //Comment the code below in order to spawn from Camera Location
 
-	//Make sure a player is controlled
+	////Make sure a player is controlled
     if (!NewPlayer->GetPawn())
         RespawnPlayer(NewPlayer);
 
