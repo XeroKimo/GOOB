@@ -19,6 +19,7 @@ void ANetPlayerController::AcknowledgePossession(class APawn* InPawn)
 void ANetPlayerController::SetupInputComponent()
 {
 	Super::SetupInputComponent();
+
 	InputComponent->BindAxis("MoveForeward", this, &ANetPlayerController::MoveForeward);
 	InputComponent->BindAxis("MoveSideways", this, &ANetPlayerController::MoveSideways);
 

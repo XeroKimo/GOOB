@@ -6,11 +6,13 @@
 
 float ANetPlayerState::GetRemainingHealth()
 {
+    //return the %current health of the player
 	return CurrentHealth / MaxHealth;
 }
 
 void ANetPlayerState::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
 {
+    //DOREPLIFETIME all replicated values
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     DOREPLIFETIME(ANetPlayerState, CurrentCheckpointID);
     DOREPLIFETIME(ANetPlayerState, CurrentGuns);
