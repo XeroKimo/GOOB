@@ -29,8 +29,15 @@ void ATerminus_22XXGameModeBase::SpawnStartingWeapons_Implementation(ANetPlayerC
             SpawnParams.Owner = character;
             ANetBaseGun* weapon = GetWorld()->SpawnActor<ANetBaseGun>(StartingWeapons[i], SpawnParams); 
 			//If the player already has the starting weapons, destroy
-			if (!character->AddWeaponToInventory(weapon))
-				weapon->Destroy();
+            if (character)
+            {
+                if (!character->AddWeaponToInventory(weapon))
+                    weapon->Destroy();
+            }
+            else
+            {
+                weapon->Destroy();
+            }
         }
 	}
 }
@@ -47,7 +54,7 @@ void ATerminus_22XXGameModeBase::HandleStartingNewPlayer_Implementation(APlayerC
 
     //Comment the code below in order to spawn from Camera Location
 
-	////Make sure a player is controlled
+	//Make sure a player is controlled
     if (!NewPlayer->GetPawn())
         RespawnPlayer(NewPlayer);
 
@@ -55,6 +62,7 @@ void ATerminus_22XXGameModeBase::HandleStartingNewPlayer_Implementation(APlayerC
     ANetPlayerCharacter* baseCharacter = Cast<ANetPlayerCharacter>(NewPlayer->GetPawn());
     int playerCount = Cast<ATerminus_22XX_GameState>(GameState)->ConnectedPlayers.Num();
     Cast<ANetPlayerState>(NewPlayer->GetPawn()->PlayerState)->StartingPointID = playerCount;
+    Cast<ANetPlayerState>(NewPlayer->GetPawn()->PlayerState)->CurrentCheckpointID = playerCount;
 
 	//Respawn player
     RespawnPlayer(NewPlayer, true); 
@@ -93,6 +101,7 @@ void ATerminus_22XXGameModeBase::RespawnPlayer(APlayerController * NewPlayer, bo
         if (Cast<ACheckpoint>(PlayerStarts[i])->CheckpointID == checkpointID)
         {
             pawn = SpawnDefaultPawnFor(NewPlayer, PlayerStarts[i]);
+            break;
         }
     }
 

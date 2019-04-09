@@ -60,8 +60,8 @@ void ANetPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
     //Get the first weapon in the inventory and attach to player
+	//ServerSpawnGuns();
 	ServerAttachNewWeapon( WeaponInventory->GetAWeapon());
-	//ServerSpawnGun();
 }
 
 void ANetPlayerCharacter::PostInitializeComponents()
@@ -191,25 +191,28 @@ void ANetPlayerCharacter::Jump()
 void ANetPlayerCharacter::StopJumping()
 {
     //Check to see if it's a client controlling the character
-	if (GetController()->IsLocalController())
-	{
-		FTimerManager& timerManager = GetWorldTimerManager();
+    if (GetController())
+    {
+        if (GetController()->IsLocalController())
+        {
+            FTimerManager& timerManager = GetWorldTimerManager();
 
-        //Check to see if a super jump is being prepared
-		if (GetWorldTimerManager().TimerExists(SuperJumpTimer))
-		{
-			ReleaseSuperJump();
-		}
-        //Reset the slow descending timer
-		GetWorldTimerManager().ClearTimer(SlowDescentTimer);
-        //Reset the super jump timer
-		GetWorldTimerManager().ClearTimer(SuperJumpTimer);
-        //Return the player's gravity to normal
-		ServerNormalDescent();
-		//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Normal");
-        //Stop jumping
-		Super::StopJumping();
-	}
+            //Check to see if a super jump is being prepared
+            if (GetWorldTimerManager().TimerExists(SuperJumpTimer))
+            {
+                ReleaseSuperJump();
+            }
+            //Reset the slow descending timer
+            GetWorldTimerManager().ClearTimer(SlowDescentTimer);
+            //Reset the super jump timer
+            GetWorldTimerManager().ClearTimer(SuperJumpTimer);
+            //Return the player's gravity to normal
+            ServerNormalDescent();
+            //GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "Gravity Scale Normal");
+            //Stop jumping
+            Super::StopJumping();
+        }
+    }
 }
 
 void ANetPlayerCharacter::PrepareSuperJump()
@@ -323,6 +326,21 @@ bool ANetPlayerCharacter::ServerCameraUpdateRotation_Validate(FRotator rot)
 	return true;
 }
 
+void ANetPlayerCharacter::ServerSpawnGuns_Implementation()
+{
+    if (GetWorld())
+    {
+        ATerminus_22XXGameModeBase* mode = Cast<ATerminus_22XXGameModeBase>(GetWorld()->GetAuthGameMode());
+        if (mode)
+            mode->SpawnStartingWeapons(this);
+    }
+}
+
+bool ANetPlayerCharacter::ServerSpawnGuns_Validate()
+{
+    return true;
+}
+
 void ANetPlayerCharacter::NormalDescent()
 {
     //Set the character's gravity value back to normal
@@ -355,7 +373,7 @@ void ANetPlayerCharacter::ServerAttachNewWeapon_Implementation(ANetBaseGun * nex
         if (nextGun->GetWeaponIndex() != CurrentWeapon->GetWeaponIndex())
         {
             //Stop the current gun's actions
-            CurrentWeapon->FullStop();
+            CurrentWeapon->ClientFullStop();
             //Detach gun from player
             CurrentWeapon->ServerDetach();
             //Switch the gun to the next gun
@@ -446,21 +464,24 @@ bool ANetPlayerCharacter::ServerForceStopAndSlowDescent_Validate()
 void ANetPlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
     //Make player take damage
-    GetPlayerState()->CurrentHealth -= Damage;
-    //If the character has died
-    if (GetPlayerState()->CurrentHealth <= 0)
+    if (GetPlayerState())
     {
-        //Stop weapon functions and drop it
-        CurrentWeapon->FullStop();
-        CurrentWeapon->ServerDetach();
+        GetPlayerState()->CurrentHealth -= Damage;
+        //If the character has died
+        if (GetPlayerState()->CurrentHealth <= 0)
+        {
+            //Stop weapon functions and drop it
+            CurrentWeapon->FullStop();
+            CurrentWeapon->ServerDetach();
 
-        //Stop the player from taking input and colliding with others
-        GetController()->DisableInput(Cast<APlayerController>(GetController()));
-        GetCapsuleComponent()->SetCollisionProfileName("NoCollision");
+            //Stop the player from taking input and colliding with others
+            GetController()->DisableInput(Cast<APlayerController>(GetController()));
+            GetCapsuleComponent()->SetCollisionProfileName("NoCollision");
 
-        //Start the respawn timer
-        FTimerHandle RespawnTimer;
-        GetWorldTimerManager().SetTimer(RespawnTimer, this, &ANetPlayerCharacter::Respawn, RespawnDelay, false);
+            //Start the respawn timer
+            FTimerHandle RespawnTimer;
+            GetWorldTimerManager().SetTimer(RespawnTimer, this, &ANetPlayerCharacter::Respawn, RespawnDelay, false);
+        }
     }
 }
 
@@ -497,7 +518,8 @@ bool ANetPlayerCharacter::AddWeaponToInventory(ANetBaseGun * AGun)
         //Auto equip the new gun
 		ServerAttachNewWeapon(WeaponInventory->SwitchToGun(AGun->GetWeaponIndex()));
         //Make player state keep track of owned guns
-		GetPlayerState()->CurrentGuns.Add(AGun);
+        if (GetPlayerState())
+		    GetPlayerState()->CurrentGuns.Add(AGun);
 		return true;
 	}
 	return false;
@@ -570,6 +592,7 @@ void ANetPlayerCharacter::LogIn()
 		GetGameState()->ConnectedPlayers.Add(PlayerState);
         //Set the player state's max health to the actor's max health
 		GetPlayerState()->MaxHealth = MaxHealth;
+        GetPlayerState()->CurrentHealth = MaxHealth;
 	}
 }
 

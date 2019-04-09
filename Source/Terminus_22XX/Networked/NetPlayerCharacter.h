@@ -177,6 +177,9 @@ private:
 
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerCameraUpdateRotation(FRotator rot);
+
+    UFUNCTION(Server, Reliable, WithValidation)
+        void ServerSpawnGuns();
 public:
 
     //Restore's the player's descent speed

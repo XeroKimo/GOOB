@@ -29,13 +29,20 @@ private:
 	UPROPERTY(Category = "Defaults", EditInstanceOnly, Replicated)
 	bool GeneratorIsActive;
 
+    UPROPERTY(Category = "Defaults", EditAnywhere, Replicated)
+        class UMaterialInterface* AliveMaterial;
+
+    UPROPERTY(Category = "Defaults", EditAnywhere, Replicated)
+        class UMaterialInterface* DeadMaterial;
+
+
 	TArray<class UShieldComponent*> PointersToShields;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	
-
+    
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -48,7 +55,9 @@ public:
 	//Getters
 	bool GetGeneratorIsActive() { return GeneratorIsActive; }
 	
-
+private:
+    UFUNCTION(NetMulticast,Reliable)
+    void NetMulicastChangeMaterial(class UMaterialInterface* material);
 	
 	
 };
