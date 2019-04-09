@@ -175,41 +175,50 @@ private:
 	UPROPERTY(Replicated)
 		float StoredSpeedBeforeJump;
 
-	//delete later
 	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerCameraDebug(FRotator rot);
+		void ServerCameraUpdateRotation(FRotator rot);
 public:
 
+    //Restore's the player's descent speed
 	void NormalDescent();
 
 	UFUNCTION(NetMulticast, Reliable, WithValidation)
 		void NetMulticastNormalDescent();
 
+    //Stops player's movement and slows their descent
 	UFUNCTION(NetMulticast, Reliable, WithValidation)
 		void NetMulticastForceStopAndSlowDescent();
 
+    //Play the sound clip
     UFUNCTION(NetMulticast, Reliable)
         void NetMulticastPlaySound(class USoundBase* soundClip);
 
+    //Used to multicast a play sound
     UFUNCTION(Server, Reliable, WithValidation)
         void ServerPlaySound(class USoundBase* soundClip);
 
+    //Used to multicast a normal descent
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerNormalDescent();
 
+    //Have the server do the super jump
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerSuperJump(FVector Impulse);
 
+    //Used to multicast a force stop and slow descent
 	UFUNCTION(Server,Reliable, WithValidation)
 		void ServerForceStopAndSlowDescent();
 
+    //Make sure the server does the respawning
     UFUNCTION(Server, Reliable, WithValidation)
         void ServerRespawn();
 
+    //Add score to the player
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerAddScore(int Score);
 
 private:
+    //Attach the a weapon the player
 	UFUNCTION(Server,Reliable,WithValidation)
 	void ServerAttachNewWeapon(class ANetBaseGun* nextGun);
 

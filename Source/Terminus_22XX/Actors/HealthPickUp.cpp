@@ -3,10 +3,9 @@
 #include "HealthPickUp.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
-#include "PlayerCharacter.h"
+#include "Networked/NetPlayerCharacter.h"
 #include "Engine/Engine.h"
 
-// ---------- DEPRECATED CLASS ---------- //
 AHealthPickUp::AHealthPickUp() 
 {
 
@@ -18,6 +17,7 @@ AHealthPickUp::AHealthPickUp()
     HealthMesh->SetupAttachment(RootComponent);
 
     SphereCollision->OnComponentBeginOverlap.AddDynamic(this, &AHealthPickUp::OnOverlapBegin);
+    SetReplicates(true);
 }
 
 void AHealthPickUp::BeginPlay()
@@ -35,18 +35,20 @@ void AHealthPickUp::OnOverlapBegin(UPrimitiveComponent * OverlappedComponent, AA
 {
     if (OtherActor)
     {
-        APlayerCharacter* Player = Cast<APlayerCharacter>(OtherActor);
-        if (Player)
+        if (Role == ROLE_Authority)
         {
-			if (Player->AddHealth(HealAmount))
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green,
-					"AMyPickupActor::OnOverlapBegin Overlapped with - "
-					+ OtherActor->GetName());
+            ANetPlayerCharacter* Player = Cast<ANetPlayerCharacter>(OtherActor);
+            if (Player)
+            {
+                if (Player->AddHealth(HealAmount))
+                {
+                    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green,
+                        "AMyPickupActor::OnOverlapBegin Overlapped with - "
+                        + OtherActor->GetName());
 
-				Destroy();
-			}
+                    Destroy();
+                }
+            }
         }
-
     }
 }
