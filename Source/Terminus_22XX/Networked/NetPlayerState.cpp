@@ -4,6 +4,10 @@
 #include "Net/UnrealNetwork.h"
 
 
+float ANetPlayerState::GetRemainingHealth()
+{
+	return CurrentHealth / MaxHealth;
+}
 
 void ANetPlayerState::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
 {
@@ -11,4 +15,6 @@ void ANetPlayerState::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & O
     DOREPLIFETIME(ANetPlayerState, CurrentCheckpointID);
     DOREPLIFETIME(ANetPlayerState, CurrentGuns);
     DOREPLIFETIME(ANetPlayerState, CurrentHealth);
+	DOREPLIFETIME(ANetPlayerState, MaxHealth);
+	DOREPLIFETIME(ANetPlayerState, PlayerScore);
 }

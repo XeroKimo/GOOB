@@ -4,6 +4,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/CapsuleShieldComponent.h"
+#include "Networked/NetPlayerCharacter.h"
+#include "GameFramework/Controller.h"
 
 
 // Sets default values
@@ -53,7 +55,14 @@ void AEnemy::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageTyp
     EnemyHealth -= Damage;
     //GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Blue, "Health - " + FString::FromInt(EnemyHealth));
 	if (EnemyHealth < 0)
+	{
+		if (InstigatedBy->GetPawn())
+		{
+			if (ANetPlayerCharacter* character = Cast<ANetPlayerCharacter>(InstigatedBy->GetPawn()))
+				character->ServerAddScore(ScoreValue);
+		}
 		Destroy();
+	}
 }
 
 void AEnemy::MoveToNextPatrolPoint()

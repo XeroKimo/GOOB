@@ -205,6 +205,9 @@ public:
     UFUNCTION(Server, Reliable, WithValidation)
         void ServerRespawn();
 
+	UFUNCTION(Server, Reliable, WithValidation)
+		void ServerAddScore(int Score);
+
 private:
 	UFUNCTION(Server,Reliable,WithValidation)
 	void ServerAttachNewWeapon(class ANetBaseGun* nextGun);

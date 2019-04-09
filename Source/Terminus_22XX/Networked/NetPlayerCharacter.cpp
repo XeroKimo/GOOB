@@ -462,8 +462,11 @@ void ANetPlayerCharacter::SwitchToRailgun()
 
 void ANetPlayerCharacter::LogIn()
 {
-    if (Role == ROLE_Authority)
-        GetGameState()->ConnectedPlayers.Add(PlayerState);
+	if (Role == ROLE_Authority)
+	{
+		GetGameState()->ConnectedPlayers.Add(PlayerState);
+		GetPlayerState()->MaxHealth = MaxHealth;
+	}
 }
 
 void ANetPlayerCharacter::Respawn()
@@ -487,6 +490,7 @@ void ANetPlayerCharacter::SetPlayerState(APlayerState * state)
 {
     PlayerState = state;
     TArray<ANetBaseGun*> guns = GetPlayerState()->CurrentGuns;
+	GetPlayerState()->CurrentGuns.Empty();
     for (int i = 0; i < guns.Num(); i++)
     {
         AddWeaponToInventory(guns[i]);
@@ -513,6 +517,35 @@ ATerminus_22XX_GameState* ANetPlayerCharacter::GetGameState()
     return Cast<ATerminus_22XX_GameState>(GetWorld()->GetGameState());
 }
 
+void ANetPlayerCharacter::ServerRespawn_Implementation()
+{
+	Respawn();
+}
+bool ANetPlayerCharacter::ServerRespawn_Validate()
+{
+	return true;
+}
+
+void ANetPlayerCharacter::ServerPlaySound_Implementation(USoundBase * soundClip)
+{
+	NetMulticastPlaySound(soundClip);
+}
+
+bool ANetPlayerCharacter::ServerPlaySound_Validate(USoundBase * soundClip)
+{
+	return true;
+}
+
+void ANetPlayerCharacter::ServerAddScore_Implementation(int Score)
+{
+	GetPlayerState()->PlayerScore += Score;
+}
+
+bool ANetPlayerCharacter::ServerAddScore_Validate(int Score)
+{
+	return true;
+}
+
 void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
 {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
@@ -521,23 +554,4 @@ void ANetPlayerCharacter::GetLifetimeReplicatedProps(TArray < FLifetimeProperty 
     DOREPLIFETIME_CONDITION(ANetPlayerCharacter, StoredSpeedBeforeJump, COND_OwnerOnly);
     DOREPLIFETIME(ANetPlayerCharacter, CurrentWeapon);
 
-}
-
-void ANetPlayerCharacter::ServerRespawn_Implementation()
-{
-    Respawn();
-}
-bool ANetPlayerCharacter::ServerRespawn_Validate()
-{
-    return true;
-}
-
-void ANetPlayerCharacter::ServerPlaySound_Implementation(USoundBase * soundClip)
-{
-    NetMulticastPlaySound(soundClip);
-}
-
-bool ANetPlayerCharacter::ServerPlaySound_Validate(USoundBase * soundClip)
-{
-    return true;
 }

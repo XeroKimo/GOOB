@@ -21,6 +21,8 @@ private:
     UPROPERTY(Category = "Status", EditAnywhere)
         float EnemyHealth = 0;
 
+	UPROPERTY(Category = "Score", EditAnywhere)
+		float ScoreValue = 300;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

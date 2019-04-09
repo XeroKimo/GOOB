@@ -27,4 +27,12 @@ public:
 
     int StartingPointID;
 
+	UPROPERTY(BlueprintReadOnly, Replicated)
+		float MaxHealth;
+
+	UPROPERTY(BlueprintReadOnly, Replicated)
+		int PlayerScore = 0;
+
+	UFUNCTION(BlueprintCallable)
+		float GetRemainingHealth();
 };
