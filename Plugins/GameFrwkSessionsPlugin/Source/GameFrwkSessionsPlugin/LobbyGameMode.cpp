@@ -46,11 +46,11 @@ void ALobbyGameMode::StartGame()
 	UWorld* World = GetWorld();
 	if (!ensure(World != nullptr)) return;
     /** Whether the game perform map travels using SeamlessTravel() which loads in the background and doesn't disconnect clients */
-	bUseSeamlessTravel = true;
+	//bUseSeamlessTravel = true;
 	
     /*We are hosting the game and load the map in listen mode*/
     //CALL ServerTravel() on the World and pass in "/Game/Levels/Sandbox/TestMap?listen"
     World->ServerTravel("/Game/Levels/Terminus_22XX?listen");
     //World->ServerTravel("/Game/Levels/Sandbox/LV_Sandbox?listen");
-    //World->SeamlessTravel("/Game/Levels/Sandbox/TestMap?listen", true);
+    //World->SeamlessTravel("/Game/Levels/Terminus_22XX?listen", true);
 }

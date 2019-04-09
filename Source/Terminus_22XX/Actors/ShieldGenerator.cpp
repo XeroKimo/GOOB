@@ -4,6 +4,7 @@
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/ShieldComponent.h"
+#include "GameFramework/Controller.h"
 #include "Net/UnrealNetwork.h"
 
 
@@ -23,19 +24,27 @@ AShieldGenerator::AShieldGenerator()
 	GeneratorMesh->SetCollisionProfileName("NoCollision");
 	GeneratorMesh->SetupAttachment(RootComponent);
 
+    GeneratorMesh->SetIsReplicated(true);
 
 	bCanBeDamaged = true;
 
 	OnTakeAnyDamage.AddDynamic(this, &AShieldGenerator::TakeAnyDamage);
 
-
+    SetReplicates(true);
 }
 
 // Called when the game starts or when spawned
 void AShieldGenerator::BeginPlay()
 {
 	Super::BeginPlay();
-	
+    if (GeneratorIsActive)
+    {
+        GeneratorMesh->SetMaterial(0, AliveMaterial);
+    }
+    else
+    {
+        GeneratorMesh->SetMaterial(0, DeadMaterial);
+    }
 }
 
 // Called every frame
@@ -55,6 +64,7 @@ void AShieldGenerator::AddShield(UShieldComponent* Shield)
 void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
 	//if (DamageCauser->ActorHasTag("ShotgunBullet"))
+    if (DamageCauser->GetOwner()->ActorHasTag("Player"))
 	{
 		if (GeneratorIsActive)
 		{
@@ -65,6 +75,7 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 				if (GeneratorHealth <= 0)
 				{
 					GeneratorIsActive = false;
+                    NetMulicastChangeMaterial(DeadMaterial);
 					for (UShieldComponent* shield : PointersToShields)
 						shield->ServerDecrementActiveGenerators();
 				}
@@ -77,11 +88,18 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 	}
 }
 
+void AShieldGenerator::NetMulicastChangeMaterial_Implementation(UMaterialInterface * material)
+{
+    GeneratorMesh->SetMaterial(0, material);
+}
+
 
 void AShieldGenerator::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const
 {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     DOREPLIFETIME(AShieldGenerator, GeneratorHealth);
     DOREPLIFETIME(AShieldGenerator, GeneratorIsActive);
+    DOREPLIFETIME(AShieldGenerator, AliveMaterial);
+    DOREPLIFETIME(AShieldGenerator, DeadMaterial);
 
 }

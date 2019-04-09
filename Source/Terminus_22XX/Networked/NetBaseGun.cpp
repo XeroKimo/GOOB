@@ -183,6 +183,11 @@ void ANetBaseGun::Reload()
 	IsReloading = false;
 }
 
+void ANetBaseGun::ClientFullStop_Implementation()
+{
+    FullStop();
+}
+
 void ANetBaseGun::NetMulticastFireSound_Implementation()
 {
 	if (ShootingSound)
