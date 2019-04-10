@@ -17,8 +17,10 @@ ANetBaseGun::ANetBaseGun()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+
 	GunMesh = CreateDefaultSubobject<UStaticMeshComponent>("Gun Mesh");
 	GunMesh->SetupAttachment(RootComponent);
+    GunMesh->bOnlyOwnerSee = true;
 	GunMesh->SetCollisionProfileName("NoCollision");
 
 	GunMuzzleLocation = CreateDefaultSubobject<UArrowComponent>("Muzzle Location");

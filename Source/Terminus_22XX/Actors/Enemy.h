@@ -30,7 +30,7 @@ protected:
     UPROPERTY(VisibleAnywhere, Category = "Mesh")
         class UStaticMeshComponent* EnemyMesh;
 
-    UPROPERTY(EditAnywhere, Category = "HitBox")
+    UPROPERTY(VisibleAnywhere, Category = "HitBox")
         class UCapsuleComponent* HitBox;
 
 	UPROPERTY(VisibleAnywhere, Category = "Shield")
