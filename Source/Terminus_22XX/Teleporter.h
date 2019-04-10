@@ -30,6 +30,7 @@ protected:
     UFUNCTION()
         void OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
+	//Teleports the actor
     UFUNCTION(Server, Reliable, WithValidation)
         void ServerMoveActor();
 

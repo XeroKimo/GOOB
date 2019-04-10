@@ -3,7 +3,6 @@
 #include "PickUpActor.h"
 #include "Components/SphereComponent.h"
 
-#include "PlayerCharacter.h"
 // Sets default values
 APickUpActor::APickUpActor()
 {
@@ -19,7 +18,6 @@ APickUpActor::APickUpActor()
 
     SphereCollision->SetSimulatePhysics(false);
 
-   // SphereCollision->OverlapComponent.Dynamic(this, &APickUpActor::OnOverlapBegin);
 
     Tags.Add("Pickup");
 }

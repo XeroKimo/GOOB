@@ -5,6 +5,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "Guns/BaseBullet.h"
 
+//A shield component with a capsule collider
 UCapsuleShieldComponent::UCapsuleShieldComponent()
 {
 	CapsuleCollider = CreateDefaultSubobject<UCapsuleComponent>("Shield Hitbox");
@@ -28,23 +29,7 @@ void UCapsuleShieldComponent::DisableShieldCollisions()
     UShieldComponent::DisableShieldCollisions();
 	CapsuleCollider->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 }
-void UCapsuleShieldComponent::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
-{
-	if (DamageCauser->ActorHasTag("Bullet"))
-	{
-		if (CanBeDestroyed && IsShieldActive)
-		{
-			ABaseBullet* bullet = Cast<ABaseBullet>(DamageCauser);
-			CurrentShieldHealth -= bullet->BulletDamage;
-			if (CurrentShieldHealth < 0.f)
-			{
-				CurrentShieldHealth = 0.f;
-				IsShieldActive = false;
-				DisableShieldCollisions();
-			}
-		}
-	}
-}
+
 void UCapsuleShieldComponent::BeginPlay()
 {
 	UShieldComponent::BeginPlay();

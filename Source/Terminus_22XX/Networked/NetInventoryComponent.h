@@ -39,7 +39,7 @@ public:
 	ANetBaseGun* GetCurrentWeapon() { return Weapons[CurrentWeaponIndex]; }
 private:
 	void SwitchWeapon(int newIndex);
-	bool WeaponExists(int index) { return Weapons[index] != nullptr; }
+	bool WeaponExists(int index);
 
 private:
     UPROPERTY(Replicated)

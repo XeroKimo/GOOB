@@ -2,6 +2,7 @@
 
 #include "T22XX_Shotgun.h"
 
+//Default values for shotgun
 AT22XX_Shotgun::AT22XX_Shotgun()
 {
 	CurrentAmmoCount = MaxAmmoCount = 6;

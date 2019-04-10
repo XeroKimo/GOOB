@@ -41,8 +41,10 @@ AEnemy::AEnemy()
 void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
+	//If the enemy can patrol between 2 points
     if (bPatrol)
     {
+		//Move to next patrol point
         MoveToNextPatrolPoint();
     }
     
@@ -73,8 +75,10 @@ void AEnemy::MoveToNextPatrolPoint()
     //GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green, "MoveToNextPatrolPoint - ");
     // Assign next patrol point.
 
+	//If we have no current patrol point, or moving towards the second
     if (CurrentPatrolPoint == nullptr || CurrentPatrolPoint == SecondPatrolPoint)
     {
+		//Current patrol point will be the first
         CurrentPatrolPoint = FirstPatrolPoint;
 
     }

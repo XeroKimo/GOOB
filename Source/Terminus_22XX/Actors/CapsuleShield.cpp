@@ -5,6 +5,7 @@
 #include "Components/CapsuleComponent.h"
 
 
+//A actor with a capsule shield
 // Sets default values
 ACapsuleShield::ACapsuleShield()
 {

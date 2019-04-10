@@ -1,13 +1,11 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Terminus_22XXGameModeBase.h"
-#include "Actors/PlayerCharacter.h"
 #include "Networked/NetPlayerCharacter.h"
 #include "Networked/NetBaseGun.h"
 #include "Networked/NetPlayerState.h"
 #include "Terminus_22XX_GameState.h"
 #include "Checkpoint.h"
-#include "Guns/BaseGun.h"
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
 

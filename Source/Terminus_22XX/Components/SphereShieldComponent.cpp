@@ -4,6 +4,7 @@
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
 
+//A shield component with a sphere collider
 USphereShieldComponent::USphereShieldComponent()
 {
 	SphereCollider = CreateDefaultSubobject<USphereComponent>("Shield Hitbox");

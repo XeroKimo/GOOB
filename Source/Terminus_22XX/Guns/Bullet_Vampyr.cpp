@@ -2,7 +2,7 @@
 
 #include "Bullet_Vampyr.h"
 
-
+//Customized bullets for the vampyr
 ABullet_Vampyr::ABullet_Vampyr()
 {
 	Tags.Add("VampyrBullets");

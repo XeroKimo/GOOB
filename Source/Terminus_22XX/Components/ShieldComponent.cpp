@@ -26,13 +26,17 @@ void UShieldComponent::BeginPlay()
 
 	//if (GetOwnerRole() == ROLE_Authority)
 	//{
+		//Search for every generator in it's array
 		for (AShieldGenerator* generator : ArrayOfShieldGenerators)
 		{
+			//Make the generator keep track of this shield
 			generator->AddShield(this);
+			//If the generator is alive, increment our counter
 			if (generator->GetGeneratorIsActive())
 				ShieldGeneratorsAlive++;
 		}
 		OnRep_Generators();
+		//If there are any generators alive, this shield will be active
 		if (ShieldGeneratorsAlive > 0)
 			IsShieldActive = true;
 	//}
@@ -51,17 +55,21 @@ void UShieldComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 void UShieldComponent::ComponentHit(UPrimitiveComponent * HitComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const FHitResult & Hit)
 {
+	//If the actor is a bullet
 	if (OtherActor->ActorHasTag("Bullet"))
 	{
 		ABaseBullet* bullet = Cast<ABaseBullet>(OtherActor);
-		if (CanBeDestroyed && IsShieldActive)
+		//If we allow this shield to be destroyed via shooting
+		if (CanBeDestroyedByShooting && IsShieldActive)
 		{
+			//Lower shield health
 			CurrentShieldHealth -= bullet->BulletDamage;
 			if (CurrentShieldHealth < 0.f)
 			{
+				//If we have no health left, disable the shield
 				CurrentShieldHealth = 0.f;
 				IsShieldActive = false;
-				DisableShieldCollisions();
+				NetMulticastDisableShieldCollisions();
 			}
 		}
 	}
@@ -69,10 +77,13 @@ void UShieldComponent::ComponentHit(UPrimitiveComponent * HitComp, AActor * Othe
 
 void UShieldComponent::DecrementActiveGenerators()
 {
+	//Made to be called by a generator
 	if (ShieldGeneratorsAlive > 0)
 	{
+		//Decrement the amount of generators the shield knows alive
 		ShieldGeneratorsAlive--;
 		OnRep_Generators();
+		//If we have no generators alive left, disable this shield
 		IsShieldActive = (ShieldGeneratorsAlive > 0) ? true : false;
 		if (!IsShieldActive)
 			NetMulticastDisableShieldCollisions();

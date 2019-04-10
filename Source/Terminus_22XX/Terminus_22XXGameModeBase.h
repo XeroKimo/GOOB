@@ -21,7 +21,6 @@ public:
 
     UFUNCTION(Server, Reliable, WithValidation)
     void SpawnStartingWeapons(class ANetPlayerCharacter* character);
-    //void SpawnStartingWeapons(class APlayerCharacter* character);
 private:
 	UPROPERTY(EditAnywhere)
 		TArray<TSubclassOf<class ANetBaseGun>> StartingWeapons;

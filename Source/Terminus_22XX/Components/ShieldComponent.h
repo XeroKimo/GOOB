@@ -61,7 +61,7 @@ protected:
 		float CurrentShieldHealth = 100.f;
 
 	UPROPERTY(VisibleAnywhere, Category = "Shield")
-		bool CanBeDestroyed = false;
+		bool CanBeDestroyedByShooting = false;
 
 	FCollisionResponseContainer EnabledCollisions;
 };

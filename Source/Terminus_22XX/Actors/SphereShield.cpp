@@ -4,6 +4,7 @@
 #include "Components/SphereShieldComponent.h"
 #include "Components/SphereComponent.h"
 
+//A actor with a sphere shield
 // Sets default values
 ASphereShield::ASphereShield()
 {

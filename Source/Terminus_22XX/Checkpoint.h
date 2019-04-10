@@ -22,7 +22,8 @@ public:
 	//Players will spawn at a checkpoint with a corresponding ID
     UPROPERTY(EditInstanceOnly, Category = "ID")
         int CheckpointID = 0;
-
+	//Indicate if this is the last checkpoint
+	//To start the boss countdown
 	UPROPERTY(EditInstanceOnly, Category = "ID")
 		bool FinalCheckpoint;
 

@@ -14,13 +14,15 @@ ATerminus_22XX_GameState::ATerminus_22XX_GameState()
 
 void ATerminus_22XX_GameState::Tick(float deltaTime)
 {
-	//Update time pass since game start
 	if (Role == ROLE_Authority)
 	{
+		//Update time pass since game start
 		if (IsMatchInProgress())
 			CurrentGameTime += deltaTime;
+		//Start the final count down for the game to end
 		if (StartBossCountDown)
 			BossCountdown -= deltaTime;
+		//End the game when boss count down has reached 0
 		if (BossCountdown <= 0.f)
 		{
 			Cast<AGameMode>(GetWorld()->GetAuthGameMode())->EndMatch();
@@ -33,6 +35,7 @@ void ATerminus_22XX_GameState::HandleMatchHasEnded()
 {
 	for (int i = 0; i < ConnectedPlayers.Num(); i++)
 	{
+		//Calculate the final time for each player by subtracting score from time
 		ANetPlayerState* playerState = Cast < ANetPlayerState>(ConnectedPlayers[i]);
 		playerState->TimeWhenBossReached -= playerState->Score;
 	}

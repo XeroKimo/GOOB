@@ -39,11 +39,11 @@ void AShieldGenerator::BeginPlay()
 	Super::BeginPlay();
     if (GeneratorIsActive)
     {
-        GeneratorMesh->SetMaterial(0, AliveMaterial);
+		NetMulicastChangeMaterial(AliveMaterial);
     }
     else
     {
-        GeneratorMesh->SetMaterial(0, DeadMaterial);
+		NetMulicastChangeMaterial(DeadMaterial);
     }
 }
 
@@ -64,6 +64,7 @@ void AShieldGenerator::AddShield(UShieldComponent* Shield)
 void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
 	//if (DamageCauser->ActorHasTag("ShotgunBullet"))
+	//If the damage was done by a player
     if (DamageCauser->GetOwner()->ActorHasTag("Player"))
 	{
 		if (GeneratorIsActive)
@@ -71,11 +72,17 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 			if (Role == ROLE_Authority)
 			{
 				//GEngine->AddOnScreenDebugMessage(-1, 3, FColor::Green, "Damage Received - " + FString::FromInt(Damage));
+				//Take damage
 				GeneratorHealth -= Damage;
+				//If we have no health left
 				if (GeneratorHealth <= 0)
 				{
+					//Generator is no longer active
 					GeneratorIsActive = false;
+					//Change the material to our dead one
                     NetMulicastChangeMaterial(DeadMaterial);
+					//Tell all shield components that are pointed to this
+					//To reduce the amount of active generators
 					for (UShieldComponent* shield : PointersToShields)
 						shield->ServerDecrementActiveGenerators();
 				}

@@ -4,6 +4,7 @@
 #include "Components/BoxComponent.h"
 #include "Components/StaticMeshComponent.h"
 
+//A shield component with a box collider
 UBoxShieldComponent::UBoxShieldComponent()
 {
 	BoxCollider = CreateDefaultSubobject<UBoxComponent>("Shield Hitbox");

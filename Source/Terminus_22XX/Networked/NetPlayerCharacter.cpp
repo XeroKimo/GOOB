@@ -59,8 +59,9 @@ ANetPlayerCharacter::ANetPlayerCharacter()
 void ANetPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-    //Get the first weapon in the inventory and attach to player
+	//Debug function
 	//ServerSpawnGuns();
+    //Get the first weapon in the inventory and attach to player
 	ServerAttachNewWeapon( WeaponInventory->GetAWeapon());
 }
 
@@ -326,6 +327,7 @@ bool ANetPlayerCharacter::ServerCameraUpdateRotation_Validate(FRotator rot)
 	return true;
 }
 
+//Debug function
 void ANetPlayerCharacter::ServerSpawnGuns_Implementation()
 {
     if (GetWorld())
@@ -495,6 +497,8 @@ bool ANetPlayerCharacter::AddHealth(float Amount)
 {
     //If the character is already at max health
     //Don't add and health
+	if (!GetPlayerState())
+		return false;
     if (GetPlayerState()->CurrentHealth >= MaxHealth)
         return false;
 
@@ -651,12 +655,16 @@ void ANetPlayerCharacter::PlayerReachedFinale()
 {
 	for (int i = 0; i < GetGameState()->ConnectedPlayers.Num(); i++)
 	{
+		//Find the matching player state in the game state
 		if (GetGameState()->ConnectedPlayers[i] == PlayerState)
 		{
 			if (!GetGameState()->PlayerReachedBoss[i])
 			{
+				//Tell gamestate that the player has successfully reached the boss
 				GetGameState()->PlayerReachedBoss[i] = true;
+				//Start the boss countdown
 				GetGameState()->StartBossCountDown = true;
+				//Record the time they reached the boss
 				GetPlayerState()->TimeWhenBossReached = GetGameState()->CurrentGameTime;
 			}
 		}

@@ -3,7 +3,7 @@
 #include "Bullet_Railgun.h"
 
 
-
+//Customized bullets for the railgun
 ABullet_Railgun::ABullet_Railgun()
 {
 	Tags.Add("RailgunBullets");

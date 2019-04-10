@@ -65,13 +65,8 @@ public:
 		class ANetPlayerState* GetPlayerState();
     class ATerminus_22XX_GameState* GetGameState();
 
-    //UFUNCTION(Client,Reliable)
-    //bool AddWeaponToInventory(class ANetBaseGun* AGun);
-
 	bool AddHealth(float Amount);
 	bool AddWeaponToInventory(class ANetBaseGun* AGun);
-	//UFUNCTION(BlueprintCallable, Category = "Status")
-	//	float GetHealthPercentage();
 
 	UFUNCTION()
 		void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
@@ -107,7 +102,7 @@ public:
 	UPROPERTY(Category = "Movement", EditAnywhere)
 		float WeakenedGravityScale = 0.05f;
 
-	//This is a multiplier, taking the power being JumpVelocity * JumpForce * MaxSuperJumpPowerScale
+	//This is a multiplier, taking the power being JumpZVelocity * MaxSuperJumpPowerScale
 	UPROPERTY(Category = "Movement", EditAnywhere)
 		float MaxSuperJumpPowerScale = 2.0f;
 
@@ -125,9 +120,6 @@ public:
 	//How much time it takes for super jump to reach max power
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
 		float MaxPowerSuperJumpTime = 0.5f;
-
-	///UPROPERTY(BlueprintReadWrite, Category = "Status", EditAnywhere)
-	///	float CurrentHealth;
 
 	UPROPERTY(Category = "Weapon", EditAnywhere)
 		bool EnableWeaponScrolling = true;
@@ -178,9 +170,12 @@ private:
 	UPROPERTY(Replicated)
 		float StoredSpeedBeforeJump;
 
+	//Update the camera's rotation in the server
+	//To match client side's rotation
 	UFUNCTION(Server, Reliable, WithValidation)
 		void ServerCameraUpdateRotation(FRotator rot);
 
+	//Debug function, delete later
     UFUNCTION(Server, Reliable, WithValidation)
         void ServerSpawnGuns();
 public:

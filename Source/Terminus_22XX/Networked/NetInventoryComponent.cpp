@@ -42,6 +42,8 @@ void UNetInventoryComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 
 ANetBaseGun * UNetInventoryComponent::GetAWeapon()
 {
+	//Return the first weapon that exists
+	//In the invetory
 	for (int i = 0; i < GN_Max; i++)
 	{
 		if (WeaponExists(i))
@@ -50,18 +52,19 @@ ANetBaseGun * UNetInventoryComponent::GetAWeapon()
 			return Weapons[i];
 		}
 	}
+	//If we can't find one, return null
 	return nullptr;
 }
 
 ANetBaseGun * UNetInventoryComponent::NextWeapon()
 {
-	SwitchWeapon((CurrentWeaponIndex + 1) % 3);
+	SwitchWeapon((CurrentWeaponIndex + 1) % GN_Max);
 	return Weapons[CurrentWeaponIndex];
 }
 
 ANetBaseGun * UNetInventoryComponent::PreviousWeapon()
 {
-	SwitchWeapon((CurrentWeaponIndex - 1 < 0) ? 2 : CurrentWeaponIndex - 1);
+	SwitchWeapon((CurrentWeaponIndex - 1 < 0) ? GN_Max - 1 : CurrentWeaponIndex - 1);
 	return Weapons[CurrentWeaponIndex];
 }
 
@@ -91,13 +94,19 @@ ANetBaseGun * UNetInventoryComponent::GetRailgun()
 
 bool UNetInventoryComponent::AddWeapon(ANetBaseGun * AGun)
 {
+	//Only add weapons if we are in role authority
 	if (GetOwnerRole() == ROLE_Authority)
 	{
+		//Check if the gun isn't null
 		if (AGun)
 		{
+			//Get the gun's weapon index
 			int gunIndex = AGun->GetWeaponIndex();
+			//See if it exists
 			bool exists = WeaponExists(gunIndex);
+			//If it exists, do nothing, else add it to the inventory
 			Weapons[gunIndex] = (exists) ? Weapons[gunIndex] : AGun;
+			//return Not Exists
 			return !exists;
 		}
 	}
@@ -106,10 +115,15 @@ bool UNetInventoryComponent::AddWeapon(ANetBaseGun * AGun)
 
 void UNetInventoryComponent::SwitchWeapon(int newIndex)
 {
-	int oldWeaponIndex = CurrentWeaponIndex;
-	CurrentWeaponIndex = newIndex;
-	if (!WeaponExists(CurrentWeaponIndex))
-		CurrentWeaponIndex = oldWeaponIndex;
+	//Check if the weapon exists before switching gunss
+	if (WeaponExists(newIndex))
+		CurrentWeaponIndex = newIndex;
+}
+
+bool UNetInventoryComponent::WeaponExists(int index)
+{
+	//Sees if weapons exists
+	return Weapons[index] != nullptr; 
 }
 
 void UNetInventoryComponent::GetLifetimeReplicatedProps(TArray < FLifetimeProperty > & OutLifetimeProps) const

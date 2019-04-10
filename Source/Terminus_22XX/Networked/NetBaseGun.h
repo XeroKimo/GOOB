@@ -4,25 +4,24 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Guns/BaseGun.h"
 #include "NetBaseGun.generated.h"
 
-//UENUM(BlueprintType)
-//enum class EFireStyle : uint8
-//{
-//	FS_Single UMETA(DisplayName = "Single"),
-//	FS_Burst UMETA(DisplayName = "Burst"),
-//	FS_FullAuto UMETA(DisplayName = "Auto"),
-//};
-//
-//UENUM(BlueprintType)
-//enum EGunName
-//{
-//	GN_Shotgun = 0,
-//	GN_Vampyr,
-//	GN_Railgun,
-//	GN_Max,
-//};
+UENUM(BlueprintType)
+enum class EFireStyle : uint8
+{
+	FS_Single UMETA(DisplayName = "Single"),
+	FS_Burst UMETA(DisplayName = "Burst"),
+	FS_FullAuto UMETA(DisplayName = "Auto"),
+};
+
+UENUM(BlueprintType)
+enum EGunName
+{
+	GN_Shotgun = 0,
+	GN_Vampyr,
+	GN_Railgun,
+	GN_Max,
+};
 
 UCLASS()
 class TERMINUS_22XX_API ANetBaseGun : public AActor
@@ -41,47 +40,59 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-public:
+protected:
+	//The style of shooting
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		EFireStyle FireStyle = EFireStyle::FS_Single;
+	//How much damage the bullet does
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		float BulletDamage = 0;
+	//The randomness in spread in a cone when spawning bullets
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		float BulletSpread = 0;
 
+	//How many bullets have been shot this round of burst
 	int BurstCounter;
+	//How many bullets will shoot per burst
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		int MaxBurstCount = 3;
+	//How many pellets will spawn when firing
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		int PelletCount = 1;
 
+	//How fast a gun will shoot in round per minute
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		int FireRate = 60;
+	//An extra delay after a round of burst shots were complete
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		float AdditionalBurstDelay = 0.f;
+	//How long it'll take to reload in seconds
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		float ReloadRate = 1.f;
 
 	bool IsTriggerPulled = false;
 	bool WasTriggerPulled = false;
 	bool IsReloading = false;
+	//A boolean so that a gun does not need to reload
 	UPROPERTY(Category = "Weapon Config", EditAnywhere)
 		bool InfiniteClip = false;
+	//Prevents the gun from shooting faster than intended
 	bool CanFire = true;
 
+	//The bullet that will spawn
 	UPROPERTY(Category = "Ammo Config", EditAnywhere)
-		TSubclassOf<ABaseBullet> BulletClass;
+		TSubclassOf<class ABaseBullet> BulletClass;
 
     UPROPERTY(EditAnywhere)
         class USoundBase* ShootingSound;
 public:
 	UPROPERTY(Category = "Ammo Config", EditAnywhere, Replicated)
 		int MaxAmmoCount = 0;
-	UPROPERTY(Category = "Ammo Config", EditAnywhere, Replicated)
+	UPROPERTY(Category = "Ammo Config", EditAnywhere, Replicated, BlueprintReadOnly)
 		int CurrentAmmoCount = 0;
 	UPROPERTY(Category = "Ammo Config", EditAnywhere, Replicated)
 		int MaxAmmoStock = 0;
-	UPROPERTY(Category = "Ammo Config", EditAnywhere, Replicated)
+	UPROPERTY(Category = "Ammo Config", EditAnywhere, Replicated, BlueprintReadOnly)
 		int CurrentAmmoStock = 0;
 
 

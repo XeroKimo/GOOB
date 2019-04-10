@@ -35,17 +35,20 @@ void AHealthPickUp::OnOverlapBegin(UPrimitiveComponent * OverlappedComponent, AA
 {
     if (OtherActor)
     {
+		//Do collision on server
         if (Role == ROLE_Authority)
         {
             ANetPlayerCharacter* Player = Cast<ANetPlayerCharacter>(OtherActor);
             if (Player)
             {
+				//If the player heals
                 if (Player->AddHealth(HealAmount))
                 {
-                    GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green,
+                    /*GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Green,
                         "AMyPickupActor::OnOverlapBegin Overlapped with - "
-                        + OtherActor->GetName());
+                        + OtherActor->GetName());*/
 
+					//Destroy
                     Destroy();
                 }
             }

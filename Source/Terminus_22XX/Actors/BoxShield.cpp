@@ -4,6 +4,7 @@
 #include "Components/BoxShieldComponent.h"
 #include "Components/BoxComponent.h"
 
+//A actor with a box shield
 // Sets default values
 ABoxShield::ABoxShield()
 {

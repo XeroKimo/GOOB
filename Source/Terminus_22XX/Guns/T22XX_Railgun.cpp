@@ -2,6 +2,7 @@
 
 #include "T22XX_Railgun.h"
 
+//Default values for the railgun
 AT22XX_Railgun::AT22XX_Railgun()
 {
 	CurrentAmmoCount = MaxAmmoCount = 100;

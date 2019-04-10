@@ -2,6 +2,7 @@
 
 #include "T22XX_Vampyr.h"
 
+//Default values for the vampyr
 AT22XX_Vampyr::AT22XX_Vampyr()
 {
 	FireStyle = EFireStyle::FS_FullAuto;

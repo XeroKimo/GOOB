@@ -1,7 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BaseBullet.h"
-#include "BaseGun.h"
 #include "Networked/NetBaseGun.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -84,20 +83,24 @@ void ABaseBullet::NetMulticastSetBulletDirection_Implementation(FVector Directio
 
 void ABaseBullet::ComponentHit(class UPrimitiveComponent* HitComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
+	//Make sure the other actor exists, and is not our owner
 	if (OtherActor != nullptr && OtherActor != this && OtherComp != nullptr && OtherActor != GetOwner())
 	{
+		//Do collision on the server
         if (Role == ROLE_Authority)
         {
             FDamageEvent DamageEvent;
             OtherActor->TakeDamage(BulletDamage, DamageEvent, GetInstigatorController(), this);
         }
 	}
+	//Destroy the actor
     if (OtherActor != GetOwner())
 	    Destroy();
 }
 
 void ABaseBullet::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	//This is for player purposes as bullets get stuck on players, when aiming downwards
 	if (OtherActor != nullptr && OtherActor != this && OtherActor != GetOwner())
 	{
 		if (Role == ROLE_Authority)
