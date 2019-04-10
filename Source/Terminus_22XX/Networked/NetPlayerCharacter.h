@@ -124,17 +124,20 @@ public:
 	UPROPERTY(Category = "MovementTimer", EditAnywhere)
 		float MaxPowerSuperJumpTime = 0.5f;
 
-	UPROPERTY(Category = "Weapon", EditAnywhere)
-		bool EnableWeaponScrolling = true;
-
-	UPROPERTY(Category = "Weapon", EditAnywhere)
-		float WeaponSwitchLockout = 0.125f;
+    UPROPERTY(Category = "Weapon", EditAnywhere)
+        float WeaponSwitchLockout = 0.125f;
 
     UPROPERTY(Category = "Status", EditAnywhere)
         float RespawnDelay = 1.0f;
 
+	UPROPERTY(Category = "Weapon", EditAnywhere)
+		bool EnableWeaponScrolling = true;
+
 	UPROPERTY(BlueprintReadOnly)
 		FTimerHandle SuperJumpTimer;
+
+    UPROPERTY(Category = "Weapon", VisibleInstanceOnly, Replicated)
+        class ANetBaseGun* CurrentWeapon = nullptr;
 private:
 	UPROPERTY(Category = "Visual", VisibleDefaultsOnly)
 		class UCameraComponent* FirstPersonCamera;
@@ -159,20 +162,17 @@ private:
 	FTimerHandle SlowDescentTimer;
 	FTimerHandle WeaponSwitchTimer;
 
+    UPROPERTY(Replicated)
+        float StoredSpeedBeforeJump;
+
 protected:
 	class UNetInventoryComponent* WeaponInventory;
 
 	TEnumAsByte<MovementStatus> CurrentStatus;
 	TEnumAsByte<MovementStatus> PreviousStatus;
 
-public:
-	UPROPERTY(Category = "Weapon", VisibleInstanceOnly, Replicated)
-		class ANetBaseGun* CurrentWeapon = nullptr;
 
 private:
-	UPROPERTY(Replicated)
-		float StoredSpeedBeforeJump;
-
 	//Update the camera's rotation in the server
 	//To match client side's rotation
 	UFUNCTION(Server, Reliable, WithValidation)
@@ -219,7 +219,7 @@ public:
 
     //Add score to the player
 	UFUNCTION(Server, Reliable, WithValidation)
-		void ServerAddScore(int Score);
+		void ServerAddScore(float Score);
 
 private:
     //Attach the a weapon the player
