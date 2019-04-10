@@ -71,6 +71,9 @@ public:
 	UFUNCTION()
 		void TakeAnyDamage(AActor* DamagedActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
+    UFUNCTION(BlueprintCallable)
+        float GetSuperJumpChargePercent();
+
 	class USceneComponent* GetGunScene() { return GunLocation; }
 private:
 	void StoreCurrentSpeed();

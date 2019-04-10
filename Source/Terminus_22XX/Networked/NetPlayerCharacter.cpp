@@ -487,6 +487,14 @@ void ANetPlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, con
     }
 }
 
+float ANetPlayerCharacter::GetSuperJumpChargePercent()
+{
+    float timeElapsed = GetWorldTimerManager().GetTimerElapsed(SuperJumpTimer);
+    float maxTime = MaxPowerSuperJumpTime + SuperJumpTimerDelay;
+    float percent = timeElapsed / maxTime;
+    return (percent > 1.0f) ? 1.0f : percent;
+}
+
 void ANetPlayerCharacter::StoreCurrentSpeed()
 {
     //Store the current velocity of the player
