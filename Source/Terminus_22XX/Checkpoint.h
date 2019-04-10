@@ -23,6 +23,9 @@ public:
     UPROPERTY(EditInstanceOnly, Category = "ID")
         int CheckpointID = 0;
 
+	UPROPERTY(EditInstanceOnly, Category = "ID")
+		bool FinalCheckpoint;
+
 protected:
 	UPROPERTY(VisibleAnywhere, Category = "HitDetection")
 		class UBoxComponent* PlayerDetection;

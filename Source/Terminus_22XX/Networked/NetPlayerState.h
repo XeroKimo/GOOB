@@ -26,13 +26,13 @@ public:
     UPROPERTY(Replicated)
         TArray<class ANetBaseGun*> CurrentGuns;
     //The initial spawn point of a player
+	UPROPERTY(Replicated)
+		float TimeWhenBossReached;
+
     int StartingPointID;
     //The max health of the player
 	UPROPERTY(BlueprintReadOnly, Replicated)
 		float MaxHealth;
-    //The player score
-	UPROPERTY(BlueprintReadOnly, Replicated)
-		int PlayerScore = 0;
     //Return a %value of the player's remaining health
 	UFUNCTION(BlueprintCallable)
 		float GetRemainingHealth();

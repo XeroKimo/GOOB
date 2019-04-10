@@ -22,7 +22,7 @@ private:
         float EnemyHealth = 0;
 
 	UPROPERTY(Category = "Score", EditAnywhere)
-		float ScoreValue = 300;
+		float ScoreValue = 2.0f;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

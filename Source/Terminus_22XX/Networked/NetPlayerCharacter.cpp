@@ -590,6 +590,7 @@ void ANetPlayerCharacter::LogIn()
 	{
         //Make the game state keep track of players
 		GetGameState()->ConnectedPlayers.Add(PlayerState);
+		GetGameState()->PlayerReachedBoss.Add(false);
         //Set the player state's max health to the actor's max health
 		GetPlayerState()->MaxHealth = MaxHealth;
         GetPlayerState()->CurrentHealth = MaxHealth;
@@ -646,6 +647,22 @@ void ANetPlayerCharacter::SetActiveCheckpoint(int CheckpointID)
 	}
 }
 
+void ANetPlayerCharacter::PlayerReachedFinale()
+{
+	for (int i = 0; i < GetGameState()->ConnectedPlayers.Num(); i++)
+	{
+		if (GetGameState()->ConnectedPlayers[i] == PlayerState)
+		{
+			if (!GetGameState()->PlayerReachedBoss[i])
+			{
+				GetGameState()->PlayerReachedBoss[i] = true;
+				GetGameState()->StartBossCountDown = true;
+				GetPlayerState()->TimeWhenBossReached = GetGameState()->CurrentGameTime;
+			}
+		}
+	}
+}
+
 ANetPlayerState * ANetPlayerCharacter::GetPlayerState()
 {
     //Get the Player state
@@ -680,7 +697,7 @@ bool ANetPlayerCharacter::ServerPlaySound_Validate(USoundBase * soundClip)
 void ANetPlayerCharacter::ServerAddScore_Implementation(int Score)
 {
     //Increase the player score
-	GetPlayerState()->PlayerScore += Score;
+	PlayerState->Score += Score;
 }
 
 bool ANetPlayerCharacter::ServerAddScore_Validate(int Score)

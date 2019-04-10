@@ -21,6 +21,12 @@ void ACheckpoint::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 	{
 		//Update the players current checkpoint
 		if (Role == ROLE_Authority)
+		{
 			player->SetActiveCheckpoint(CheckpointID);
+			if (FinalCheckpoint)
+			{
+				player->PlayerReachedFinale();
+			}
+		}
 	}
 }

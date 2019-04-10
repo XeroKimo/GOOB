@@ -17,16 +17,19 @@ class TERMINUS_22XX_API ATerminus_22XX_GameState : public AGameState
 public:
     ATerminus_22XX_GameState();
 
-    void BeginPlay() override;
     void Tick(float deltaTime) override;
-	
-private:
-    void UpdateCurrentTime();
 
+protected:
+	void HandleMatchHasEnded() override;
 public:
     UPROPERTY(BlueprintReadOnly, Replicated)
         TArray<APlayerState*> ConnectedPlayers;
+	UPROPERTY(BlueprintReadOnly, Replicated)
+		TArray<bool> PlayerReachedBoss;
     UPROPERTY(BlueprintReadOnly, Replicated)
         float CurrentGameTime = 0.0f;
-
+	UPROPERTY(BlueprintReadOnly, Replicated)
+		bool StartBossCountDown = false;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Replicated)
+		float BossCountdown = 60.0f;
 };

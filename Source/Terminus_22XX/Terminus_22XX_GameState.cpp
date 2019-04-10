@@ -3,34 +3,47 @@
 #include "Terminus_22XX_GameState.h"
 #include "Net/UnrealNetwork.h"
 #include "Public/TimerManager.h"
+#include "GameFramework/GameMode.h"
+#include "Networked/NetPlayerState.h"
+#include "Engine/World.h"
 
 ATerminus_22XX_GameState::ATerminus_22XX_GameState()
 {
-    //PrimaryActorTick.bCanEverTick = true;
-}
-
-void ATerminus_22XX_GameState::BeginPlay()
-{
-    FTimerHandle updateTime;
-    if (Role == ROLE_Authority)
-        GetWorldTimerManager().SetTimer(updateTime, this, &ATerminus_22XX_GameState::UpdateCurrentTime, 1.0f, true);
+    PrimaryActorTick.bCanEverTick = true;
 }
 
 void ATerminus_22XX_GameState::Tick(float deltaTime)
 {
 	//Update time pass since game start
-    if (Role == ROLE_Authority)
-        CurrentGameTime += deltaTime;
+	if (Role == ROLE_Authority)
+	{
+		if (IsMatchInProgress())
+			CurrentGameTime += deltaTime;
+		if (StartBossCountDown)
+			BossCountdown -= deltaTime;
+		if (BossCountdown <= 0.f)
+		{
+			Cast<AGameMode>(GetWorld()->GetAuthGameMode())->EndMatch();
+		}
+	}
+
 }
 
-void ATerminus_22XX_GameState::UpdateCurrentTime()
+void ATerminus_22XX_GameState::HandleMatchHasEnded()
 {
-    CurrentGameTime += 1.0f;
+	for (int i = 0; i < ConnectedPlayers.Num(); i++)
+	{
+		ANetPlayerState* playerState = Cast < ANetPlayerState>(ConnectedPlayers[i]);
+		playerState->TimeWhenBossReached -= playerState->Score;
+	}
 }
 
 void ATerminus_22XX_GameState::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const
 {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     DOREPLIFETIME(ATerminus_22XX_GameState, ConnectedPlayers);
-    DOREPLIFETIME(ATerminus_22XX_GameState, CurrentGameTime);
+	DOREPLIFETIME(ATerminus_22XX_GameState, PlayerReachedBoss);
+	DOREPLIFETIME(ATerminus_22XX_GameState, CurrentGameTime);
+	DOREPLIFETIME(ATerminus_22XX_GameState, StartBossCountDown);
+	DOREPLIFETIME(ATerminus_22XX_GameState, BossCountdown);
 }

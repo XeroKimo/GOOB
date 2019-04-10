@@ -18,5 +18,5 @@ void ANetPlayerState::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & O
     DOREPLIFETIME(ANetPlayerState, CurrentGuns);
     DOREPLIFETIME(ANetPlayerState, CurrentHealth);
 	DOREPLIFETIME(ANetPlayerState, MaxHealth);
-	DOREPLIFETIME(ANetPlayerState, PlayerScore);
+	DOREPLIFETIME(ANetPlayerState, TimeWhenBossReached);
 }

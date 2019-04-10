@@ -59,6 +59,7 @@ public:
     void Respawn();
     void SetPlayerState(class APlayerState* state);
 	void SetActiveCheckpoint(int CheckpointID);
+	void PlayerReachedFinale();
 	
 	UFUNCTION(BlueprintCallable)
 		class ANetPlayerState* GetPlayerState();
