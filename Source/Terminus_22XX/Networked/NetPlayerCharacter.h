@@ -114,11 +114,11 @@ public:
 		float MaxHealth;
 
 	//How much time before the super jump auto releases
-	UPROPERTY(Category = "MovementTimer", EditAnywhere)
+	UPROPERTY(Category = "MovementTimer", EditAnywhere, BlueprintReadOnly)
 		float ReleaseSuperJumpTime = 1.0f;
 
 	//How much time before the super jump starts preparing
-	UPROPERTY(Category = "MovementTimer", EditAnywhere)
+	UPROPERTY(Category = "MovementTimer", EditAnywhere, BlueprintReadOnly)
 		float SuperJumpTimerDelay = 0.15f;
 
 	//How much time it takes for super jump to reach max power
@@ -136,6 +136,9 @@ public:
 
     UPROPERTY(Category = "Status", EditAnywhere)
         float RespawnDelay = 1.0f;
+
+	UPROPERTY(BlueprintReadOnly)
+		FTimerHandle SuperJumpTimer;
 private:
 	UPROPERTY(Category = "Visual", VisibleDefaultsOnly)
 		class UCameraComponent* FirstPersonCamera;
@@ -157,7 +160,6 @@ private:
 	UPROPERTY(EditAnywhere)
 		class USoundBase* ReleaseSuperJumpSound;
 
-	FTimerHandle SuperJumpTimer;
 	FTimerHandle SlowDescentTimer;
 	FTimerHandle WeaponSwitchTimer;
 
