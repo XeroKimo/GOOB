@@ -69,7 +69,7 @@ void ANetPlayerCharacter::PostInitializeComponents()
 {
 	Super::PostInitializeComponents(); 
 	UCharacterMovementComponent* characterMovement = GetCharacterMovement();
-	MaxPowerSuperJumpTime = FMath::Min(MaxPowerSuperJumpTime, ReleaseSuperJumpTime + SuperJumpTimerDelay);
+	MaxPowerSuperJumpTime = FMath::Min(MaxPowerSuperJumpTime + SuperJumpTimerDelay, ReleaseSuperJumpTime + SuperJumpTimerDelay);
 
     //Change the character movement's default values to ones we set
 	characterMovement->MaxWalkSpeed = MaxWalkSpeed;
@@ -244,7 +244,7 @@ void ANetPlayerCharacter::ReleaseSuperJump()
         //Get the total time elapsed for the super jump timer
 		float elapsedTime = GetWorldTimerManager().GetTimerElapsed(SuperJumpTimer);
         //Determine the power multiplier by taking the elapsedTime / MaxPowerSuperJumpTime + SuperJumpTimerDelay
-        float powerScale = elapsedTime / (MaxPowerSuperJumpTime + SuperJumpTimerDelay);
+        float powerScale = elapsedTime / MaxPowerSuperJumpTime;
         //If the scale goes above 1, set scale to 1
 		if (powerScale >= 1.0f)
             powerScale = 1.0f;
@@ -490,8 +490,7 @@ void ANetPlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, con
 float ANetPlayerCharacter::GetSuperJumpChargePercent()
 {
     float timeElapsed = GetWorldTimerManager().GetTimerElapsed(SuperJumpTimer);
-    float maxTime = MaxPowerSuperJumpTime + SuperJumpTimerDelay;
-    float percent = timeElapsed / maxTime;
+    float percent = timeElapsed / MaxPowerSuperJumpTime;
     return (percent > 1.0f) ? 1.0f : percent;
 }
 
@@ -710,13 +709,13 @@ bool ANetPlayerCharacter::ServerPlaySound_Validate(USoundBase * soundClip)
 	return true;
 }
 
-void ANetPlayerCharacter::ServerAddScore_Implementation(int Score)
+void ANetPlayerCharacter::ServerAddScore_Implementation(float Score)
 {
     //Increase the player score
 	PlayerState->Score += Score;
 }
 
-bool ANetPlayerCharacter::ServerAddScore_Validate(int Score)
+bool ANetPlayerCharacter::ServerAddScore_Validate(float Score)
 {
 	return true;
 }
