@@ -24,8 +24,8 @@ void UShieldComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (GetOwnerRole() == ROLE_Authority)
-	{
+	//if (GetOwnerRole() == ROLE_Authority)
+	//{
 		for (AShieldGenerator* generator : ArrayOfShieldGenerators)
 		{
 			generator->AddShield(this);
@@ -35,7 +35,7 @@ void UShieldComponent::BeginPlay()
 		OnRep_Generators();
 		if (ShieldGeneratorsAlive > 0)
 			IsShieldActive = true;
-	}
+	//}
 
 }
 
