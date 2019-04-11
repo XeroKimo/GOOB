@@ -54,6 +54,9 @@ void ANetBaseGun::Tick(float DeltaTime)
 	FireWeapon();
 	AutoReloadWeapon();
 	WasTriggerPulled = IsTriggerPulled;
+
+    GunMesh->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
+    GunMuzzleLocation->SetRelativeRotation(FRotator(0.0f, 180.0f, 0.0f));
 }
 
 void ANetBaseGun::PullTrigger()
