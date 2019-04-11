@@ -23,11 +23,7 @@
 /wd4838
 /we4668
 /I .
-<<<<<<< HEAD
-/I C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\Private
-=======
 /I C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\Private
->>>>>>> 857d5f75b5047984a935c61fdad194b06225b148
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\CoreUObject
 /I Runtime
 /I Runtime\CoreUObject\Public
@@ -405,17 +401,10 @@
 /I ThirdParty
 /I ThirdParty\libSampleRate\Public
 /I ThirdParty\libSampleRate
-<<<<<<< HEAD
-/I C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Inc\GameFrwkSessionsPlugin
-/I C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source
-/I C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\Public
-/I C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin
-=======
 /I C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Inc\GameFrwkSessionsPlugin
 /I C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source
 /I C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin\Public
 /I C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Source\GameFrwkSessionsPlugin
->>>>>>> 857d5f75b5047984a935c61fdad194b06225b148
 /I ..\Plugins\Online\OnlineSubsystem\Intermediate\Build\Win64\UE4Editor\Inc\OnlineSubsystem
 /I ..\Plugins\Online\OnlineSubsystem
 /I ..\Plugins\Online\OnlineSubsystem\Source
@@ -429,27 +418,18 @@
 /I ..\Plugins\Online\OnlineSubsystemNull
 /I ..\Plugins\Online\OnlineSubsystemNull\Source\Public
 /I ..\Plugins\Online\OnlineSubsystemNull\Source
-/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.14.26428\INCLUDE"
+/I "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Tools\MSVC\14.16.27023\INCLUDE"
 /I "C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\ucrt"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt"
-<<<<<<< HEAD
-/FI"C:\Users\jarr0036\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h"
-/Yu"C:\Users\jarr0036\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h"
-/Fp"C:\Users\jarr0036\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp"
-/FI"C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Definitions.GameFrwkSessionsPlugin.h"
-/Fo"C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp.obj"
-=======
 /FI"C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h"
 /Yu"C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h"
 /Fp"C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h.pch"
 "C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp"
 /FI"C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Definitions.GameFrwkSessionsPlugin.h"
 /Fo"C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp.obj"
->>>>>>> 857d5f75b5047984a935c61fdad194b06225b148
 /TP
 /GR-
 /W4
