@@ -41,7 +41,7 @@
 #define PROJECT_PRODUCT_IDENTIFIER Terminus_22XX
 #define NDEBUG 1
 #define UE_BUILD_DEVELOPMENT 1
-#define UE_ENGINE_DIRECTORY "D:/Program Files/Epic Games/UE_4.20/Engine/"
+#define UE_ENGINE_DIRECTORY "D:/Program Files (x86)/UE_4.20/Engine/"
 #define ORIGINAL_FILE_NAME "Terminus_22XX.exe"
 #define UE_IS_ENGINE_MODULE 0
 #define UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME 0
