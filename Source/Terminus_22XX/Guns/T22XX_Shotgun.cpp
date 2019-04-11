@@ -13,4 +13,6 @@ AT22XX_Shotgun::AT22XX_Shotgun()
     PelletCount = 12;
 	WeaponIndex = EGunName::GN_Shotgun;
 	Tags.Add("Shotgun");
+
+
 }

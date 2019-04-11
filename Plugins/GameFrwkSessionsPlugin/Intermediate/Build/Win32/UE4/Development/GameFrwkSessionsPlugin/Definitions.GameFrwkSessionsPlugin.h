@@ -38,14 +38,14 @@
 #define DEPTH_32_BIT_CONVERSION 0
 #define PROJECT_COPYRIGHT_STRING Fill out your copyright notice in the Description page of Project Settings.
 #define PROJECT_PRODUCT_NAME UE4Game
-#define PROJECT_PRODUCT_IDENTIFIER Renzy_A_Final
+#define PROJECT_PRODUCT_IDENTIFIER Terminus_22XX
 #define NDEBUG 1
 #define UE_BUILD_DEVELOPMENT 1
 #define UE_ENGINE_DIRECTORY "D:/Program Files/Epic Games/UE_4.20/Engine/"
-#define ORIGINAL_FILE_NAME "Renzy_A_Final.exe"
+#define ORIGINAL_FILE_NAME "Terminus_22XX.exe"
 #define UE_IS_ENGINE_MODULE 0
 #define UE_BUILD_DEVELOPMENT_WITH_DEBUGGAME 0
-#define UE_PROJECT_NAME Renzy_A_Final
+#define UE_PROJECT_NAME Terminus_22XX
 #define IMPLEMENT_ENCRYPTION_KEY_REGISTRATION() 
 #define IMPLEMENT_SIGNING_KEY_REGISTRATION() 
 #define DEPRECATED_FORGAME DEPRECATED
