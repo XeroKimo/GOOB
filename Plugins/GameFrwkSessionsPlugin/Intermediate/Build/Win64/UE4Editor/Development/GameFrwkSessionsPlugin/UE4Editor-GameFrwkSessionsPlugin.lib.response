@@ -10,4 +10,8 @@
 "C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.cpp.obj"
 "C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp.obj"
 "C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\PCLaunch.rc.res"
+<<<<<<< HEAD
 /OUT:"C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.lib"
+=======
+/OUT:"C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.lib"
+>>>>>>> parent of 31e29df... Added Sounds/UI stuff
