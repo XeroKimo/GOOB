@@ -289,6 +289,7 @@ void ANetPlayerCharacter::ReleaseSuperJump()
         //Cancel out Z velocity so that jumping will always be the same height
 		float cancelVector = GetVelocity().Z;
 		FVector jumpVector = GetActorUpVector() * (GetCharacterMovement()->JumpZVelocity - cancelVector);
+		ServerPlaySound(JumpingSound);
 		ServerSuperJump(jumpVector);
 	}
 }
