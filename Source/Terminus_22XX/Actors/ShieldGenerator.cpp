@@ -97,7 +97,7 @@ void AShieldGenerator::TakeAnyDamage(AActor * DamagedActor, float Damage, const 
 
 void AShieldGenerator::NetMulicastChangeMaterial_Implementation(UMaterialInterface * material)
 {
-    GeneratorMesh->SetMaterial(0, material);
+    GeneratorMesh->SetMaterialByName("Core", material);
 }
 
 
