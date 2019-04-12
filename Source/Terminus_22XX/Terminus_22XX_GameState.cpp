@@ -36,8 +36,17 @@ void ATerminus_22XX_GameState::HandleMatchHasEnded()
 	for (int i = 0; i < ConnectedPlayers.Num(); i++)
 	{
 		//Calculate the final time for each player by subtracting score from time
-		ANetPlayerState* playerState = Cast < ANetPlayerState>(ConnectedPlayers[i]);
-		playerState->TimeWhenBossReached -= playerState->Score;
+        if (PlayerReachedBoss[i])
+        {
+            ANetPlayerState* playerState = Cast < ANetPlayerState>(ConnectedPlayers[i]);
+            playerState->TimeWhenBossReached -= playerState->Score;
+        }
+        else
+        {
+            PlayerReachedBoss[i] = true;
+            ANetPlayerState* playerState = Cast < ANetPlayerState>(ConnectedPlayers[i]);
+            playerState->TimeWhenBossReached = CurrentGameTime - playerState->Score;
+        }
 	}
 }
 
