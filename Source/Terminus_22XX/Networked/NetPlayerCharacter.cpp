@@ -474,11 +474,12 @@ void ANetPlayerCharacter::TakeAnyDamage(AActor * DamagedActor, float Damage, con
         if (GetPlayerState()->CurrentHealth <= 0)
         {
             //Stop weapon functions and drop it
-            CurrentWeapon->FullStop();
+            CurrentWeapon->ClientFullStop();
             CurrentWeapon->ServerDetach();
 
             //Stop the player from taking input and colliding with others
             GetController()->DisableInput(Cast<APlayerController>(GetController()));
+            GetCapsuleComponent()->SetSimulatePhysics(false);
             GetCapsuleComponent()->SetCollisionProfileName("NoCollision");
 
             //Start the respawn timer
