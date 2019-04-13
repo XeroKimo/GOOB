@@ -6,16 +6,8 @@
 /NAME:"UE4Editor-GameFrwkSessionsPlugin.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-<<<<<<< HEAD
 "C:\Users\pola0023\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h.obj"
 "C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.cpp.obj"
 "C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp.obj"
 "C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\PCLaunch.rc.res"
 /OUT:"C:\Users\pola0023\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.lib"
-=======
-"C:\Users\jarr0036\Documents\GitHub\GOOB\Intermediate\Build\Win64\Terminus_22XXEditor\Development\Engine\SharedPCH.Engine.h.obj"
-"C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.cpp.obj"
-"C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\Module.GameFrwkSessionsPlugin.gen.cpp.obj"
-"C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\PCLaunch.rc.res"
-/OUT:"C:\Users\jarr0036\Documents\GitHub\GOOB\Plugins\GameFrwkSessionsPlugin\Intermediate\Build\Win64\UE4Editor\Development\GameFrwkSessionsPlugin\UE4Editor-GameFrwkSessionsPlugin.lib"
->>>>>>> 12131203b3dfabcf517692453aa172beaad0a381

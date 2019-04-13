@@ -31,5 +31,5 @@ public:
 	UPROPERTY(BlueprintReadOnly, Replicated)
 		bool StartBossCountDown = false;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Replicated)
-		float BossCountdown = 60.0f;
+		float BossCountdown = 30.0f;
 };
