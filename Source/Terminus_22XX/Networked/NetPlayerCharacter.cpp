@@ -82,7 +82,7 @@ void ANetPlayerCharacter::PostInitializeComponents()
 void ANetPlayerCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-    GEngine->AddOnScreenDebugMessage(-1, DeltaTime * 1.01f, FColor::Red, "See T_22XXGameModeBase in order to spawn at camera Location");
+    //GEngine->AddOnScreenDebugMessage(-1, DeltaTime * 1.01f, FColor::Red, "See T_22XXGameModeBase in order to spawn at camera Location");
 
     //Determine what kind of movement our player is doing
 	if (GetVelocity().Size() == 0.0f)
